@@ -1,4 +1,4 @@
-# Lecture 0
+# Cours 1
 
 
 - [Introduction](#introduction)

@@ -1,0 +1,33 @@
+site_name: Cours SQL
+theme:
+  name: material   # Uses a nice, modern theme
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - navigation.instant
+    - navigation.indexes
+
+nav:
+  - Home: index.md
+  - Cours 1:
+      - Introduction: cours1/index.md
+      - Cyberchase: cours1/cyberchase/instructions.md
+      - Normals: cours1/normals/instructions.md
+      - Players: cours1/players/instructions.md
+      - Views: cours1/views/instructions.md
+  - Cours 2:
+      - Introduction: cours2/index.md
+      - Dese: cours2/dese/instructions.md
+      - Moneyball: cours2/moneyball/instructions.md
+      - Packages: cours2/packages/instructions.md
+  - Cours 3:
+      - Introduction: cours3/index.md
+      - ATL: cours3/atl/instructions.md
+      - Connect: cours3/connect/instructions.md
+      - Doghnut: cours3/doghnut/instructions.md
+  - Cours 4:
+      - Introduction: cours4/index.md
+      - Don't Panic: cours4/dont-panic/instructions.md
+      - Meteorites: cours4/meteorites/instructions.md
+  - Cours 5: cours5/index.md
