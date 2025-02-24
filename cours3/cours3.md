@@ -113,11 +113,11 @@ Chaque ligne de cette table nous indique la station visitée par un usager parti
 ## Types de Données et Classes de Stockage
 
 - SQLite a cinq classes de stockage :
-  - Null : rien, ou valeur vide
-  - Integer : nombres sans points décimaux
-  - Real : nombres décimaux ou à virgule flottante
-  - Text : caractères ou chaînes de caractères
-  - Blob : Binary Large Object, pour stocker des objets en binaire (utile pour les images, l'audio, etc.)
+  - `Null` : rien, ou valeur vide
+  - `Integer` : nombres sans points décimaux
+  - `Real` : nombres décimaux ou à virgule flottante
+  - `Text` : caractères ou chaînes de caractères
+  - `Blob` : Binary Large Object, pour stocker des objets en binaire (utile pour les images, l'audio, etc.)
 - Une classe de stockage peut contenir plusieurs types de données.
 - Par exemple, voici les types de données qui relèvent de la classe de stockage Integer.
 
@@ -185,11 +185,11 @@ CREATE TABLE visits (
 
 > Auparavant, nous étions capables d'interroger les tables de notre base de données et de voir les résultats dans une structure de type tableau. Comment obtenir le même type de résultats ici ?
 
-- Nous n'avons pas encore ajouté de données aux tables. Dans la Conférence 3, nous verrons comment insérer, mettre à jour et supprimer des lignes dans les tables que nous avons créées !
+- Nous n'avons pas encore ajouté de données aux tables. Dans le Cours 4, nous verrons comment insérer, mettre à jour et supprimer des lignes dans les tables que nous avons créées !
 
 > Avons-nous une affinité de type pour Boolean ?
 
-- Nous n'en avons pas dans SQLite, mais d'autres SGBD pourraient avoir cette option. Une solution de contournement pourrait être d'utiliser des valeurs entières 0 ou 1 pour représenter des booléens.
+- Nous n'en avons pas dans SQLite, mais d'autres SGBD pourraient avoir cette option. Une solution de contournement pourrait être d'utiliser des valeurs entières 0 ou 1 pour représenter des booléens. Nous verrons MySQL qui a une option Boolean à la fin du cours.
 
 ## Contraintes de Table
 
@@ -254,7 +254,8 @@ Dans ce cas, nous voudrions probablement permettre à un usager de visiter une s
 CREATE TABLE riders (
     "id" INTEGER,
     "name" TEXT,
-    PRIMARY KEY("id")
+    PRIMARY KEY("id"),
+    CHECK (LENGTH("name") >= 3) -- Check pour forcer une taille de nom d'au moins 3 charactères
 );
 
 CREATE TABLE stations (

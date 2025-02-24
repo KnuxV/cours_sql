@@ -1,26 +1,25 @@
-> # Lecture 0
->
+# Lecture 0
 
-- Introduction
-- Qu'est-ce qu'une base de données ?
-- SQL
+
+- [Introduction](#introduction)
+- [Qu'est-ce qu'une base de données ?](#base-de-données)
+- [SQL](#sql)
     - Questions
-- Démarrer avec SQLite
-- Conseils pour le terminal
-- `SELECT`
+- [Démarrer avec SQLite](#sqlite)
+- [Conseils pour le terminal](#terminal)
+- [`SELECT`](#select)
+  
     - Questions
-- `LIMIT`
-- `WHERE`
-- `NULL`
-- `LIKE`
-    - Questions
-- Plages
-    - Questions
-- `ORDER BY`
-    - Questions
-- Fonctions d'agrégation
-    - Questions
-- Fin
+- [`LIMIT`](#limit)
+- [`WHERE`](#where)
+- [`NULL`](#null)
+- [`LIKE`](#like)
+- [Range](#range)
+- [`ORDER BY`](#order-by)
+- [Fonctions d'agrégation](#fonctions-dagrégation)
+- [Fin](#fin)
+
+    
 
 ## Introduction
 
@@ -44,7 +43,7 @@
     - Capacité de mise à jour : Les bases de données sont capables de gérer plusieurs mises à jour de données par seconde.
     - Vitesse : Les bases de données permettent une recherche plus rapide des informations. Cela est dû au fait que les bases de données nous donnent accès à différents algorithmes pour récupérer des informations. En revanche, les feuilles de calcul qui permettent uniquement l'utilisation de Ctrl+F ou Cmd+F pour parcourir les résultats un par un.
 
-## Qu'est-ce qu'une base de données ?
+## Base de données
 
 - Une base de données est un moyen d'organiser des données de manière à pouvoir effectuer quatre opérations CRUD:
     - CREATE
@@ -73,11 +72,11 @@
 
 - SQL est une norme à la fois de l'American National Standards Institute (ANSI) et de l'Organisation internationale de normalisation (ISO). La plupart des DBMS supportent un sous-ensemble du langage SQL. Par exemple, pour SQLite, nous utilisons un sous-ensemble de SQL qui est supporté par SQLite. Si nous voulions porter notre code vers un autre système comme MySQL, il est probable que nous devrions changer une partie de la syntaxe.
 
-## Démarrer avec SQLite
+## SQLite
 
 - Il est utile de noter que SQLite n'est pas seulement quelque chose que nous utilisons pour ce cours, mais une base de données utilisée dans de nombreuses autres applications, y compris les téléphones, les applications de bureau et les sites web.
 
-## Conseils pour le terminal
+## Terminal
 
 Voici quelques conseils utiles pour écrire du code SQL sur le terminal.
 
@@ -300,7 +299,7 @@ WHERE "title" LIKE 'T______';';
 
 - Dans SQLite, la comparaison des chaînes de caractères avec `LIKE` est par défaut insensible à la casse, tandis que la comparaison des chaînes de caractères avec `=` est sensible à la casse. (Notez que, dans d'autres DBMS, la configuration de votre base de données peut changer cela !)
 
-## Plages
+## Ranges
 
 - Nous pouvons également utiliser les opérateurs `<`, `>`, `<=` et `>=` dans nos conditions pour correspondre à une plage de valeurs. 
 
