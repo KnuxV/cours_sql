@@ -1,0 +1,1294 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../connect/instructions/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>ATL - Cours SQL</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#atl" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Cours SQL" class="md-header__button md-logo" aria-label="Cours SQL" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cours SQL
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ATL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cours1/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cours2/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cours4/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../cours5/" class="md-tabs__link">
+        
+  
+    
+  
+  Cours 5
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Cours SQL
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../cours1/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 1
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cours1/cyberchase/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cyberchase
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cours1/normals/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Normals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cours1/players/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Players
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cours1/views/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Views
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../cours2/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 2
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cours2/dese/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dese
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cours2/moneyball/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moneyball
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cours2/packages/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 3
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ATL
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ATL
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#probleme-a-resoudre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problème à Résoudre
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spécification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spécification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exigences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exigences
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exigences">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passagers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passagers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enregistrements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compagnies-aeriennes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compagnies Aériennes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vols
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donnees-dechantillon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Données d'Échantillon
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connect/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doghnut/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Doghnut
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../cours4/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 4
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cours4/dont-panic/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Don't Panic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cours4/meteorites/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meteorites
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cours5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cours 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#probleme-a-resoudre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problème à Résoudre
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spécification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spécification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exigences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exigences
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exigences">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passagers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passagers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enregistrements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compagnies-aeriennes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compagnies Aériennes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vols
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donnees-dechantillon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Données d'Échantillon
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="atl">ATL</h1>
+<p><img alt="Vue aérienne de l'aéroport international Hartsfield-Jackson" src="https://cs50.harvard.edu/sql/2024/psets/2/atl/atl.jpeg" /></p>
+<h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
+<p>L'aéroport international Hartsfield-Jackson, plus connu sous le nom de "ATL" pour son code IATA, est le plus fréquenté au monde depuis 1998. Situé à Atlanta, en Géorgie, aux États-Unis, ATL a desservi 93,7 millions de passagers en 2022. </p>
+<p>Imaginons que vous venez d'être embauché pour aider ATL à restructurer leur système de base de données. Dans un fichier nommé <code>schema.sql</code> dans un dossier appelé <code>atl</code>, écrivez un ensemble d'instructions SQL pour concevoir une base de données permettant à Hartsfield-Jackson de suivre ses passagers et leurs vols.</p>
+<p>Tapez ce qui suit dans votre terminal :</p>
+<pre><code class="language-bash">mkdir atl # crée un dossier vide 
+</code></pre>
+<p>Notez que le dossier <code>atl</code> sera créé dans le "working directory" de votre terminal (c'est-à-dire le dossier sur lequel votre terminal est actuellement concentré). Si votre working directory est déjà un dossier nommé <code>pset2</code>, par exemple, <code>atl</code> sera créé à l'intérieur du dossier <code>pset2</code>. (Pas besoin de créer un tel dossier <code>pset2</code> !)</p>
+<p>Une fois que vous avez créé le dossier <code>atl</code>, vous pouvez taper ce qui suit pour changer le working directory de votre terminal vers le dossier <code>atl</code> :</p>
+<pre><code class="language-bash">cd atl # se déplace dans le dossier atl
+</code></pre>
+<p>Ensuite, tapez </p>
+<pre><code class="language-bash">touch schema.sql
+</code></pre>
+<p>pour créer un fichier <code>schema.sql</code> vierge.</p>
+<p>Pour vous souvenir de <code>mkdir</code> à l'avenir, rappelez-vous que <code>mkdir</code> signifie "make directory" !</p>
+<h2 id="specification">Spécification</h2>
+<p>Votre tâche est de créer une base de données SQLite pour ATL à partir de zéro, en écrivant un ensemble d'instructions <code>CREATE TABLE</code> dans un fichier <code>schema.sql</code>. Les détails de mise en œuvre dépendent de vous, bien que vous devriez au minimum vous assurer que votre base de données répond aux exigences de l'aéroport et qu'elle peut représenter les données d'échantillon fournies.</p>
+<h3 id="exigences">Exigences</h3>
+<p>Pour comprendre les exigences d'ATL pour leur base de données, vous vous êtes assis pour discuter avec l'Assistant General Manager for IT Operations.</p>
+<h4 id="passagers">Passagers</h4>
+<blockquote>
+<p>En ce qui concerne nos passagers, nous devons juste avoir les informations essentielles : le prénom, le nom de famille et l'âge. C'est tout ce que nous devons savoir — rien de plus.</p>
+</blockquote>
+<h4 id="enregistrements">Enregistrements</h4>
+<blockquote>
+<p>Lorsque les passagers arrivent à ATL, ils "s'enregistrent" souvent pour leurs vols. C'est leur façon de nous dire qu'ils sont là et prêts à embarquer. Nous aimerions garder une trace de ces moments. Et de quoi avons-nous besoin pour cela, demandez-vous ? Eh bien, voici ce dont nous avons besoin :</p>
+<ul>
+<li>La date et l'heure exactes auxquelles notre passager s'est enregistré</li>
+<li>Le vol pour lequel ils s'enregistrent, bien sûr. On ne peut pas perdre de vue où ils se dirigent, n'est-ce pas ?</li>
+</ul>
+</blockquote>
+<h4 id="compagnies-aeriennes">Compagnies Aériennes</h4>
+<blockquote>
+<p>ATL est un hub pour de nombreuses compagnies aériennes nationales et internationales : des noms comme Delta, British Airways, Air France, Korean Air, et Turkish Airlines. La liste est longue. Voici ce que nous suivons :</p>
+<ul>
+<li>Le nom de la compagnie aérienne</li>
+<li>La "jetée" ou, devrais-je dire, la section de notre aéroport où la compagnie aérienne opère. Nous avons 7 jetées : A, B, C, D, E, F, et T.</li>
+</ul>
+</blockquote>
+<h4 id="vols">Vols</h4>
+<blockquote>
+<p>Nous desservons jusqu'à 1 000 vols par jour. Pour nous assurer que nos passagers ne se posent jamais de questions, nous devons leur fournir tous les détails critiques sur leur vol. Voici ce que nous aimerions stocker :</p>
+<ul>
+<li>Le numéro de vol. Par exemple, "900". Sachez juste que nous réutilisons parfois les numéros de vol.</li>
+<li>La compagnie aérienne opérant le vol. Vous pouvez garder cela simple et supposer qu'un vol est opéré par une seule compagnie aérienne.</li>
+<li>Le code de l'aéroport de départ. Par exemple, "ATL" ou "BOS".</li>
+<li>Le code de l'aéroport de destination</li>
+<li>La date et l'heure de départ prévues (à la minute près, bien sûr !)</li>
+<li>La date et l'heure d'arrivée prévues, avec la même précision</li>
+</ul>
+</blockquote>
+<h3 id="donnees-dechantillon">Données d'Échantillon</h3>
+<p>Votre base de données doit pouvoir représenter...</p>
+<ul>
+<li>Un passager, Amelia Earhart, âgée de 39 ans</li>
+<li>Une compagnie aérienne, Delta, qui opère à partir des jetées A, B, C, D, et T</li>
+<li>Un vol, Delta Flight 300, qui est prévu de partir d'ATL le 3 août 2023 à 18h46 et d'arriver à BOS le 3 août 2023 à 21h09</li>
+<li>Un enregistrement pour Amelia Earhart, pour le vol Delta 300, le 3 août 2023 à 15h03</li>
+</ul>
+<h2 id="utilisation">Utilisation</h2>
+<p>Pour créer une base de données à partir de votre schéma, dans votre dossier <code>atl</code>, tapez</p>
+<pre><code>sqlite3 atl.db
+</code></pre>
+<p>Cela créera une base de données SQLite vide appelée <code>atl.db</code>.</p>
+<p>Ensuite, dans l'invite <code>sqlite3</code>, tapez</p>
+<pre><code>.read schema.sql
+</code></pre>
+<p>pour lire les instructions de <code>schema.sql</code>.</p>
+<p>Rappelez-vous que vous pouvez utiliser <code>DROP TABLE tablename</code>, où <code>tablename</code> est le nom de votre table, pour supprimer une table de votre base de données.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

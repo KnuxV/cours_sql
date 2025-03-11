@@ -1,56 +1,68 @@
-# Cours 1
+# [Cours 1 : Query](https://cs50.harvard.edu/sql/2024/weeks/0/)
 
 
 - [Introduction](#introduction)
+
 - [Qu'est-ce qu'une base de données ?](#base-de-données)
+
 - [SQL](#sql)
-    - Questions
+
 - [Démarrer avec SQLite](#sqlite)
+
 - [Conseils pour le terminal](#terminal)
+
 - [`SELECT`](#select)
   
-    - Questions
 - [`LIMIT`](#limit)
+
 - [`WHERE`](#where)
+
 - [`NULL`](#null)
+
 - [`LIKE`](#like)
-- [Range](#range)
+
+- [`BETWEEN`](#range)
+
 - [`ORDER BY`](#order-by)
+
 - [Fonctions d'agrégation](#fonctions-dagrégation)
-- [Fin](#fin)
 
     
+
+## [Vidéo en anglais](https://video.cs50.io/vHYeChEf2lA?screen=6UZILCexEZ4) (facultatif)
 
 ## Introduction
 
 - Les bases de données (et SQL) sont des outils qui peuvent être utilisés pour interagir avec, stocker et gérer des informations. 
 
 - Un tableau stocke un ensemble d'informations
-- Chaque ligne d'un tableau stocke un élément de cet ensemble
-- Chaque colonne a un attribut de cet élément
+- Chaque **ligne** d'un tableau **stocke** un **élément** de cet ensemble
+- Chaque **colonne** a un **attribut** de cet élément
 
 - Considérons maintenant un contexte moderne. Disons que vous êtes bibliothécaire et que vous devez organiser des informations sur les titres de livres et les auteurs dans ce diagramme.
 
+![books](https://cs50.harvard.edu/sql/2024/notes/0/images/books.jpg)
+
 - Une façon d'organiser les informations serait d'avoir chaque titre de livre suivi de son auteur, comme ci-dessous.
 
-["Tableau avec les titres de livres suivis de l'auteur"]
+!["Tableau avec les titres de livres suivis de l'auteur"](https://cs50.harvard.edu/sql/2024/notes/0/images/bookstable.jpg)
 
-    - Notez que chaque livre est maintenant une ligne dans ce tableau.
-    - Chaque ligne a deux colonnes - chacune un attribut différent du livre (titre du livre et auteur).
+- Notez que chaque livre est maintenant une ligne dans ce tableau.
+- Chaque ligne a deux colonnes - chacune un attribut différent du livre (titre du livre et auteur).
 - À l'ère de l'information d'aujourd'hui, nous pouvons stocker nos tableaux en utilisant des logiciels comme Google Sheets au lieu de papier📝 ou de tablettes en pierre🪨. Cependant, dans ce cours, nous parlerons de bases de données et non de feuilles de calcul.
 - Trois raisons de passer des feuilles de calcul aux bases de données sont :
-    - Échelle : Les bases de données peuvent stocker non seulement des éléments se comptant par dizaines de milliers, mais aussi des millions et des milliards.
-    - Capacité de mise à jour : Les bases de données sont capables de gérer plusieurs mises à jour de données par seconde.
-    - Vitesse : Les bases de données permettent une recherche plus rapide des informations. Cela est dû au fait que les bases de données nous donnent accès à différents algorithmes pour récupérer des informations. En revanche, les feuilles de calcul qui permettent uniquement l'utilisation de Ctrl+F ou Cmd+F pour parcourir les résultats un par un.
+    - **Échelle** : Les bases de données peuvent stocker non seulement des éléments se comptant par dizaines de milliers, mais aussi des millions et des milliards.
+    - **Capacité de mise à jour** : Les bases de données sont capables de gérer plusieurs mises à jour de données par seconde.
+    - **Vitesse** : Les bases de données permettent une recherche plus rapide des informations. Cela est dû au fait que les bases de données nous donnent accès à différents algorithmes pour récupérer des informations. En revanche, les feuilles de calcul qui permettent uniquement l'utilisation de Ctrl+F ou Cmd+F pour parcourir les résultats un par un.
 
 ## Base de données
 
-- Une base de données est un moyen d'organiser des données de manière à pouvoir effectuer quatre opérations CRUD:
-    - CREATE
-    - READ
-    - UPDATE
-    - DELETE
-- Un système de gestion de base de données (DBMS) est un moyen d'interagir avec une base de données en utilisant une interface graphique ou un langage textuel.
+- Une base de données est un moyen d'organiser des données de manière à pouvoir effectuer quatre opérations **CRUD**:
+    - **C**REATE
+    - **R**EAD
+    - **U**PDATE
+    - **D**ELETE
+- Un système de gestion de base de données (**DBMS**: DataBase Managment System) est un moyen d'interagir avec une base de données en utilisant une interface graphique ou un langage textuel.
 - Exemples de DBMS : MySQL, Oracle, PostgreSQL, SQLite, Microsoft Access, MongoDB, etc.
 - Le choix d'un DBMS repose sur des facteurs tels que :
     - Coût : logiciel propriétaire vs logiciel gratuit,
@@ -60,7 +72,7 @@
 
 ## SQL
 
-- SQL signifie Structured Query Language. C'est un langage utilisé pour interagir avec les bases de données, par lequel vous pouvez créer, lire, mettre à jour et supprimer des données dans une base de données. Quelques points importants sur SQL :
+- SQL signifie **Structured Query Language**. C'est un langage utilisé pour interagir avec les bases de données, par lequel vous pouvez créer, lire, mettre à jour et supprimer des données dans une base de données. Quelques points importants sur SQL :
     - il est structuré, comme nous le verrons dans ce cours,
     - il a certains mots-clés qui peuvent être utilisés pour interagir avec la base de données, et
     - c'est un langage de requête - il peut être utilisé pour poser des questions sur les données à l'intérieur d'une base de données.
