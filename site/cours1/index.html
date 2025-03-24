@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cours-1" class="md-skip">
+        <a href="#cours-1-query" class="md-skip">
           Skip to content
         </a>
       
@@ -919,6 +919,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#video-en-anglais-facultatif" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vidéo en anglais (facultatif)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       Introduction
@@ -1159,7 +1168,7 @@
 
 
 
-<h1 id="cours-1">Cours 1</h1>
+<h1 id="cours-1-query"><a href="https://cs50.harvard.edu/sql/2024/weeks/0/">Cours 1 : Query</a></h1>
 <ul>
 <li>
 <p><a href="#introduction">Introduction</a></p>
@@ -1192,7 +1201,7 @@
 <p><a href="#like"><code>LIKE</code></a></p>
 </li>
 <li>
-<p><a href="#range">Range</a></p>
+<p><a href="#range"><code>BETWEEN</code></a></p>
 </li>
 <li>
 <p><a href="#order-by"><code>ORDER BY</code></a></p>
@@ -1201,7 +1210,7 @@
 <p><a href="#fonctions-dagrégation">Fonctions d'agrégation</a></p>
 </li>
 </ul>
-<p>​    </p>
+<h2 id="video-en-anglais-facultatif"><a href="https://video.cs50.io/vHYeChEf2lA?screen=6UZILCexEZ4">Vidéo en anglais</a> (facultatif)</h2>
 <h2 id="introduction">Introduction</h2>
 <ul>
 <li>
@@ -1210,16 +1219,17 @@
 <li>
 <p>Un tableau stocke un ensemble d'informations</p>
 </li>
-<li>Chaque ligne d'un tableau stocke un élément de cet ensemble</li>
+<li>Chaque <strong>ligne</strong> d'un tableau <strong>stocke</strong> un <strong>élément</strong> de cet ensemble</li>
 <li>
-<p>Chaque colonne a un attribut de cet élément</p>
+<p>Chaque <strong>colonne</strong> a un <strong>attribut</strong> de cet élément</p>
 </li>
 <li>
 <p>Considérons maintenant un contexte moderne. Disons que vous êtes bibliothécaire et que vous devez organiser des informations sur les titres de livres et les auteurs dans ce diagramme.</p>
 </li>
-<li>
-<p>Une façon d'organiser les informations serait d'avoir chaque titre de livre suivi de son auteur, comme ci-dessous.</p>
-</li>
+</ul>
+<p><img alt="books" src="https://cs50.harvard.edu/sql/2024/notes/0/images/books.jpg" /></p>
+<ul>
+<li>Une façon d'organiser les informations serait d'avoir chaque titre de livre suivi de son auteur, comme ci-dessous.</li>
 </ul>
 <p><img alt="&quot;Tableau avec les titres de livres suivis de l'auteur&quot;" src="https://cs50.harvard.edu/sql/2024/notes/0/images/bookstable.jpg" /></p>
 <ul>
@@ -1235,14 +1245,14 @@
 </ul>
 <h2 id="base-de-donnees">Base de données</h2>
 <ul>
-<li>Une base de données est un moyen d'organiser des données de manière à pouvoir effectuer quatre opérations CRUD:<ul>
-<li>CREATE</li>
-<li>READ</li>
-<li>UPDATE</li>
-<li>DELETE</li>
+<li>Une base de données est un moyen d'organiser des données de manière à pouvoir effectuer quatre opérations <strong>CRUD</strong>:<ul>
+<li><strong>C</strong>REATE</li>
+<li><strong>R</strong>EAD</li>
+<li><strong>U</strong>PDATE</li>
+<li><strong>D</strong>ELETE</li>
 </ul>
 </li>
-<li>Un système de gestion de base de données (DBMS) est un moyen d'interagir avec une base de données en utilisant une interface graphique ou un langage textuel.</li>
+<li>Un système de gestion de base de données (<strong>DBMS</strong>: DataBase Managment System) est un moyen d'interagir avec une base de données en utilisant une interface graphique ou un langage textuel.</li>
 <li>Exemples de DBMS : MySQL, Oracle, PostgreSQL, SQLite, Microsoft Access, MongoDB, etc.</li>
 <li>Le choix d'un DBMS repose sur des facteurs tels que :<ul>
 <li>Coût : logiciel propriétaire vs logiciel gratuit,</li>
@@ -1254,7 +1264,7 @@
 </ul>
 <h2 id="sql">SQL</h2>
 <ul>
-<li>SQL signifie Structured Query Language. C'est un langage utilisé pour interagir avec les bases de données, par lequel vous pouvez créer, lire, mettre à jour et supprimer des données dans une base de données. Quelques points importants sur SQL :<ul>
+<li>SQL signifie <strong>Structured Query Language</strong>. C'est un langage utilisé pour interagir avec les bases de données, par lequel vous pouvez créer, lire, mettre à jour et supprimer des données dans une base de données. Quelques points importants sur SQL :<ul>
 <li>il est structuré, comme nous le verrons dans ce cours,</li>
 <li>il a certains mots-clés qui peuvent être utilisés pour interagir avec la base de données, et</li>
 <li>c'est un langage de requête - il peut être utilisé pour poser des questions sur les données à l'intérieur d'une base de données.</li>

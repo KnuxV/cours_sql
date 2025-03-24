@@ -1,5 +1,6 @@
 # [Cours 5](https://cs50.harvard.edu/sql/2024/notes/5/)
 
+[Vidéo en anglais](https://youtu.be/qa5-mKVSQHQ)
 - [Introduction](#introduction)
 - [Index](#index)
 - [Index sur plusieurs tables](#index-sur-plusieurs-tables)
