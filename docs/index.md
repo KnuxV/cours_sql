@@ -1,10 +1,8 @@
 # 📊 Bienvenue au Cours SQL
 
-Bienvenue dans notre formation complète SQL. Ce parcours d'apprentissage structuré vous guidera à travers les concepts fondamentaux jusqu'aux techniques avancées d'optimisation et d'administration de bases de données.
-
 ## 🗂️ Contenu du Cours
 
-### 📖 [Cours 1 : Les Fondamentaux du SQL](cours1/index.md)
+### 📖 [Cours 1 : Les Fondamentaux en SQL](cours1/index.md)
 Ce module introduit les concepts de base du langage SQL et vous familiarise avec la syntaxe essentielle pour interroger des bases de données. Vous apprendrez à extraire des informations spécifiques à partir de tables, à filtrer les résultats selon différents critères et à organiser vos données de manière logique.
 
 - **Thèmes abordés :**
@@ -18,6 +16,7 @@ Ce module introduit les concepts de base du langage SQL et vous familiarise avec
   - [Normals](cours1/normals/instructions.md) : Analyse de données météorologiques avec filtrage avancé
   - [Players](cours1/players/instructions.md) : Manipulation de statistiques sportives avec tri et conditions multiples
   - [Views](cours1/views/instructions.md) : Création de vues pour simplifier l'accès aux données complexes
+- Lien vers le github/codespace: [Cliquez ici](https://github.com/KnuxV/sql_cours1#)
 
 ### 📊 [Cours 2 : Requêtes Avancées et Agrégations](cours2/index.md)
 Ce module approfondit les techniques de requêtes en introduisant les fonctions d'agrégation et les jointures. Vous apprendrez à effectuer des analyses statistiques sur vos données et à combiner des informations provenant de plusieurs tables.
@@ -100,12 +99,6 @@ Ce module final explore les différents systèmes de gestion de bases de donnée
   - [From the Deep](cours7/deep/instructions.md) : Implémentation de stratégies de partitionnement pour gérer des données volumineuses
   - [Don't Panic Python](cours7/dont-panic-python/instructions.md) : Interaction avec des bases de données via Python et protection contre les injections SQL
 
-## 📌 Instructions Générales
 
-1. Suivez les modules dans l'ordre proposé pour une progression optimale
-2. Chaque exercice inclut une base de données d'exemple et des instructions détaillées
-3. Testez vos requêtes au fur et à mesure pour vérifier votre compréhension
-4. N'hésitez pas à revenir sur les concepts précédents si nécessaire
-5. Consultez la [documentation de connexion aux bases de données](https://documentation.unistra.fr/DNUM/Pedagogie/MAI_VIE/co/connexionApplicationBdD.html) pour résoudre les problèmes techniques
 
-Bon apprentissage ! 🎯
+FOR LATER [documentation de connexion aux bases de données](https://documentation.unistra.fr/DNUM/Pedagogie/MAI_VIE/co/connexionApplicationBdD.html) 

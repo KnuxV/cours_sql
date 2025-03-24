@@ -10,24 +10,51 @@ theme:
 
 nav:
   - Home: index.md
+  - Cours 0:
+      - Introduction: cours0/index.md 
   - Cours 1:
       - Introduction: cours1/index.md
       - Cyberchase: cours1/cyberchase/instructions.md
       - Normals: cours1/normals/instructions.md
       - Players: cours1/players/instructions.md
       - Views: cours1/views/instructions.md
+      - Old Index: cours1/index_old.md  # Added missing page
+
   - Cours 2:
       - Introduction: cours2/index.md
       - Dese: cours2/dese/instructions.md
       - Moneyball: cours2/moneyball/instructions.md
       - Packages: cours2/packages/instructions.md
+
   - Cours 3:
       - Introduction: cours3/index.md
       - ATL: cours3/atl/instructions.md
       - Connect: cours3/connect/instructions.md
       - Doghnut: cours3/doghnut/instructions.md
+
   - Cours 4:
       - Introduction: cours4/index.md
       - Don't Panic: cours4/dont-panic/instructions.md
       - Meteorites: cours4/meteorites/instructions.md
-  - Cours 5: cours5/index.md
+
+  - Cours 5:
+      - Introduction: cours5/index.md
+      - BNB: cours5/bnb/instructions.md  # Added missing page
+      - Census: cours5/census/instructions.md  # Added missing page
+      - Private: cours5/private/instructions.md  # Added missing page
+
+  - Cours 6:
+      - Introduction: cours6/index.md  # Added missing page
+      - Harvard: cours6/harvard/instructions.md  # Added missing page
+      - Snap: cours6/snap/instructions.md  # Added missing page
+
+  - Cours 7:
+      - Introduction: cours7/index.md  # Added missing page
+      - Index 2: cours7/index2.md  # Added missing page
+      - Deep Answers: cours7/deep/answers.md  # Added missing page
+      - Deep Instructions: cours7/deep/instructions.md  # Added missing page
+      - Don't Panic Python: cours7/dont-panic-python/instructions.md  # Added missing page
+      - LinkedIn: cours7/linkedin/instructions.md  # Added missing page
+
+  - SQLite Python:
+      - Introduction: sqlite_python/index.md  # Added missing page
