@@ -1,6 +1,6 @@
 site_name: Cours SQL
 theme:
-  name: mkdocs   # Uses a nice, modern theme
+  name: material   # Uses a nice, modern theme
   features:
     - navigation.tabs
     - navigation.top
