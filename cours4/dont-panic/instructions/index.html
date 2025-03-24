@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1626,92 +1628,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à Résoudre
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Demo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schéma
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spécification">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#indices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Indices
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utilisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisation
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1721,9 +1637,9 @@
 
 
 
-<h1 id="dont-panic-ne-paniquez-pas-version-originale"><a href="https://cs50.harvard.edu/sql/2024/psets/3/dont-panic/">Don't Panic</a> // Ne Paniquez Pas ! (<a href="https://cs50.harvard.edu/sql/2024/psets/3/dont-panic/">Version originale</a>)</h1>
+<h1 id="dont-panic-ne-paniquez-pas-version-originale"><a href="https://cs50.harvard.edu/sql/2024/psets/3/dont-panic/">Don't Panic</a> // Ne Paniquez Pas ! (<a href="https://cs50.harvard.edu/sql/2024/psets/3/dont-panic/">Version originale</a>)<a class="headerlink" href="#dont-panic-ne-paniquez-pas-version-originale" title="Permanent link">&para;</a></h1>
 <p><img alt="Un seul ordinateur de bureau posé sur un bureau dans un bureau vide la nuit, dans le style d'un roman noir" src="https://cs50.harvard.edu/sql/2024/psets/3/dont-panic/dont-panic-glitch.png" /> "Un seul ordinateur de bureau posé sur un bureau dans un bureau vide la nuit, dans le style d'un roman noir", généré par <a href="https://openai.com/dall-e-2">DALL·E 2</a></p>
-<h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
 <p>Vous êtes un "pentester" (testeur d'intrusion) entraîné. Les entreprises vous engagent souvent pour effectuer des tests de pénétration et signaler les vulnérabilités dans leurs systèmes de données. Il n'y a pas si longtemps, vous avez été engagé par une petite entreprise qui avait besoin de vous pour effectuer un tel test sur une base de données SQLite : celle qui alimente leur site web à faible trafic.</p>
 <p>Pour réussir cette opération secrète, vous devrez :</p>
 <ul>
@@ -1732,12 +1648,12 @@
 <li>Ajouter de fausses données pour détourner l'attention de l'entreprise.</li>
 </ul>
 <p>Et maintenant, une opportunité en or se présente : vous vous êtes faufilé dans les locaux de l'entreprise, juste à temps pour voir un ingénieur logiciel quitter son bureau. La connexion de l'ingénieur à la base de données est toujours ouverte. Vous estimez avoir 5 minutes avant qu'il ne revienne. Prêt ?</p>
-<h2 id="demo">Demo</h2>
+<h2 id="demo">Demo<a class="headerlink" href="#demo" title="Permanent link">&para;</a></h2>
 <p><img alt="image-20250224182119613" src="/home/kevin-desktop/.config/Typora/typora-user-images/image-20250224182119613.png" /></p>
 <p>Vous avez une base de données nommée <code>dont-panic.db</code> à côté d'un fichier <code>hack.sql</code> et <code>reset.sql</code>. L'exécution de <code>sqlite3 dont-panic.db</code> devrait ouvrir la base de données.</p>
-<h2 id="schema">Schéma</h2>
+<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
 <p>Désolé, il n'y a pas beaucoup de temps pour expliquer le schéma de la base de données. N'oubliez pas que vous pouvez accéder au schéma d'une base de données SQLite avec <code>.schema</code>.</p>
-<h2 id="specification">Spécification</h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <p>Dans <code>hack.sql</code>, écrivez une séquence d'instructions SQL pour réaliser ce qui suit :</p>
 <ul>
 <li>Modifier le mot de passe du compte administratif du site web, <code>admin</code>, pour qu'il soit "oops!".</li>
@@ -1747,7 +1663,7 @@
 <p>Lorsque vos instructions SQL dans <code>hack.sql</code> sont exécutées sur une nouvelle instance de la base de données, elles doivent produire les résultats ci-dessus. Sachez simplement que l'ordre dans lequel ces objectifs sont présentés n'est peut-être pas l'ordre dans lequel ils sont le mieux accomplis !</p>
 <p>Gardez également à l'esprit que les mots de passe ne sont généralement pas stockés "en clair" - c'est-à-dire sous forme de caractères simples qui composent le mot de passe. Au lieu de cela, ils sont "hachés" (hashés), ou brouillés, pour préserver la confidentialité. Étant donné cette réalité, vous devrez vous assurer que le mot de passe auquel vous changez le mot de passe administratif est également haché. Heureusement, vous savez que les mots de passe de la table <code>users</code> sont déjà stockés sous forme de hachages MD5. Vous pouvez générer rapidement de tels hachages à partir de texte brut sur md5hashgenerator.com.</p>
 <p>L'horloge tourne !</p>
-<h3 id="indices">Indices</h3>
+<h3 id="indices">Indices<a class="headerlink" href="#indices" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Rappelez-vous que vous pouvez <code>INSERT</code> (insérer) dans une table les lignes retournées par une instruction <code>SELECT</code>, tant que le nombre de colonnes correspond.</li>
 <li>Vous pouvez créer une sous-requête à tout moment dans une instruction SQL, pas seulement dans le cadre d'une clause <code>WHERE</code>. Par exemple, considérez la requête SQL suivante sur une table <code>user_logs</code> simplifiée :</li>
@@ -1760,7 +1676,7 @@ SELECT 'update', (
 );
 </code></pre>
 <p>La requête ci-dessus insérera une nouvelle ligne dans la table <code>user_logs</code>. La colonne <code>type</code> aura la valeur "update" et la colonne <code>password</code> aura le mot de passe actuel de l'utilisateur <code>carter</code>.</p>
-<h2 id="utilisation">Utilisation</h2>
+<h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
 <p>Pour tester votre piratage au fur et à mesure que vous l'écrivez dans vos fichiers <code>hack.sql</code>, vous pouvez interroger la base de données en exécutant</p>
 <pre><code>.read hack.sql
 </code></pre>
@@ -1820,7 +1736,7 @@ SELECT 'update', (
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

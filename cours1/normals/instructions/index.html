@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1629,95 +1631,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#demonstration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Démonstration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à Résoudre
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schéma
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utilisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comment-tester" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comment Tester
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remerciements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remerciements
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1727,18 +1640,18 @@
 
 
 
-<h1 id="normals">Normals</h1>
+<h1 id="normals">Normals<a class="headerlink" href="#normals" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>À la suite d'un nouveau record annuel de chaleur établi en 2022 — le dernier d'une série d'années records — les températures moyennes de la surface des océans dans le monde ont augmenté depuis début mars. En excluant les régions polaires, elles sont environ deux dixièmes de degré Celsius plus chaudes que ce que les scientifiques ont jamais observé à cette période de l'année via les données satellites.</p>
 <p>The Washington Post, 28 avril 2023</p>
 </blockquote>
-<h2 id="demonstration">Démonstration</h2>
+<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
 <pre><code class="language-sqlite">$ sqlite3 normals.db                                                     sqlite&gt; .tables                                                         normals                                                                 sqlite&gt; SELECT &quot;latitude&quot;, &quot;longitude&quot;, &quot;0m&quot;, &quot;250m&quot;, &quot;500m&quot; FROM &quot;normals&quot;  
 </code></pre>
-<h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
 <p>Comment savons-nous si les températures des océans sont plus basses ou plus élevées que la "normale" ? Qu'est-ce qu'une température "normale" ? Il s'avère que les scientifiques ont développé une métrique appelée "Climate Normal". Une Climate Normal caractérise les aspects du climat terrestre — ses conditions météorologiques à long terme — sur une période de 30 ans. Une métrique importante est la température des océans.</p>
 <p>Dans une base de données appelée <code>normals.db</code>, en utilisant une table appelée <code>normals</code>, explorez certaines des données les plus récentes de Climate Normal pour comprendre ce qui constitue une température océanique normale dans le monde.</p>
-<h2 id="schema">Schéma</h2>
+<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
 <p>Les données dans <code>normals.db</code> peuvent être visualisées comme suit :</p>
 <p><img alt="Figure des Normales Climatiques" src="https://cs50.harvard.edu/sql/2024/psets/0/normals/normals.jpg" /></p>
 <p>Remarquez que la Terre est divisée en une grille de coordonnées — des points qui peuvent identifier presque n'importe quel endroit sur Terre. Chaque coordonnée est une combinaison de latitude et de longitude. Et remarquez comment chaque coordonnée au-dessus d'un océan a une certaine température normale de la surface de l'océan qui lui est associée !</p>
@@ -1753,7 +1666,7 @@
 </ul>
 <p>Et les observations continuent jusqu'à <code>5500m</code>, ou 5500 mètres de profondeur, pour certaines coordonnées !</p>
 <p>Puisque <code>normals</code> est une table large, si vous voulez prévisualiser le contenu, envisagez de <code>SELECT</code>ionner uniquement les colonnes <code>latitude</code>, <code>longitude</code>, et quelques colonnes de profondeur.</p>
-<h2 id="specification">Spécification</h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <p>Pour chacune des questions suivantes, vous devez écrire une seule requête SQL qui produit les résultats spécifiés par chaque problème. Votre réponse doit prendre la forme d'une seule requête SQL. Vous ne devez pas faire d'hypothèses sur les <code>id</code>s de certaines observations : vos requêtes doivent être exactes même si l'<code>id</code> d'une observation particulière était différent. Enfin, chaque requête doit retourner uniquement les données nécessaires pour répondre à la question.</p>
 <ol>
 <li>Dans <code>1.sql</code>, écrivez une requête SQL pour trouver la température normale de la surface de l'océan dans le Golfe du Maine, au large des côtes du Massachusetts. Pour trouver cette température, regardez les données associées à 42,5° de latitude et -69,5° de longitude.</li>
@@ -1774,7 +1687,7 @@
 <li>Dans <code>9.sql</code>, écrivez une requête SQL pour trouver les 10 endroits avec la température normale de la surface de l'océan la plus élevée, triés du plus chaud au plus froid. Si deux endroits ont la même température normale de la surface de l'océan, triez par latitude, de la plus petite à la plus grande. Incluez les colonnes latitude, longitude, et température de surface.</li>
 <li>Il y a 180 degrés entiers de latitude. Dans <code>10.sql</code>, écrivez une requête SQL pour déterminer combien de points de latitude nous avons au moins un point de donnée. (Pourquoi pourrions-nous ne pas avoir de points de données pour toutes les latitudes ?)</li>
 </ol>
-<h2 id="utilisation">Utilisation</h2>
+<h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
 <p>Pour tester vos requêtes au fur et à mesure que vous les écrivez dans vos fichiers <code>.sql</code>, vous pouvez interroger la base de données en exécutant</p>
 <pre><code>.read FILENAME
 </code></pre>
@@ -1785,7 +1698,7 @@
 <pre><code>$ cat FILENAME | sqlite3 normals.db &gt; output.txt
 </code></pre>
 <p>pour rediriger la sortie de la requête vers un fichier texte appelé <code>output.txt</code>. (Cela peut être utile pour vérifier combien de lignes sont retournées par votre requête !)</p>
-<h2 id="comment-tester">Comment Tester</h2>
+<h2 id="comment-tester">Comment Tester<a class="headerlink" href="#comment-tester" title="Permanent link">&para;</a></h2>
 <ul>
 <li>L'exécution de <code>1.sql</code> produit une table avec 1 colonne et 1 ligne.</li>
 <li>L'exécution de <code>2.sql</code> produit une table avec 1 colonne et 1 ligne.</li>
@@ -1799,7 +1712,7 @@
 <li>L'exécution de <code>10.sql</code> produit une table avec 1 colonne et 1 ligne.</li>
 </ul>
 <p>Notez que les comptes de lignes n'incluent pas les lignes d'en-tête qui ne montrent que les noms de colonnes.</p>
-<h2 id="remerciements">Remerciements</h2>
+<h2 id="remerciements">Remerciements<a class="headerlink" href="#remerciements" title="Permanent link">&para;</a></h2>
 <p>Données extraites du World Ocean Atlas 2023, disponibles publiquement auprès de la National Oceanic and Atmospheric Administration (NOAA).</p>
 
 
@@ -1853,7 +1766,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

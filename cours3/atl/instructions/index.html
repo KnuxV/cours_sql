@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1659,125 +1661,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à Résoudre
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spécification">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exigences" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exigences
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exigences">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#passagers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Passagers
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enregistrements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enregistrements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compagnies-aeriennes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compagnies Aériennes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vols" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vols
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#donnees-dechantillon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Données d'Échantillon
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utilisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisation
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1787,9 +1670,9 @@
 
 
 
-<h1 id="atl">ATL</h1>
+<h1 id="atl">ATL<a class="headerlink" href="#atl" title="Permanent link">&para;</a></h1>
 <p><img alt="Vue aérienne de l'aéroport international Hartsfield-Jackson" src="https://cs50.harvard.edu/sql/2024/psets/2/atl/atl.jpeg" /></p>
-<h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
 <p>L'aéroport international Hartsfield-Jackson, plus connu sous le nom de "ATL" pour son code IATA, est le plus fréquenté au monde depuis 1998. Situé à Atlanta, en Géorgie, aux États-Unis, ATL a desservi 93,7 millions de passagers en 2022. </p>
 <p>Imaginons que vous venez d'être embauché pour aider ATL à restructurer leur système de base de données. Dans un fichier nommé <code>schema.sql</code> dans un dossier appelé <code>atl</code>, écrivez un ensemble d'instructions SQL pour concevoir une base de données permettant à Hartsfield-Jackson de suivre ses passagers et leurs vols.</p>
 <p>Tapez ce qui suit dans votre terminal :</p>
@@ -1804,15 +1687,15 @@
 </code></pre>
 <p>pour créer un fichier <code>schema.sql</code> vierge.</p>
 <p>Pour vous souvenir de <code>mkdir</code> à l'avenir, rappelez-vous que <code>mkdir</code> signifie "make directory" !</p>
-<h2 id="specification">Spécification</h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <p>Votre tâche est de créer une base de données SQLite pour ATL à partir de zéro, en écrivant un ensemble d'instructions <code>CREATE TABLE</code> dans un fichier <code>schema.sql</code>. Les détails de mise en œuvre dépendent de vous, bien que vous devriez au minimum vous assurer que votre base de données répond aux exigences de l'aéroport et qu'elle peut représenter les données d'échantillon fournies.</p>
-<h3 id="exigences">Exigences</h3>
+<h3 id="exigences">Exigences<a class="headerlink" href="#exigences" title="Permanent link">&para;</a></h3>
 <p>Pour comprendre les exigences d'ATL pour leur base de données, vous vous êtes assis pour discuter avec l'Assistant General Manager for IT Operations.</p>
-<h4 id="passagers">Passagers</h4>
+<h4 id="passagers">Passagers<a class="headerlink" href="#passagers" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p>En ce qui concerne nos passagers, nous devons juste avoir les informations essentielles : le prénom, le nom de famille et l'âge. C'est tout ce que nous devons savoir — rien de plus.</p>
 </blockquote>
-<h4 id="enregistrements">Enregistrements</h4>
+<h4 id="enregistrements">Enregistrements<a class="headerlink" href="#enregistrements" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p>Lorsque les passagers arrivent à ATL, ils "s'enregistrent" souvent pour leurs vols. C'est leur façon de nous dire qu'ils sont là et prêts à embarquer. Nous aimerions garder une trace de ces moments. Et de quoi avons-nous besoin pour cela, demandez-vous ? Eh bien, voici ce dont nous avons besoin :</p>
 <ul>
@@ -1820,7 +1703,7 @@
 <li>Le vol pour lequel ils s'enregistrent, bien sûr. On ne peut pas perdre de vue où ils se dirigent, n'est-ce pas ?</li>
 </ul>
 </blockquote>
-<h4 id="compagnies-aeriennes">Compagnies Aériennes</h4>
+<h4 id="compagnies-aeriennes">Compagnies Aériennes<a class="headerlink" href="#compagnies-aeriennes" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p>ATL est un hub pour de nombreuses compagnies aériennes nationales et internationales : des noms comme Delta, British Airways, Air France, Korean Air, et Turkish Airlines. La liste est longue. Voici ce que nous suivons :</p>
 <ul>
@@ -1828,7 +1711,7 @@
 <li>La "jetée" ou, devrais-je dire, la section de notre aéroport où la compagnie aérienne opère. Nous avons 7 jetées : A, B, C, D, E, F, et T.</li>
 </ul>
 </blockquote>
-<h4 id="vols">Vols</h4>
+<h4 id="vols">Vols<a class="headerlink" href="#vols" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p>Nous desservons jusqu'à 1 000 vols par jour. Pour nous assurer que nos passagers ne se posent jamais de questions, nous devons leur fournir tous les détails critiques sur leur vol. Voici ce que nous aimerions stocker :</p>
 <ul>
@@ -1840,7 +1723,7 @@
 <li>La date et l'heure d'arrivée prévues, avec la même précision</li>
 </ul>
 </blockquote>
-<h3 id="donnees-dechantillon">Données d'Échantillon</h3>
+<h3 id="donnees-dechantillon">Données d'Échantillon<a class="headerlink" href="#donnees-dechantillon" title="Permanent link">&para;</a></h3>
 <p>Votre base de données doit pouvoir représenter...</p>
 <ul>
 <li>Un passager, Amelia Earhart, âgée de 39 ans</li>
@@ -1848,7 +1731,7 @@
 <li>Un vol, Delta Flight 300, qui est prévu de partir d'ATL le 3 août 2023 à 18h46 et d'arriver à BOS le 3 août 2023 à 21h09</li>
 <li>Un enregistrement pour Amelia Earhart, pour le vol Delta 300, le 3 août 2023 à 15h03</li>
 </ul>
-<h2 id="utilisation">Utilisation</h2>
+<h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
 <p>Pour créer une base de données à partir de votre schéma, dans votre dossier <code>atl</code>, tapez</p>
 <pre><code>sqlite3 atl.db
 </code></pre>
@@ -1910,7 +1793,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

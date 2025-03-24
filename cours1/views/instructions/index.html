@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1640,108 +1642,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#demonstration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Démonstration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à Résoudre
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Problème à Résoudre">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#curieux-den-savoir-plus-sur-la-couleur-moyenne-la-luminosite-le-contraste-ou-lentropie" class="md-nav__link">
-    <span class="md-ellipsis">
-      Curieux d'en savoir plus sur la couleur moyenne, la luminosité, le contraste ou l'entropie ?
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#distribution-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Distribution Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schéma
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utilisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comment-tester" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comment Tester
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1755,22 +1655,22 @@
 
 <p><img alt="Beau Temps, Matin Clair" src="https://cs50.harvard.edu/sql/2024/psets/0/views/2.jpeg" />
 Beau Temps, Matin Clair par Katsushika Hokusai</p>
-<h2 id="demonstration">Démonstration</h2>
+<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
 <pre><code class="language-sql">$ sqlite3 views.db                                                       sqlite&gt; .tables                                                         views                                                                   sqlite&gt; SELECT &quot;english_title&quot;, &quot;artist&quot; FROM &quot;views&quot;;  
 </code></pre>
-<h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
 <p>De 1830 à 1832, l'artiste japonais Katsushika Hokusai a créé 36 estampes représentant 36 vues différentes du Mont Fuji, un volcan sur l'île de Honshū au Japon. Parmi les œuvres les plus célèbres de la série figurent Beau Temps, Matin Clair et La Grande Vague de Kanagawa. Les estampes sont devenues si influentes qu'un autre artiste japonais de l'époque, Utagawa Hiroshige, a créé sa propre série de 36 estampes, chacune représentant une nouvelle vue du Fuji.</p>
 <p>Dans <code>views.db</code>, vous trouverez des détails sur les 36 estampes créées respectivement par Hokusai et Hiroshige. Au total, vous disposerez de données sur 72 estampes. Bien que ces estampes soient généralement appréciées pour leur esthétique, la science informatique permet désormais de fournir des informations numériques supplémentaires sur les œuvres d'art. En plus du titre et de l'auteur de chaque estampe, vous trouverez des statistiques couramment utilisées dans l'analyse computationnelle des images : la couleur moyenne, la luminosité, le contraste et l'entropie. Dans les fichiers <code>.sql</code> fournis, écrivez des requêtes SQL pour répondre à des questions sur cette base de données de 72 estampes et les statistiques sur leur composition.</p>
-<h3 id="curieux-den-savoir-plus-sur-la-couleur-moyenne-la-luminosite-le-contraste-ou-lentropie">Curieux d'en savoir plus sur la couleur moyenne, la luminosité, le contraste ou l'entropie ?</h3>
+<h3 id="curieux-den-savoir-plus-sur-la-couleur-moyenne-la-luminosite-le-contraste-ou-lentropie">Curieux d'en savoir plus sur la couleur moyenne, la luminosité, le contraste ou l'entropie ?<a class="headerlink" href="#curieux-den-savoir-plus-sur-la-couleur-moyenne-la-luminosite-le-contraste-ou-lentropie" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Couleur moyenne</strong> : La couleur obtenue en additionnant les valeurs des canaux rouge, vert et bleu de chaque pixel, puis en divisant chaque somme par le nombre de pixels dans l'image.</li>
 <li><strong>Luminosité</strong> : Définie comme la clarté ou l'obscurité d'une image, sur une échelle de 0 à 1. Une image blanche mesurerait 1, tandis qu'une image noire mesurerait 0.</li>
 <li><strong>Contraste</strong> : Défini comme l'étendue des différences de luminosité dans une image, sur une échelle de 0 à 1. Un contraste plus élevé (différences de luminosité plus importantes) permet aux objets de se démarquer. Un contraste plus faible (différences de luminosité plus faibles) signifie que les objets ne se démarquent pas autant.</li>
 <li><strong>Entropie</strong> : Une mesure de l'aléatoire d'une image, souvent utilisée pour caractériser la complexité d'une œuvre d'art. Une entropie de 10 est assez élevée, tandis qu'une entropie de 0 est très faible.</li>
 </ul>
-<h2 id="distribution-code">Distribution Code</h2>
+<h2 id="distribution-code">Distribution Code<a class="headerlink" href="#distribution-code" title="Permanent link">&para;</a></h2>
 <p>Pour ce problème, vous devrez accéder à <code>views.db</code>, ainsi que plusieurs fichiers <code>.sql</code> dans lesquels vous écrirez vos requêtes.</p>
-<h2 id="schema">Schéma</h2>
+<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
 <p>Dans <code>views.db</code>, vous trouverez une seule table, <code>views</code>. Dans la table <code>views</code>, vous trouverez les colonnes suivantes :</p>
 <ul>
 <li><code>id</code> : Identifie de manière unique chaque ligne (estampe) de la table.</li>
@@ -1783,7 +1683,7 @@ Beau Temps, Matin Clair par Katsushika Hokusai</p>
 <li><code>contrast</code> : Un nombre représentant l'étendue de la différence entre les zones claires et sombres de l'image.</li>
 <li><code>entropy</code> : Une mesure utilisée pour quantifier la complexité de l'œuvre d'art.</li>
 </ul>
-<h2 id="specification">Spécification</h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <p>Pour chacune des questions suivantes, vous devez écrire une seule requête SQL qui produit les résultats spécifiés par chaque problème. Votre réponse doit prendre la forme d'une seule requête SQL. Vous ne devez pas faire d'hypothèses sur les <code>id</code> de certaines observations : vos requêtes doivent être exactes même si l'<code>id</code> d'une observation particulière était différent. Enfin, chaque requête doit retourner uniquement les données nécessaires pour répondre à la question.</p>
 <ol>
 <li>Dans <code>1.sql</code>, écrivez une requête SQL qui pourrait intéresser un traducteur : listez, côte à côte, le titre japonais et le titre anglais de chaque estampe. Assurez-vous que le titre japonais est la première colonne, suivi du titre anglais.</li>
@@ -1802,7 +1702,7 @@ Beau Temps, Matin Clair par Katsushika Hokusai</p>
 </ul>
 </li>
 </ol>
-<h2 id="utilisation">Utilisation</h2>
+<h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
 <p>Pour tester vos requêtes au fur et à mesure que vous les écrivez dans vos fichiers <code>.sql</code>, vous pouvez interroger la base de données en exécutant :</p>
 <pre><code>.read FILENAME
 </code></pre>
@@ -1813,7 +1713,7 @@ Beau Temps, Matin Clair par Katsushika Hokusai</p>
 <pre><code>$ cat FILENAME | sqlite3 views.db &gt; output.txt
 </code></pre>
 <p>pour rediriger la sortie de la requête vers un fichier texte nommé <code>output.txt</code>. (Cela peut être utile pour vérifier combien de lignes sont retournées par votre requête !)</p>
-<h2 id="comment-tester">Comment Tester</h2>
+<h2 id="comment-tester">Comment Tester<a class="headerlink" href="#comment-tester" title="Permanent link">&para;</a></h2>
 <ul>
 <li>L'exécution de <code>1.sql</code> produit une table avec 2 colonnes et 72 lignes.</li>
 <li>L'exécution de <code>2.sql</code> produit une table avec 1 colonne et 3 lignes.</li>
@@ -1879,7 +1779,7 @@ Beau Temps, Matin Clair par Katsushika Hokusai</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

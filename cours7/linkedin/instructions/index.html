@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1697,165 +1699,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à Résoudre
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spécification">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#plateforme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plateforme
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Plateforme">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#utilisateurs-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisateurs (Users)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ecoles-et-universites-schools-and-universities" class="md-nav__link">
-    <span class="md-ellipsis">
-      Écoles et Universités (Schools and Universities)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#entreprises-companies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entreprises (Companies)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#connexions-connections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connexions (Connections)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#donnees-dexemple-sample-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Données d'Exemple (Sample Data)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conseils-advice" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conseils (Advice)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utilisation-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisation (Usage)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comment-tester-how-to-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comment Tester (How to Test)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Comment Tester (How to Test)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#correction-correctness" class="md-nav__link">
-    <span class="md-ellipsis">
-      Correction (Correctness)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#depannage-troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dépannage (Troubleshooting)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1869,16 +1712,16 @@
 
 <p><a href="https://cs50.harvard.edu/sql/2024/psets/6/connect/"># Happy to Connect</a></p>
 <p><img alt="Logo LinkedIn" src="https://cs50.harvard.edu/sql/2024/psets/6/connect/linkedin.png" /></p>
-<h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
 <p>Vous vous souvenez peut-être d'un <a href="https://cs50.harvard.edu/sql/2024/psets/2/connect/">problème précédent</a> 
 où LinkedIn est « le plus grand réseau professionnel au monde » avec pour mission de « connecter les professionnels 
 du monde entier pour les rendre plus productifs et couronnés de succès ». 
 Il est donc probable qu'ils utilisent des serveurs de bases de données complets pour garantir que leur plateforme est <a href="https://www.digitalocean.com/community/tutorials/what-is-high-availability">hautement disponible</a> dans le monde entier.</p>
 <p>Dans un fichier nommé <code>schema.sql</code> dans un dossier nommé <code>sentimental-connect</code>, écrivez un ensemble d'instructions SQL pour concevoir un schéma de base de données MySQL que LinkedIn pourrait utiliser.</p>
-<h2 id="specification">Spécification</h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <p>Votre tâche consiste à créer une base de données MySQL pour LinkedIn à partir de zéro. Les détails de mise en œuvre dépendent de vous, bien que vous deviez au minimum vous assurer que votre base de données répond aux spécifications de la plateforme et qu'elle peut représenter les données d'exemple données. Vous êtes invité à utiliser ou à améliorer votre conception d'une base de données SQLite — gardez simplement à l'esprit que vous disposez désormais d'un nouvel ensemble de types !</p>
-<h3 id="plateforme">Plateforme</h3>
-<h4 id="utilisateurs-users">Utilisateurs (Users)</h4>
+<h3 id="plateforme">Plateforme<a class="headerlink" href="#plateforme" title="Permanent link">&para;</a></h3>
+<h4 id="utilisateurs-users">Utilisateurs (Users)<a class="headerlink" href="#utilisateurs-users" title="Permanent link">&para;</a></h4>
 <p>Le cœur de la plateforme LinkedIn est ses utilisateurs. Votre base de données doit pouvoir représenter les informations suivantes concernant les utilisateurs de LinkedIn :</p>
 <ul>
 <li>Leur prénom et nom de famille (first and last name)</li>
@@ -1886,7 +1729,7 @@ Il est donc probable qu'ils utilisent des serveurs de bases de données complets
 <li>Leur mot de passe (password)</li>
 </ul>
 <p>Gardez à l'esprit que, si une entreprise suit les meilleures pratiques, les mots de passe des applications sont « hachés » (hashed). Pas besoin de vous inquiéter du hachage des mots de passe ici, bien qu'il puisse être utile de savoir que certains algorithmes de hachage peuvent produire des chaînes de jusqu'à 128 caractères.</p>
-<h4 id="ecoles-et-universites-schools-and-universities">Écoles et Universités (Schools and Universities)</h4>
+<h4 id="ecoles-et-universites-schools-and-universities">Écoles et Universités (Schools and Universities)<a class="headerlink" href="#ecoles-et-universites-schools-and-universities" title="Permanent link">&para;</a></h4>
 <p>LinkedIn permet également des comptes officiels d'écoles ou d'universités, comme celui de Harvard, afin que les anciens élèves (c'est-à-dire ceux qui ont fréquenté l'établissement) puissent identifier leur affiliation. Assurez-vous que la base de données de LinkedIn peut stocker les informations suivantes sur chaque école :</p>
 <ul>
 <li>Le nom de l'école (name of the school)</li>
@@ -1895,7 +1738,7 @@ Il est donc probable qu'ils utilisent des serveurs de bases de données complets
 <li>L'année de fondation de l'école (year in which the school was founded)</li>
 </ul>
 <p>Vous devez supposer que LinkedIn ne permet aux écoles de choisir qu'un seul des trois types suivants : « Primaire » (Primary), « Secondaire » (Secondary) et « Enseignement Supérieur » (Higher Education).</p>
-<h4 id="entreprises-companies">Entreprises (Companies)</h4>
+<h4 id="entreprises-companies">Entreprises (Companies)<a class="headerlink" href="#entreprises-companies" title="Permanent link">&para;</a></h4>
 <p>LinkedIn permet aux entreprises de créer leurs propres pages, comme celle de LinkedIn elle-même, afin que les employés puissent identifier leur emploi passé ou actuel avec l'entreprise. Assurez-vous que la base de données de LinkedIn peut stocker les informations suivantes pour chaque entreprise :</p>
 <ul>
 <li>Le nom de l'entreprise (name of the company)</li>
@@ -1903,7 +1746,7 @@ Il est donc probable qu'ils utilisent des serveurs de bases de données complets
 <li>L'emplacement de l'entreprise (company’s location)</li>
 </ul>
 <p>Vous devez supposer que LinkedIn ne permet aux entreprises de choisir qu'un seul des trois secteurs suivants : « Technologie » (Technology), « Éducation » (Education) et « Commerce » (Business).</p>
-<h4 id="connexions-connections">Connexions (Connections)</h4>
+<h4 id="connexions-connections">Connexions (Connections)<a class="headerlink" href="#connexions-connections" title="Permanent link">&para;</a></h4>
 <p>Enfin, l'essence de LinkedIn est sa capacité à faciliter les connexions entre les personnes. Assurez-vous que la base de données de LinkedIn peut prendre en charge chacune des connexions suivantes.</p>
 <p><strong>Connexions avec des Personnes (Connections with People)</strong></p>
 <p>La base de données de LinkedIn doit pouvoir représenter des connexions mutuelles (réciproques, bidirectionnelles) entre les utilisateurs. Pas besoin de s'inquiéter des connexions unidirectionnelles où l'utilisateur A « suit » (follows) l'utilisateur B sans que l'utilisateur B « suive » l'utilisateur A.</p>
@@ -1920,7 +1763,7 @@ Il est donc probable qu'ils utilisent des serveurs de bases de données complets
 <li>La date de début de leur affiliation (c'est-à-dire, la date à laquelle ils ont commencé à travailler avec l'entreprise) (start date of their affiliation)</li>
 <li>La date de fin de leur affiliation (c'est-à-dire, quand ils ont quitté l'entreprise), le cas échéant (end date of their affiliation, if applicable)</li>
 </ul>
-<h3 id="donnees-dexemple-sample-data">Données d'Exemple (Sample Data)</h3>
+<h3 id="donnees-dexemple-sample-data">Données d'Exemple (Sample Data)<a class="headerlink" href="#donnees-dexemple-sample-data" title="Permanent link">&para;</a></h3>
 <p>Votre base de données doit pouvoir représenter…</p>
 <ul>
 <li>Un utilisateur, Claudine Gay, dont le nom d'utilisateur est « claudine » et le mot de passe est « password ».</li>
@@ -1930,7 +1773,7 @@ Il est donc probable qu'ils utilisent des serveurs de bases de données complets
 <li>La connexion de Claudine Gay avec Harvard, poursuivant un doctorat du 1er janvier 1993 au 31 décembre 1998.</li>
 <li>La connexion de Reid Hoffman avec LinkedIn, avec le titre « CEO and Chairman », du 1er janvier 2003 au 1er février 2007.</li>
 </ul>
-<h3 id="conseils-advice">Conseils (Advice)</h3>
+<h3 id="conseils-advice">Conseils (Advice)<a class="headerlink" href="#conseils-advice" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Considérez toute la gamme des types pris en charge par MySQL, qui sont documentés dans le manuel de référence MySQL 8.0 à l'adresse dev.mysql.com/doc/refman/8.0/en/data-types.html.</li>
 <li>Considérez également les conseils du manuel de référence sur le choix du bon type pour une colonne, documentés à l'adresse dev.mysql.com/doc/refman/8.0/en/choosing-types.html.<ul>
@@ -1938,7 +1781,7 @@ Il est donc probable qu'ils utilisent des serveurs de bases de données complets
 </ul>
 </li>
 </ul>
-<h2 id="utilisation-usage">Utilisation (Usage)</h2>
+<h2 id="utilisation-usage">Utilisation (Usage)<a class="headerlink" href="#utilisation-usage" title="Permanent link">&para;</a></h2>
 <p>Pour utiliser <code>mysql</code>, vous devez d'abord démarrer un serveur MySQL, comme suit :</p>
 <pre><code class="language-bash">docker container run --name mysql -p 3306:3306 -v /workspaces/$RepositoryName:/mnt -e MYSQL_ROOT_PASSWORD=crimson -d mysql
 </code></pre>
@@ -1953,12 +1796,12 @@ Il est donc probable qu'ils utilisent des serveurs de bases de données complets
 <pre><code class="language-sql">USE `linkedin`;
 </code></pre>
 <p>Maintenant, rappelez-vous d'autres instructions MySQL du cours qui pourraient vous aider à naviguer ! Vous pouvez toujours taper <code>quit</code> pour fermer votre connexion à la base de données MySQL.</p>
-<h2 id="comment-tester-how-to-test">Comment Tester (How to Test)</h2>
+<h2 id="comment-tester-how-to-test">Comment Tester (How to Test)<a class="headerlink" href="#comment-tester-how-to-test" title="Permanent link">&para;</a></h2>
 <p>Bien que <code>check50</code> existe pour ce problème, seul vous pouvez vous assurer que votre base de données répond aux spécifications de la plateforme et qu'elle peut stocker les données d'exemple de manière efficace. Considérez si votre base de données est entièrement normalisée !</p>
-<h3 id="correction-correctness">Correction (Correctness)</h3>
+<h3 id="correction-correctness">Correction (Correctness)<a class="headerlink" href="#correction-correctness" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">check50 cs50/problems/2024/sql/sentimental/connect
 </code></pre>
-<h3 id="depannage-troubleshooting">Dépannage (Troubleshooting)</h3>
+<h3 id="depannage-troubleshooting">Dépannage (Troubleshooting)<a class="headerlink" href="#depannage-troubleshooting" title="Permanent link">&para;</a></h3>
 <p>Parfois, vous pouvez rencontrer cette erreur lorsque vous essayez de vous connecter à votre base de données MySQL après un redémarrage de Codespace :</p>
 <pre><code class="language-bash">ERROR 2003 (HY000): Can't connect to MySQL server on '127.0.0.1:3306' (111)
 </code></pre>
@@ -2017,7 +1860,7 @@ Il est donc probable qu'ils utilisent des serveurs de bases de données complets
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

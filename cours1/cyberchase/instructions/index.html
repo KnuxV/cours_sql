@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1634,102 +1636,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cyberchase" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cyberchase
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à Résoudre
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demonstration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Démonstration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-de-distribution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code de Distribution
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schéma
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utilisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comment-tester" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comment Tester
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1741,18 +1647,18 @@
 
   <h1>Cyberchase</h1>
 
-<h2 id="cyberchase"><a href="https://cs50.harvard.edu/sql/2024/psets/0/cyberchase/#cyberchase">Cyberchase</a></h2>
+<h2 id="cyberchase"><a href="https://cs50.harvard.edu/sql/2024/psets/0/cyberchase/#cyberchase">Cyberchase</a><a class="headerlink" href="#cyberchase" title="Permanent link">&para;</a></h2>
 <p><img alt="cyb_img" src="https://cs50.harvard.edu/sql/2024/psets/0/cyberchase/cyberchase.jpg" /></p>
-<h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
 <p>Bienvenue dans le Cyberespace ! Cyberchase est une série télévisée animée et éducative pour enfants, diffusée par le Public Broadcasting Service (PBS) des États-Unis depuis 2002. Conçue à l'origine pour « montrer aux enfants que les mathématiques sont partout et que tout le monde peut être bon en maths », le monde de Cyberchase tourne autour de Jackie, Matt et Inez qui s'associent à Digit, un « cybird », pour empêcher Hacker de prendre le contrôle du Cyberespace et d'infecter la Carte Mère. En chemin, le quatuor apprend des compétences en mathématiques, en sciences et en résolution de problèmes pour contrecarrer les tentatives de Hacker.</p>
 <p>Dans une base de données appelée <code>cyberchase.db</code>, en utilisant une table appelée <code>episodes</code>, trouvez des réponses aux questions de PBS sur les épisodes de Cyberchase jusqu'à présent.</p>
-<h2 id="demonstration">Démonstration</h2>
+<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
 <pre><code class="language-sqlite">sqlite3 cyberchase.db                                                  sqlite&gt; .tables                                                         episodes                                                                 sqlite&gt; SELECT &quot;title&quot; FROM &quot;episodes&quot;      
 </code></pre>
-<h2 id="code-de-distribution">Code de Distribution</h2>
+<h2 id="code-de-distribution">Code de Distribution<a class="headerlink" href="#code-de-distribution" title="Permanent link">&para;</a></h2>
 <p>Pour ce problème, vous devrez utiliser <code>cyberchase.db</code>, ainsi que plusieurs fichiers <code>.sql</code> dans lesquels vous écrirez vos requêtes.</p>
 <p>L'exécution de <code>sqlite3 cyberchase.db</code> devrait ouvrir la base de données dans <code>sqlite3</code>, via laquelle vous exécuterez des requêtes SQL. </p>
-<h2 id="schema">Schéma</h2>
+<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
 <p>Chaque base de données a un certain « schéma » — les tables et colonnes dans lesquelles les données sont organisées. Dans <code>cyberchase.db</code>, vous trouverez une seule table, <code>episodes</code>. Dans la table <code>episodes</code>, vous trouverez les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui identifie de manière unique chaque ligne (épisode) de la table</li>
@@ -1763,7 +1669,7 @@
 <li><code>air_date</code>, qui est la date (exprimée au format <code>AAAA-MM-JJ</code>) à laquelle l'épisode a été « diffusé » (c'est-à-dire publié)</li>
 <li><code>production_code</code>, qui est l'ID unique utilisé par PBS pour faire référence à chaque épisode en interne</li>
 </ul>
-<h2 id="specification">Spécification</h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <p>Pour chacune des questions suivantes, vous devez écrire une seule requête SQL qui produit les résultats spécifiés par chaque problème. Votre réponse doit prendre la forme d'une seule requête SQL. Vous ne devez faire aucune supposition sur les <code>id</code> de certains épisodes : vos requêtes doivent être exactes même si l'<code>id</code> d'un épisode particulier était différent. Enfin, chaque requête doit renvoyer uniquement les données nécessaires pour répondre à la question : si le problème vous demande uniquement de sortir les noms des épisodes, par exemple, votre requête ne doit pas également sortir la date de diffusion de chaque épisode.</p>
 <ol>
 <li>Dans <code>1.sql</code>, écrivez une requête SQL pour lister les titres de tous les épisodes de la saison originale de Cyberchase, la Saison 1.</li>
@@ -1799,7 +1705,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="utilisation">Utilisation</h2>
+<h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
 <p>Pour tester vos requêtes au fur et à mesure que vous les écrivez dans vos fichiers <code>.sql</code>, vous pouvez interroger la base de données en exécutant</p>
 <pre><code>.read FILENAME
 </code></pre>
@@ -1810,7 +1716,7 @@
 <pre><code>$ cat FILENAME | sqlite3 cyberchase.db &gt; output.txt
 </code></pre>
 <p>pour rediriger la sortie de la requête vers un fichier texte nommé <code>output.txt</code>. (Cela peut être utile pour vérifier combien de lignes sont renvoyées par votre requête !)</p>
-<h2 id="comment-tester">Comment Tester</h2>
+<h2 id="comment-tester">Comment Tester<a class="headerlink" href="#comment-tester" title="Permanent link">&para;</a></h2>
 <p>Réponse à la prochaine séance</p>
 <ul>
 <li>L'exécution de <code>1.sql</code> produit une table avec 1 colonne et 26 lignes.</li>
@@ -1880,7 +1786,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

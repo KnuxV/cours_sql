@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1525,102 +1527,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cours-4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cours 4
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema-de-la-base-de-donnees-database-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schéma de la base de données (Database Schema)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autres-contraintes-other-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      Autres contraintes (Other Constraints)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#insertion-de-plusieurs-lignes-inserting-multiple-rows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Insertion de plusieurs lignes (Inserting Multiple Rows)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suppression-de-donnees-deleting-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suppression de données (Deleting Data)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mise-a-jour-de-donnees-updating-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mise à jour de données (Updating Data)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fin
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1632,7 +1538,7 @@
 
   <h1>Introduction</h1>
 
-<h2 id="cours-4"><a href="https://cs50.harvard.edu/sql/2024/notes/3/"><strong>Cours 4</strong></a></h2>
+<h2 id="cours-4"><a href="https://cs50.harvard.edu/sql/2024/notes/3/"><strong>Cours 4</strong></a><a class="headerlink" href="#cours-4" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#schéma-de-la-base-de-données-database-schema">Schéma de la base de données (Database Schema)</a></li>
@@ -1643,14 +1549,14 @@
 <li><a href="#mise-à-jour-de-données-updating-data">Mise à jour de données (Updating Data)</a></li>
 <li><a href="#fin">Fin</a></li>
 </ul>
-<h2 id="introduction"><strong>Introduction</strong></h2>
+<h2 id="introduction"><strong>Introduction</strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Dans le cours précédent, nous avons appris à créer notre propre schéma de base de données. Dans ce cours, nous allons explorer comment ajouter, mettre à jour et supprimer des données dans nos bases de données.</li>
 <li>Le Boston MFA (Museum of Fine Arts) est un musée centenaire à Boston. Le MFA gère une vaste collection d'artefacts et d'œuvres d'art historiques et contemporains. Ils utilisent probablement une base de données pour stocker des informations sur leur art et leurs artefacts.</li>
 <li>Lorsqu'un nouvel artefact est ajouté à leur collection, nous pouvons imaginer qu'ils insèrent les données correspondantes dans leur base de données. De même, il existe des cas d'utilisation où les données peuvent nécessiter d'être lues, mises à jour ou supprimées.</li>
 <li>Nous allons maintenant nous concentrer sur la création (ou l'insertion) de données dans une base de données du Boston MFA.</li>
 </ul>
-<h2 id="schema-de-la-base-de-donnees-database-schema"><strong>Schéma de la base de données (Database Schema)</strong></h2>
+<h2 id="schema-de-la-base-de-donnees-database-schema"><strong>Schéma de la base de données (Database Schema)</strong><a class="headerlink" href="#schema-de-la-base-de-donnees-database-schema" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Considérons ce schéma que le MFA pourrait utiliser pour sa collection.</li>
 </ul>
@@ -1701,7 +1607,7 @@
 <p><code>sql
   SELECT * FROM "collections";</code></p>
 <p>Remarquez que SQLite remplit les valeurs de la clé primaire en incrémentant la clé primaire précédente, dans ce cas, 1.</p>
-<h2 id="autres-contraintes-other-constraints"><strong>Autres contraintes (Other Constraints)</strong></h2>
+<h2 id="autres-contraintes-other-constraints"><strong>Autres contraintes (Other Constraints)</strong><a class="headerlink" href="#autres-contraintes-other-constraints" title="Permanent link">&para;</a></h2>
 <ul>
 <li>L'ouverture du fichier <code>schema.sql</code> affiche le schéma de la base de données.</li>
 </ul>
@@ -1723,7 +1629,7 @@
   VALUES(NULL, NULL, '1900-01-10');</code></p>
 <p>En exécutant ceci, nous verrons à nouveau une erreur indiquant <code>NOT NULL constraint failed: collections.title (19)</code>.
 - De cette manière, les contraintes de schéma sont des garde-fous qui nous protègent de l'ajout de lignes qui ne suivent pas le schéma de notre base de données.</p>
-<h2 id="insertion-de-plusieurs-lignes-inserting-multiple-rows"><strong>Insertion de plusieurs lignes (Inserting Multiple Rows)</strong></h2>
+<h2 id="insertion-de-plusieurs-lignes-inserting-multiple-rows"><strong>Insertion de plusieurs lignes (Inserting Multiple Rows)</strong><a class="headerlink" href="#insertion-de-plusieurs-lignes-inserting-multiple-rows" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Nous pourrions avoir besoin d'insérer plus d'une ligne à la fois lors de l'écriture dans une base de données. Une façon de le faire est de séparer les lignes par des virgules dans la commande <code>INSERT INTO</code>.</li>
 </ul>
@@ -1820,7 +1726,7 @@
 </ul>
 <p><code>sql
   DROP TABLE "temp";</code></p>
-<h2 id="suppression-de-donnees-deleting-data"><strong>Suppression de données (Deleting Data)</strong></h2>
+<h2 id="suppression-de-donnees-deleting-data"><strong>Suppression de données (Deleting Data)</strong><a class="headerlink" href="#suppression-de-donnees-deleting-data" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Nous avons vu précédemment que l'exécution de la commande suivante supprimait toutes les lignes de la table <code>collections</code>. (Nous ne voulons pas exécuter cette commande maintenant, sinon nous perdrons toutes les données de la table !)</li>
 </ul>
@@ -1896,7 +1802,7 @@
 <p><code>sql
   SELECT * FROM "created";</code></p>
 <p>Nous observons qu'aucune des lignes n'a un ID de 3 (l'ID de l'artiste supprimé de la table <code>artistes</code>).</p>
-<h2 id="mise-a-jour-de-donnees-updating-data"><strong>Mise à jour de données (Updating Data)</strong></h2>
+<h2 id="mise-a-jour-de-donnees-updating-data"><strong>Mise à jour de données (Updating Data)</strong><a class="headerlink" href="#mise-a-jour-de-donnees-updating-data" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Nous pouvons facilement imaginer des scénarios dans lesquels des données dans une base de données devraient être mises à jour. Peut-être, dans le cas de la base de données du MFA, nous découvrons que la peinture "Fermiers travaillant à l'aube" initialement attribuée à un "Artiste non identifié" a en fait été créée par l'artiste Li Yin.</li>
 <li>Nous pouvons utiliser la commande de mise à jour pour apporter des modifications, par exemple, à l'affiliation d'une peinture. Voici la syntaxe de la commande de mise à jour.</li>
@@ -1918,7 +1824,7 @@
       WHERE "title" = 'Fermiers travaillant à l'aube'
   );</code></p>
 <p>La première partie de cette requête spécifie la table à mettre à jour. La partie suivante récupère l'ID de Li Yin à définir comme nouvel ID. La dernière partie sélectionne la ou les lignes dans <code>created</code> qui seront mises à jour avec l'ID de Li Yin, qui est la peinture "Fermiers travaillant à l'aube" !</p>
-<h2 id="fin"><strong>Fin</strong></h2>
+<h2 id="fin"><strong>Fin</strong><a class="headerlink" href="#fin" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Cela conclut le Cours 3 sur l'écriture en SQL !</li>
 </ul>
@@ -1976,7 +1882,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>

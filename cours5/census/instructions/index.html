@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1662,128 +1664,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à résoudre
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demonstration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Démonstration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-de-distribution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code de distribution
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schéma
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spécification">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rural" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rural
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#total" class="md-nav__link">
-    <span class="md-ellipsis">
-      Total
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#par-district" class="md-nav__link">
-    <span class="md-ellipsis">
-      Par District
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#le-plus-peuple" class="md-nav__link">
-    <span class="md-ellipsis">
-      Le plus peuplé
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utilisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisation
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1793,19 +1673,19 @@
 
 
 
-<h1 id="recenseur"><a href="https://cs50.harvard.edu/sql/2024/psets/4/census/">Recenseur</a></h1>
+<h1 id="recenseur"><a href="https://cs50.harvard.edu/sql/2024/psets/4/census/">Recenseur</a><a class="headerlink" href="#recenseur" title="Permanent link">&para;</a></h1>
 <p><img alt="Les chaînes de montagnes de l'Himalaya dans le style d'une peinture népalaise" src="../../../assets/nepal.png" /> « Les chaînes de montagnes de l'Himalaya dans le style d'une peinture népalaise », générée par DALL·E 2</p>
-<h2 id="probleme-a-resoudre">Problème à résoudre</h2>
+<h2 id="probleme-a-resoudre">Problème à résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
 <p>Vous êtes un recenseur (census taker) travaillant pour le gouvernement népalais. Alors que vous franchissez une dernière colline, votre souffle se coupe à la vue d'un lever de soleil himalayen, projetant une lueur sur le village que vous avez parcouru si loin pour atteindre. Votre guide, un local, s'arrête brusquement. Sous le bruissement constant de vos papiers de recensement (census papers), vous ressentez une démangeaison de curiosité. Après tout, ce n'est pas tous les jours que votre travail vous emmène dans un village comme celui-ci.</p>
 <p>Dans <code>census.db</code>, traitez vos données en vues (views) que le gouvernement népalais peut utiliser pour la tenue des dossiers.</p>
-<h2 id="demonstration">Démonstration</h2>
+<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
 <pre><code class="language-sqlite">sqlite3 census.db
 SELECT district, locality, families FROM census;
 .quit       
 </code></pre>
-<h2 id="code-de-distribution">Code de distribution</h2>
+<h2 id="code-de-distribution">Code de distribution<a class="headerlink" href="#code-de-distribution" title="Permanent link">&para;</a></h2>
 <p>Pour ce problème, vous devrez télécharger <code>census.db</code>, ainsi que quelques fichiers <code>.sql</code> dans lesquels vous écrirez vos requêtes (queries).</p>
-<h2 id="schema">Schéma</h2>
+<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
 <p>Dans <code>census.db</code>, vous trouverez une seule table, <code>census</code>. Dans la table <code>census</code>, vous trouverez les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui identifie de manière unique chaque enregistrement de recensement (census record)</li>
@@ -1817,11 +1697,11 @@ SELECT district, locality, families FROM census;
 <li><code>male</code>, qui est le nombre de personnes associées à l'enregistrement de recensement qui se sont identifiées comme étant de sexe masculin</li>
 <li><code>female</code>, qui est le nombre de personnes associées à l'enregistrement de recensement qui se sont identifiées comme étant de sexe féminin</li>
 </ul>
-<h2 id="specification">Spécification</h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <p>Dans chacun des fichiers <code>.sql</code> correspondants, écrivez une instruction SQL (SQL statement) pour créer chacune des vues (views) suivantes des données dans <code>census.db</code>. Notez que, bien que les vues puissent être créées à partir d'autres vues, chacune de vos vues doit être autonome (c'est-à-dire ne pas dépendre d'une vue antérieure).</p>
-<h4 id="rural">Rural</h4>
+<h4 id="rural">Rural<a class="headerlink" href="#rural" title="Permanent link">&para;</a></h4>
 <p>Dans <code>rural.sql</code>, écrivez une instruction SQL pour créer une vue nommée <code>rural</code>. Cette vue doit contenir tous les enregistrements de recensement relatifs à une municipalité rurale (identifiée par l'inclusion de « rural » dans leur nom). Assurez-vous que la vue contient toutes les colonnes de la table <code>census</code>.</p>
-<h4 id="total">Total</h4>
+<h4 id="total">Total<a class="headerlink" href="#total" title="Permanent link">&para;</a></h4>
 <p>Dans <code>total.sql</code>, écrivez une instruction SQL pour créer une vue nommée <code>total</code>. Cette vue doit contenir les sommes pour chaque colonne numérique dans <code>census</code>, à travers tous les districts et localités. Assurez-vous que la vue contient chacune des colonnes suivantes :</p>
 <ul>
 <li><code>families</code>, qui est la somme des familles de chaque localité au Népal.</li>
@@ -1830,7 +1710,7 @@ SELECT district, locality, families FROM census;
 <li><code>male</code>, qui est la somme des personnes s'identifiant comme étant de sexe masculin de chaque localité au Népal.</li>
 <li><code>female</code>, qui est la somme des personnes s'identifiant comme étant de sexe féminin de chaque localité au Népal.</li>
 </ul>
-<h4 id="par-district">Par District</h4>
+<h4 id="par-district">Par District<a class="headerlink" href="#par-district" title="Permanent link">&para;</a></h4>
 <p>Dans <code>by_district.sql</code>, écrivez une instruction SQL pour créer une vue nommée <code>by_district</code>. Cette vue doit contenir les sommes pour chaque colonne numérique dans <code>census</code>, regroupées par <code>district</code>. Assurez-vous que la vue contient chacune des colonnes suivantes :</p>
 <ul>
 <li><code>district</code>, qui est le nom du district.</li>
@@ -1840,7 +1720,7 @@ SELECT district, locality, families FROM census;
 <li><code>male</code>, qui est le nombre total de personnes s'identifiant comme étant de sexe masculin dans le district.</li>
 <li><code>female</code>, qui est le nombre total de personnes s'identifiant comme étant de sexe féminin dans le district.</li>
 </ul>
-<h4 id="le-plus-peuple">Le plus peuplé</h4>
+<h4 id="le-plus-peuple">Le plus peuplé<a class="headerlink" href="#le-plus-peuple" title="Permanent link">&para;</a></h4>
 <p>Dans <code>most_populated.sql</code>, écrivez une instruction SQL pour créer une vue nommée <code>most_populated</code>. Cette vue doit contenir, dans l'ordre du plus grand au plus petit, les districts les plus peuplés du Népal. Assurez-vous que la vue contient chacune des colonnes suivantes :</p>
 <ul>
 <li><code>district</code>, qui est le nom du district.</li>
@@ -1850,7 +1730,7 @@ SELECT district, locality, families FROM census;
 <li><code>male</code>, qui est le nombre total de personnes s'identifiant comme étant de sexe masculin dans le district.</li>
 <li><code>female</code>, qui est le nombre total de personnes s'identifiant comme étant de sexe féminin dans le district.</li>
 </ul>
-<h2 id="utilisation">Utilisation</h2>
+<h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
 <p>Pour tester vos vues au fur et à mesure que vous les écrivez dans vos fichiers <code>.sql</code>, vous pouvez exécuter une requête (query) sur la base de données en exécutant</p>
 <pre><code>.read FILENAME
 </code></pre>
@@ -1913,7 +1793,7 @@ SELECT district, locality, families FROM census;
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

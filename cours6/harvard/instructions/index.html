@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1710,176 +1712,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à Résoudre
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demonstration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Démonstration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-de-distribution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code de Distribution
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schéma
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schéma">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#table-students" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table students
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#table-courses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table courses
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#table-enrollments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table enrollments
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#table-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table requirements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#table-satisfies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table satisfies
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spécification">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requetes-select-typiques-sur-harvarddb" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requêtes SELECT typiques sur harvard.db
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conseils" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conseils
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Conseils">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#minimisez-le-nombre-dindex-que-vous-avez-crees" class="md-nav__link">
-    <span class="md-ellipsis">
-      Minimisez le nombre d'index que vous avez créés
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utilisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisation
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1889,34 +1721,34 @@
 
 
 
-<h1 id="yourharvard"><a href="https://cs50.harvard.edu/sql/2024/psets/5/your.harvard/">your.harvard</a></h1>
+<h1 id="yourharvard"><a href="https://cs50.harvard.edu/sql/2024/psets/5/your.harvard/">your.harvard</a><a class="headerlink" href="#yourharvard" title="Permanent link">&para;</a></h1>
 <p><img alt="Le logo my.harvard" src="https://cs50.harvard.edu/sql/2024/psets/5/your.harvard/my.harvard.png" />
 Le logo my.harvard</p>
-<h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
 <p>Si vous n'êtes pas déjà familier, Harvard dispose d'un outil de recherche de cours appelé my.harvard, avec lequel les étudiants explorent (et finalement s'inscrivent !) aux cours. Pour suivre les cours, les étudiants et leurs inscriptions, my.harvard utilise probablement une sorte de base de données sous-jacente. Et pourtant, si vous l'avez déjà utilisé, vous savez que my.harvard n'est pas particulièrement... rapide.</p>
 <p>Voici votre chance de rendre my.harvard un peu plus rapide ! Dans ce problème, prenez des données de cours de Harvard et créez des index pour accélérer les requêtes typiques sur la base de données. Gardez à l'esprit que l'indexation de chaque colonne n'est pas toujours la meilleure solution : vous devrez considérer les compromis en termes d'espace et de temps, représentant finalement les cours et les étudiants de Harvard de la manière la plus efficace possible.</p>
-<h2 id="demonstration">Démonstration</h2>
+<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
 <pre><code class="language-sql">$ sqlite3 harvard.db                                                                                
 sqlite&gt; SELECT &quot;title&quot;, &quot;semester&quot;                                                                  
    ...&gt; FROM &quot;courses&quot;                                                                              
    ...&gt; WHERE &quot;semester&quot; = 'Fall 2023'                                                              
    ...&gt; LIMIT 5;   
 </code></pre>
-<h2 id="code-de-distribution">Code de Distribution</h2>
+<h2 id="code-de-distribution">Code de Distribution<a class="headerlink" href="#code-de-distribution" title="Permanent link">&para;</a></h2>
 <p>Pour ce problème, vous devrez utiliser <code>harvard.db</code> et un fichier <code>indexes.sql</code> dans lequel vous écrirez vos instructions SQL pour créer vos index.</p>
-<h2 id="schema">Schéma</h2>
+<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
 <pre><code class="language-mermaid">erDiagram
     &quot;Student&quot; }o--|{ &quot;Course&quot; : &quot;enrolls in&quot;
     &quot;Course&quot; }|--o{ &quot;Requirement&quot; : &quot;satisfies&quot;
 </code></pre>
 <p>Dans <code>harvard.db</code>, vous trouverez cinq tables qui implémentent les relations décrites dans le diagramme ER ci-dessus. Cliquez sur les menus déroulants ci-dessous pour en savoir plus sur le schéma de chaque table individuelle.</p>
-<h3 id="table-students">Table <code>students</code></h3>
+<h3 id="table-students">Table <code>students</code><a class="headerlink" href="#table-students" title="Permanent link">&para;</a></h3>
 <p>La table <code>students</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui est l'ID de l'étudiant.</li>
 <li><code>name</code>, qui est le nom de l'étudiant.</li>
 </ul>
-<h3 id="table-courses">Table <code>courses</code></h3>
+<h3 id="table-courses">Table <code>courses</code><a class="headerlink" href="#table-courses" title="Permanent link">&para;</a></h3>
 <p>La table <code>courses</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui est l'ID du cours.</li>
@@ -1925,30 +1757,30 @@ sqlite&gt; SELECT &quot;title&quot;, &quot;semester&quot;
 <li><code>semester</code>, qui est le semestre au cours duquel le cours a été enseigné (par exemple, « Spring 2024 », « Fall 2023 »).</li>
 <li><code>title</code>, qui est le titre du cours (par exemple, « Introduction to Computer Science »).</li>
 </ul>
-<h3 id="table-enrollments">Table <code>enrollments</code></h3>
+<h3 id="table-enrollments">Table <code>enrollments</code><a class="headerlink" href="#table-enrollments" title="Permanent link">&para;</a></h3>
 <p>La table <code>enrollments</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui est l'ID pour identifier l'inscription.</li>
 <li><code>student_id</code>, qui est l'ID de l'étudiant inscrit.</li>
 <li><code>course_id</code>, qui est l'ID du cours dans lequel l'étudiant est inscrit.</li>
 </ul>
-<h3 id="table-requirements">Table <code>requirements</code></h3>
+<h3 id="table-requirements">Table <code>requirements</code><a class="headerlink" href="#table-requirements" title="Permanent link">&para;</a></h3>
 <p>La table <code>requirements</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui est l'ID de l'exigence.</li>
 <li><code>name</code>, qui est le nom de l'exigence.</li>
 </ul>
-<h3 id="table-satisfies">Table <code>satisfies</code></h3>
+<h3 id="table-satisfies">Table <code>satisfies</code><a class="headerlink" href="#table-satisfies" title="Permanent link">&para;</a></h3>
 <p>La table <code>satisfies</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui est l'ID de la paire cours-exigence.</li>
 <li><code>course_id</code>, qui est l'ID d'un cours donné.</li>
 <li><code>requirement_id</code>, qui est l'ID de l'exigence que le cours donné satisfait.</li>
 </ul>
-<h2 id="specification">Spécification</h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <p>Dans <code>indexes.sql</code>, écrivez un ensemble d'instructions SQL qui créent des index qui accéléreront les requêtes typiques sur la base de données <code>harvard.db</code>. Le nombre d'index que vous créez, ainsi que les colonnes qu'ils incluent, dépend entièrement de vous. Assurez-vous d'équilibrer la vitesse avec l'espace disque, en créant uniquement les index dont vous avez besoin.</p>
 <p>Lorsque les ingénieurs optimisent une base de données, ils se soucient souvent des requêtes typiques exécutées sur la base de données. De telles requêtes mettent en évidence les schémas avec lesquels une base de données est accédée, révélant ainsi les meilleures colonnes et tables sur lesquelles créer des index. Cliquez sur l'étiquette spoiler ci-dessous pour voir l'ensemble des requêtes <code>SELECT</code> typiques exécutées sur <code>harvard.db</code>.</p>
-<h3 id="requetes-select-typiques-sur-harvarddb">Requêtes <code>SELECT</code> typiques sur <code>harvard.db</code></h3>
+<h3 id="requetes-select-typiques-sur-harvarddb">Requêtes <code>SELECT</code> typiques sur <code>harvard.db</code><a class="headerlink" href="#requetes-select-typiques-sur-harvarddb" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Trouver les inscriptions historiques aux cours d'un étudiant, en fonction de son ID :</li>
 </ul>
@@ -2031,7 +1863,7 @@ WHERE &quot;title&quot; LIKE &quot;History%&quot;
 AND &quot;semester&quot; = 'Fall 2023';
 </code></pre>
 <p>Assurez-vous de consulter la section Conseils (Advice) lorsque vous commencez !</p>
-<h2 id="conseils">Conseils</h2>
+<h2 id="conseils">Conseils<a class="headerlink" href="#conseils" title="Permanent link">&para;</a></h2>
 <p>Dans ce problème, vous prendrez le point de vue opposé à celui que vous aviez en travaillant sur In a Snap : plutôt que de concevoir une requête qui tire parti des index existants, votre tâche consiste à concevoir des index dont les requêtes existantes peuvent tirer parti.</p>
 <p>Utilisez <code>EXPLAIN QUERY PLAN</code> sur chaque requête <code>SELECT</code> pour évaluer où il est préférable de créer des index.</p>
 <p>Commencez par évaluer où il est préférable de créer des index en comprenant le plan de chaque requête typique sur la base de données de my.harvard.</p>
@@ -2051,7 +1883,7 @@ WHERE &quot;students&quot;.&quot;id&quot; = 3;
 </code></pre>
 <p>Remarquez que, bien que le moteur de la base de données <code>SEARCH</code> déjà les tables <code>students</code> et <code>courses</code> en utilisant leurs index de clé primaire, il y a encore des améliorations à apporter : le moteur de la base de données <code>SCAN</code> la table <code>enrollments</code> sans index. Rappelez-vous que <code>SCAN</code> signifie que le moteur de la base de données doit rechercher toutes les lignes, une par une—un processus beaucoup plus lent que la recherche d'un index !</p>
 <p>Expérimentez maintenant en créant un index qui pourrait transformer ce <code>SCAN</code> en une <code>SEARCH</code> utilisant un index. Ensuite, répétez le même processus pour chacune des requêtes typiques sur la base de données de my.harvard jusqu'à ce que vous ayez obtenu un ensemble d'index qui garantit que toutes les requêtes utilisent des index à leur plein potentiel.</p>
-<h3 id="minimisez-le-nombre-dindex-que-vous-avez-crees">Minimisez le nombre d'index que vous avez créés</h3>
+<h3 id="minimisez-le-nombre-dindex-que-vous-avez-crees">Minimisez le nombre d'index que vous avez créés<a class="headerlink" href="#minimisez-le-nombre-dindex-que-vous-avez-crees" title="Permanent link">&para;</a></h3>
 <p>Gardez à l'esprit que les index prennent de l'espace supplémentaire et qu'ils peuvent ralentir les requêtes <code>INSERT</code>, <code>UPDATE</code> et <code>DELETE</code>. Une fois que vous avez obtenu un ensemble initial d'index, commencez à les réduire jusqu'à ce que vous ayez créé le minimum requis pour que chaque requête utilise des index de manière optimale. Comment commencer ce processus ? Considérez les questions suivantes :</p>
 <ul>
 <li>Certains de vos index incluent-ils les mêmes colonnes ? Si c'est le cas, il est probable que vous n'ayez besoin que d'un seul index sur cette colonne particulière.</li>
@@ -2059,7 +1891,7 @@ WHERE &quot;students&quot;.&quot;id&quot; = 3;
 <li>La suppression d'un index a-t-elle un impact sur le plan de chaque requête ? Si ce n'est pas le cas, il est peut-être préférable de le supprimer !</li>
 </ul>
 <p>Grâce au processus itératif ci-dessus, vous affinerez les index que vous avez choisi de créer.</p>
-<h2 id="utilisation">Utilisation</h2>
+<h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
 <p>Pour charger vos index au fur et à mesure que vous les écrivez dans <code>indexes.sql</code>, vous pouvez utiliser</p>
 <pre><code>.read indexes.sql
 </code></pre>
@@ -2120,7 +1952,7 @@ WHERE &quot;students&quot;.&quot;id&quot; = 3;
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

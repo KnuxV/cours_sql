@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1629,95 +1631,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à Résoudre
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demonstration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Démonstration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-de-distribution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code de Distribution
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schéma
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utilisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comment-tester" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comment Tester
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1727,18 +1640,18 @@
 
 
 
-<h1 id="joueurs">Joueurs</h1>
+<h1 id="joueurs">Joueurs<a class="headerlink" href="#joueurs" title="Permanent link">&para;</a></h1>
 <p><img alt="Équipe des Boston Americans de 1901" src="https://cs50.harvard.edu/sql/2024/psets/0/players/red_sox.jpeg" /><br />
 L'équipe des Boston Americans de 1901 (maintenant les Red Sox)</p>
-<h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
 <p>Si vous n'êtes pas familier, le baseball est un sport populaire dans lequel deux équipes de 9 joueurs alternent entre la batte (frapper une balle) et le champ (attraper et lancer les balles frappées). Des points ("runs") sont marqués lorsqu'un joueur de l'équipe à la batte frappe une balle et touche toutes les bases avant que les joueurs de l'équipe au champ n'aient la chance de le retirer ("out"). Le baseball est sans doute le plus populaire aux États-Unis et au Canada, où la MLB (Major League Baseball) sert d'association professionnelle pour les joueurs depuis 1876.</p>
 <p>Dans une base de données appelée <code>players.db</code>, en utilisant une table appelée <code>players</code>, répondez à des questions sur les joueurs de la MLB qui ont joué de 1871 à 2023.</p>
-<h2 id="demonstration">Démonstration</h2>
+<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
 <pre><code class="language-sql">$ sqlite3 players.db                                                     sqlite&gt; .tables                                                         players                                                                 sqlite&gt; SELECT &quot;first_name&quot;, &quot;last_name&quot;, &quot;debut&quot;                          ...&gt; FROM &quot;players&quot;                                                      ...&gt; LIMIT 10;     
 </code></pre>
-<h2 id="code-de-distribution">Code de Distribution</h2>
+<h2 id="code-de-distribution">Code de Distribution<a class="headerlink" href="#code-de-distribution" title="Permanent link">&para;</a></h2>
 <p>Pour ce problème, vous devrez utiliser <code>players.db</code>, ainsi que plusieurs fichiers <code>.sql</code> dans lesquels vous écrirez vos requêtes.</p>
-<h2 id="schema">Schéma</h2>
+<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
 <p>Dans <code>players.db</code>, vous trouverez une seule table, <code>players</code>. Dans la table <code>players</code>, vous trouverez les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui identifie de manière unique chaque ligne (joueur) dans la table</li>
@@ -1757,7 +1670,7 @@ L'équipe des Boston Americans de 1901 (maintenant les Red Sox)</p>
 <li><code>birth_state</code>, qui est l'état où le joueur est né</li>
 <li><code>birth_country</code>, qui est le pays où le joueur est né</li>
 </ul>
-<h2 id="specification">Spécification</h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Dans <code>1.sql</code>, écrivez une requête SQL pour trouver la ville natale (y compris la ville, l'état et le pays) de Jackie Robinson.</li>
 <li>Dans <code>2.sql</code>, écrivez une requête SQL pour trouver le côté (par exemple, droit ou gauche) où Babe Ruth frappait.</li>
@@ -1780,7 +1693,7 @@ L'équipe des Boston Americans de 1901 (maintenant les Red Sox)</p>
 <ol>
 <li>Écrivez une seule requête SQL pour lister les prénoms et noms de famille de tous les joueurs de taille supérieure à la moyenne, triés du plus grand au plus petit, puis par prénom et nom de famille.</li>
 </ol>
-<h2 id="utilisation">Utilisation</h2>
+<h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
 <p>Pour tester vos requêtes au fur et à mesure que vous les écrivez dans vos fichiers <code>.sql</code>, vous pouvez interroger la base de données en exécutant</p>
 <pre><code>.read FILENAME
 </code></pre>
@@ -1791,7 +1704,7 @@ L'équipe des Boston Americans de 1901 (maintenant les Red Sox)</p>
 <pre><code>$ cat FILENAME | sqlite3 players.db &gt; output.txt
 </code></pre>
 <p>pour rediriger la sortie de la requête vers un fichier texte appelé <code>output.txt</code>. (Cela peut être utile pour vérifier combien de lignes sont retournées par votre requête !)</p>
-<h2 id="comment-tester">Comment Tester</h2>
+<h2 id="comment-tester">Comment Tester<a class="headerlink" href="#comment-tester" title="Permanent link">&para;</a></h2>
 <ul>
 <li>L'exécution de <code>1.sql</code> donne une table avec 3 colonnes et 1 ligne.</li>
 <li>L'exécution de <code>2.sql</code> donne une table avec 1 colonne et 1 ligne.</li>
@@ -1857,7 +1770,7 @@ L'équipe des Boston Americans de 1901 (maintenant les Red Sox)</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

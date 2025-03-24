@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1525,156 +1527,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cours-5-version-originale" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cours 5 (Version originale)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vues-views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vues (Views)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simplification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simplification
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Simplification">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#questions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Questions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#agregation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Agrégation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Agrégation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#questions_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Questions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expression-commune-de-table-cte" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expression Commune de Table (CTE)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partitionnement" class="md-nav__link">
-    <span class="md-ellipsis">
-      Partitionnement
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Partitionnement">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#questions_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Questions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#securisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sécurisation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suppressions-logiques-soft-deletions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suppressions Logiques (Soft Deletions)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1686,7 +1538,7 @@
 
   <h1>Introduction</h1>
 
-<h2 id="cours-5-version-originale">Cours 5 (<a href="https://cs50.harvard.edu/sql/2024/notes/4/">Version originale</a>)</h2>
+<h2 id="cours-5-version-originale">Cours 5 (<a href="https://cs50.harvard.edu/sql/2024/notes/4/">Version originale</a>)<a class="headerlink" href="#cours-5-version-originale" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#vues-views">Vues (Views)</a></li>
@@ -1697,7 +1549,7 @@
 <li><a href="#sécurisation">Sécurisation</a></li>
 <li><a href="#suppressions-logiques-soft-deletions">Suppressions Logiques (Soft Deletions)</a></li>
 </ul>
-<h2 id="introduction">Introduction</h2>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Jusqu'à présent, nous avons appris des concepts qui nous permettent de concevoir des bases de données complexes et d'y écrire des données. Maintenant, nous allons explorer des moyens d'obtenir des vues à partir de ces bases de données.</li>
 <li>Revenons à la base de données contenant des livres présélectionnés pour le International Booker Prize. Voici un aperçu des tables de cette base de données.</li>
@@ -1709,7 +1561,7 @@
 <p>Cela permet de voir facilement que Han Kang a écrit "The White Book".
 - On peut aussi imaginer supprimer les colonnes d'ID ici, de sorte que notre vue ressemble à ce qui suit.</p>
 <p><img alt="&quot;Table joignant livres, authored et auteurs avec les colonnes d'ID supprimées&quot;" src="https://cs50.harvard.edu/sql/2024/notes/4/images/10.jpg" /></p>
-<h2 id="vues-views">Vues (Views)</h2>
+<h2 id="vues-views">Vues (Views)<a class="headerlink" href="#vues-views" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Une vue est une table virtuelle définie par une requête.</li>
 <li>Supposons que nous écrivions une requête pour joindre trois tables, comme dans l'exemple précédent, puis sélectionnons les colonnes pertinentes. La nouvelle table créée par cette requête peut être enregistrée en tant que vue, à interroger ultérieurement.</li>
@@ -1721,7 +1573,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="simplification">Simplification</h2>
+<h2 id="simplification">Simplification<a class="headerlink" href="#simplification" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Ouvrons <code>longlist.db</code> sur SQLite et exécutons la commande <code>.schema</code> pour vérifier que les trois tables que nous avons vues dans l'exemple précédent sont créées : <code>authors</code>, <code>authored</code> et <code>books</code>.</li>
 <li>Pour sélectionner les livres écrits par Fernanda Melchor, nous écririons cette requête imbriquée.</li>
@@ -1767,7 +1619,7 @@ JOIN &quot;books&quot; ON &quot;books&quot;.&quot;id&quot; = &quot;authored&quot
 <ul>
 <li>Une vue, étant une table virtuelle, ne consomme pas beaucoup plus d'espace disque pour être créée. Les données d'une vue sont toujours stockées dans les tables sous-jacentes, mais restent accessibles via cette vue simplifiée.</li>
 </ul>
-<h3 id="questions">Questions</h3>
+<h3 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Peut-on manipuler les vues pour les trier ou les afficher différemment ?</p>
 </blockquote>
@@ -1783,7 +1635,7 @@ ORDER BY &quot;title&quot;;
 </code></pre>
 <pre><code>- Nous pourrions également avoir la vue elle-même triée. Nous pouvons le faire en incluant une clause `ORDER BY` dans la requête utilisée pour créer la vue.
 </code></pre>
-<h2 id="agregation">Agrégation</h2>
+<h2 id="agregation">Agrégation<a class="headerlink" href="#agregation" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Dans <code>longlist.db</code>, nous avons une table contenant des notes individuelles attribuées à chaque livre. Dans les semaines précédentes, nous avons vu comment trouver la note moyenne de chaque livre, arrondie à 2 décimales.</li>
 </ul>
@@ -1831,14 +1683,14 @@ GROUP BY &quot;year&quot;;
 SELECT &quot;year&quot;, ROUND(AVG(&quot;rating&quot;), 2) AS &quot;rating&quot; FROM &quot;average_book_ratings&quot;
 GROUP BY &quot;year&quot;;
 </code></pre>
-<h3 id="questions_1">Questions</h3>
+<h3 id="questions_1">Questions<a class="headerlink" href="#questions_1" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Les vues temporaires peuvent-elles être utilisées pour tester si une requête fonctionne ou non ?</p>
 </blockquote>
 <ul>
 <li>Oui, c'est un excellent cas d'utilisation pour les vues temporaires ! Pour généraliser un peu, les vues temporaires sont utilisées lorsque nous voulons organiser des données d'une certaine manière sans réellement stocker cette organisation à long terme.</li>
 </ul>
-<h2 id="expression-commune-de-table-cte">Expression Commune de Table (CTE)</h2>
+<h2 id="expression-commune-de-table-cte">Expression Commune de Table (CTE)<a class="headerlink" href="#expression-commune-de-table-cte" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Une vue régulière existe pour toujours dans notre schéma de base de données. Une vue temporaire existe pendant la durée de notre connexion avec la base de données. Une CTE est une vue qui existe pour une seule requête.</li>
 <li>Recréons la vue contenant les notes moyennes des livres par année en utilisant une CTE au lieu d'une vue temporaire. Tout d'abord, nous devons supprimer la vue temporaire existante afin de pouvoir réutiliser le nom <code>average_book_ratings</code>.</li>
@@ -1856,7 +1708,7 @@ GROUP BY &quot;year&quot;;
 SELECT &quot;year&quot; ROUND(AVG(&quot;rating&quot;), 2) AS &quot;rating&quot; FROM &quot;average_book_ratings&quot;
 GROUP BY &quot;year&quot;;
 </code></pre>
-<h2 id="partitionnement">Partitionnement</h2>
+<h2 id="partitionnement">Partitionnement<a class="headerlink" href="#partitionnement" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Les vues peuvent être utilisées pour partitionner des données, ou les diviser en morceaux plus petits qui seront utiles pour nous ou une application. Par exemple, le site web du International Booker Prize a une page de livres présélectionnés pour chaque année où le prix a été décerné. Cependant, notre base de données stocke tous les livres présélectionnés dans une seule table. Pour créer le site web, ou à d'autres fins, il pourrait être utile d'avoir une table (ou vue) différente de livres pour chaque année.</li>
 <li>Créons une vue pour stocker les livres présélectionnés en 2022.</li>
@@ -1869,14 +1721,14 @@ WHERE &quot;year&quot; = 2022;
 </code></pre>
 <pre><code class="language-sql">SELECT * FROM &quot;2022&quot;;
 </code></pre>
-<h3 id="questions_2">Questions</h3>
+<h3 id="questions_2">Questions<a class="headerlink" href="#questions_2" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Les vues peuvent-elles être mises à jour ?</p>
 </blockquote>
 <ul>
 <li>Non, car les vues ne contiennent pas de données comme les tables. Les vues extraient en fait des données des tables sous-jacentes chaque fois qu'elles sont interrogées. Cela signifie que lorsqu'une table sous-jacente est mise à jour, la prochaine fois que la vue est interrogée, elle affichera les données mises à jour de la table !</li>
 </ul>
-<h2 id="securisation">Sécurisation</h2>
+<h2 id="securisation">Sécurisation<a class="headerlink" href="#securisation" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Les vues peuvent être utilisées pour améliorer la sécurité de la base de données en limitant l'accès à certaines données.</li>
 <li>Prenons l'exemple d'une base de données d'une entreprise de covoiturage avec une table <code>rides</code> qui ressemble à ce qui suit.</li>
@@ -1897,7 +1749,7 @@ FROM &quot;rides&quot;;
 <ul>
 <li>Bien que nous puissions créer une vue qui anonymise les données, SQLite ne permet pas le contrôle d'accès. Cela signifie que notre analyste pourrait simplement interroger la table <code>rides</code> d'origine et voir tous les noms de passagers que nous avons pris soin d'omettre dans la vue <code>analysis</code>.</li>
 </ul>
-<h2 id="suppressions-logiques-soft-deletions">Suppressions Logiques (Soft Deletions)</h2>
+<h2 id="suppressions-logiques-soft-deletions">Suppressions Logiques (Soft Deletions)<a class="headerlink" href="#suppressions-logiques-soft-deletions" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Comme nous l'avons vu dans les semaines précédentes, une suppression logique implique de marquer une ligne comme supprimée au lieu de la retirer de la table.</li>
 <li>Par exemple, une œuvre d'art intitulée "Farmers working at dawn" est marquée comme supprimée de la table <code>collections</code> en changeant la valeur de la colonne <code>deleted</code> de 0 à 1.</li>
@@ -2039,7 +1891,7 @@ END;
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>

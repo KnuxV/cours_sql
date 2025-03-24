@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1677,143 +1679,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à Résoudre
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#distribution-du-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Distribution du Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schéma
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schéma">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#table-addresses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table addresses
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#table-drivers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table drivers
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#table-packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table packages
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#table-scans" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table scans
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spécification">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#la-lettre-perdue" class="md-nav__link">
-    <span class="md-ellipsis">
-      La Lettre Perdue
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#la-livraison-malicieuse" class="md-nav__link">
-    <span class="md-ellipsis">
-      La Livraison Malicieuse
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#le-cadeau-oublie" class="md-nav__link">
-    <span class="md-ellipsis">
-      Le Cadeau Oublié
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1823,9 +1688,9 @@
 
 
 
-<h1 id="livraisons-sil-vous-plait">Livraisons, S'il Vous Plaît</h1>
+<h1 id="livraisons-sil-vous-plait">Livraisons, S'il Vous Plaît<a class="headerlink" href="#livraisons-sil-vous-plait" title="Permanent link">&para;</a></h1>
 <p><img alt="Un colis en carton sur le pas de la porte d'une charmante maison de ville, dans le style d'une peinture en plein air" src="https://cs50.harvard.edu/sql/2024/psets/1/packages/package.png" /></p>
-<h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
 <p>Vous êtes un employé de bureau de poste pour la ville de Boston et, à ce titre, vous supervisez la livraison du courrier dans toute la ville. Pour la plupart, tous les colis envoyés sont finalement livrés. Sauf que, de temps en temps, un mystère vous tombe dessus : un colis manquant ! Pour chaque client qui vient vous signaler un colis manquant, votre travail consiste à déterminer :</p>
 <ul>
 <li>L'adresse actuelle (ou l'emplacement !) de leur colis manquant</li>
@@ -1833,9 +1698,9 @@
 <li>Le contenu du colis</li>
 </ul>
 <p>Tout ce que vous savez est ce que les clients eux-mêmes vous diront. Pour résoudre chaque mystère, vous devrez utiliser la base de données du service de livraison de courrier, <code>packages.db</code>, qui contient des données sur le transit des colis dans la ville. En utilisant uniquement les informations de la base de données, votre tâche est d'aider chaque client à retrouver son colis manquant.</p>
-<h2 id="distribution-du-code">Distribution du Code</h2>
+<h2 id="distribution-du-code">Distribution du Code<a class="headerlink" href="#distribution-du-code" title="Permanent link">&para;</a></h2>
 <p>Pour ce problème, vous devrez utiliser <code>packages.db</code>, ainsi qu'un fichier <code>.sql</code> et un fichier <code>.txt</code> dans lesquels vous écrirez vos requêtes et réponses.</p>
-<h2 id="schema">Schéma</h2>
+<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
 <p><code>packages.db</code> représente toutes les livraisons de colis récentes dans la ville de Boston. Pour ce faire, <code>packages.db</code> représente les entités suivantes :</p>
 <ul>
 <li>Chauffeurs, qui sont les personnes qui livrent les colis</li>
@@ -1851,20 +1716,20 @@
     &quot;Scan&quot; }o--|| &quot;Address&quot; : &quot;at&quot;
     &quot;Driver&quot; ||--o{ &quot;Scan&quot; : &quot;makes&quot;
 </code></pre>
-<h3 id="table-addresses">Table <code>addresses</code></h3>
+<h3 id="table-addresses">Table <code>addresses</code><a class="headerlink" href="#table-addresses" title="Permanent link">&para;</a></h3>
 <p>La table <code>addresses</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui est l'ID de l'adresse</li>
 <li><code>address</code>, qui est l'adresse elle-même (par exemple, 7660 Sharon Street)</li>
 <li><code>type</code>, qui est le type d'adresse (par exemple, résidentiel, commercial, etc.)</li>
 </ul>
-<h3 id="table-drivers">Table <code>drivers</code></h3>
+<h3 id="table-drivers">Table <code>drivers</code><a class="headerlink" href="#table-drivers" title="Permanent link">&para;</a></h3>
 <p>La table <code>drivers</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui est l'ID du chauffeur</li>
 <li><code>name</code>, qui est le prénom du chauffeur</li>
 </ul>
-<h3 id="table-packages">Table <code>packages</code></h3>
+<h3 id="table-packages">Table <code>packages</code><a class="headerlink" href="#table-packages" title="Permanent link">&para;</a></h3>
 <p>La table <code>packages</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui est l'ID du colis</li>
@@ -1872,7 +1737,7 @@
 <li><code>from_address_id</code>, qui est l'ID de l'adresse d'où le colis a été envoyé</li>
 <li><code>to_address_id</code>, qui est l'ID de l'adresse à laquelle le colis a été envoyé. Ce n'est pas nécessairement là où il a fini !</li>
 </ul>
-<h3 id="table-scans">Table <code>scans</code></h3>
+<h3 id="table-scans">Table <code>scans</code><a class="headerlink" href="#table-scans" title="Permanent link">&para;</a></h3>
 <p>La table <code>scans</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui est l'ID du scan</li>
@@ -1882,25 +1747,25 @@
 <li><code>action</code>, qui indique si le colis a été pris en charge ("Pick") ou déposé ("Drop")</li>
 <li><code>timestamp</code>, qui est le jour et l'heure auxquels le colis a été scanné</li>
 </ul>
-<h2 id="specification">Spécification</h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <p>Pour ce problème, il est tout aussi important de trouver les colis que le processus que vous utilisez pour le faire. Dans <code>log.sql</code>, gardez une trace de toutes les requêtes SQL que vous exécutez sur la base de données. Au-dessus de chaque requête, étiquetez-la avec un commentaire : en SQL, les commentaires sont toutes les lignes qui commencent par <code>--</code>, comme suit :</p>
 <pre><code class="language-sqlite">-- Ceci est un commentaire SQL
 </code></pre>
 <p>Le commentaire doit décrire pourquoi vous exécutez la requête et quelles informations vous espérez obtenir de cette requête particulière. Vous pouvez également utiliser des commentaires pour ajouter des notes supplémentaires sur votre processus de réflexion lorsque vous résolvez chaque mystère : en fin de compte, ce fichier doit servir de preuve du processus que vous avez utilisé pour trouver chaque colis !</p>
 <p>Une fois que vous avez trouvé l'emplacement d'un colis, complétez chacune des lignes dans <code>answers.txt</code> en remplissant les détails sur l'emplacement du colis, ainsi que son contenu. Assurez-vous de ne pas modifier le texte existant dans le fichier ou d'ajouter d'autres lignes au fichier !</p>
-<h3 id="la-lettre-perdue">La Lettre Perdue</h3>
+<h3 id="la-lettre-perdue">La Lettre Perdue<a class="headerlink" href="#la-lettre-perdue" title="Permanent link">&para;</a></h3>
 <p>Votre premier rapport de colis manquant provient d'Anneke. Anneke s'approche de votre comptoir et vous dit ce qui suit :</p>
 <blockquote>
 <p>Monsieur, je m'appelle Anneke. J'habite au 900 Somerville Avenue. Il n'y a pas longtemps, j'ai envoyé une lettre spéciale. Elle est destinée à mon amie Varsha. Elle commence un nouveau chapitre de sa vie au 2 Finnegan Street, en centre-ville. (Cette adresse, laissez-moi vous dire : elle était un peu difficile à obtenir correctement la première fois.) La lettre est un mot de félicitations—une petite accolade en papier de moi à elle, pour célébrer ce grand déménagement. Pouvez-vous vérifier si elle est arrivée jusqu'à elle ?</p>
 </blockquote>
 <p>Dans <code>log.sql</code>, sous <code>-- *** La Lettre Perdue ***</code>, gardez une trace des requêtes SQL que vous utilisez pour trouver la lettre perdue d'Anneke. Une fois que vous l'avez trouvée, décrivez-la selon les questions dans <code>answers.txt</code>.</p>
-<h3 id="la-livraison-malicieuse">La Livraison Malicieuse</h3>
+<h3 id="la-livraison-malicieuse">La Livraison Malicieuse<a class="headerlink" href="#la-livraison-malicieuse" title="Permanent link">&para;</a></h3>
 <p>Votre deuxième rapport de colis manquant provient d'un individu mystérieux d'une ville voisine. Il s'approche de votre comptoir et vous dit ce qui suit :</p>
 <blockquote>
 <p>Bonjour, M. le livreur. Vous vous souvenez peut-être qu'il n'y a pas longtemps, je suis venu de la ville de Fiftyville. J'ai remis une certaine boîte entre vos mains et vous ai demandé de rester discret. Mon associé attend ce colis depuis un moment maintenant. Et pourtant, il semble avoir disparu. Ha ! Y a-t-il une chance que vous puissiez éclaircir ce mystère ? Désolé, il n'y a pas d'adresse "De".</p>
 </blockquote>
 <p>Dans <code>log.sql</code>, sous <code>-- *** La Livraison Malicieuse ***</code>, gardez une trace des requêtes SQL que vous utilisez pour trouver le colis. Une fois que vous l'avez trouvé, décrivez-le selon les questions dans <code>answers.txt</code>.</p>
-<h3 id="le-cadeau-oublie">Le Cadeau Oublié</h3>
+<h3 id="le-cadeau-oublie">Le Cadeau Oublié<a class="headerlink" href="#le-cadeau-oublie" title="Permanent link">&para;</a></h3>
 <p>Votre troisième rapport de colis manquant provient d'un grand-parent qui habite près du bureau de poste. Il s'approche de votre comptoir et vous dit ce qui suit :</p>
 <blockquote>
 <p>Oh, excusez-moi, Agent. J'avais envoyé un cadeau mystère, voyez-vous, à ma merveilleuse petite-fille, au 728 Maple Place. C'était il y a environ deux semaines. Maintenant, la date de livraison est passée de sept jours entiers et j'apprends qu'elle attend toujours, les mains vides et le cœur rempli d'anticipation. Je suis un peu inquiet et je me demande où mon colis est passé. Je ne me souviens pas pour la vie de moi ce qu'il y a à l'intérieur, mais je sais qu'il est rempli à ras bord de mon amour pour elle. Pourrions-nous éventuellement le retrouver pour qu'il puisse remplir sa journée de joie ? Je l'ai envoyé de chez moi au 109 Tileston Street.</p>
@@ -1958,7 +1823,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>

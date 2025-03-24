@@ -379,7 +379,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
       
@@ -1659,125 +1661,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à Résoudre
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spécification">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#plateforme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plateforme
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Plateforme">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#utilisateurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisateurs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ecoles-et-universites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Écoles et Universités
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#entreprises" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entreprises
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#connexions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connexions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#donnees-dexemple" class="md-nav__link">
-    <span class="md-ellipsis">
-      Données d'Exemple
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utilisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisation
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1787,15 +1670,15 @@
 
 
 
-<h1 id="happy-to-connect">Happy to connect</h1>
+<h1 id="happy-to-connect">Happy to connect<a class="headerlink" href="#happy-to-connect" title="Permanent link">&para;</a></h1>
 <p><img alt="Logo LinkedIn" src="https://cs50.harvard.edu/sql/2024/psets/2/connect/linkedin.png" /></p>
-<h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
 <p>LinkedIn est « le plus grand réseau professionnel au monde » avec pour mission de « connecter les professionnels du monde entier pour les rendre plus productifs et plus performants ». Peut-être avez-vous un compte ? Sur la plateforme, les utilisateurs peuvent publier leur expérience professionnelle (c'est-à-dire, les emplois précédents, l'éducation, etc.) et établir des connexions avec d'autres personnes qu'ils ont rencontrées, en personne ou en ligne.</p>
 <p>Dans un fichier nommé <code>schema.sql</code> dans un dossier nommé <code>connect</code>, écrivez un ensemble d'instructions SQL pour concevoir une base de données que LinkedIn pourrait utiliser.</p>
-<h2 id="specification">Spécification</h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <p>Votre tâche consiste à créer une base de données SQLite pour LinkedIn à partir de zéro, en écrivant un ensemble d'instructions <code>CREATE TABLE</code> dans un fichier <code>schema.sql</code>. Les détails de mise en œuvre dépendent de vous, bien que vous devriez au minimum vous assurer que votre base de données répond aux spécifications de la plateforme et qu'elle peut représenter les données d'exemple fournies.</p>
-<h3 id="plateforme">Plateforme</h3>
-<h4 id="utilisateurs">Utilisateurs</h4>
+<h3 id="plateforme">Plateforme<a class="headerlink" href="#plateforme" title="Permanent link">&para;</a></h3>
+<h4 id="utilisateurs">Utilisateurs<a class="headerlink" href="#utilisateurs" title="Permanent link">&para;</a></h4>
 <p>Le cœur de la plateforme LinkedIn est ses utilisateurs. Votre base de données doit pouvoir représenter les informations suivantes sur les utilisateurs de LinkedIn :</p>
 <ul>
 <li>Leur prénom et nom de famille</li>
@@ -1803,7 +1686,7 @@
 <li>Leur mot de passe</li>
 </ul>
 <p>Gardez à l'esprit que, si une entreprise suit les meilleures pratiques, les mots de passe des applications sont « hachés ». Pas besoin de vous soucier du hachage des mots de passe ici, cependant.</p>
-<h4 id="ecoles-et-universites">Écoles et Universités</h4>
+<h4 id="ecoles-et-universites">Écoles et Universités<a class="headerlink" href="#ecoles-et-universites" title="Permanent link">&para;</a></h4>
 <p>LinkedIn permet également des comptes officiels pour les écoles ou universités, comme celui de Harvard, afin que les anciens élèves (c'est-à-dire, ceux qui y ont étudié) puissent identifier leur affiliation. Assurez-vous que la base de données de LinkedIn peut stocker les informations suivantes sur chaque école :</p>
 <ul>
 <li>Le nom de l'école</li>
@@ -1811,14 +1694,14 @@
 <li>L'emplacement de l'école</li>
 <li>L'année de fondation de l'école</li>
 </ul>
-<h4 id="entreprises">Entreprises</h4>
+<h4 id="entreprises">Entreprises<a class="headerlink" href="#entreprises" title="Permanent link">&para;</a></h4>
 <p>LinkedIn permet aux entreprises de créer leurs propres pages, comme celle de LinkedIn elle-même, afin que les employés puissent identifier leur emploi passé ou actuel avec l'entreprise. Assurez-vous que la base de données de LinkedIn peut stocker les informations suivantes pour chaque entreprise :</p>
 <ul>
 <li>Le nom de l'entreprise</li>
 <li>Le secteur d'activité de l'entreprise (par exemple, « Éducation », « Technologie », « Finance », etc.)</li>
 <li>L'emplacement de l'entreprise</li>
 </ul>
-<h4 id="connexions">Connexions</h4>
+<h4 id="connexions">Connexions<a class="headerlink" href="#connexions" title="Permanent link">&para;</a></h4>
 <p>Et enfin, l'essence de LinkedIn est sa capacité à faciliter les connexions entre les personnes. Assurez-vous que la base de données de LinkedIn peut supporter chacune des connexions suivantes.</p>
 <p>Connexions avec des Personnes</p>
 <p>La base de données de LinkedIn doit pouvoir représenter des connexions mutuelles (réciproques, bidirectionnelles) entre les utilisateurs. Pas besoin de vous soucier des connexions unidirectionnelles, comme l'utilisateur A « suivant » l'utilisateur B sans que l'utilisateur B « suive » l'utilisateur A.</p>
@@ -1836,7 +1719,7 @@
 <li>La date de fin de son affiliation (c'est-à-dire, quand il a quitté l'entreprise), le cas échéant</li>
 <li>Le titre qu'il occupait pendant son affiliation avec l'entreprise</li>
 </ul>
-<h3 id="donnees-dexemple">Données d'Exemple</h3>
+<h3 id="donnees-dexemple">Données d'Exemple<a class="headerlink" href="#donnees-dexemple" title="Permanent link">&para;</a></h3>
 <p>Votre base de données doit pouvoir représenter…</p>
 <ul>
 <li>Un utilisateur, Alan Garber, dont le nom d'utilisateur est « alan » et le mot de passe est « password ».</li>
@@ -1846,7 +1729,7 @@
 <li>L'éducation de premier cycle d'Alan Garber à Harvard, poursuivant une Licence du 1er septembre 1973 au 1er juin 1976.</li>
 <li>L'emploi de Reid Hoffman chez LinkedIn en tant que PDG et Président, du 1er janvier 2003 au 1er février 2007.</li>
 </ul>
-<h2 id="utilisation">Utilisation</h2>
+<h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
 <p>Pour créer une base de données à partir de votre schéma, dans votre dossier <code>connect</code>, tapez</p>
 <pre><code>sqlite3 connect.db
 </code></pre>
@@ -1908,7 +1791,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", {"toc.integrate": true}], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
