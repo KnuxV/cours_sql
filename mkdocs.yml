@@ -1,6 +1,6 @@
 site_name: Cours SQL
 theme:
-  name: material   # Uses a nice, modern theme
+  name: cinder   # Uses a nice, modern theme
   features:
     - navigation.tabs
     - navigation.top
