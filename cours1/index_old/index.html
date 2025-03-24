@@ -1,0 +1,2597 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../views/instructions/">
+      
+      
+        <link rel="next" href="../../cours2/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Old Index - Cours SQL</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cours-1-query" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Cours SQL" class="md-header__button md-logo" aria-label="Cours SQL" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cours SQL
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Old Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cours0/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 0
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cours2/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cours3/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cours4/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cours5/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 5
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cours6/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 6
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cours7/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 7
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sqlite_python/" class="md-tabs__link">
+          
+  
+    
+  
+  SQLite Python
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Cours SQL
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../cours0/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 0
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 1
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cyberchase/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cyberchase
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../normals/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Normals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../players/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Players
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../views/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Views
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Old Index
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Old Index
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video-en-anglais-facultatif" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vidéo en anglais (facultatif)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base de données
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlite" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQLite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    <span class="md-ellipsis">
+      SELECT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SELECT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIMIT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where" class="md-nav__link">
+    <span class="md-ellipsis">
+      WHERE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#null" class="md-nav__link">
+    <span class="md-ellipsis">
+      NULL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#like" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIKE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LIKE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ranges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ranges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORDER BY
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ORDER BY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions-dagregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions d'agrégation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctions d&#39;agrégation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-cela-conclut-la-lecture-0-sur-les-requetes-en-sql-pour-quitter-linvite-sqlite-vous-pouvez-taper-le-mot-cle-sqlite-quit-et-cela-devrait-vous-ramener-au-terminal-habituel" class="md-nav__link">
+    <span class="md-ellipsis">
+      - Cela conclut la Lecture 0 sur les requêtes en SQL ! Pour quitter l'invite SQLite, vous pouvez taper le mot-clé SQLite .quit et cela devrait vous ramener au terminal habituel.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../cours2/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 2
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours2/dese/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dese
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours2/moneyball/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moneyball
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours2/packages/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../cours3/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 3
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours3/atl/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours3/connect/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours3/doghnut/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Doghnut
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../cours4/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 4
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours4/dont-panic/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Don't Panic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours4/meteorites/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meteorites
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../cours5/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 5
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours5/bnb/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BNB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours5/census/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Census
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours5/private/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Private
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../cours6/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 6
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours6/harvard/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harvard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours6/snap/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Snap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../cours7/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 7
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 7
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours7/index2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours7/deep/answers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deep Answers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours7/deep/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deep Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours7/dont-panic-python/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Don't Panic Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours7/linkedin/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LinkedIn
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../sqlite_python/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    SQLite Python
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            SQLite Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video-en-anglais-facultatif" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vidéo en anglais (facultatif)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base de données
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlite" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQLite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    <span class="md-ellipsis">
+      SELECT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SELECT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIMIT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where" class="md-nav__link">
+    <span class="md-ellipsis">
+      WHERE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#null" class="md-nav__link">
+    <span class="md-ellipsis">
+      NULL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#like" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIKE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LIKE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ranges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ranges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORDER BY
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ORDER BY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions-dagregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions d'agrégation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctions d&#39;agrégation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-cela-conclut-la-lecture-0-sur-les-requetes-en-sql-pour-quitter-linvite-sqlite-vous-pouvez-taper-le-mot-cle-sqlite-quit-et-cela-devrait-vous-ramener-au-terminal-habituel" class="md-nav__link">
+    <span class="md-ellipsis">
+      - Cela conclut la Lecture 0 sur les requêtes en SQL ! Pour quitter l'invite SQLite, vous pouvez taper le mot-clé SQLite .quit et cela devrait vous ramener au terminal habituel.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cours-1-query"><a href="https://cs50.harvard.edu/sql/2024/weeks/0/">Cours 1 : Query</a></h1>
+<ul>
+<li>
+<p><a href="#introduction">Introduction</a></p>
+</li>
+<li>
+<p><a href="#base-de-données">Qu'est-ce qu'une base de données ?</a></p>
+</li>
+<li>
+<p><a href="#sql">SQL</a></p>
+</li>
+<li>
+<p><a href="#sqlite">Démarrer avec SQLite</a></p>
+</li>
+<li>
+<p><a href="#terminal">Conseils pour le terminal</a></p>
+</li>
+<li>
+<p><a href="#select"><code>SELECT</code></a></p>
+</li>
+<li>
+<p><a href="#limit"><code>LIMIT</code></a></p>
+</li>
+<li>
+<p><a href="#where"><code>WHERE</code></a></p>
+</li>
+<li>
+<p><a href="#null"><code>NULL</code></a></p>
+</li>
+<li>
+<p><a href="#like"><code>LIKE</code></a></p>
+</li>
+<li>
+<p><a href="#range"><code>BETWEEN</code></a></p>
+</li>
+<li>
+<p><a href="#order-by"><code>ORDER BY</code></a></p>
+</li>
+<li>
+<p><a href="#fonctions-dagrégation">Fonctions d'agrégation</a></p>
+</li>
+</ul>
+<h2 id="video-en-anglais-facultatif"><a href="https://video.cs50.io/vHYeChEf2lA?screen=6UZILCexEZ4">Vidéo en anglais</a> (facultatif)</h2>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li>
+<p>Les bases de données (et SQL) sont des outils qui peuvent être utilisés pour interagir avec, stocker et gérer des informations. </p>
+</li>
+<li>
+<p>Un tableau stocke un ensemble d'informations</p>
+</li>
+<li>Chaque <strong>ligne</strong> d'un tableau <strong>stocke</strong> un <strong>élément</strong> de cet ensemble</li>
+<li>
+<p>Chaque <strong>colonne</strong> a un <strong>attribut</strong> de cet élément</p>
+</li>
+<li>
+<p>Considérons maintenant un contexte moderne. Disons que vous êtes bibliothécaire et que vous devez organiser des informations sur les titres de livres et les auteurs dans ce diagramme.</p>
+</li>
+</ul>
+<p><img alt="books" src="https://cs50.harvard.edu/sql/2024/notes/0/images/books.jpg" /></p>
+<ul>
+<li>Une façon d'organiser les informations serait d'avoir chaque titre de livre suivi de son auteur, comme ci-dessous.</li>
+</ul>
+<p><img alt="&quot;Tableau avec les titres de livres suivis de l'auteur&quot;" src="https://cs50.harvard.edu/sql/2024/notes/0/images/bookstable.jpg" /></p>
+<ul>
+<li>Notez que chaque livre est maintenant une ligne dans ce tableau.</li>
+<li>Chaque ligne a deux colonnes - chacune un attribut différent du livre (titre du livre et auteur).</li>
+<li>À l'ère de l'information d'aujourd'hui, nous pouvons stocker nos tableaux en utilisant des logiciels comme Google Sheets au lieu de papier📝 ou de tablettes en pierre🪨. Cependant, dans ce cours, nous parlerons de bases de données et non de feuilles de calcul.</li>
+<li>Trois raisons de passer des feuilles de calcul aux bases de données sont :<ul>
+<li><strong>Échelle</strong> : Les bases de données peuvent stocker non seulement des éléments se comptant par dizaines de milliers, mais aussi des millions et des milliards.</li>
+<li><strong>Capacité de mise à jour</strong> : Les bases de données sont capables de gérer plusieurs mises à jour de données par seconde.</li>
+<li><strong>Vitesse</strong> : Les bases de données permettent une recherche plus rapide des informations. Cela est dû au fait que les bases de données nous donnent accès à différents algorithmes pour récupérer des informations. En revanche, les feuilles de calcul qui permettent uniquement l'utilisation de Ctrl+F ou Cmd+F pour parcourir les résultats un par un.</li>
+</ul>
+</li>
+</ul>
+<h2 id="base-de-donnees">Base de données</h2>
+<ul>
+<li>Une base de données est un moyen d'organiser des données de manière à pouvoir effectuer quatre opérations <strong>CRUD</strong>:<ul>
+<li><strong>C</strong>REATE</li>
+<li><strong>R</strong>EAD</li>
+<li><strong>U</strong>PDATE</li>
+<li><strong>D</strong>ELETE</li>
+</ul>
+</li>
+<li>Un système de gestion de base de données (<strong>DBMS</strong>: DataBase Managment System) est un moyen d'interagir avec une base de données en utilisant une interface graphique ou un langage textuel.</li>
+<li>Exemples de DBMS : MySQL, Oracle, PostgreSQL, SQLite, Microsoft Access, MongoDB, etc.</li>
+<li>Le choix d'un DBMS repose sur des facteurs tels que :<ul>
+<li>Coût : logiciel propriétaire vs logiciel gratuit,</li>
+<li>Quantité de support : les logiciels libres et open source comme MySQL, PostgreSQL et SQLite ont l'inconvénient de devoir configurer la base de données soi-même,</li>
+<li>Poids : les systèmes plus complets comme MySQL ou PostgreSQL sont plus lourds et nécessitent plus de calcul pour fonctionner que les systèmes comme SQLite.</li>
+</ul>
+</li>
+<li>Dans ce cours, nous commencerons par SQLite.</li>
+</ul>
+<h2 id="sql">SQL</h2>
+<ul>
+<li>SQL signifie <strong>Structured Query Language</strong>. C'est un langage utilisé pour interagir avec les bases de données, par lequel vous pouvez créer, lire, mettre à jour et supprimer des données dans une base de données. Quelques points importants sur SQL :<ul>
+<li>il est structuré, comme nous le verrons dans ce cours,</li>
+<li>il a certains mots-clés qui peuvent être utilisés pour interagir avec la base de données, et</li>
+<li>c'est un langage de requête - il peut être utilisé pour poser des questions sur les données à l'intérieur d'une base de données.</li>
+</ul>
+</li>
+<li>Dans cette leçon, nous allons apprendre à écrire quelques requêtes SQL simples.</li>
+</ul>
+<h3 id="questions">Questions</h3>
+<blockquote>
+<p>Existe-t-il des sous-ensembles de SQL ?</p>
+</blockquote>
+<ul>
+<li>SQL est une norme à la fois de l'American National Standards Institute (ANSI) et de l'Organisation internationale de normalisation (ISO). La plupart des DBMS supportent un sous-ensemble du langage SQL. Par exemple, pour SQLite, nous utilisons un sous-ensemble de SQL qui est supporté par SQLite. Si nous voulions porter notre code vers un autre système comme MySQL, il est probable que nous devrions changer une partie de la syntaxe.</li>
+</ul>
+<h2 id="sqlite">SQLite</h2>
+<ul>
+<li>Il est utile de noter que SQLite n'est pas seulement quelque chose que nous utilisons pour ce cours, mais une base de données utilisée dans de nombreuses autres applications, y compris les téléphones, les applications de bureau et les sites web.</li>
+</ul>
+<h2 id="terminal">Terminal</h2>
+<p>Voici quelques conseils utiles pour écrire du code SQL sur le terminal.</p>
+<ul>
+<li>Pour effacer l'écran du terminal, appuyez sur Ctrl + L.</li>
+<li>Pour obtenir la ou les instructions précédemment exécutées sur le terminal, appuyez sur la touche fléchée vers le haut.</li>
+<li>Si votre requête SQL est trop longue et s'enroule autour du terminal, vous pouvez appuyer sur Entrée et continuer à écrire la requête sur la ligne suivante.</li>
+<li>Pour quitter une base de données ou l'environnement SQLite, utilisez <code>.quit</code>.</li>
+<li>Pour visualiser les différents tableaux dans la base de données utilisiez <code>.tables</code></li>
+<li><code>.mode column</code> permet une visualisation plus facile.</li>
+</ul>
+<h2 id="select"><code>SELECT</code></h2>
+<ul>
+<li>Quelles données sont réellement dans notre base de données ? Pour répondre à cette question, nous allons utiliser notre premier mot-clé SQL, <code>SELECT</code>, qui nous permet de sélectionner certaines (ou toutes) lignes d'un tableau à l'intérieur de la base de données.</li>
+<li>Dans l'environnement SQLite, exécutez :</li>
+</ul>
+<pre><code class="language-sql">SELECT *
+FROM &quot;nom_du_tableau&quot;;
+</code></pre>
+<p>Cela sélectionne toutes les lignes du tableau appelé <code>nom_du_tableau</code>.
+- La sortie que nous obtenons contient toutes les colonnes de toutes les lignes de ce tableau, ce qui fait beaucoup de données. Nous pouvons la simplifier en sélectionnant une colonne particulière, par exemple le titre, du tableau. Essayons :</p>
+<pre><code class="language-sql">SELECT &quot;nom_de_la_colonne&quot;
+FROM &quot;nom_du_tableau&quot;;
+</code></pre>
+<ul>
+<li>Maintenant, nous voyons une liste des titres dans ce tableau. Mais que faire si nous voulons voir les titres et les auteurs dans nos résultats de recherche ? Pour cela, nous exécutons :</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;colonne1&quot;, &quot;colonne2&quot;
+FROM nom_du_tableau;
+</code></pre>
+<h3 id="questions_1">Questions</h3>
+<blockquote>
+<p>Est-il nécessaire d'utiliser les doubles guillemets (“) autour des noms de tableaux et de colonnes ?</p>
+</blockquote>
+<ul>
+<li>Il est bon d'utiliser des doubles guillemets autour des noms de tableaux et de colonnes, qui sont appelés identificateurs SQL. SQL a également des chaînes de caractères (string en anglais) et nous utilisons des guillemets simples autour des chaînes de caractères pour les différencier des identificateurs.</li>
+</ul>
+<blockquote>
+<p>Comment savons-nous quels tableaux et colonnes se trouvent dans une base de données ?</p>
+</blockquote>
+<ul>
+<li>Le schéma de la base de données contient la structure de la base de données, y compris les noms des tableaux et des colonnes.  Dans le terminal, on utilise la commande <code>.schema</code></li>
+</ul>
+<blockquote>
+<p>SQLite 3 est-il sensible à la casse ? Pourquoi certaines parties de la requête sont-elles en majuscules et d'autres en minuscules ?</p>
+</blockquote>
+<ul>
+<li>SQLite n'est pas sensible à la casse. Cependant, nous suivons certaines conventions de style. Observez cette requête :</li>
+</ul>
+<pre><code class="language-sql">SELECT *
+FROM &quot;tableau&quot;;
+</code></pre>
+<p>Les mots-clés SQL sont écrits en majuscules. Cela est particulièrement utile pour améliorer la lisibilité des requêtes plus longues. Les noms de tableaux et de colonnes sont en minuscules.</p>
+<h2 id="limit"><code>LIMIT</code></h2>
+<ul>
+<li>Si une base de données contient des millions de lignes, il ne serait peut-être pas judicieux de sélectionner toutes ses lignes. Au lieu de cela, nous pourrions simplement vouloir jeter un coup d'œil aux données qu'elle contient. Nous utilisons le mot-clé SQL <code>LIMIT</code> pour spécifier le nombre de lignes dans la sortie de la requête.</li>
+</ul>
+<pre><code class="language-sql">  SELECT title, air_date 
+  FROM episodes 
+  LIMIT 5;
+</code></pre>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>title</th>
+<th>air_date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lost My Marbles</td>
+<td>2002-01-21</td>
+</tr>
+<tr>
+<td>Castleblanca</td>
+<td>2002-01-22</td>
+</tr>
+<tr>
+<td>R-Fair City</td>
+<td>2002-01-23</td>
+</tr>
+<tr>
+<td>Snow Day to be Exact</td>
+<td>2002-01-24</td>
+</tr>
+<tr>
+<td>Sensible Flats</td>
+<td>2002-01-25</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>Cette requête nous donne les 5 premiers titres et data de la base de données. Les titres sont ordonnés de la même manière dans la sortie de cette requête que dans la base de données.</p>
+<h2 id="where"><code>WHERE</code></h2>
+<ul>
+<li>Le mot-clé <code>WHERE</code> est utilisé pour sélectionner des lignes en fonction d'une condition ; il affichera les lignes pour lesquelles la condition spécifiée est vraie.</li>
+<li><code>sql
+  SELECT "title"
+  FROM "episodes"
+  WHERE "season" = 1;</code>
+|                title                |
+|-------------------------------------|
+| Lost My Marbles                     |
+| Castleblanca                        |
+| R-Fair City                         |
+| Snow Day to be Exact                |
+| Sensible Flats                      |
+| Zeus on the Loose                   |
+| The Poddleville Case                |
+| And They Counted Happily Ever After |
+| Clock Like An Egyptian              |
+| Secrets of Symmetria                |
+| A Day at the Spa                    |
+| Of All The Luck                     |
+| Eureeka                             |
+| Cool It                             |
+| Find Those Gleamers                 |
+| Codename: Icky                      |
+| Return to Sensible Flats            |
+| Problem Solving in Shangri-La       |
+| Send in the Clones                  |
+| Trading Places                      |
+| Less Than Zero                      |
+| Model Behavior                      |
+| Fortress of Attitude                |
+| Size Me Up                          |
+| A Battle of Equals                  |
+| Out of Sync                         |</li>
+</ul>
+<p>Cela nous donne les titres des épisodes de la saison 1. Notez que <code>1</code> n'est pas entre guillemets car c'est un entier, et non une chaîne de caractères ou un identificateur.
+- Les opérateurs qui peuvent être utilisés pour spécifier des conditions en SQL sont <code>=</code> (“égal à”), <code>!=</code> (“différent de”) et <code>&lt;&gt;</code> (également “différent de”).</p>
+<pre><code>- Notez qu'il faut utiliser les guillemets sumple pour faire une comparison avec une chaîne de caractères en SQL (et les guillemets doubles si nom de colonne).
+</code></pre>
+<p>On peut aussi utiliser le mot-clé SQL <code>NOT</code>. Une requête serait :</p>
+<pre><code class="language-sql">SELECT &quot;title
+FROM &quot;episodes&quot;
+WHERE NOT &quot;season&quot; = 1;
+</code></pre>
+<ul>
+<li>Pour combiner des conditions, nous pouvons utiliser les mots-clés SQL <code>AND</code> et <code>OR</code>. Nous pouvons également utiliser des parenthèses pour indiquer comment combiner les conditions dans une instruction conditionnelle composée.</li>
+<li>Pour sélectionner les titres et les auteurs des livres présélectionnés en 2022 ou 2023 :</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;air_date&quot; 
+from &quot;episodes&quot; 
+where 
+    &quot;season&quot;=1 
+    OR 
+    &quot;season&quot;=2;
+</code></pre>
+<ul>
+<li>Pour sélectionner les livres présélectionnés en 2022 ou 2023 qui n'étaient pas des reliures cartonnées :</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;topic&quot;
+FROM &quot;episodes&quot;
+WHERE (&quot;season&quot; = 1 OR &quot;season&quot; = 2) AND &quot;topic&quot; != 'Navigation';
+</code></pre>
+<p>Ici, les parenthèses indiquent que la clause <code>OR</code> doit être évaluée avant la clause <code>AND</code>.</p>
+<h2 id="null"><code>NULL</code></h2>
+<ul>
+<li>Il est possible que les tableaux aient des données manquantes. <code>NULL</code> est un type utilisé pour indiquer que certaines données n'ont pas de valeur, ou n'existent pas dans le tableau.</li>
+<li>Les conditions utilisées avec <code>NULL</code> sont <code>IS NULL</code> et <code>IS NOT NULL</code>.</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;,
+FROM &quot;episodes&quot;
+WHERE &quot;topic&quot; IS NULL;
+</code></pre>
+<ul>
+<li>Essayons l'inverse : sélectionner les épisodes pour lesquels il n'y a pas de topic</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;,
+FROM &quot;episodes&quot;
+WHERE &quot;topic&quot; IS NOT NULL;
+</code></pre>
+<h2 id="like"><code>LIKE</code></h2>
+<ul>
+<li>Ce mot-clé est utilisé pour sélectionner des données qui correspondent approximativement à la chaîne de caractères spécifiée. Par exemple, <code>LIKE</code> pourrait être utilisé pour sélectionner des livres qui ont un certain mot ou une certaine phrase dans leur titre.</li>
+<li><code>LIKE</code> est combiné avec les opérateurs <code>%</code> (correspond à n'importe quels caractères autour d'une chaîne de caractères donnée) et <code>_</code> (correspond à un seul caractère).</li>
+<li>Pour sélectionner les épisodes avec le mot “love” dans leurs titres, nous pouvons exécuter :</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;
+FROM &quot;episodes&quot;
+WHERE &quot;title&quot; LIKE '%love%';
+</code></pre>
+<p><code>%</code> correspond à 0 ou plusieurs caractères, donc cette requête correspondra aux titres de livres qui ont 0 ou plusieurs caractères avant et après “love” - c'est-à-dire, les titres qui contiennent “love”.
+- Pour sélectionner les livres dont le titre commence par “The”, nous pouvons exécuter :</p>
+<pre><code class="language-sql">SELECT &quot;title&quot;
+FROM &quot;episodes&quot;
+WHERE &quot;title&quot; LIKE 'The%';
+</code></pre>
+<ul>
+<li>La requête ci-dessus pourrait également retourner des épisodes dont les titres commencent par “Their” ou “They”. Pour sélectionner uniquement les épisodes dont les titres commencent par le mot “The”, nous pouvons ajouter un espace.</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;
+FROM &quot;episodes&quot;
+WHERE &quot;title&quot; LIKE 'The %';
+</code></pre>
+<h3 id="questions_2">Questions</h3>
+<blockquote>
+<p>Pouvons-nous utiliser plusieurs symboles <code>%</code> ou <code>_</code> dans une requête ?</p>
+</blockquote>
+<ul>
+<li>Oui, nous pouvons ! Exemple 1 : Si nous voulions sélectionner des épisodes dont les titres commencent par “The” et ont “of” quelque part au milieu, nous pourrions exécuter :</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;
+FROM &quot;episodes&quot;
+WHERE &quot;title&quot; LIKE 'The%love%';
+</code></pre>
+<ul>
+<li>Exemple 2 : Si nous savions qu'il y a un épisode dans le tableau dont le titre commence par “T” et contient 9 lettres, nous pouvons essayer de le trouver en exécutant :</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;
+FROM &quot;episodes&quot;
+WHERE &quot;title&quot; LIKE 'T______';';
+</code></pre>
+<blockquote>
+<p>La comparaison des chaînes de caractères est-elle sensible à la casse en SQL ?</p>
+</blockquote>
+<ul>
+<li>Dans SQLite, la comparaison des chaînes de caractères avec <code>LIKE</code> est par défaut insensible à la casse, tandis que la comparaison des chaînes de caractères avec <code>=</code> est sensible à la casse. (Notez que, dans d'autres DBMS, la configuration de votre base de données peut changer cela !)</li>
+</ul>
+<h2 id="ranges">Ranges</h2>
+<ul>
+<li>Nous pouvons également utiliser les opérateurs <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> et <code>&gt;=</code> dans nos conditions pour correspondre à une plage de valeurs. </li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;
+FROM &quot;episodes&quot;
+WHERE &quot;season&quot; &gt;= 2 AND &quot;season&quot; &lt; 5;
+</code></pre>
+<ul>
+<li>Une autre façon d'obtenir les mêmes résultats est d'utiliser les mots-clés <code>BETWEEN</code> et <code>AND</code> pour spécifier des plages <strong>inclusives</strong>. Nous pouvons exécuter :</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;
+FROM &quot;episodes&quot;
+WHERE &quot;season&quot; BETWEEN 2 AND 4;
+</code></pre>
+<h3 id="questions_3">Questions</h3>
+<blockquote>
+<p>Pour les opérateurs de plage comme <code>&lt;</code> et <code>&gt;</code>, les valeurs de la base de données doivent-elles être des entiers ?</p>
+</blockquote>
+<ul>
+<li>Non, les valeurs peuvent être des entiers ou des nombres à virgule flottante (c'est-à-dire, “décimaux” ou “réels”). Lors de la création d'une base de données, il existe des moyens de définir ces types de données pour les colonnes.</li>
+</ul>
+<h2 id="order-by"><code>ORDER BY</code></h2>
+<ul>
+<li>Le mot-clé <code>ORDER BY</code> nous permet d'organiser les lignes retournées dans un certain ordre spécifié.</li>
+<li>La requête suivante sélectionne les 10 livres les moins bien notés de notre base de données.</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;,&quot;air_date&quot;
+FROM &quot;episodes&quot;
+ORDER BY &quot;air_date&quot; LIMIT 10;
+</code></pre>
+<ul>
+<li>Notez que l'ordre est croissant par défaut.</li>
+<li>Au lieu de cela, pour sélectionner les 10 derniers éléments :</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;air_date&quot;
+FROM &quot;episodes&quot;
+ORDER BY &quot;air_date&quot; DESC LIMIT 10;
+</code></pre>
+<p>Notez l'utilisation du mot-clé SQL <code>DESC</code> pour spécifier l'ordre décroissant. <code>ASC</code> peut être utilisé pour spécifier explicitement l'ordre croissant.
+- Comme critère de départage, nous pouvons exécuter un deuxième <code>ORDER BY</code>:</p>
+<pre><code class="language-sql">SELECT * 
+from episodes 
+ORDER BY 
+    season DESC, 
+    episode_in_season ASC;
+</code></pre>
+<p>Notez que pour chaque colonne dans la clause <code>ORDER BY</code>, nous spécifions l'ordre croissant ou décroissant.</p>
+<h3 id="questions_4">Questions</h3>
+<blockquote>
+<p>Pour trier les livres par épisodes par ordre alphabétique, pouvons-nous utiliser <code>ORDER BY</code> ?</p>
+</blockquote>
+<ul>
+<li>Oui, nous pouvons. La requête serait :</li>
+</ul>
+<pre><code class="language-sql">SELECT &quot;title&quot;
+FROM &quot;episodes&quot;
+ORDER BY &quot;title&quot;;
+</code></pre>
+<h2 id="fonctions-dagregation">Fonctions d'agrégation</h2>
+<ul>
+<li><code>COUNT</code>, <code>AVG</code>, <code>MIN</code>, <code>MAX</code>, et <code>SUM</code> sont appelées fonctions d'agrégation et nous permettent d'effectuer les opérations correspondantes sur plusieurs lignes de données. Par leur nature même, chacune des fonctions d'agrégation suivantes ne retournera qu'une seule sortie - la valeur agrégée.</li>
+<li>Pour trouver la note moyenne de tous les livres dans la base de données :</li>
+</ul>
+<pre><code class="language-sql">SELECT AVG(&quot;rating&quot;)
+FROM &quot;longlist&quot;;
+</code></pre>
+<ul>
+<li>Pour arrondir la note moyenne à 2 décimales :</li>
+</ul>
+<pre><code class="language-sql">SELECT ROUND(AVG(&quot;rating&quot;), 2)
+FROM &quot;longlist&quot;;
+</code></pre>
+<ul>
+<li>Pour renommer la colonne dans laquelle les résultats sont affichés :</li>
+</ul>
+<pre><code class="language-sql">SELECT ROUND(AVG(&quot;rating&quot;), 2) AS &quot;note moyenne&quot;
+FROM &quot;longlist&quot;;
+</code></pre>
+<p>Notez l'utilisation du mot-clé SQL <code>AS</code> pour renommer les colonnes.
+- Pour sélectionner la note maximale dans la base de données :</p>
+<pre><code class="language-sql">SELECT MAX(&quot;rating&quot;)
+FROM &quot;longlist&quot;;
+</code></pre>
+<ul>
+<li>Pour sélectionner la note minimale dans la base de données :</li>
+</ul>
+<pre><code class="language-sql">SELECT MIN(&quot;rating&quot;)
+FROM &quot;longlist&quot;;
+</code></pre>
+<ul>
+<li>Pour compter le nombre total de votes dans la base de données :</li>
+</ul>
+<pre><code class="language-sql">SELECT SUM(&quot;votes&quot;)
+FROM &quot;longlist&quot;;
+</code></pre>
+<ul>
+<li>Pour compter le nombre de livres dans notre base de données :</li>
+</ul>
+<pre><code class="language-sql">SELECT COUNT(*)
+FROM &quot;longlist&quot;;
+</code></pre>
+<ul>
+<li>Souvenez-vous que nous avons utilisé <code>*</code> pour sélectionner chaque ligne et colonne de la base de données. Dans ce cas, nous essayons de compter chaque ligne de la base de données et donc nous utilisons le <code>*</code>.</li>
+<li>Pour compter le nombre de traducteurs :</li>
+</ul>
+<pre><code class="language-sql">SELECT COUNT(&quot;translator&quot;)
+FROM &quot;longlist&quot;;
+</code></pre>
+<ul>
+<li>Nous observons que le nombre de traducteurs est inférieur au nombre de lignes dans la base de données. C'est parce que la fonction <code>COUNT</code> ne compte pas les valeurs <code>NULL</code>.</li>
+<li>Pour compter le nombre d'éditeurs dans la base de données :</li>
+</ul>
+<pre><code class="language-sql">SELECT COUNT(&quot;publisher&quot;)
+FROM &quot;longlist&quot;;
+</code></pre>
+<ul>
+<li>Comme pour les traducteurs, cette requête comptera le nombre de valeurs d'éditeurs qui ne sont pas <code>NULL</code>. Cependant, cela peut inclure des doublons. Un autre mot-clé SQL, <code>DISTINCT</code>, peut être utilisé pour s'assurer que seules les valeurs distinctes sont comptées.</li>
+</ul>
+<pre><code class="language-sql">SELECT COUNT(DISTINCT &quot;publisher&quot;)
+FROM &quot;longlist&quot;;
+</code></pre>
+<h3 id="questions_5">Questions</h3>
+<blockquote>
+<p>L'utilisation de <code>MAX</code> avec la colonne de titre vous donnerait-elle le titre de livre le plus long ?</p>
+</blockquote>
+<ul>
+<li>Non, l'utilisation de <code>MAX</code> avec la colonne de titre vous donnerait le titre “le plus grand” (ou dans ce cas, le dernier) par ordre alphabétique. De même, <code>MIN</code> donnera le premier titre par ordre alphabétique.</li>
+</ul>
+<h2 id="fin">Fin</h2>
+<h2 id="-cela-conclut-la-lecture-0-sur-les-requetes-en-sql-pour-quitter-linvite-sqlite-vous-pouvez-taper-le-mot-cle-sqlite-quit-et-cela-devrait-vous-ramener-au-terminal-habituel">- Cela conclut la Lecture 0 sur les requêtes en SQL ! Pour quitter l'invite SQLite, vous pouvez taper le mot-clé SQLite <code>.quit</code> et cela devrait vous ramener au terminal habituel.</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
