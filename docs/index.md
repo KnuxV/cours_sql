@@ -2,8 +2,11 @@
 
 ## 🗂️ Contenu du Cours
 
+### [Cours 0 : Introduction rapide au monde de la données](cours0/index.md)
+Introduction générale sur les données et les bases de données
+
 ### 📖 [Cours 1 : Les Fondamentaux en SQL](cours1/index.md)
-Ce module introduit les concepts de base du langage SQL et vous familiarise avec la syntaxe essentielle pour interroger des bases de données. Vous apprendrez à extraire des informations spécifiques à partir de tables, à filtrer les résultats selon différents critères et à organiser vos données de manière logique.
+Concepts de base du langage SQL et vous familiarise avec la syntaxe essentielle pour interroger des bases de données. 
 
 - **Thèmes abordés :**
   - Syntaxe de base des requêtes (SELECT, FROM, WHERE)
@@ -19,7 +22,7 @@ Ce module introduit les concepts de base du langage SQL et vous familiarise avec
 - Lien vers le github/codespace: [Cliquez ici](https://github.com/KnuxV/sql_cours1#)
 
 ### 📊 [Cours 2 : Requêtes Avancées et Agrégations](cours2/index.md)
-Ce module approfondit les techniques de requêtes en introduisant les fonctions d'agrégation et les jointures. Vous apprendrez à effectuer des analyses statistiques sur vos données et à combiner des informations provenant de plusieurs tables.
+Techniques de requêtes en introduisant les fonctions d'agrégation et les jointures. 
 
 - **Thèmes abordés :**
   - Fonctions d'agrégation pour l'analyse statistique (COUNT, SUM, AVG, MAX, MIN)
@@ -33,7 +36,7 @@ Ce module approfondit les techniques de requêtes en introduisant les fonctions 
   - [Packages](cours2/packages/instructions.md) : Gestion des dépendances logicielles avec jointures multiples
 
 ### 📈 [Cours 3 : Modélisation et Schémas](cours3/index.md)
-Ce module se concentre sur les principes de conception de bases de données, la normalisation et la création de schémas efficaces. Vous apprendrez à structurer vos données de manière à éviter la redondance et à maintenir l'intégrité.
+Principes de conception de bases de données, la normalisation et la création de schémas efficaces. 
 
 - **Thèmes abordés :**
   - Conception de schémas relationnels
@@ -47,7 +50,7 @@ Ce module se concentre sur les principes de conception de bases de données, la 
   - [Doghnut](cours3/doghnut/instructions.md) : Application des principes de normalisation dans la conception d'un système de gestion
 
 ### 🔍 [Cours 4 : Manipulation Avancée des Données](cours4/index.md)
-Ce module explore les techniques avancées pour manipuler des ensembles de données complexes. Vous découvrirez les sous-requêtes, les fonctions de fenêtrage et la gestion des transactions.
+Techniques avancées pour manipuler des ensembles de données complexes.
 
 - **Thèmes abordés :**
   - Sous-requêtes corrélées et non corrélées
@@ -60,8 +63,7 @@ Ce module explore les techniques avancées pour manipuler des ensembles de donn�
   - [Météorites](cours4/meteorites/instructions.md) : Analyse scientifique de données de météorites avec fonctions de fenêtrage
 
 ### 💾 [Cours 5 : Indexation et Performance](cours5/index.md)
-Ce module se concentre sur l'optimisation des performances des bases de données. Vous apprendrez à créer et utiliser des index pour accélérer les requêtes et à analyser les plans d'exécution.
-
+Optimisation des performances des bases de données. 
 - **Thèmes abordés :**
   - Types d'index et leur fonctionnement interne
   - Analyse des plans d'exécution avec EXPLAIN QUERY PLAN
@@ -73,7 +75,7 @@ Ce module se concentre sur l'optimisation des performances des bases de données
   - [Indexes](cours5/indexes/instructions.md) : Création et utilisation stratégique d'index pour accélérer des requêtes spécifiques
 
 ### 🔐 [Cours 6 : Indexation Avancée et Optimisation](cours6/index.md)
-Ce module approfondit les techniques d'optimisation des bases de données en explorant l'indexation avancée, l'analyse des plans d'exécution et les stratégies de performance pour les applications à forte charge.
+Techniques d'optimisation des bases de données en explorant l'indexation avancée, l'analyse des plans d'exécution et les stratégies de performance pour les applications à forte charge.
 
 - **Thèmes abordés :**
   - Indexation avancée et indexation sur plusieurs colonnes
@@ -86,7 +88,7 @@ Ce module approfondit les techniques d'optimisation des bases de données en exp
   - [Snap](cours6/snap/instructions.md) : Écriture de requêtes efficaces pour une application de messagerie utilisant des index existants
 
 ### 🌐 [Cours 7 : Systèmes de Gestion de Bases de Données Avancés](cours7/index.md)
-Ce module final explore les différents systèmes de gestion de bases de données, leurs caractéristiques spécifiques et les techniques avancées pour la mise à l'échelle des applications.
+Différents systèmes de gestion de bases de données, leurs caractéristiques spécifiques et les techniques avancées pour la mise à l'échelle des applications.
 
 - **Thèmes abordés :**
   - Différences entre SQLite, MySQL, PostgreSQL et MariaDB
