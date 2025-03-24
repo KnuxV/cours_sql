@@ -1,4 +1,4 @@
-# Cours 2
+## Cours 2
 
 - [Introduction](#introduction)
 - [Diagrammes Entité-Relation](#diagrammes-entité-relation)

@@ -1,4 +1,4 @@
-[# Lecture 6](https://cs50.harvard.edu/sql/2024/notes/6/)
+## [Cours 6](https://cs50.harvard.edu/sql/2024/notes/6/)
 
 - [Introduction](#introduction)
 - [MySQL](#mysql)

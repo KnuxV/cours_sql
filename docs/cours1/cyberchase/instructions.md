@@ -1,6 +1,6 @@
-# Cyberchase
+## [Cyberchase](https://cs50.harvard.edu/sql/2024/psets/0/cyberchase/#cyberchase)
 
-
+![cyb_img](https://cs50.harvard.edu/sql/2024/psets/0/cyberchase/cyberchase.jpg)
 ## Problème à Résoudre
 
 Bienvenue dans le Cyberespace ! Cyberchase est une série télévisée animée et éducative pour enfants, diffusée par le Public Broadcasting Service (PBS) des États-Unis depuis 2002. Conçue à l'origine pour « montrer aux enfants que les mathématiques sont partout et que tout le monde peut être bon en maths », le monde de Cyberchase tourne autour de Jackie, Matt et Inez qui s'associent à Digit, un « cybird », pour empêcher Hacker de prendre le contrôle du Cyberespace et d'infecter la Carte Mère. En chemin, le quatuor apprend des compétences en mathématiques, en sciences et en résolution de problèmes pour contrecarrer les tentatives de Hacker.
@@ -8,6 +8,12 @@ Bienvenue dans le Cyberespace ! Cyberchase est une série télévisée animée e
 Dans une base de données appelée `cyberchase.db`, en utilisant une table appelée `episodes`, trouvez des réponses aux questions de PBS sur les épisodes de Cyberchase jusqu'à présent.
 
 ## Démonstration
+
+```sqlite
+sqlite3 cyberchase.db                                                  sqlite> .tables                                                         episodes                                                                 sqlite> SELECT "title" FROM "episodes"      
+```
+
+
 
 ## Code de Distribution
 

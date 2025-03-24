@@ -1,4 +1,4 @@
-# Cours 5 ([Version originale](https://cs50.harvard.edu/sql/2024/notes/4/))
+## Cours 5 ([Version originale](https://cs50.harvard.edu/sql/2024/notes/4/))
 
 - [Introduction](#introduction)
 - [Vues (Views)](#vues-views)

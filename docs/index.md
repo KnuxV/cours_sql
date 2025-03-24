@@ -1,4 +1,4 @@
-# 📊 Bienvenue au Cours SQL
+## 📊 Bienvenue au Cours SQL
 
 ## 🗂️ Contenu du Cours
 

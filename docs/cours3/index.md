@@ -1,4 +1,4 @@
-# Cours 3
+## Cours 3
 
 ## Introduction
 

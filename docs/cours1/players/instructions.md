@@ -11,6 +11,12 @@ Dans une base de données appelée `players.db`, en utilisant une table appelée
 
 ## Démonstration
 
+```sql
+$ sqlite3 players.db                                                     sqlite> .tables                                                         players                                                                 sqlite> SELECT "first_name", "last_name", "debut"                       	...> FROM "players"                                                      ...> LIMIT 10;     
+```
+
+
+
 ## Code de Distribution
 
 Pour ce problème, vous devrez utiliser `players.db`, ainsi que plusieurs fichiers `.sql` dans lesquels vous écrirez vos requêtes.

@@ -4,6 +4,14 @@
 >
 > The Washington Post, 28 avril 2023
 
+## Démonstration
+
+```sqlite
+$ sqlite3 normals.db                                                     sqlite> .tables                                                         normals                                                                 sqlite> SELECT "latitude", "longitude", "0m", "250m", "500m" FROM "normals"  
+```
+
+
+
 ## Problème à Résoudre
 
 Comment savons-nous si les températures des océans sont plus basses ou plus élevées que la "normale" ? Qu'est-ce qu'une température "normale" ? Il s'avère que les scientifiques ont développé une métrique appelée "Climate Normal". Une Climate Normal caractérise les aspects du climat terrestre — ses conditions météorologiques à long terme — sur une période de 30 ans. Une métrique importante est la température des océans.

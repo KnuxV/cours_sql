@@ -2,6 +2,14 @@
 ![Beau Temps, Matin Clair](https://cs50.harvard.edu/sql/2024/psets/0/views/2.jpeg)
 Beau Temps, Matin Clair par Katsushika Hokusai
 
+## Démonstration
+
+```sql
+$ sqlite3 views.db                                                       sqlite> .tables                                                         views                                                                   sqlite> SELECT "english_title", "artist" FROM "views";  
+```
+
+
+
 ## Problème à Résoudre
 
 De 1830 à 1832, l'artiste japonais Katsushika Hokusai a créé 36 estampes représentant 36 vues différentes du Mont Fuji, un volcan sur l'île de Honshū au Japon. Parmi les œuvres les plus célèbres de la série figurent Beau Temps, Matin Clair et La Grande Vague de Kanagawa. Les estampes sont devenues si influentes qu'un autre artiste japonais de l'époque, Utagawa Hiroshige, a créé sa propre série de 36 estampes, chacune représentant une nouvelle vue du Fuji.

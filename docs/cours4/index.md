@@ -1,4 +1,4 @@
-# [**Cours 4**](https://cs50.harvard.edu/sql/2024/notes/3/)
+## [**Cours 4**](https://cs50.harvard.edu/sql/2024/notes/3/)
 
 - [Introduction](#introduction)
 - [Schéma de la base de données (Database Schema)](#schéma-de-la-base-de-données-database-schema)

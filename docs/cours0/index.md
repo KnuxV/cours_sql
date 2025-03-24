@@ -1,4 +1,4 @@
-# [Cours 1](https://cs50.harvard.edu/sql/2024/notes/0/)
+## [Cours 1](https://cs50.harvard.edu/sql/2024/notes/0/)
 
 - [Introduction](#introduction)
 - [Qu'est-ce qu'une base de données ?](#quest-ce-quune-base-de-données)
