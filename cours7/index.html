@@ -1,427 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    
-    <link rel="shortcut icon" href="../img/favicon.ico">
-
-    
-    <title>Introduction - Cours SQL</title>
-    
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
-    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../css/base.min.css" rel="stylesheet">
-    <link href="../css/cinder.min.css" rel="stylesheet">
-
-    
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
         
-    
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Introduction - Cours SQL</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-        <![endif]-->
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Cours SQL</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours 0</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../cours0/" class="dropdown-item">Introduction</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours 1</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../cours1/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../cours1/cyberchase/instructions/" class="dropdown-item">Cyberchase</a>
+</li>
+                                    
+<li>
+    <a href="../cours1/normals/instructions/" class="dropdown-item">Normals</a>
+</li>
+                                    
+<li>
+    <a href="../cours1/players/instructions/" class="dropdown-item">Players</a>
+</li>
+                                    
+<li>
+    <a href="../cours1/views/instructions/" class="dropdown-item">Views</a>
+</li>
+                                    
+<li>
+    <a href="../cours1/index_old.md" class="dropdown-item">Old Index</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours 2</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../cours2/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../cours2/dese/instructions/" class="dropdown-item">Dese</a>
+</li>
+                                    
+<li>
+    <a href="../cours2/moneyball/instructions/" class="dropdown-item">Moneyball</a>
+</li>
+                                    
+<li>
+    <a href="../cours2/packages/instructions/" class="dropdown-item">Packages</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours 3</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../cours3/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../cours3/atl/instructions/" class="dropdown-item">ATL</a>
+</li>
+                                    
+<li>
+    <a href="../cours3/connect/instructions/" class="dropdown-item">Connect</a>
+</li>
+                                    
+<li>
+    <a href="../cours3/doghnut/instructions/" class="dropdown-item">Doghnut</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours 4</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../cours4/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../cours4/dont-panic/instructions/" class="dropdown-item">Don't Panic</a>
+</li>
+                                    
+<li>
+    <a href="../cours4/meteorites/instructions/" class="dropdown-item">Meteorites</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours 5</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../cours5/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../cours5/bnb/instructions/" class="dropdown-item">BNB</a>
+</li>
+                                    
+<li>
+    <a href="../cours5/census/instructions/" class="dropdown-item">Census</a>
+</li>
+                                    
+<li>
+    <a href="../cours5/private/instructions/" class="dropdown-item">Private</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours 6</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../cours6/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../cours6/harvard/instructions/" class="dropdown-item">Harvard</a>
+</li>
+                                    
+<li>
+    <a href="../cours6/snap/instructions/" class="dropdown-item">Snap</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours 7</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="index2/" class="dropdown-item">Index 2</a>
+</li>
+                                    
+<li>
+    <a href="deep/answers/" class="dropdown-item">Deep Answers</a>
+</li>
+                                    
+<li>
+    <a href="deep/instructions/" class="dropdown-item">Deep Instructions</a>
+</li>
+                                    
+<li>
+    <a href="dont-panic-python/instructions/" class="dropdown-item">Don't Panic Python</a>
+</li>
+                                    
+<li>
+    <a href="linkedin/instructions/" class="dropdown-item">LinkedIn</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">SQLite Python</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../sqlite_python/" class="dropdown-item">Introduction</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
 
-     
-</head>
-
-<body>
-
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-
-            <!-- Main title -->
-
-            
-              <a class="navbar-brand" href="..">Cours SQL</a>
-            
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../cours6/snap/instructions/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="index2/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                
-                
-                    <li >
-                        <a href="..">Home</a>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 0 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours0/">Introduction</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 1 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours1/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours1/cyberchase/instructions/">Cyberchase</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours1/normals/instructions/">Normals</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours1/players/instructions/">Players</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours1/views/instructions/">Views</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours1/index_old.md">Old Index</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 2 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours2/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours2/dese/instructions/">Dese</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours2/moneyball/instructions/">Moneyball</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours2/packages/instructions/">Packages</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 3 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours3/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours3/atl/instructions/">ATL</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours3/connect/instructions/">Connect</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours3/doghnut/instructions/">Doghnut</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 4 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours4/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours4/dont-panic/instructions/">Don't Panic</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours4/meteorites/instructions/">Meteorites</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 5 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours5/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours5/bnb/instructions/">BNB</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours5/census/instructions/">Census</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours5/private/instructions/">Private</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 6 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours6/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours6/harvard/instructions/">Harvard</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours6/snap/instructions/">Snap</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 7 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li class="active">
-    <a href="./">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="index2/">Index 2</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="deep/answers/">Deep Answers</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="deep/instructions/">Deep Instructions</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="dont-panic-python/instructions/">Don't Panic Python</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="linkedin/instructions/">LinkedIn</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SQLite Python <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../sqlite_python/">Introduction</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fas fa-search"></i> Search
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="../cours6/snap/instructions/">
-                            <i class="fas fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="next" href="index2/">
-                            Next <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </li>
-            </ul>
-        </div>
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
     </div>
-</div>
 
-    <div class="container">
-        
-        
-        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#cours-6">Cours 6</a></li>
-        <li class="first-level "><a href="#introduction">Introduction</a></li>
-        <li class="first-level "><a href="#transition-de-sqlite-vers-les-bases-de-donnees-clientserveur">Transition de SQLite vers les bases de données client/serveur</a></li>
-        <li class="first-level "><a href="#mysql">MySQL</a></li>
-        <li class="first-level "><a href="#creating-the-cards-table">Creating the cards Table</a></li>
-            <li class="second-level"><a href="#questions">Questions</a></li>
-                
-        <li class="first-level "><a href="#creating-the-stations-table">Creating the stations Table</a></li>
-            <li class="second-level"><a href="#questions_1">Questions</a></li>
-                
-        <li class="first-level "><a href="#creating-the-swipes-table">Creating the swipes Table</a></li>
-            <li class="second-level"><a href="#questions_2">Questions</a></li>
-                
-        <li class="first-level "><a href="#altering-tables">Altering Tables</a></li>
-        <li class="first-level "><a href="#stored-procedures">Stored Procedures</a></li>
-            <li class="second-level"><a href="#questions_3">Questions</a></li>
-                
-        <li class="first-level "><a href="#stored-procedures-with-parameters">Stored Procedures with Parameters</a></li>
-        <li class="first-level "><a href="#mariadb-alternative-a-mysql">MariaDB : Alternative à MySQL</a></li>
-        <li class="first-level "><a href="#postgresql">PostgreSQL</a></li>
-            <li class="second-level"><a href="#questions_4">Questions</a></li>
-                
-        <li class="first-level "><a href="#creating-postgresql-tables">Creating PostgreSQL Tables</a></li>
-        <li class="first-level "><a href="#scaling-with-mysql">Scaling with MySQL</a></li>
-        <li class="first-level "><a href="#access-controls">Access Controls</a></li>
-        <li class="first-level "><a href="#sql-injection-attacks">SQL Injection Attacks</a></li>
-            <li class="second-level"><a href="#questions_5">Questions</a></li>
-                
-        <li class="first-level "><a href="#postgresql-approfondissement">PostgreSQL : Approfondissement</a></li>
-            <li class="second-level"><a href="#introduction-a-postgresql">Introduction à PostgreSQL</a></li>
-                
-            <li class="second-level"><a href="#differences-principales-avec-mysql">Différences principales avec MySQL</a></li>
-                
-                <li class="third-level"><a href="#architecture">Architecture</a></li>
-                <li class="third-level"><a href="#types-de-donnees">Types de données</a></li>
-                <li class="third-level"><a href="#indexation">Indexation</a></li>
-            <li class="second-level"><a href="#quand-choisir-postgresql">Quand choisir PostgreSQL ?</a></li>
-                
-            <li class="second-level"><a href="#exemple-pratique-heritage-de-tables">Exemple pratique : Héritage de tables</a></li>
-                
-            <li class="second-level"><a href="#migration-de-sqlite-vers-postgresql">Migration de SQLite vers PostgreSQL</a></li>
-                
-            <li class="second-level"><a href="#conclusion-sur-le-choix-entre-mysql-et-postgresql">Conclusion sur le choix entre MySQL et PostgreSQL</a></li>
-                
-    </ul>
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#cours-6" class="nav-link">Cours 6</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#transition-de-sqlite-vers-les-bases-de-donnees-clientserveur" class="nav-link">Transition de SQLite vers les bases de données client/serveur</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#mysql" class="nav-link">MySQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#creating-the-cards-table" class="nav-link">Creating the cards Table</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#creating-the-stations-table" class="nav-link">Creating the stations Table</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#creating-the-swipes-table" class="nav-link">Creating the swipes Table</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#altering-tables" class="nav-link">Altering Tables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#stored-procedures" class="nav-link">Stored Procedures</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#stored-procedures-with-parameters" class="nav-link">Stored Procedures with Parameters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#mariadb-alternative-a-mysql" class="nav-link">MariaDB : Alternative à MySQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#postgresql" class="nav-link">PostgreSQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#creating-postgresql-tables" class="nav-link">Creating PostgreSQL Tables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#scaling-with-mysql" class="nav-link">Scaling with MySQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#access-controls" class="nav-link">Access Controls</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#sql-injection-attacks" class="nav-link">SQL Injection Attacks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#postgresql-approfondissement" class="nav-link">PostgreSQL : Approfondissement</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#introduction-a-postgresql" class="nav-link">Introduction à PostgreSQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#differences-principales-avec-mysql" class="nav-link">Différences principales avec MySQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#quand-choisir-postgresql" class="nav-link">Quand choisir PostgreSQL ?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#exemple-pratique-heritage-de-tables" class="nav-link">Exemple pratique : Héritage de tables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#migration-de-sqlite-vers-postgresql" class="nav-link">Migration de SQLite vers PostgreSQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion-sur-le-choix-entre-mysql-et-postgresql" class="nav-link">Conclusion sur le choix entre MySQL et PostgreSQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-        <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h2 id="cours-6"><a href="https://cs50.harvard.edu/sql/2024/notes/6/">Cours 6</a><a class="headerlink" href="#cours-6" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1029,59 +965,36 @@ CREATE TABLE motos (
 <li><strong>MariaDB</strong> : alternative à MySQL avec des améliorations de performance et une garantie de rester open-source</li>
 </ul>
 <p>Le choix dépend principalement de votre cas d'utilisation et des fonctionnalités dont vous avez besoin pour votre application.</p></div>
-        
-        
-    </div>
+            </div>
+        </div>
 
-    
-      <footer class="col-md-12 text-center">
-          
-          
+        <footer class="col-md-12">
             <hr>
-            <p>
-            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
-            </p>
-          
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
-          
-          
-      </footer>
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/bootstrap-3.0.3.min.js"></script>
-
-    
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-        
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    <script>var base_url = ".."</script>
-    
-    <script src="../js/base.js"></script>
-    <script src="../search/main.js"></script>
-
-    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
+                <p>From here you can search these documents. Enter your search terms below.</p>
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>
@@ -1092,7 +1005,7 @@ CREATE TABLE motos (
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">
@@ -1127,6 +1040,6 @@ CREATE TABLE motos (
         </div>
     </div>
 </div>
-    </body>
 
+    </body>
 </html>
