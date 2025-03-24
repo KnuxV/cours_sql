@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    
+    <title>Introduction - Cours SQL</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="..">Cours SQL</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 0 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours0/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 1 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours1/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/cyberchase/instructions/">Cyberchase</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/normals/instructions/">Normals</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/players/instructions/">Players</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/views/instructions/">Views</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/index_old.md">Old Index</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 2 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours2/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours2/dese/instructions/">Dese</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours2/moneyball/instructions/">Moneyball</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours2/packages/instructions/">Packages</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 3 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours3/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours3/atl/instructions/">ATL</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours3/connect/instructions/">Connect</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours3/doghnut/instructions/">Doghnut</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 4 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours4/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours4/dont-panic/instructions/">Don't Panic</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours4/meteorites/instructions/">Meteorites</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 5 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours5/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours5/bnb/instructions/">BNB</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours5/census/instructions/">Census</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours5/private/instructions/">Private</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 6 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours6/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours6/harvard/instructions/">Harvard</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours6/snap/instructions/">Snap</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 7 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours7/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours7/index2/">Index 2</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours7/deep/answers/">Deep Answers</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours7/deep/instructions/">Deep Instructions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours7/dont-panic-python/instructions/">Don't Panic Python</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours7/linkedin/instructions/">LinkedIn</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SQLite Python <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../cours7/linkedin/instructions/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#sqlite-avec-python-guide-pratique">SQLite avec Python : Guide Pratique</a></li>
+            <li class="second-level"><a href="#table-des-matieres">Table des matières</a></li>
+                
+            <li class="second-level"><a href="#connexion-a-une-base-de-donnees-existante">Connexion à une base de données existante</a></li>
+                
+                <li class="third-level"><a href="#explications">Explications :</a></li>
+            <li class="second-level"><a href="#operations-crud-avec-sqlite3">Opérations CRUD avec sqlite3</a></li>
+                
+                <li class="third-level"><a href="#creation-create">Création (Create)</a></li>
+                <li class="third-level"><a href="#explications_1">Explications :</a></li>
+                <li class="third-level"><a href="#lecture-read">Lecture (Read)</a></li>
+                <li class="third-level"><a href="#explications_2">Explications :</a></li>
+                <li class="third-level"><a href="#mise-a-jour-update">Mise à jour (Update)</a></li>
+                <li class="third-level"><a href="#suppression-delete">Suppression (Delete)</a></li>
+                <li class="third-level"><a href="#transactions">Transactions</a></li>
+                <li class="third-level"><a href="#fermeture-de-la-connexion">Fermeture de la connexion</a></li>
+            <li class="second-level"><a href="#utilisation-avec-pandas">Utilisation avec Pandas</a></li>
+                
+                <li class="third-level"><a href="#lecture-de-donnees">Lecture de données</a></li>
+                <li class="third-level"><a href="#filtrage-et-analyse">Filtrage et analyse</a></li>
+                <li class="third-level"><a href="#ecriture-vers-la-base-de-donnees">Écriture vers la base de données</a></li>
+            <li class="second-level"><a href="#exemples-pratiques-avec-la-base-de-donnees-pokemon">Exemples pratiques avec la base de données Pokémon</a></li>
+                
+                <li class="third-level"><a href="#exemple-de-sortie-pour-la-requete-de-base">Exemple de sortie pour la requête de base :</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<p>Voici une version modifiée du guide SQLite avec Python, incluant des explications supplémentaires sur les concepts propres à la bibliothèque <code>sqlite3</code>, notamment <code>cursor</code>, <code>fetchone</code>, <code>fetchmany</code>, <code>fetchall</code>, <code>commit</code>, <code>execute</code>, et <code>executemany</code>.</p>
+<hr />
+<h1 id="sqlite-avec-python-guide-pratique">SQLite avec Python : Guide Pratique<a class="headerlink" href="#sqlite-avec-python-guide-pratique" title="Permanent link">&para;</a></h1>
+<p>Ce guide se concentre sur les commandes Python pour manipuler une base de données SQLite existante (<code>pokedex.sqlite</code>) en utilisant les opérations CRUD (Create, Read, Update, Delete).</p>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Connexion à une base de données existante</li>
+<li>Opérations CRUD avec <code>sqlite3</code><ul>
+<li>Création (Create)</li>
+<li>Lecture (Read)</li>
+<li>Mise à jour (Update)</li>
+<li>Suppression (Delete)</li>
+</ul>
+</li>
+<li>Utilisation avec Pandas</li>
+<li>Exemples pratiques avec la base de données Pokémon</li>
+</ol>
+<h2 id="connexion-a-une-base-de-donnees-existante">Connexion à une base de données existante<a class="headerlink" href="#connexion-a-une-base-de-donnees-existante" title="Permanent link">&para;</a></h2>
+<p>Pour commencer à travailler avec une base de données SQLite existante, utilisez le module <code>sqlite3</code> de Python :</p>
+<pre><code class="language-python">import sqlite3
+
+# Connexion à une base de données existante
+conn = sqlite3.connect('pokedex.sqlite')
+
+# Création d'un curseur pour exécuter des commandes SQL
+curseur = conn.cursor()
+
+# Vérifier que la connexion fonctionne
+curseur.execute(&quot;SELECT sqlite_version();&quot;)
+version = curseur.fetchone()
+print(f&quot;Version SQLite: {version[0]}&quot;)
+</code></pre>
+<h3 id="explications">Explications :<a class="headerlink" href="#explications" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>sqlite3.connect('pokedex.sqlite')</code></strong> : Établit une connexion à la base de données SQLite nommée <code>pokedex.sqlite</code>.</li>
+<li><strong><code>conn.cursor()</code></strong> : Crée un objet curseur qui permet d'exécuter des commandes SQL.</li>
+<li><strong><code>curseur.execute("SELECT sqlite_version();")</code></strong> : Exécute une commande SQL pour obtenir la version de SQLite.</li>
+<li><strong><code>curseur.fetchone()</code></strong> : Récupère le premier résultat de la requête exécutée.</li>
+</ul>
+<h2 id="operations-crud-avec-sqlite3">Opérations CRUD avec <code>sqlite3</code><a class="headerlink" href="#operations-crud-avec-sqlite3" title="Permanent link">&para;</a></h2>
+<h3 id="creation-create">Création (Create)<a class="headerlink" href="#creation-create" title="Permanent link">&para;</a></h3>
+<h4 id="creer-une-nouvelle-table">Créer une nouvelle table<a class="headerlink" href="#creer-une-nouvelle-table" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python"># Création d'une nouvelle table
+curseur.execute('''
+CREATE TABLE IF NOT EXISTS pokemon_types (
+    id INTEGER PRIMARY KEY,
+    pokemon_id INTEGER,
+    type_name TEXT,
+    FOREIGN KEY (pokemon_id) REFERENCES pokedex(id)
+)
+''')
+
+# Enregistrer les modifications
+conn.commit()
+</code></pre>
+<h4 id="inserer-des-donnees">Insérer des données<a class="headerlink" href="#inserer-des-donnees" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python"># Insertion d'un seul enregistrement
+curseur.execute('''
+INSERT INTO pokemon_types (pokemon_id, type_name) VALUES (?, ?)
+''', (1, 'grass'))
+
+# Insertion de plusieurs enregistrements
+types_data = [
+    (1, 'poison'),
+    (2, 'grass'),
+    (2, 'poison'),
+    (3, 'grass'),
+    (3, 'poison'),
+    (4, 'fire')
+]
+curseur.executemany('INSERT INTO pokemon_types (pokemon_id, type_name) VALUES (?, ?)', types_data)
+
+# Enregistrer les modifications
+conn.commit()
+</code></pre>
+<h3 id="explications_1">Explications :<a class="headerlink" href="#explications_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>curseur.execute()</code></strong> : Exécute une commande SQL unique.</li>
+<li><strong><code>curseur.executemany()</code></strong> : Exécute une commande SQL pour plusieurs enregistrements.</li>
+<li><strong><code>conn.commit()</code></strong> : Enregistre les modifications effectuées dans la base de données.</li>
+</ul>
+<h3 id="lecture-read">Lecture (Read)<a class="headerlink" href="#lecture-read" title="Permanent link">&para;</a></h3>
+<h4 id="executer-des-requetes-simples">Exécuter des requêtes simples<a class="headerlink" href="#executer-des-requetes-simples" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python"># Sélection de tous les enregistrements d'une table
+curseur.execute('SELECT * FROM pokedex LIMIT 5')
+pokemons = curseur.fetchall()
+
+# Affichage des résultats
+for pokemon in pokemons:
+    print(pokemon)
+</code></pre>
+<h4 id="differentes-methodes-de-recuperation">Différentes méthodes de récupération<a class="headerlink" href="#differentes-methodes-de-recuperation" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">curseur.execute('SELECT name, hp, attack FROM pokedex')
+premier_pokemon = curseur.fetchone()  # Récupère uniquement le premier résultat
+quelques_pokemons = curseur.fetchmany(3)  # Récupère les 3 résultats suivants
+tous_les_pokemons = curseur.fetchall()  # Récupère tous les résultats restants
+</code></pre>
+<h3 id="explications_2">Explications :<a class="headerlink" href="#explications_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>curseur.fetchone()</code></strong> : Récupère le premier résultat de la requête.</li>
+<li><strong><code>curseur.fetchmany(n)</code></strong> : Récupère les <code>n</code> résultats suivants.</li>
+<li><strong><code>curseur.fetchall()</code></strong> : Récupère tous les résultats restants.</li>
+</ul>
+<h4 id="requetes-avec-filtres">Requêtes avec filtres<a class="headerlink" href="#requetes-avec-filtres" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python"># Sélection avec condition
+curseur.execute('SELECT name, hp FROM pokedex WHERE type LIKE ?', ('%fire%',))
+fire_pokemons = curseur.fetchall()
+for pokemon in fire_pokemons:
+    print(f&quot;Pokémon de feu: {pokemon[0]} - HP: {pokemon[1]}&quot;)
+
+# Recherche avec plusieurs conditions
+curseur.execute('''
+SELECT name, attack, defense
+FROM pokedex
+WHERE hp &gt; ? AND defense &gt; ?
+''', (50, 60))
+tough_pokemons = curseur.fetchall()
+</code></pre>
+<h4 id="acceder-aux-colonnes-par-nom">Accéder aux colonnes par nom<a class="headerlink" href="#acceder-aux-colonnes-par-nom" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python"># Configurer la connexion pour retourner des dictionnaires
+conn = sqlite3.connect('pokedex.sqlite')
+conn.row_factory = sqlite3.Row
+
+curseur = conn.cursor()
+curseur.execute('SELECT id, name, hp, attack FROM pokedex LIMIT 3')
+
+for row in curseur.fetchall():
+    print(f&quot;ID: {row['id']}, Nom: {row['name']}, HP: {row['hp']}&quot;)
+</code></pre>
+<h3 id="mise-a-jour-update">Mise à jour (Update)<a class="headerlink" href="#mise-a-jour-update" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># Mise à jour d'un seul enregistrement
+curseur.execute('''
+UPDATE pokedex
+SET hp = ?, attack = ?
+WHERE id = ?
+''', (50, 55, 1))
+
+# Mise à jour de plusieurs enregistrements
+curseur.execute('''
+UPDATE pokedex
+SET s_defense = s_defense * 1.1
+WHERE type LIKE ?
+''', ('%grass%',))
+
+conn.commit()
+</code></pre>
+<h3 id="suppression-delete">Suppression (Delete)<a class="headerlink" href="#suppression-delete" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># Suppression d'un enregistrement
+curseur.execute('DELETE FROM pokedex WHERE id = ?', (150,))
+
+# Suppression avec condition
+curseur.execute('DELETE FROM pokedex WHERE hp &lt; ? AND speed &lt; ?', (40, 40))
+
+conn.commit()
+</code></pre>
+<h3 id="transactions">Transactions<a class="headerlink" href="#transactions" title="Permanent link">&para;</a></h3>
+<p>SQLite supporte les transactions, qui permettent de grouper plusieurs opérations et de les annuler en cas d'erreur :</p>
+<pre><code class="language-python">try:
+    # Les opérations suivantes seront dans une transaction
+    curseur.execute(&quot;UPDATE pokedex SET hp = hp + 5 WHERE id = 1&quot;)
+    curseur.execute(&quot;UPDATE pokedex SET attack = attack + 3 WHERE id = 1&quot;)
+
+    # Si tout va bien, on valide les changements
+    conn.commit()
+    print(&quot;Modifications validées avec succès&quot;)
+
+except sqlite3.Error as e:
+    # En cas d'erreur, on annule tout
+    conn.rollback()
+    print(f&quot;Une erreur est survenue: {e}&quot;)
+</code></pre>
+<h3 id="fermeture-de-la-connexion">Fermeture de la connexion<a class="headerlink" href="#fermeture-de-la-connexion" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># Fermer le curseur et la connexion lorsque vous avez terminé
+curseur.close()
+conn.close()
+</code></pre>
+<h2 id="utilisation-avec-pandas">Utilisation avec Pandas<a class="headerlink" href="#utilisation-avec-pandas" title="Permanent link">&para;</a></h2>
+<p>Pandas facilite grandement l'analyse de données issues de bases SQLite.</p>
+<h3 id="lecture-de-donnees">Lecture de données<a class="headerlink" href="#lecture-de-donnees" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">import pandas as pd
+import sqlite3
+
+# Connexion à la base de données
+conn = sqlite3.connect('pokedex.sqlite')
+
+# Exécution d'une requête et conversion en DataFrame
+df = pd.read_sql_query(&quot;SELECT * FROM pokedex&quot;, conn)
+
+# Affichage des premières lignes
+print(df.head())
+
+# Statistiques descriptives
+print(df.describe())
+</code></pre>
+<h3 id="filtrage-et-analyse">Filtrage et analyse<a class="headerlink" href="#filtrage-et-analyse" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># Filtrage de données
+fire_pokemon = df[df['type'].str.contains('fire', case=False)]
+print(f&quot;Nombre de Pokémon de type feu : {len(fire_pokemon)}&quot;)
+
+# Statistiques par groupe
+stats_by_type = df.groupby('type').agg({
+    'hp': 'mean',
+    'attack': 'mean',
+    'defense': 'mean'
+}).reset_index()
+
+print(&quot;Statistiques moyennes par type:&quot;)
+print(stats_by_type)
+</code></pre>
+<h3 id="ecriture-vers-la-base-de-donnees">Écriture vers la base de données<a class="headerlink" href="#ecriture-vers-la-base-de-donnees" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># Création d'un nouveau DataFrame
+new_pokemons = pd.DataFrame({
+    'id': [151, 152],
+    'name': ['mew', 'chikorita'],
+    'hp': [100, 45],
+    'attack': [100, 49],
+    'defense': [100, 65],
+    'type': ['{psychic}', '{grass}']
+})
+
+# Écriture dans la base de données
+new_pokemons.to_sql('new_pokemon_data', conn, if_exists='replace', index=False)
+
+# Vérification
+verification = pd.read_sql_query(&quot;SELECT * FROM new_pokemon_data&quot;, conn)
+print(verification)
+
+# Fermeture de la connexion
+conn.close()
+</code></pre>
+<h2 id="exemples-pratiques-avec-la-base-de-donnees-pokemon">Exemples pratiques avec la base de données Pokémon<a class="headerlink" href="#exemples-pratiques-avec-la-base-de-donnees-pokemon" title="Permanent link">&para;</a></h2>
+<p>Voici un exemple de comment explorer et manipuler la base de données Pokémon que vous avez :</p>
+<pre><code class="language-python">import sqlite3
+import pandas as pd
+
+# Connexion à la base de données
+conn = sqlite3.connect('pokedex.sqlite')
+curseur = conn.cursor()
+
+# Affichage des 5 premiers Pokémon
+curseur.execute('SELECT * FROM pokedex LIMIT 5')
+columns = [description[0] for description in curseur.description]
+rows = curseur.fetchall()
+
+print(&quot;Structure de la table :&quot;)
+print(columns)
+print(&quot;\nDonnées :&quot;)
+for row in rows:
+    print(row)
+
+# Utilisation de pandas pour une analyse plus avancée
+df_pokemon = pd.read_sql_query(&quot;SELECT * FROM pokedex&quot;, conn)
+
+# Analyse statistique par type
+def extract_types(type_string):
+    &quot;&quot;&quot;Extraction des types depuis la chaîne {type1,type2}&quot;&quot;&quot;
+    if not isinstance(type_string, str):
+        return []
+    return type_string.strip('{}').split(',')
+
+# Créer des colonnes pour chaque type primaire
+df_pokemon['primary_type'] = df_pokemon['type'].apply(
+    lambda x: extract_types(x)[0] if extract_types(x) else None
+)
+
+# Statistiques par type primaire
+stats_by_primary = df_pokemon.groupby('primary_type').agg({
+    'hp': 'mean',
+    'attack': 'mean',
+    'defense': 'mean',
+    'speed': 'mean'
+}).reset_index()
+
+print(&quot;\nStatistiques moyennes par type primaire:&quot;)
+print(stats_by_primary)
+
+# Trouver les Pokémon les plus équilibrés (stats similaires)
+df_pokemon['stat_std'] = df_pokemon[['hp', 'attack', 'defense', 's_attack', 's_defense', 'speed']].std(axis=1)
+balanced_pokemon = df_pokemon.sort_values('stat_std').head(5)
+
+print(&quot;\nPokémon aux statistiques les plus équilibrées:&quot;)
+print(balanced_pokemon[['name', 'hp', 'attack', 'defense', 'stat_std']])
+
+# Fermeture de la connexion
+conn.close()
+</code></pre>
+<h3 id="exemple-de-sortie-pour-la-requete-de-base">Exemple de sortie pour la requête de base :<a class="headerlink" href="#exemple-de-sortie-pour-la-requete-de-base" title="Permanent link">&para;</a></h3>
+<pre><code>id  name    height  weight  hp  attack  defense s_attack    s_defense   speed   type    evo_set info
+1   bulbasaur   7   69  45  49  49  65  65  45  {grass,poison}  1   A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.
+2   ivysaur 10  130 60  62  63  80  80  60  {grass,poison}  1   When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.
+3   venusaur    20  1000    80  82  83  100 100 80  {grass,poison}  1   The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.
+4   charmander  6   85  39  52  43  60  50  65  {fire}  2   Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.
+5   charmeleon  11  190 58  64  58  80  65  80  {fire}  2   When it swings its burning tail, it elevates the temperature to unbearably high levels.
+</code></pre>
+<hr />
+<p>Ce guide devrait maintenant être plus clair et informatif, avec des explications supplémentaires sur les concepts clés de la bibliothèque <code>sqlite3</code>.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>Index 2 - Cours SQL</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">Cours SQL</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 0 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../cours0/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 1 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../cours1/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours1/cyberchase/instructions/">Cyberchase</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours1/normals/instructions/">Normals</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours1/players/instructions/">Players</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours1/views/instructions/">Views</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours1/index_old.md">Old Index</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 2 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../cours2/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours2/dese/instructions/">Dese</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours2/moneyball/instructions/">Moneyball</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours2/packages/instructions/">Packages</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 3 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../cours3/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours3/atl/instructions/">ATL</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours3/connect/instructions/">Connect</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours3/doghnut/instructions/">Doghnut</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 4 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../cours4/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours4/dont-panic/instructions/">Don't Panic</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours4/meteorites/instructions/">Meteorites</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 5 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../cours5/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours5/bnb/instructions/">BNB</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours5/census/instructions/">Census</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours5/private/instructions/">Private</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 6 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../cours6/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours6/harvard/instructions/">Harvard</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cours6/snap/instructions/">Snap</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 7 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../">Introduction</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Index 2</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../deep/answers/">Deep Answers</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../deep/instructions/">Deep Instructions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../dont-panic-python/instructions/">Don't Panic Python</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../linkedin/instructions/">LinkedIn</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SQLite Python <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../sqlite_python/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../deep/answers/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#autres-solutions-sql-mainstream">Autres Solutions SQL Mainstream</a></li>
+        <li class="first-level "><a href="#oracle-database">Oracle Database</a></li>
+            <li class="second-level"><a href="#perspective-pratique">Perspective pratique</a></li>
+                
+            <li class="second-level"><a href="#differences-cles-pour-les-requetes">Différences clés pour les requêtes</a></li>
+                
+            <li class="second-level"><a href="#impact-sur-votre-travail-quotidien">Impact sur votre travail quotidien</a></li>
+                
+            <li class="second-level"><a href="#couts-approximatifs">Coûts approximatifs</a></li>
+                
+        <li class="first-level "><a href="#microsoft-sql-server">Microsoft SQL Server</a></li>
+            <li class="second-level"><a href="#perspective-pratique_1">Perspective pratique</a></li>
+                
+            <li class="second-level"><a href="#differences-cles-pour-les-requetes_1">Différences clés pour les requêtes</a></li>
+                
+            <li class="second-level"><a href="#integration-avec-lecosysteme-danalyse">Intégration avec l'écosystème d'analyse</a></li>
+                
+            <li class="second-level"><a href="#couts-approximatifs_1">Coûts approximatifs</a></li>
+                
+        <li class="first-level "><a href="#ibm-db2-et-sap-hana">IBM Db2 et SAP HANA</a></li>
+            <li class="second-level"><a href="#contextes-de-rencontre">Contextes de rencontre</a></li>
+                
+            <li class="second-level"><a href="#ce-qui-change-pour-vos-requetes">Ce qui change pour vos requêtes</a></li>
+                
+            <li class="second-level"><a href="#couts-approximatifs_2">Coûts approximatifs</a></li>
+                
+        <li class="first-level "><a href="#comparaison-simplifiee-des-solutions-sql">Comparaison simplifiée des solutions SQL</a></li>
+        <li class="first-level "><a href="#ce-que-vous-devez-retenir">Ce que vous devez retenir</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="autres-solutions-sql-mainstream">Autres Solutions SQL Mainstream<a class="headerlink" href="#autres-solutions-sql-mainstream" title="Permanent link">&para;</a></h2>
+<h2 id="oracle-database">Oracle Database<a class="headerlink" href="#oracle-database" title="Permanent link">&para;</a></h2>
+<h3 id="perspective-pratique">Perspective pratique<a class="headerlink" href="#perspective-pratique" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Oracle Database est fréquemment rencontré dans les grandes entreprises, notamment dans les secteurs bancaire, financier et industriel.</li>
+<li>Vous pourriez travailler avec Oracle lorsque vous rejoignez une grande organisation ou consultez pour des clients d'entreprise.</li>
+<li>Les outils comme Oracle SQL Developer ou SQL*Plus seront votre interface principale pour interroger ces bases de données.</li>
+</ul>
+<h3 id="differences-cles-pour-les-requetes">Différences clés pour les requêtes<a class="headerlink" href="#differences-cles-pour-les-requetes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Types de données</strong> : Oracle utilise <code>VARCHAR2</code> au lieu de <code>VARCHAR</code>, <code>NUMBER</code> au lieu de <code>INT</code>/<code>FLOAT</code>, et <code>DATE</code> stocke à la fois la date et l'heure.</li>
+<li><strong>Fonctions de date</strong> : Oracle utilise <code>TO_DATE</code>, <code>TO_CHAR</code> au lieu des fonctions vues dans SQLite ou MySQL.</li>
+<li><strong>Pagination différente</strong> : Limite des résultats avec <code>ROWNUM</code> au lieu de <code>LIMIT</code>.</li>
+</ul>
+<pre><code class="language-sql">-- Requête avec limitation des résultats (équivalent de LIMIT)
+SELECT * FROM ventes WHERE ROWNUM &lt;= 10;
+
+-- Format de date
+SELECT TO_CHAR(date_vente, 'YYYY-MM-DD') FROM ventes;
+
+-- Jointure avec syntaxe Oracle (ancienne syntaxe encore fréquente)
+SELECT e.nom, d.nom_departement
+FROM employes e, departements d
+WHERE e.dept_id = d.dept_id;
+</code></pre>
+<h3 id="impact-sur-votre-travail-quotidien">Impact sur votre travail quotidien<a class="headerlink" href="#impact-sur-votre-travail-quotidien" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Les requêtes analytiques complexes peuvent être plus performantes et offrir plus d'options.</li>
+<li>Oracle propose des fonctions analytiques avancées intégrées (OLAP).</li>
+<li>Vous pourriez rencontrer PL/SQL, le langage procédural d'Oracle, dans des procédures stockées que vous devrez appeler.</li>
+</ul>
+<h3 id="couts-approximatifs">Coûts approximatifs<a class="headerlink" href="#couts-approximatifs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Licence Standard Edition 2</strong> : ~15 000€ par processeur</li>
+<li><strong>Licence Enterprise Edition</strong> : ~40 000€ par processeur</li>
+<li><strong>Support annuel</strong> : ~22% du coût de licence</li>
+<li>Des options spécifiques (RAC, Partitioning, etc.) peuvent significativement augmenter le coût</li>
+</ul>
+<h2 id="microsoft-sql-server">Microsoft SQL Server<a class="headerlink" href="#microsoft-sql-server" title="Permanent link">&para;</a></h2>
+<h3 id="perspective-pratique_1">Perspective pratique<a class="headerlink" href="#perspective-pratique_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Probablement la solution que vous rencontrerez le plus souvent dans les entreprises utilisant les technologies Microsoft.</li>
+<li>Très répandu dans les services financiers, l'assurance, la santé, et le retail.</li>
+<li>L'interface principale sera SQL Server Management Studio (SSMS) ou Azure Data Studio.</li>
+</ul>
+<h3 id="differences-cles-pour-les-requetes_1">Différences clés pour les requêtes<a class="headerlink" href="#differences-cles-pour-les-requetes_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>T-SQL</strong> : La version Microsoft du SQL avec ses propres particularités.</li>
+<li><strong>Fonctions de date</strong> : Utilise <code>GETDATE()</code> au lieu de <code>NOW()</code> ou <code>CURRENT_TIMESTAMP</code>.</li>
+<li><strong>Concaténation</strong> : Utilise <code>+</code> au lieu de <code>||</code> pour concaténer des chaînes.</li>
+</ul>
+<pre><code class="language-sql">-- Concaténation dans SQL Server
+SELECT prenom + ' ' + nom AS nom_complet FROM employes;
+
+-- Date actuelle
+SELECT GETDATE();
+
+-- Top N au lieu de LIMIT
+SELECT TOP 10 * FROM ventes ORDER BY montant DESC;
+</code></pre>
+<h3 id="integration-avec-lecosysteme-danalyse">Intégration avec l'écosystème d'analyse<a class="headerlink" href="#integration-avec-lecosysteme-danalyse" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Excel s'intègre nativement avec SQL Server.</li>
+<li>Power BI se connecte directement à SQL Server avec des performances optimisées.</li>
+<li>SSRS (Reporting Services) permet de créer des rapports sur vos analyses SQL.</li>
+</ul>
+<h3 id="couts-approximatifs_1">Coûts approximatifs<a class="headerlink" href="#couts-approximatifs_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Express Edition</strong> : Gratuit (limité à 10GB par base, 1 processeur, 1GB RAM)</li>
+<li><strong>Standard Edition</strong> : ~3 500€ par cœur (minimum 4 cœurs)</li>
+<li><strong>Enterprise Edition</strong> : ~12 000€ par cœur</li>
+<li><strong>Modèle cloud (Azure SQL)</strong> : À partir de ~75€/mois selon la configuration</li>
+</ul>
+<h2 id="ibm-db2-et-sap-hana">IBM Db2 et SAP HANA<a class="headerlink" href="#ibm-db2-et-sap-hana" title="Permanent link">&para;</a></h2>
+<h3 id="contextes-de-rencontre">Contextes de rencontre<a class="headerlink" href="#contextes-de-rencontre" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>IBM Db2</strong> : Principalement dans les grandes entreprises avec des systèmes historiques, particulièrement dans la banque, l'assurance et les services gouvernementaux.</li>
+<li><strong>SAP HANA</strong> : Dans les entreprises utilisant les solutions SAP pour la gestion (ERP, CRM, etc.).</li>
+</ul>
+<h3 id="ce-qui-change-pour-vos-requetes">Ce qui change pour vos requêtes<a class="headerlink" href="#ce-qui-change-pour-vos-requetes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ces systèmes sont optimisés pour des volumes de données massifs.</li>
+<li>Les requêtes analytiques peuvent être nettement plus rapides qu'avec SQLite.</li>
+<li>Des fonctions analytiques et statistiques avancées sont disponibles nativement.</li>
+</ul>
+<pre><code class="language-sql">-- Exemple de fonction d'analyse dans Db2
+SELECT STDDEV(montant_vente) FROM ventes;
+
+-- Exemple de requête analytique dans SAP HANA
+SELECT 
+    categorie,
+    SUM(montant) AS total,
+    SUM(montant) / SUM(SUM(montant)) OVER () AS pourcentage
+FROM ventes
+GROUP BY categorie;
+</code></pre>
+<h3 id="couts-approximatifs_2">Coûts approximatifs<a class="headerlink" href="#couts-approximatifs_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>IBM Db2</strong> :</p>
+<ul>
+<li>Edition standard : ~5 000€ par cœur</li>
+<li>Edition avancée : ~12 000€ par cœur</li>
+<li>Cloud (Db2 on Cloud) : À partir de ~150€/mois</li>
+</ul>
+</li>
+<li>
+<p><strong>SAP HANA</strong> :</p>
+<ul>
+<li>Parmi les plus coûteuses des bases de données</li>
+<li>Licences basées sur la mémoire utilisée : ~100 000€ pour 64GB</li>
+<li>Souvent inclus dans les contrats globaux SAP</li>
+</ul>
+</li>
+</ul>
+<h2 id="comparaison-simplifiee-des-solutions-sql">Comparaison simplifiée des solutions SQL<a class="headerlink" href="#comparaison-simplifiee-des-solutions-sql" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Caractéristique</th>
+<th>SQLite</th>
+<th>MySQL</th>
+<th>PostgreSQL</th>
+<th>Oracle</th>
+<th>SQL Server</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Où vous le rencontrerez</strong></td>
+<td>Petites applications</td>
+<td>Startups, Web</td>
+<td>Entreprises tech</td>
+<td>Grandes entreprises, Finance</td>
+<td>Entreprises Microsoft</td>
+</tr>
+<tr>
+<td><strong>Coût approximatif</strong></td>
+<td>Gratuit</td>
+<td>Gratuit - 3K€</td>
+<td>Gratuit</td>
+<td>15K€ - 40K€+</td>
+<td>Gratuit - 12K€+</td>
+</tr>
+<tr>
+<td><strong>Outils d'accès</strong></td>
+<td>DB Browser</td>
+<td>MySQLWorkbench</td>
+<td>pgAdmin</td>
+<td>SQL Developer</td>
+<td>SSMS, Power BI</td>
+</tr>
+<tr>
+<td><strong>Particularités</strong></td>
+<td>Simple, portable</td>
+<td>Simple, rapide</td>
+<td>Riche en fonctions</td>
+<td>Puissant mais verbeux</td>
+<td>Intégration Microsoft</td>
+</tr>
+<tr>
+<td><strong>Fonctions analytiques</strong></td>
+<td>Basiques</td>
+<td>Moyennes</td>
+<td>Bonnes</td>
+<td>Excellentes</td>
+<td>Très bonnes</td>
+</tr>
+<tr>
+<td><strong>Performances sur gros volumes</strong></td>
+<td>Faibles</td>
+<td>Moyennes</td>
+<td>Bonnes</td>
+<td>Excellentes</td>
+<td>Très bonnes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ce-que-vous-devez-retenir">Ce que vous devez retenir<a class="headerlink" href="#ce-que-vous-devez-retenir" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Syntaxe variable</strong> : Chaque système a ses particularités syntaxiques, notamment pour:</p>
+<ul>
+<li>Fonctions de date et d'heure</li>
+<li>Pagination et limitation des résultats</li>
+<li>Fonctions d'agrégation et analytiques</li>
+</ul>
+</li>
+<li>
+<p><strong>Performances</strong> : Les bases de données d'entreprise comme Oracle, SQL Server et SAP HANA sont optimisées pour:</p>
+<ul>
+<li>Gérer des milliards de lignes</li>
+<li>Exécuter des requêtes analytiques complexes</li>
+<li>Maintenir les performances avec de nombreux utilisateurs simultanés</li>
+</ul>
+</li>
+<li>
+<p><strong>Outils d'accès</strong> : Vous utiliserez rarement la ligne de commande, mais plutôt:</p>
+<ul>
+<li>Des outils spécifiques à chaque SGBD (SQL Developer, SSMS)</li>
+<li>Des outils d'analyse (Tableau, Power BI) connectés à ces bases</li>
+<li>Des environnements de notebooks (Jupyter) via des connecteurs SQL</li>
+</ul>
+</li>
+<li>
+<p><strong>Préparation</strong> : Pour vous adapter à ces différents environnements:</p>
+<ul>
+<li>Apprenez les particularités syntaxiques de chaque système</li>
+<li>Familiarisez-vous avec les outils d'accès principaux</li>
+<li>Comprenez les fonctions analytiques spécifiques disponibles dans chaque système</li>
+</ul>
+</li>
+</ol>
+<p>La bonne nouvelle est que les concepts fondamentaux que vous avez appris avec SQLite restent valables - seuls certains détails changent d'un système à l'autre.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

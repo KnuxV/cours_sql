@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    
+    <title>Introduction - Cours SQL</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="..">Cours SQL</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 0 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours0/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 1 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours1/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/cyberchase/instructions/">Cyberchase</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/normals/instructions/">Normals</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/players/instructions/">Players</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/views/instructions/">Views</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/index_old.md">Old Index</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 2 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours2/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours2/dese/instructions/">Dese</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours2/moneyball/instructions/">Moneyball</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours2/packages/instructions/">Packages</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 3 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours3/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours3/atl/instructions/">ATL</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours3/connect/instructions/">Connect</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours3/doghnut/instructions/">Doghnut</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 4 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours4/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours4/dont-panic/instructions/">Don't Panic</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours4/meteorites/instructions/">Meteorites</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 5 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours5/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours5/bnb/instructions/">BNB</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours5/census/instructions/">Census</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours5/private/instructions/">Private</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 6 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours6/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours6/harvard/instructions/">Harvard</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours6/snap/instructions/">Snap</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 7 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="index2/">Index 2</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="deep/answers/">Deep Answers</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="deep/instructions/">Deep Instructions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="dont-panic-python/instructions/">Don't Panic Python</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="linkedin/instructions/">LinkedIn</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SQLite Python <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../sqlite_python/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../cours6/snap/instructions/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="index2/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#cours-6">Cours 6</a></li>
+        <li class="first-level "><a href="#introduction">Introduction</a></li>
+        <li class="first-level "><a href="#transition-de-sqlite-vers-les-bases-de-donnees-clientserveur">Transition de SQLite vers les bases de données client/serveur</a></li>
+        <li class="first-level "><a href="#mysql">MySQL</a></li>
+        <li class="first-level "><a href="#creating-the-cards-table">Creating the cards Table</a></li>
+            <li class="second-level"><a href="#questions">Questions</a></li>
+                
+        <li class="first-level "><a href="#creating-the-stations-table">Creating the stations Table</a></li>
+            <li class="second-level"><a href="#questions_1">Questions</a></li>
+                
+        <li class="first-level "><a href="#creating-the-swipes-table">Creating the swipes Table</a></li>
+            <li class="second-level"><a href="#questions_2">Questions</a></li>
+                
+        <li class="first-level "><a href="#altering-tables">Altering Tables</a></li>
+        <li class="first-level "><a href="#stored-procedures">Stored Procedures</a></li>
+            <li class="second-level"><a href="#questions_3">Questions</a></li>
+                
+        <li class="first-level "><a href="#stored-procedures-with-parameters">Stored Procedures with Parameters</a></li>
+        <li class="first-level "><a href="#mariadb-alternative-a-mysql">MariaDB : Alternative à MySQL</a></li>
+        <li class="first-level "><a href="#postgresql">PostgreSQL</a></li>
+            <li class="second-level"><a href="#questions_4">Questions</a></li>
+                
+        <li class="first-level "><a href="#creating-postgresql-tables">Creating PostgreSQL Tables</a></li>
+        <li class="first-level "><a href="#scaling-with-mysql">Scaling with MySQL</a></li>
+        <li class="first-level "><a href="#access-controls">Access Controls</a></li>
+        <li class="first-level "><a href="#sql-injection-attacks">SQL Injection Attacks</a></li>
+            <li class="second-level"><a href="#questions_5">Questions</a></li>
+                
+        <li class="first-level "><a href="#postgresql-approfondissement">PostgreSQL : Approfondissement</a></li>
+            <li class="second-level"><a href="#introduction-a-postgresql">Introduction à PostgreSQL</a></li>
+                
+            <li class="second-level"><a href="#differences-principales-avec-mysql">Différences principales avec MySQL</a></li>
+                
+                <li class="third-level"><a href="#architecture">Architecture</a></li>
+                <li class="third-level"><a href="#types-de-donnees">Types de données</a></li>
+                <li class="third-level"><a href="#indexation">Indexation</a></li>
+            <li class="second-level"><a href="#quand-choisir-postgresql">Quand choisir PostgreSQL ?</a></li>
+                
+            <li class="second-level"><a href="#exemple-pratique-heritage-de-tables">Exemple pratique : Héritage de tables</a></li>
+                
+            <li class="second-level"><a href="#migration-de-sqlite-vers-postgresql">Migration de SQLite vers PostgreSQL</a></li>
+                
+            <li class="second-level"><a href="#conclusion-sur-le-choix-entre-mysql-et-postgresql">Conclusion sur le choix entre MySQL et PostgreSQL</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="cours-6"><a href="https://cs50.harvard.edu/sql/2024/notes/6/">Cours 6</a><a class="headerlink" href="#cours-6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#mysql">MySQL</a><ul>
+<li><a href="#creating-the-cards-table">Creating the <code>cards</code> Table</a></li>
+<li><a href="#creating-the-stations-table">Creating the <code>stations</code> Table</a></li>
+<li><a href="#creating-the-swipes-table">Creating the <code>swipes</code> Table</a></li>
+</ul>
+</li>
+<li><a href="#altering-tables">Altering Tables</a></li>
+<li><a href="#stored-procedures">Stored Procedures</a><ul>
+<li><a href="#stored-procedures-with-parameters">Stored Procedures with Parameters</a></li>
+</ul>
+</li>
+<li><a href="#postgresql">PostgreSQL</a><ul>
+<li><a href="#creating-postgresql-tables">Creating PostgreSQL Tables</a></li>
+</ul>
+</li>
+<li><a href="#scaling-with-mysql">Scaling with MySQL</a></li>
+<li><a href="#access-controls">Access Controls</a></li>
+<li><a href="#sql-injection-attacks">SQL Injection Attacks</a></li>
+<li><a href="#fin">Fin</a></li>
+</ul>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Jusqu'à présent dans ce cours, nous avons appris à concevoir et créer nos propres bases de données, à lire et écrire des données, et plus récemment, à optimiser nos requêtes. Maintenant, nous allons comprendre comment faire tout cela mais à plus grande échelle.</li>
+<li>La <strong>scalabilité</strong> (scalability) est la capacité d'augmenter ou de diminuer la capacité d'une application ou d'une base de données pour répondre à la demande.</li>
+<li>Les plateformes de médias sociaux et les systèmes bancaires sont des exemples d'applications qui peuvent avoir besoin de se développer à mesure qu'elles grandissent et gagnent plus d'utilisateurs.</li>
+<li>Dans cette conférence, nous utiliserons différents systèmes de gestion de bases de données comme MySQL et PostgreSQL, qui peuvent être utilisés pour mettre à l'échelle des bases de données.</li>
+<li>SQLite est une base de données intégrée, mais MySQL et PostgreSQL sont des serveurs de bases de données — ils fonctionnent souvent sur leur propre matériel dédié auquel nous pouvons nous connecter via Internet pour exécuter nos requêtes SQL. Cela leur confère l'avantage de pouvoir stocker leurs données en RAM, ce qui entraîne des requêtes plus rapides.</li>
+</ul>
+<h2 id="transition-de-sqlite-vers-les-bases-de-donnees-clientserveur">Transition de SQLite vers les bases de données client/serveur<a class="headerlink" href="#transition-de-sqlite-vers-les-bases-de-donnees-clientserveur" title="Permanent link">&para;</a></h2>
+<ul>
+<li>SQLite, que nous avons utilisé jusqu'à présent, est une base de données <strong>intégrée</strong> : elle fonctionne comme une bibliothèque liée directement à l'application, sans processus serveur distinct.</li>
+<li>MySQL et PostgreSQL fonctionnent selon un modèle <strong>client/serveur</strong> : un processus serveur dédié gère la base de données, tandis que les applications s'y connectent en tant que clients.</li>
+<li>Cette différence architecturale a plusieurs implications importantes :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Caractéristique</th>
+<th>SQLite</th>
+<th>MySQL/PostgreSQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Installation</td>
+<td>Simple, fichier unique</td>
+<td>Nécessite installation et configuration d'un serveur</td>
+</tr>
+<tr>
+<td>Concurrence</td>
+<td>Limitée (verrous au niveau fichier)</td>
+<td>Avancée (gestion fine des transactions)</td>
+</tr>
+<tr>
+<td>Mémoire</td>
+<td>Utilise la mémoire de l'application</td>
+<td>Utilise sa propre mémoire, configurable</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Excellente pour les petites charges</td>
+<td>Supérieure pour les charges importantes</td>
+</tr>
+<tr>
+<td>Administration</td>
+<td>Minimale</td>
+<td>Nécessite une gestion active (utilisateurs, sécurité, etc.)</td>
+</tr>
+<tr>
+<td>Réseau</td>
+<td>Local uniquement</td>
+<td>Accessible à distance via le réseau</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Le modèle client/serveur permet des fonctionnalités avancées :</p>
+<ul>
+<li><strong>Mise en cache</strong> : Stockage des données fréquemment utilisées en RAM pour un accès ultra-rapide</li>
+<li><strong>Connexions multiples</strong> : Centaines voire milliers de connexions simultanées</li>
+<li><strong>Sécurité réseau</strong> : Contrôle d'accès granulaire, SSL/TLS pour les connexions</li>
+<li><strong>Haute disponibilité</strong> : Réplication, clustering, basculement automatique</li>
+</ul>
+</li>
+<li>
+<p>Ces différences expliquent pourquoi les applications professionnelles adoptent généralement MySQL ou PostgreSQL lorsqu'elles dépassent un certain niveau de complexité ou d'utilisation.érences expliquent pourquoi les applications professionnelles adoptent généralement MySQL ou PostgreSQL lorsqu'elles dépassent un certain niveau de complexité ou d'utilisation.</p>
+</li>
+</ul>
+<h2 id="mysql">MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Nous allons utiliser la base de données MBTA avec laquelle nous avons travaillé dans les conférences précédentes. Le diagramme ER suivant montre les entités Card (Carte), Swipe (Passage) et Station (Station) et les relations entre ces entités.</li>
+</ul>
+<p>[Diagramme ER pour la base de données MBTA avec les entités Card, Swipe et Station]</p>
+<pre><code class="language-mermaid">erDiagram
+    Card ||--o{ Swipe : makes
+    Swipe }o--|| Station : at
+</code></pre>
+<ul>
+<li>Pour rappel, les usagers du métro utilisent une CharlieCard qu'ils passent dans les stations pour entrer. Les usagers peuvent recharger leurs cartes et, dans certains cas, doivent passer leurs cartes pour quitter une station. La MBTA ne stocke pas d'informations sur les usagers, mais suit uniquement les cartes.</li>
+<li>Nous voulons créer une base de données dans MySQL avec ce schéma ! Dans le terminal, connectons-nous à un serveur MySQL.</li>
+</ul>
+<p><code>bash
+  mysql -u root -h 127.0.0.1 -P 3306 -p</code></p>
+<pre><code>- Dans cette commande de terminal, `-u` indique l'utilisateur. Nous fournissons l'utilisateur auquel nous voulons nous connecter à la base de données en tant que `root` (synonyme d'administrateur de base de données, dans ce cas).
+- `127.0.0.1` est l'adresse de l'hôte local sur Internet (notre propre ordinateur).
+- `3306` est le port auquel nous voulons nous connecter, et c'est le port par défaut où MySQL est hébergé. Considérez la combinaison de l'hôte et du port comme l'adresse de la base de données à laquelle nous essayons de nous connecter !
+- `-p` à la fin de la commande indique que nous voulons être invités à saisir un mot de passe lors de la connexion.
+</code></pre>
+<ul>
+<li>Étant donné qu'il s'agit d'un serveur de base de données complet avec potentiellement de nombreuses bases de données à l'intérieur. Pour afficher toutes les bases de données existantes, nous utilisons la commande MySQL suivante.</li>
+</ul>
+<p><code>sql
+  SHOW DATABASES;</code></p>
+<p>Cela renvoie certaines bases de données par défaut déjà présentes dans le serveur.
+- Nous allons effectuer quelques opérations pour configurer la base de données MBTA. Nous avons vu comment faire cela dans SQLite, alors concentrons-nous sur les différences de syntaxe pour MySQL !
+    - Création d'une nouvelle base de données :</p>
+<pre><code>  ```sql
+  CREATE DATABASE `mbta`;
+  ```
+
+  Au lieu de guillemets, nous utilisons des accents graves pour identifier le nom de la table et d'autres variables dans nos instructions SQL.
+- Pour changer la base de données actuelle en `mbta` :
+
+  ```sql
+  USE `mbta`;
+  ```
+</code></pre>
+<h2 id="creating-the-cards-table">Creating the <code>cards</code> Table<a class="headerlink" href="#creating-the-cards-table" title="Permanent link">&para;</a></h2>
+<ul>
+<li>MySQL offre une granularité plus fine avec les types que SQLite. Par exemple, un entier (integer) pourrait être <code>TINYINT</code>, <code>SMALLINT</code>, <code>MEDIUMINT</code>, <code>INT</code> ou <code>BIGINT</code> en fonction de la taille du nombre que nous voulons stocker. Le tableau suivant nous montre la taille et la plage des nombres que nous pouvons stocker dans chacun des types d'entiers.</li>
+</ul>
+<p>[Tableau des types d'entiers dans MySQL]</p>
+<p>Ces plages supposent que nous voulons utiliser un entier signé. Si nous utilisons des entiers non signés, la valeur maximale que nous pourrions stocker avec chaque type d'entier serait doublée.
+- Créons maintenant la table <code>cards</code> en utilisant un type de données <code>INT</code> pour la colonne ID. Puisqu'un <code>INT</code> peut stocker un nombre jusqu'à 4 milliards, il devrait être suffisamment grand pour notre cas d'utilisation !</p>
+<p><code>sql
+  CREATE TABLE `cards` (
+      `id` INT AUTO_INCREMENT,
+      PRIMARY KEY(`id`)
+  );</code></p>
+<p>Notez que nous utilisons le mot-clé <code>AUTO_INCREMENT</code> avec l'ID afin que MySQL insère automatiquement le nombre suivant comme ID pour une nouvelle ligne.</p>
+<h3 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>L'ID ne devrait-il pas être un entier non signé ? Comment pouvons-nous l'indiquer ?</p>
+</blockquote>
+<ul>
+<li>Oui, nous pourrions explicitement faire de l'ID un entier non signé en ajoutant le mot-clé <code>UNSIGNED</code> lors de la création de l'entier.</li>
+</ul>
+<h2 id="creating-the-stations-table">Creating the <code>stations</code> Table<a class="headerlink" href="#creating-the-stations-table" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Après avoir créé la table, nous pouvons voir une liste des tables existantes en exécutant :</li>
+</ul>
+<p><code>sql
+  SHOW TABLES;</code>
+- Pour plus de détails sur une table, nous pouvons utiliser la commande <code>DESCRIBE</code>.</p>
+<p><code>sql
+  DESCRIBE `cards`;</code>
+- Pour gérer le texte, MySQL propose de nombreux types. Deux types couramment utilisés sont <code>CHAR</code> — une chaîne de largeur fixe, et <code>VARCHAR</code> — une chaîne de longueur variable. MySQL dispose également d'un type <code>TEXT</code> mais contrairement à SQLite, ce type est utilisé pour des morceaux de texte plus longs comme des paragraphes, des pages de livres, etc. En fonction de la longueur du texte, il pourrait être l'un des types suivants : <code>TINYTEXT</code>, <code>TEXT</code>, <code>MEDIUMTEXT</code> et <code>LONGTEXT</code>. De plus, nous avons le type <code>BLOB</code> pour stocker des chaînes binaires.
+- MySQL fournit également deux autres types de texte : <code>ENUM</code> et <code>SET</code>. Enum restreint une colonne à une seule option prédéfinie parmi une liste d'options que nous fournissons. Par exemple, les tailles de t-shirts pourraient être énumérées en M, L, XL, etc. Un ensemble permet de stocker plusieurs options dans une seule cellule, utile pour des scénarios comme les genres de films.
+- Créons maintenant la table <code>stations</code> dans MySQL.</p>
+<p><code>sql
+  CREATE TABLE `stations` (
+      `id` INT AUTO_INCREMENT,
+      `name` VARCHAR(32) NOT NULL UNIQUE,
+      `line` ENUM('blue', 'green', 'orange', 'red') NOT NULL,
+      PRIMARY KEY(`id`)
+  );</code></p>
+<pre><code>- Nous choisissons un `VARCHAR` pour le nom de la station car les noms peuvent avoir une longueur inconnue. La ligne sur laquelle se trouve une station, cependant, est l'une des lignes de métro existantes à Boston. Puisque nous connaissons les valeurs que cela peut prendre, nous pouvons utiliser un type `ENUM`.
+- Nous utilisons également les contraintes de colonne `UNIQUE` et `NOT NULL` de la même manière que nous l'avons fait avec SQLite.
+</code></pre>
+<ul>
+<li>En exécutant la commande pour décrire cette table, nous voyons une sortie similaire qui répertorie chacune des colonnes de la table. Dans le champ <code>Key</code>, la clé primaire est reconnue par <code>PRI</code> et toute colonne avec des valeurs uniques est reconnue par <code>UNI</code>. Le champ <code>NULL</code> nous indique quelles colonnes permettent des valeurs <code>NULL</code>, ce que aucune des colonnes ne fait pour la table <code>stations</code>.</li>
+</ul>
+<h3 id="questions_1">Questions<a class="headerlink" href="#questions_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Peut-on utiliser une table comme entrée pour <code>ENUM</code> ?</p>
+</blockquote>
+<ul>
+<li>Cela pourrait être possible en utilisant une instruction <code>SELECT</code> imbriquée, mais ce n'est peut-être pas une bonne idée si les valeurs de la table changent avec le temps. Il pourrait être préférable d'indiquer explicitement les valeurs comme options pour <code>ENUM</code>.</li>
+</ul>
+<blockquote>
+<p>Si nous ne savons pas combien de temps un morceau de texte sera et que nous utilisons quelque chose comme <code>VARCHAR(300)</code> pour le représenter, est-ce correct ?</p>
+</blockquote>
+<ul>
+<li>Bien que cela soit correct, il y a un compromis ici. Nous perdrons 300 octets de mémoire pour chaque ligne de données insérée, ce qui pourrait ne pas en valoir la peine si nous finissons par stocker uniquement des chaînes très courtes. Il pourrait être préférable de commencer avec une longueur plus courte, puis de modifier la table pour augmenter la longueur si nécessaire.</li>
+</ul>
+<h2 id="creating-the-swipes-table">Creating the <code>swipes</code> Table<a class="headerlink" href="#creating-the-swipes-table" title="Permanent link">&para;</a></h2>
+<ul>
+<li>MySQL nous propose quelques options pour stocker les dates et les heures, alors qu'elles devaient être stockées à l'aide du type numérique dans SQLite.</li>
+<li>Nous pourrions utiliser <code>DATE</code>, <code>YEAR</code>, <code>TIME</code>, <code>DATETIME</code> et <code>TIMESTAMP</code> (pour des temps plus précis) pour stocker nos valeurs de date et d'heure. Les trois derniers permettent un paramètre facultatif pour spécifier la précision avec laquelle nous voulons stocker l'heure.</li>
+<li>Dans SQLite, nous avions un type de données <code>REAL</code>. Ici, nos options sont <code>FLOAT</code> et <code>DOUBLE PRECISION</code> comme montré dans le tableau ci-dessous.</li>
+</ul>
+<p>[Types de données réels dans MySQL]</p>
+<pre><code>- La quantité de précision doit être spécifiée avec le nombre d'octets, en raison de l'imprécision des nombres à virgule flottante. Cela signifie qu'avec une quantité limitée de mémoire, les nombres à virgule flottante ne peuvent être représentés qu'avec une certaine précision. Plus il y a d'octets, plus la précision avec laquelle le nombre est représenté est grande.
+</code></pre>
+<ul>
+<li>Il existe également un moyen dans MySQL d'utiliser un type décimal (précision fixe). Avec cela, nous spécifierions le nombre de chiffres dans le nombre à représenter, et le nombre de chiffres après la virgule décimale.</li>
+<li>Créons maintenant la table <code>swipes</code>.</li>
+</ul>
+<p><code>sql
+  CREATE TABLE `swipes` (
+      `id` INT AUTO_INCREMENT,
+      `card_id` INT,
+      `station_id` INT,
+      `type` ENUM('enter', 'exit', 'deposit') NOT NULL,
+      `datetime` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      `amount` DECIMAL(5,2) NOT NULL CHECK(`amount` != 0),
+      PRIMARY KEY(`id`),
+      FOREIGN KEY(`station_id`) REFERENCES `stations`(`id`),
+      FOREIGN KEY(`card_id`) REFERENCES `cards`(`id`)
+  );</code></p>
+<pre><code>- Remarquez l'utilisation de `DEFAULT CURRENT_TIMESTAMP` pour indiquer que l'horodatage doit être automatiquement rempli pour stocker l'heure actuelle si aucune valeur n'est fournie.
+- La précision que nous choisissons pour le montant du passage est de 2. Cela garantit que les centimes sont ajoutés ou soustraits sans aucun arrondi.
+- Les contraintes de colonne de lorsque nous avons créé la table dans SQLite restent, y compris la vérification pour s'assurer que le montant du passage n'est pas négatif.
+</code></pre>
+<ul>
+<li>Si nous décrivons cette table après l'avoir créée, nous verrons une sortie familière. Le champ <code>Key</code> a une nouvelle valeur, <code>MUL</code> (multiple) pour les colonnes de clé étrangère, indiquant qu'elles pourraient avoir des valeurs répétées puisqu'elles sont des clés étrangères.</li>
+</ul>
+<h3 id="questions_2">Questions<a class="headerlink" href="#questions_2" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Lorsque nous ajoutons des contraintes à une colonne, y a-t-il une précédence avec laquelle elles prennent effet ?</p>
+</blockquote>
+<ul>
+<li>Non, les contraintes fonctionnent ensemble de manière combinée. MySQL nous permet d'ajouter des contraintes dans n'importe quel ordre lors de la création de la table.</li>
+</ul>
+<blockquote>
+<p>MySQL a-t-il des affinités de type ?</p>
+</blockquote>
+<ul>
+<li>Pas exactement. MySQL a des types de données, comme <code>INT</code> et <code>VARCHAR</code>, mais contrairement à SQLite, il ne nous permettra pas d'entrer des données d'un type différent et d'essayer de les convertir.</li>
+</ul>
+<h2 id="altering-tables">Altering Tables<a class="headerlink" href="#altering-tables" title="Permanent link">&para;</a></h2>
+<ul>
+<li>MySQL nous permet de modifier les tables plus fondamentalement que SQLite.</li>
+<li>Si nous voulions ajouter une ligne argentée (silver line) aux lignes possibles sur lesquelles une station pourrait se trouver, nous pouvons faire ce qui suit.</li>
+</ul>
+<p><code>sql
+  ALTER TABLE `stations`
+  MODIFY `line` ENUM('blue', 'green', 'orange', 'red', 'silver') NOT NULL;</code></p>
+<pre><code>- Cela nous permet de modifier la colonne `line` et de changer son type, de sorte que l'`ENUM` inclut désormais l'argenté comme option.
+- Notez également que nous utilisons le mot-clé `MODIFY` en plus de la construction `ALTER TABLE` à laquelle nous sommes habitués avec SQLite.
+</code></pre>
+<h2 id="stored-procedures">Stored Procedures<a class="headerlink" href="#stored-procedures" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Les procédures stockées sont un moyen d'automatiser les instructions SQL et de les exécuter de manière répétée.</li>
+<li>Pour démontrer les procédures stockées, nous utiliserons une base de données d'une conférence précédente — la base de données MFA de Boston.</li>
+<li>Rappelez-vous que nous avons utilisé des vues dans SQLite pour implémenter une fonctionnalité de suppression logicielle pour les <code>collections</code> dans la base de données MFA. Une vue <code>current_collections</code> affichait toutes les collections non marquées comme supprimées. Nous allons maintenant utiliser une procédure stockée dans MySQL pour faire quelque chose de similaire.</li>
+<li>Naviguons vers la base de données MFA déjà créée sur notre serveur MySQL.</li>
+</ul>
+<p><code>sql
+  USE `mfa`;</code>
+- En décrivant la table <code>collections</code>, nous voyons que la colonne <code>deleted</code> n'est pas présente et doit être ajoutée à la table.</p>
+<p><code>sql
+  ALTER TABLE `collections`
+  ADD COLUMN `deleted` TINYINT DEFAULT 0;</code></p>
+<p>Étant donné que la colonne <code>deleted</code> n'a que des valeurs de 0 ou 1, il est sûr d'utiliser un <code>TINYINT</code>. Nous définissons également la valeur par défaut sur 0 car nous voulons conserver toutes les collections déjà présentes dans la table.
+- Avant de créer une procédure stockée, nous devons changer le délimiteur de <code>;</code> à autre chose. Contrairement à SQLite, où nous pouvions taper plusieurs instructions entre un <code>BEGIN</code> et un <code>END</code> (ce dont nous avons besoin pour une procédure stockée ici) et les terminer par un <code>;</code>, MySQL met fin prématurément à l'instruction lorsqu'il rencontre un <code>;</code>.</p>
+<p><code>sql
+  delimiter //</code>
+- Maintenant, nous écrivons la procédure stockée.</p>
+<p><code>sql
+  CREATE PROCEDURE `current_collection`()
+  BEGIN
+      SELECT `title`, `accession_number`, `acquired`
+      FROM `collections`
+      WHERE `deleted` = 0;
+  END//</code></p>
+<p>Remarquez l'utilisation de parenthèses vides à côté du nom de la procédure, peut-être réminiscent des fonctions dans d'autres langages de programmation. De manière similaire aux fonctions, nous pouvons également appeler des procédures stockées pour les exécuter.
+- Après avoir créé cela, nous devons réinitialiser le délimiteur sur <code>;</code>.</p>
+<p><code>sql
+  delimiter ;</code>
+- Essayons d'appeler cette procédure pour voir les collections actuelles. À ce stade, la requête devrait afficher toutes les lignes de la table <code>collections</code> car nous n'avons encore rien supprimé logiquement.</p>
+<p><code>sql
+  CALL current_collection();</code>
+- Si nous supprimons logiquement « Farmers working at dawn » et appelons à nouveau la procédure, nous constaterons que la ligne supprimée n'est pas incluse dans la sortie.</p>
+<p><code>sql
+  UPDATE `collections`
+  SET `deleted` = 1
+  WHERE `title` = 'Farmers working at dawn';</code></p>
+<h3 id="questions_3">Questions<a class="headerlink" href="#questions_3" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Pouvons-nous ajouter des paramètres aux procédures stockées, c'est-à-dire les appeler avec une certaine entrée ?</p>
+</blockquote>
+<ul>
+<li>Oui, nous le pouvons et nous verrons un exemple bientôt !</li>
+</ul>
+<blockquote>
+<p>Pouvons-nous appeler une procédure depuis une autre, comme avec les fonctions ?</p>
+</blockquote>
+<ul>
+<li>Oui. Vous pourriez mettre à peu près n'importe quelle instruction SQL que vous écrivez dans une procédure également.</li>
+</ul>
+<blockquote>
+<p>Peut-on laisser des notes ou des commentaires dans les tables dans MySQL ?</p>
+</blockquote>
+<ul>
+<li>Cela pourrait certainement être une fonctionnalité utile ! Vous pourriez laisser des commentaires dans un fichier <code>schema.sql</code> décrivant l'intention derrière différentes parties du schéma, mais il pourrait également y avoir des moyens d'ajouter des commentaires dans les tables SQL.</li>
+</ul>
+<h2 id="stored-procedures-with-parameters">Stored Procedures with Parameters<a class="headerlink" href="#stored-procedures-with-parameters" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Lorsque nous avons précédemment travaillé avec la base de données MFA, nous avions une table appelée <code>transactions</code> pour enregistrer l'achat ou la vente d'œuvres d'art, que nous pouvons également créer ici.</li>
+</ul>
+<p><code>sql
+  CREATE TABLE `transactions` (
+      `id` INT AUTO_INCREMENT,
+      `title` VARCHAR(64) NOT NULL,
+      `action` ENUM('bought', 'sold') NOT NULL,
+      PRIMARY KEY(`id`)
+  );</code>
+- Maintenant, si une œuvre d'art est supprimée de <code>collections</code> parce qu'elle est vendue, nous voudrions également mettre à jour cela dans la table <code>transactions</code>. Habituellement, cela nécessiterait deux requêtes différentes, mais avec une procédure stockée, nous pouvons donner un nom à cette séquence.</p>
+<p><code>sql
+  delimiter //
+  CREATE PROCEDURE `sell`(IN `sold_id` INT)
+  BEGIN
+      UPDATE `collections` SET `deleted` = 1
+      WHERE `id` = `sold_id`;
+      INSERT INTO `transactions` (`title`, `action`)
+      VALUES ((SELECT `title` FROM `collections` WHERE `id` = `sold_id`), 'sold');
+  END//
+  delimiter ;</code></p>
+<p>Le choix du paramètre pour cette procédure est l'ID du tableau ou de l'œuvre d'art car c'est un identifiant unique.
+- Nous pouvons maintenant appeler la procédure pour vendre un article particulier. Supposons que nous voulons vendre « Imaginative landscape ».</p>
+<p><code>sql
+  CALL `sell`(2);</code>
+- Nous pouvons afficher les données des tables <code>collections</code> et <code>transactions</code> pour vérifier que les modifications ont été effectuées.
+- Que se passe-t-il si j'appelle <code>sell</code> sur le même ID plus d'une fois ? Il y a un danger qu'il soit ajouté plusieurs fois à la table <code>transactions</code>. Les procédures stockées peuvent être considérablement améliorées en logique et en complexité en utilisant certains constructs de programmation classiques. La liste suivante contient quelques constructs populaires disponibles dans MySQL.</p>
+<p>[Constructs de programmation dans MySQL]</p>
+<h2 id="mariadb-alternative-a-mysql">MariaDB : Alternative à MySQL<a class="headerlink" href="#mariadb-alternative-a-mysql" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Origine</strong> : MariaDB est un fork de MySQL créé en 2009 par Michael "Monty" Widenius, le fondateur original de MySQL, suite au rachat de MySQL par Oracle.</li>
+<li><strong>Compatibilité</strong> : MariaDB est hautement compatible avec MySQL, ce qui permet une migration relativement simple. Les commandes SQL, les APIs et les structures sont largement identiques.</li>
+<li>
+<p><strong>Différences principales avec MySQL</strong> :</p>
+<ul>
+<li><strong>Licences</strong> : MariaDB est sous licence GPL v2, garantissant qu'elle restera toujours open-source, tandis que MySQL propose à la fois des versions communautaires et des versions propriétaires.</li>
+<li><strong>Moteurs de stockage</strong> : MariaDB inclut des moteurs supplémentaires comme Aria, ColumnStore (pour l'analytique) et Spider (pour le sharding).</li>
+<li><strong>Fonctionnalités</strong> : MariaDB a ajouté certaines fonctionnalités avant MySQL, comme les tables système en JSON, des améliorations de réplication et une meilleure optimisation des requêtes.</li>
+<li><strong>Transparence</strong> : Le développement de MariaDB est plus ouvert, avec une feuille de route publique et un processus communautaire.</li>
+</ul>
+</li>
+<li>
+<p><strong>Performance</strong> : Dans certains benchmarks, MariaDB surpasse MySQL, particulièrement pour les charges de travail mixtes lecture/écriture.</p>
+</li>
+<li><strong>Adoption</strong> : De nombreuses distributions Linux (comme Debian et RHEL) ont remplacé MySQL par MariaDB comme système de gestion de base de données par défaut.</li>
+<li>
+<p><strong>Migration</strong> : La migration de MySQL vers MariaDB est généralement simple :
+  <code>bash
+  mysqldump -u root -p --all-databases &gt; sauvegarde_mysql.sql
+  # Après installation de MariaDB
+  mysql -u root -p &lt; sauvegarde_mysql.sql</code></p>
+</li>
+<li>
+<p>Dans nos exercices pratiques, la plupart des commandes SQL fonctionneront de manière identique entre MySQL et MariaDB, ce qui facilite la transition entre ces systèmes.</p>
+</li>
+</ul>
+<h2 id="postgresql">PostgreSQL<a class="headerlink" href="#postgresql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Jusqu'à présent dans cette conférence, nous avons vu comment utiliser MySQL, ce qui nous donne une certaine capacité à évoluer par rapport à ce que SQLite peut offrir.</li>
+<li>Nous allons maintenant explorer les fonctionnalités de PostgreSQL en suivant le même processus que nous avons fait avec MySQL. Nous allons travailler avec certaines bases de données SQLite existantes et les convertir en PostgreSQL.</li>
+<li>
+<p>Revenons à la base de données MBTA qui avait une table <code>cards</code>, voyons quels types de données sont disponibles pour nous dans PostgreSQL.</p>
+<ul>
+<li>Entiers (Integers)</li>
+</ul>
+<p>[Types d'entiers dans PostgreSQL]</p>
+<p>Nous pouvons observer qu'il y a moins d'options ici que MySQL. PostgreSQL fournit également des entiers non signés, similaires à MySQL. Cela signifierait que le double de la valeur maximale affichée ici pourrait être stocké dans chaque type d'entier lorsque vous travaillez avec des entiers non signés.
+- Sériels (Serials)
+    - Les sériels sont également des entiers, mais ce sont des numéros de série, généralement utilisés pour les clés primaires.
+- Connectons-nous au serveur de base de données en ouvrant PSQL — l'interface de ligne de commande pour PostgreSQL.</p>
+</li>
+</ul>
+<p><code>bash
+  psql postgresql://postgres@127.0.0.1:5432/postgres</code></p>
+<p>Nous pouvons nous connecter en tant qu'utilisateur Postgres par défaut ou administrateur.
+- Pour afficher toutes les bases de données, nous pouvons exécuter <code>\\l</code> et cela affiche une liste.
+- Pour créer la base de données MBTA, nous pouvons exécuter :</p>
+<p><code>sql
+  CREATE DATABASE "mbta";</code>
+- Pour nous connecter à cette base de données spécifique, nous pouvons exécuter <code>\\c "mbta"</code>.
+- Pour lister toutes les tables de la base de données, nous pouvons exécuter <code>\\dt</code>. Pour l'instant, cependant, nous ne verrons aucune table dans la base de données.
+- Enfin, nous pouvons créer la table <code>cards</code>, comme proposé. Nous utilisons un type de données <code>SERIAL</code> pour la colonne ID.</p>
+<p><code>sql
+  CREATE TABLE "cards" (
+      "id" SERIAL,
+      PRIMARY KEY("id")
+  );</code>
+- Pour décrire une table dans PostgreSQL, nous pouvons utiliser une commande comme <code>\\d "cards"</code>. En exécutant cela, nous voyons certaines informations sur cette table mais dans un format légèrement différent de MySQL.</p>
+<h3 id="questions_4">Questions<a class="headerlink" href="#questions_4" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Comment savez-vous dans PostgreSQL si votre requête entraîne une erreur ?</p>
+</blockquote>
+<ul>
+<li>Si vous appuyez sur Entrée et que le serveur de base de données ne dit pas ptu, vous saurez qu'il pourrait y avoir une erreur. Il est également probable que PostgreSQL vous donne des messages d'erreur utiles pour vous orienter dans la bonne direction.</li>
+</ul>
+<h2 id="creating-postgresql-tables">Creating PostgreSQL Tables<a class="headerlink" href="#creating-postgresql-tables" title="Permanent link">&para;</a></h2>
+<ul>
+<li>La table <code>stations</code> est créée de manière similaire à MySQL.</li>
+</ul>
+<p><code>sql
+  CREATE TABLE "stations" (
+      "id" SERIAL,
+      "name" VARCHAR(32) NOT NULL UNIQUE,
+      "line" VARCHAR(32) NOT NULL,
+      PRIMARY KEY("id")
+  );</code></p>
+<p>Nous pouvons utiliser <code>VARCHAR</code> de la même manière que dans MySQL. Pour simplifier, nous disons que la colonne <code>"line"</code> est également de type <code>VARCHAR</code>.
+- Nous voulons créer la table <code>swipes</code> ensuite. Rappelez-vous que le type de passage peut marquer l'entrée, la sortie ou le dépôt de fonds dans la carte. De manière similaire à MySQL, nous pouvons utiliser un <code>ENUM</code> pour capturer ces options, mais nous ne l'incluons pas dans la définition de la colonne. Au lieu de cela, nous créons notre propre type.</p>
+<p><code>sql
+  CREATE TYPE "swipe_type" AS ENUM('enter', 'exit', 'deposit');</code>
+- PostgreSQL dispose des types <code>TIMESTAMP</code>, <code>DATE</code>, <code>TIME</code> et <code>INTERVAL</code> pour représenter les valeurs de date et d'heure. <code>INTERVAL</code> est utilisé pour capturer la durée de quelque chose ou la distance entre les heures. De manière similaire à MySQL, nous pouvons spécifier la précision avec ces types.
+- Une différence clé avec les types de nombres réels dans PostgreSQL est que le type <code>DECIMAL</code> s'appelle <code>NUMERIC</code>.
+- Nous pouvons maintenant créer la table <code>swipes</code> comme suit.</p>
+<p><code>sql
+  CREATE TABLE "swipes" (
+      "id" SERIAL,
+      "card_id" INT,
+      "station_id" INT,
+      "type" "swipe_type" NOT NULL,
+      "datetime" TIMESTAMP NOT NULL DEFAULT now(),
+      "amount" NUMERIC(5,2) NOT NULL CHECK("amount" != 0),
+      PRIMARY KEY("id"),
+      FOREIGN KEY("station_id") REFERENCES "stations"("id"),
+      FOREIGN KEY("card_id") REFERENCES "cards"("id")
+  );</code></p>
+<p>Pour l'horodatage par défaut, nous utilisons une fonction fournie par PostgreSQL appelée <code>now()</code> qui nous donne l'horodatage actuel !
+- Pour quitter PostgreSQL, nous utilisons la commande <code>\\q</code>.</p>
+<h2 id="scaling-with-mysql">Scaling with MySQL<a class="headerlink" href="#scaling-with-mysql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Considérons un serveur de base de données pour une application dont la demande augmente. À mesure que le nombre de lectures et d'écritures provenant de l'application commence à augmenter, le temps d'attente pour que les requêtes soient traitées par le serveur augmente également.</li>
+<li>Une approche ici consiste à mettre à l'échelle la base de données verticalement. La mise à l'échelle verticale consiste à augmenter la capacité en augmentant la puissance de calcul du serveur de base de données.</li>
+<li>Une autre approche consiste à mettre à l'échelle horizontalement. Cela signifie augmenter la capacité en répartissant la charge sur plusieurs serveurs. Lorsque nous mettons à l'échelle horizontalement, nous conservons des copies de notre base de données sur plusieurs serveurs (réplication).</li>
+<li>Il existe trois principaux modèles de réplication : à leader unique, à leaders multiples et sans leader. La réplication à leader unique implique un seul serveur de base de données traitant les écritures entrantes, puis copiant ces modifications dans d'autres serveurs, tandis que la réplication à leaders multiples implique plusieurs serveurs recevant des mises à jour, entraînant une complexité accrue. La réplication sans leader utilise une approche différente qui ne nécessite pas de leaders en ce sens.</li>
+<li>Ici, nous nous concentrerons sur le modèle de réplication à leader unique. Dans ce modèle, le serveur de base de données suiveur est une réplique en lecture : une copie de la base de données à partir de laquelle les données peuvent uniquement être lues. Le serveur leader est désigné pour traiter les écritures dans la base de données.</li>
+<li>Une fois que le leader traite une demande d'écriture, il pourrait attendre que les suiveurs répliquent les modifications avant de faire quoi que ce soit d'autre. Cela s'appelle la réplication synchrone. Bien qu'elle garantisse que la base de données est toujours cohérente, elle peut être trop lente à répondre aux requêtes. Dans les applications comme la finance ou les soins de santé, où la cohérence des données est extrêmement importante, nous pourrions choisir ce type de communication malgré les inconvénients.</li>
+<li>Un autre type est la réplication asynchrone, dans laquelle le leader communique avec les serveurs suiveurs de manière asynchrone pour s'assurer que les modifications sont répliquées. Cette méthode pourrait être utilisée dans les applications de médias sociaux, où la rapidité de réponse est extrêmement importante.</li>
+<li>Une autre méthode populaire de mise à l'échelle s'appelle le sharding. Cela implique de diviser la base de données en shards sur plusieurs serveurs de base de données. Un mot d'avertissement avec le sharding : nous voulons éviter d'avoir un point d'accès de base de données, ou un serveur de base de données qui devient plus fréquemment accédé que d'autres. Cela pourrait créer une surcharge sur ce serveur.</li>
+<li>Un autre problème survient lorsque nous utilisons le sharding sans réplication. Dans ce cas, si l'un des serveurs tombe en panne, nous aurons une base de données incomplète. Cela crée un point de défaillance unique : si un système tombe en panne, notre système entier est inutilisable.</li>
+</ul>
+<h2 id="access-controls">Access Controls<a class="headerlink" href="#access-controls" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Auparavant, nous nous sommes connectés à MySQL en utilisant l'utilisateur root. Cependant, nous pouvons également créer plus d'utilisateurs et leur donner un certain type d'accès à la base de données.</li>
+<li>Créons un nouvel utilisateur nommé Carter (n'hésitez pas à essayer avec votre propre nom ici) !</li>
+</ul>
+<p><code>sql
+  CREATE USER 'carter' IDENTIFIED BY 'password';</code>
+- Nous pouvons maintenant nous connecter à MySQL en utilisant le nouvel utilisateur et le mot de passe, de la même manière que nous l'avons fait précédemment avec l'utilisateur root.
+- Lorsque nous créons ce nouvel utilisateur, par défaut, il a très peu de privilèges. Essayons la requête suivante.</p>
+<p><code>sql
+  SHOW DATABASES;</code></p>
+<p>Cela n'affiche que certaines des bases de données par défaut dans le serveur.
+- Si nous nous connectons à nouveau avec l'utilisateur root et exécutons la requête ci-dessus, beaucoup plus de bases de données apparaissent ! C'est parce que l'utilisateur root a accès à presque tout dans le serveur.
+- Voyons comment nous pouvons accorder l'accès aux utilisateurs en discutant d'un exemple des semaines précédentes. Nous avions une base de données <code>rideshare</code> avec une table <code>rides</code>. Dans cette table, nous stockions les noms des passagers, qui sont des informations personnellement identifiables (PII). Nous avons créé une vue appelée <code>analysis</code> qui anonymisait les noms des passagers, dans l'intention de partager uniquement cette vue avec un analyste ou un autre utilisateur.
+- Si nous voulions partager la vue <code>analysis</code> avec l'utilisateur que nous venons de créer, nous ferions ce qui suit tout en étant connecté en tant qu'utilisateur root.</p>
+<p><code>sql
+  GRANT SELECT ON `rideshare`.`analysis` TO 'carter';</code>
+- Maintenant, connectons-nous en tant que nouvel utilisateur et vérifions que nous pouvons accéder à la vue. Nous pouvons maintenant exécuter</p>
+<p><code>sql
+  USE `rideshare`;</code>
+- Cependant, la seule partie de la base de données à laquelle cet utilisateur peut accéder est la vue <code>analysis</code>. Nous pouvons maintenant voir les données dans cette vue, mais pas à partir de la table <code>rides</code> d'origine ! Nous venons de démontrer l'avantage du contrôle d'accès de MySQL : nous pouvons avoir plusieurs utilisateurs accédant à la base de données mais n'autoriser que certains à accéder aux données confidentielles.</p>
+<h2 id="sql-injection-attacks">SQL Injection Attacks<a class="headerlink" href="#sql-injection-attacks" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Une façon d'augmenter la sécurité de notre base de données consiste à utiliser le contrôle d'accès et à accorder uniquement les privilèges nécessaires à chaque utilisateur. Cependant, nos applications qui utilisent une base de données SQL pourraient également être exposées à des attaques — l'une d'elles est une attaque par injection SQL.</li>
+<li>Comme son nom l'indique, cela implique qu'un utilisateur malveillant injecte certaines phrases SQL pour compléter une requête existante dans notre application de manière indésirable.</li>
+<li>Par exemple, un site Web qui demande à un utilisateur de se connecter avec son nom d'utilisateur et son mot de passe pourrait exécuter une requête comme celle-ci sur la base de données.</li>
+</ul>
+<p><code>sql
+  SELECT `id` FROM `users`
+  WHERE `user` = 'Carter' AND `password` = 'password';</code></p>
+<p>Dans l'exemple ci-dessus, l'utilisateur Carter a saisi son nom d'utilisateur et son mot de passe comme d'habitude. Cependant, un utilisateur malveillant pourrait entrer quelque chose de différent, comme la chaîne « password' OR '1' = '1 » comme mot de passe. Dans ce cas, ils essaient d'obtenir l'accès à l'ensemble de la base de données des utilisateurs et des mots de passe.</p>
+<p><code>sql
+  SELECT `id` FROM `users`
+  WHERE `user` = 'Carter' AND `password` = 'password' OR '1' = '1';</code>
+- Dans MySQL, nous pouvons utiliser des instructions préparées pour prévenir les attaques par injection SQL. Connectons-nous à MySQL avec l'utilisateur que nous avons créé précédemment et passons à la base de données <code>bank</code>.
+- Un exemple d'attaque par injection SQL qui peut être exécuté pour afficher tous les comptes d'utilisateurs à partir de la table <code>accounts</code> est le suivant.</p>
+<p><code>sql
+  SELECT * FROM `accounts`
+  WHERE `id` = 1 UNION SELECT * FROM `accounts`;</code>
+- Une instruction préparée est une instruction dans SQL que nous pouvons insérer ultérieurement des valeurs. Pour la requête ci-dessus, nous pouvons écrire une instruction préparée.</p>
+<p><code>sql
+  PREPARE `balance_check`
+  FROM 'SELECT * FROM `accounts`
+  WHERE `id` = ?';</code></p>
+<p>Le point d'interrogation dans l'instruction préparée agit comme une sauvegarde contre l'exécution involontaire de code SQL.
+- Pour exécuter réellement cette instruction maintenant et vérifier le solde de quelqu'un, nous acceptons l'entrée de l'utilisateur comme variable, puis nous l'insérons dans l'instruction préparée.</p>
+<p><code>sql
+  SET @id = 1;
+  EXECUTE `balance_check` USING @id;</code></p>
+<p>Dans le code ci-dessus, imaginez que l'instruction <code>SET</code> procure l'ID de l'utilisateur via l'application ! Le <code>@</code> est une convention pour les variables dans MySQL.
+- L'instruction préparée nettoie l'entrée pour s'assurer qu'aucun code SQL malveillant n'est injecté. Essayons d'exécuter les mêmes instructions que ci-dessus mais avec un ID malveillant.</p>
+<p><code>sql
+  SET @id = '1 UNION SELECT * FROM `accounts`';
+  EXECUTE `balance_check` USING @id;</code></p>
+<p>Cela nous donne les mêmes résultats que le code précédent — il nous montre le solde de l'utilisateur avec l'ID 1 et rien d'autre ! Ainsi, nous avons empêché une éventuelle attaque par injection SQL.</p>
+<h3 id="questions_5">Questions<a class="headerlink" href="#questions_5" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Dans cet exemple d'instruction préparée, ne prend-elle en compte que la première condition de la variable ?</p>
+</blockquote>
+<ul>
+<li>L'instruction préparée fait quelque chose appelé échappement. Elle trouve toutes les parties de la variable qui pourraient être malveillantes et les échappe pour qu'elles ne soient pas réellement exécutées.</li>
+</ul>
+<blockquote>
+<p>Est-ce similaire à la raison pour laquelle nous ne devrions pas utiliser des chaînes formatées en Python pour exécuter une requête SQL ?</p>
+</blockquote>
+<ul>
+<li>Oui, les chaînes formatées en Python ont le même inconvénient car elles sont susceptibles d'attaques par injection SQL.</li>
+</ul>
+<h1 id="postgresql-approfondissement">PostgreSQL : Approfondissement<a class="headerlink" href="#postgresql-approfondissement" title="Permanent link">&para;</a></h1>
+<h2 id="introduction-a-postgresql">Introduction à PostgreSQL<a class="headerlink" href="#introduction-a-postgresql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>PostgreSQL (souvent appelé "Postgres") est un système de gestion de base de données relationnel <strong>open-source</strong> avec plus de 30 ans de développement actif.</li>
+<li>Contrairement à MySQL qui privilégie la simplicité et la performance, PostgreSQL met l'accent sur la <strong>conformité aux standards SQL</strong> et les <strong>fonctionnalités avancées</strong>.</li>
+<li>PostgreSQL est souvent choisi pour les applications complexes, scientifiques ou les systèmes qui nécessitent une forte intégrité des données.</li>
+</ul>
+<h2 id="differences-principales-avec-mysql">Différences principales avec MySQL<a class="headerlink" href="#differences-principales-avec-mysql" title="Permanent link">&para;</a></h2>
+<h3 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Modèle de processus</strong> : PostgreSQL utilise un modèle multi-processus (un processus par connexion) tandis que MySQL utilise un modèle de threads.</li>
+<li><strong>Transactions</strong> : PostgreSQL offre une gestion des transactions ACID plus stricte que MySQL, ce qui le rend particulièrement fiable pour les applications financières.</li>
+<li><strong>Extensibilité</strong> : PostgreSQL permet de créer vos propres types de données, fonctions et opérateurs, ce qui le rend très flexible.</li>
+</ul>
+<h3 id="types-de-donnees">Types de données<a class="headerlink" href="#types-de-donnees" title="Permanent link">&para;</a></h3>
+<ul>
+<li>PostgreSQL propose des types de données plus riches que MySQL :<ul>
+<li>Support natif pour les données <strong>géospatiales</strong> avec PostGIS</li>
+<li>Type <strong>JSONB</strong> pour le stockage optimisé de JSON</li>
+<li><strong>Tableaux</strong> et types composites</li>
+<li><strong>HSTORE</strong> pour le stockage de paires clé-valeur</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-sql">-- Exemple d'utilisation du type JSONB dans PostgreSQL
+CREATE TABLE commandes (
+    id SERIAL PRIMARY KEY,
+    infos JSONB
+);
+
+INSERT INTO commandes (infos) 
+VALUES ('{&quot;client&quot;: &quot;Dupont&quot;, &quot;articles&quot;: [{&quot;nom&quot;: &quot;stylo&quot;, &quot;quantité&quot;: 5}]}');
+
+-- Recherche dans le JSON
+SELECT * FROM commandes 
+WHERE infos @&gt; '{&quot;client&quot;: &quot;Dupont&quot;}';
+</code></pre>
+<h3 id="indexation">Indexation<a class="headerlink" href="#indexation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>PostgreSQL offre <strong>plusieurs types d'index</strong> adaptés à différents cas d'usage :<ul>
+<li>B-tree (par défaut)</li>
+<li>Hash</li>
+<li>GiST (pour les données géométriques, textuelles)</li>
+<li>GIN (pour les tableaux, JSONB)</li>
+<li>BRIN (pour grandes tables avec données ordonnées)</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-sql">-- Index GIN pour recherche efficace dans JSONB
+CREATE INDEX idx_commandes_infos ON commandes USING GIN (infos);
+</code></pre>
+<h2 id="quand-choisir-postgresql">Quand choisir PostgreSQL ?<a class="headerlink" href="#quand-choisir-postgresql" title="Permanent link">&para;</a></h2>
+<p>PostgreSQL est particulièrement adapté quand :</p>
+<ol>
+<li>Vous avez besoin d'une <strong>haute intégrité des données</strong></li>
+<li>Votre application utilise des <strong>requêtes complexes</strong></li>
+<li>Vous travaillez avec des <strong>données géospatiales</strong></li>
+<li>Vous avez besoin d'<strong>extensibilité</strong> pour des cas spécifiques</li>
+<li>Vous préférez une solution <strong>entièrement open-source</strong></li>
+</ol>
+<h2 id="exemple-pratique-heritage-de-tables">Exemple pratique : Héritage de tables<a class="headerlink" href="#exemple-pratique-heritage-de-tables" title="Permanent link">&para;</a></h2>
+<p>Une fonctionnalité unique de PostgreSQL est l'héritage de tables :</p>
+<pre><code class="language-sql">-- Table parent pour tous les véhicules
+CREATE TABLE vehicules (
+    id SERIAL PRIMARY KEY,
+    marque VARCHAR(50),
+    modele VARCHAR(50),
+    annee INTEGER
+);
+
+-- Tables spécialisées qui héritent de la table parent
+CREATE TABLE voitures (
+    nombre_portes INTEGER,
+    type_carburant VARCHAR(20)
+) INHERITS (vehicules);
+
+CREATE TABLE motos (
+    cylindree INTEGER
+) INHERITS (vehicules);
+</code></pre>
+<p>Avec cette structure, une requête sur <code>vehicules</code> retournera aussi les données des tables <code>voitures</code> et <code>motos</code>.</p>
+<h2 id="migration-de-sqlite-vers-postgresql">Migration de SQLite vers PostgreSQL<a class="headerlink" href="#migration-de-sqlite-vers-postgresql" title="Permanent link">&para;</a></h2>
+<p>Lorsque votre application grandit, migrer de SQLite vers PostgreSQL implique :</p>
+<ol>
+<li><strong>Exportation des données</strong> depuis SQLite</li>
+<li><strong>Adaptation du schéma</strong> pour utiliser les types PostgreSQL</li>
+<li><strong>Importation des données</strong> dans PostgreSQL</li>
+<li><strong>Adaptation du code</strong> de connexion et des requêtes spécifiques</li>
+</ol>
+<p>Ce processus est similaire à la migration vers MySQL, mais avec une attention particulière aux types de données et aux contraintes spécifiques à PostgreSQL.</p>
+<h2 id="conclusion-sur-le-choix-entre-mysql-et-postgresql">Conclusion sur le choix entre MySQL et PostgreSQL<a class="headerlink" href="#conclusion-sur-le-choix-entre-mysql-et-postgresql" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>MySQL</strong> : idéal pour les applications web classiques, blogs, sites e-commerce avec beaucoup de lectures et peu d'écritures complexes</li>
+<li><strong>PostgreSQL</strong> : meilleur pour les applications analytiques, scientifiques, ou nécessitant une forte intégrité des données et des fonctionnalités avancées</li>
+<li><strong>MariaDB</strong> : alternative à MySQL avec des améliorations de performance et une garantie de rester open-source</li>
+</ul>
+<p>Le choix dépend principalement de votre cas d'utilisation et des fonctionnalités dont vous avez besoin pour votre application.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

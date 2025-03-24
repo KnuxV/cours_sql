@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Don't Panic Python - Cours SQL</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">Cours SQL</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 0 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours0/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 1 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours1/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/cyberchase/instructions/">Cyberchase</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/normals/instructions/">Normals</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/players/instructions/">Players</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/views/instructions/">Views</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/index_old.md">Old Index</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 2 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours2/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/dese/instructions/">Dese</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/moneyball/instructions/">Moneyball</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/packages/instructions/">Packages</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 3 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours3/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/atl/instructions/">ATL</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/connect/instructions/">Connect</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/doghnut/instructions/">Doghnut</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 4 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours4/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours4/dont-panic/instructions/">Don't Panic</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours4/meteorites/instructions/">Meteorites</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 5 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours5/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/bnb/instructions/">BNB</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/census/instructions/">Census</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/private/instructions/">Private</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 6 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours6/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours6/harvard/instructions/">Harvard</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours6/snap/instructions/">Snap</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 7 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../index2/">Index 2</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../deep/answers/">Deep Answers</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../deep/instructions/">Deep Instructions</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Don't Panic Python</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../linkedin/instructions/">LinkedIn</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SQLite Python <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../sqlite_python/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../deep/instructions/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../../linkedin/instructions/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#probleme-a-resoudre">Problème à Résoudre</a></li>
+        <li class="first-level "><a href="#demonstration">Démonstration</a></li>
+        <li class="first-level "><a href="#code-de-distribution">Code de Distribution</a></li>
+        <li class="first-level "><a href="#specification">Spécification</a></li>
+        <li class="first-level "><a href="#guide">Guide</a></li>
+            <li class="second-level"><a href="#python">Python</a></li>
+                
+            <li class="second-level"><a href="#connexion-a-une-base-de-donnees">Connexion à une Base de Données</a></li>
+                
+            <li class="second-level"><a href="#execution-dinstructions-sql-avec-python">Exécution d'Instructions SQL avec Python</a></li>
+                
+            <li class="second-level"><a href="#instructions-preparees">Instructions Préparées</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<p><a href="https://cs50.harvard.edu/sql/2024/psets/6/dont-panic/python/"># Don’t Panic!</a></p>
+<p><img alt="Une salle de serveur vide dans un bureau la nuit, dans le style d'un film noir de détective" src="https://cs50.harvard.edu/sql/2024/psets/6/dont-panic/python/dont-panic.jpg" /></p>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
+<p>Vous êtes un « pentester » (testeur de pénétration) formé. Après votre succès dans une opération précédente, une nouvelle entreprise vous a engagé pour effectuer un test de pénétration et rapporter les vulnérabilités dans leur système de données. Cette fois, vous suspectez pouvoir faire mieux en écrivant un programme en Python qui automatise votre piratage.</p>
+<p>Pour réussir cette opération secrète, vous devrez :</p>
+<ul>
+<li>Vous connecter, via Python, à une base de données SQLite.</li>
+<li>Modifier, dans votre programme Python, le mot de passe de l'administrateur.</li>
+</ul>
+<p>Si vous n'avez pas d'expérience avec Python, pas de souci ! Ce problème vous guidera à chaque étape.</p>
+<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
+<pre><code class="language-SQL">$ ls                                                                                                
+dont-panic.db  hack.py  reset.sql                                                                   
+$ python hack.py                                                                                    
+Enter a password: hacked!                                                                           
+$ sqlite3 dont-panic.db                                                                             
+sqlite&gt; SELECT &quot;password&quot;                                                                           
+   ...&gt; FROM &quot;users&quot;                                                                                
+   ...&gt; WHERE &quot;username&quot; = 'admin';    
+
+   +----------+                                                                                        
+| password |                                                                                        
++----------+                                                                                        
+| hacked!  |                                                                                        
++----------+                                                                                        
+sqlite&gt; .quit  
+</code></pre>
+<h2 id="code-de-distribution">Code de Distribution<a class="headerlink" href="#code-de-distribution" title="Permanent link">&para;</a></h2>
+<p>Pour ce problème, vous aurez besoin d'accéder à une base de données, un fichier Python, et un ensemble d'instructions SQL pour réinitialiser la base de données au cas où votre piratage échouerait la première fois (ne vous inquiétez pas si c'est le cas !).</p>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
+<p>Dans <code>hack.py</code>, écrivez un programme Python pour réaliser les tâches suivantes :</p>
+<ul>
+<li>Connectez-vous, via Python, à une base de données SQLite.</li>
+<li>Modifiez, dans votre programme Python, le mot de passe de l'administrateur.</li>
+</ul>
+<p>Lorsque votre programme dans <code>hack.py</code> est exécuté sur une nouvelle instance de la base de données, il devrait produire les résultats ci-dessus.</p>
+<p>L'horloge tourne !</p>
+<h2 id="guide">Guide<a class="headerlink" href="#guide" title="Permanent link">&para;</a></h2>
+<p>Si vous êtes nouveau dans Python (ou dans la connexion de Python avec SQL !), ce guide vous accompagnera à chaque étape de ce problème.</p>
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<p>Lorsque vous téléchargez le code de distribution pour ce problème, vous devriez remarquer un fichier nommé <code>hack.py</code>. Vous pouvez dire que ce programme est un programme Python car il se termine par <code>.py</code>. L'extension <code>.py</code> identifie les fichiers comme des fichiers Python, tout comme l'extension <code>.sql</code> identifie les fichiers comme un ensemble d'instructions SQL.</p>
+<p>Au début, <code>hack.py</code> ne devrait contenir qu'une seule ligne de code Python :</p>
+<pre><code class="language-python">print(&quot;Hacked!&quot;)
+</code></pre>
+<p>Pour exécuter ce programme Python, assurez-vous que lorsque vous tapez <code>ls</code>, vous voyez <code>hack.py</code> parmi les fichiers de votre répertoire actuel. Ensuite, exécutez ce qui suit dans votre terminal :</p>
+<pre><code class="language-bash">python hack.py
+</code></pre>
+<p>Vous devriez voir « Hacked! » dans votre fenêtre de terminal. Pas vraiment un piratage, mais vous êtes sur la bonne voie !</p>
+<h3 id="connexion-a-une-base-de-donnees">Connexion à une Base de Données<a class="headerlink" href="#connexion-a-une-base-de-donnees" title="Permanent link">&para;</a></h3>
+<p>Maintenant que vous pouvez exécuter votre programme Python, l'étape suivante consiste à connecter votre programme à <code>dont-panic.db</code>. Pour ce faire, vous devrez utiliser la bibliothèque CS50 pour Python. Une bibliothèque est une collection de code que quelqu'un d'autre a écrit pour résoudre un problème (et, surtout, que vous pouvez utiliser dans votre propre programme !). Dans ce cas, l'une des problèmes que la bibliothèque CS50 pour Python vous aide à résoudre est le processus de connexion à une base de données SQLite.</p>
+<p>Pour utiliser la fonctionnalité SQL de la bibliothèque CS50 dans votre propre programme, remplacez <code>print("Hacked!")</code> par ce qui suit :</p>
+<pre><code class="language-python">from cs50 import SQL
+</code></pre>
+<p>Cette ligne de code Python indique que votre programme doit récupérer (« importer ») des outils liés à SQL depuis la bibliothèque CS50, appelée <code>cs50</code>.</p>
+<p>Avec cette bibliothèque maintenant incluse dans votre programme, établir une connexion à <code>dont-panic.db</code> est aussi simple qu'une seule ligne de code Python :</p>
+<pre><code class="language-python">from cs50 import SQL
+
+db = SQL(&quot;sqlite:///dont-panic.db&quot;)
+</code></pre>
+<p>Vous pouvez décomposer cette ligne de code en les éléments suivants :</p>
+<ul>
+<li><code>db = SQL(...)</code>, qui établit une connexion à la base de données donnée en entrée, entre les parenthèses. Cette ligne de code garantit également que vous pouvez faire référence à votre connexion de base de données sous le nom <code>db</code> par la suite dans votre programme.</li>
+<li><code>sqlite:///dont-panic.db</code> est une URL (similaire à une URL de site web !) qui identifie la base de données à laquelle se connecter (<code>dont-panic.db</code>) et le dialecte SQL à utiliser (<code>sqlite</code>, dans ce cas, par opposition à <code>mysql</code> ou <code>postgres</code>).</li>
+</ul>
+<p>Si vous vous sentez plus à l'aise, vous pouvez en apprendre davantage sur cette ligne de code dans la documentation de la bibliothèque CS50 pour Python.</p>
+<p>Essayez d'exécuter votre programme maintenant. Vous ne verrez peut-être rien se passer, et si c'est le cas, c'est bon signe !</p>
+<h3 id="execution-dinstructions-sql-avec-python">Exécution d'Instructions SQL avec Python<a class="headerlink" href="#execution-dinstructions-sql-avec-python" title="Permanent link">&para;</a></h3>
+<p>La fonctionnalité SQL de la bibliothèque CS50 pour Python est fournie avec une méthode appelée <code>execute</code>. Une méthode reçoit une entrée et produit une sortie. Par exemple, une méthode peut prendre une instruction SQL en entrée, exécuter cette instruction SQL sur une base de données, et vous renvoyer les résultats de l'instruction SQL. En fait, c'est exactement ce que fait la méthode <code>execute</code> !</p>
+<pre><code class="language-python">from cs50 import SQL
+
+db = SQL(&quot;sqlite:///dont-panic.db&quot;)
+db.execute(
+    &quot;&quot;&quot;
+    UPDATE &quot;users&quot;
+    SET &quot;password&quot; = 'hacked!'
+    WHERE &quot;username&quot; = 'admin';
+    &quot;&quot;&quot;
+)
+</code></pre>
+<p>Remarquez que, à l'intérieur des parenthèses associées à la méthode <code>execute</code>, vous avez maintenant écrit une requête SQL entièrement formée. Lorsque vous exécutez votre programme Python, la requête SQL sera exécutée sur la base de données.</p>
+<p>Après avoir exécuté votre programme, essayez d'ouvrir <code>dont-panic.db</code> avec <code>sqlite3</code>. Lorsque vous consultez le mot de passe de l'administrateur, vous devriez constater qu'il est maintenant « hacked! ».</p>
+<p>Si à tout moment vous souhaitez réinitialiser <code>dont-panic.db</code> à son état d'origine, rappelez-vous que vous pouvez utiliser <code>reset.sql</code>.</p>
+<h3 id="instructions-preparees">Instructions Préparées<a class="headerlink" href="#instructions-preparees" title="Permanent link">&para;</a></h3>
+<p>Imaginez que vous souhaitiez qu'un utilisateur détermine le nouveau mot de passe administratif au fur et à mesure que votre programme Python s'exécute.</p>
+<p>Rappelez-vous du cours que une instruction préparée est une requête SQL avec des espaces réservés pour des valeurs qui sont insérées (« interpolées ») plus tard. Puisque vous ne savez pas quel mot de passe votre utilisateur choisira, le mieux que vous puissiez faire est de définir un espace réservé pour le mot de passe et permettre à votre programme d'interpoler le mot de passe choisi par l'utilisateur plus tard. L'utilisation d'une instruction préparée peut donc aider !</p>
+<p>La bibliothèque CS50 pour Python prend en charge l'utilisation d'instructions préparées. Tout d'abord, modifiez votre programme pour accepter une entrée de l'utilisateur :</p>
+<pre><code class="language-python">from cs50 import SQL
+
+db = SQL(&quot;sqlite:///dont-panic.db&quot;)
+password = input(&quot;Enter a password: &quot;)
+db.execute(
+    &quot;&quot;&quot;
+    UPDATE &quot;users&quot;
+    SET &quot;password&quot; = 'oops!'
+    WHERE &quot;username&quot; = 'admin';
+    &quot;&quot;&quot;
+)
+</code></pre>
+<p>Remarquez que si vous exécutez maintenant votre programme, vous serez invité à entrer un mot de passe. Tout ce que vous entrez est stocké dans la variable nommée <code>password</code>. Une variable est un nom pour une valeur qui peut changer.</p>
+<p>Maintenant, modifiez votre requête SQL pour qu'elle soit une instruction préparée. Dans la bibliothèque CS50, vous pouvez utiliser un <code>?</code> pour représenter un espace réservé pour une valeur que vous fournirez plus tard.</p>
+<pre><code class="language-python">from cs50 import SQL
+
+db = SQL(&quot;sqlite:///dont-panic.db&quot;)
+password = input(&quot;Enter a password: &quot;)
+db.execute(
+    &quot;&quot;&quot;
+    UPDATE &quot;users&quot;
+    SET &quot;password&quot; = ?
+    WHERE &quot;username&quot; = 'admin';
+    &quot;&quot;&quot;
+)
+</code></pre>
+<p>La dernière étape, bien sûr, consiste à indiquer à la méthode <code>execute</code> quelle valeur elle doit substituer à l'espace réservé. Pour ce faire, vous pouvez ajouter la valeur à substituer après la requête SQL, séparée par une virgule :</p>
+<pre><code class="language-python">from cs50 import SQL
+
+db = SQL(&quot;sqlite:///dont-panic.db&quot;)
+password = input(&quot;Enter a password: &quot;)
+db.execute(
+    &quot;&quot;&quot;
+    UPDATE &quot;users&quot;
+    SET &quot;password&quot; = ?
+    WHERE &quot;username&quot; = 'admin';
+    &quot;&quot;&quot;,
+    password
+)
+</code></pre>
+<p>Maintenant, essayez d'exécuter votre programme et de consulter les modifications dans <code>dont-panic.db</code> !</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

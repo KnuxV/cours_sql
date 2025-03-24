@@ -1,1115 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-        <link rel="prev" href="../cours2/packages/instructions/">
-      
-      
-        <link rel="next" href="atl/instructions/">
-      
-      
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-      
-        <title>Introduction - Cours SQL</title>
-      
     
-    
-      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
-      
-      
-
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
     
+    <title>Introduction - Cours SQL</title>
     
-      
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+
     
-    
-      
         
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
     
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
 
     
-    
-    
-  </head>
-  
-  
-    <body dir="ltr">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#cours-3" class="md-skip">
-          Skip to content
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Cours SQL" class="md-header__button md-logo" aria-label="Cours SQL" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+     
+</head>
 
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Cours SQL
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             
-              Introduction
+
+            <!-- Main title -->
+
             
-          </span>
+              <a class="navbar-brand" href="..">Cours SQL</a>
+            
         </div>
-      </div>
-    </div>
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 0 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours0/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 1 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours1/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/cyberchase/instructions/">Cyberchase</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/normals/instructions/">Normals</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/players/instructions/">Players</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/views/instructions/">Views</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours1/index_old.md">Old Index</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 2 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours2/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours2/dese/instructions/">Dese</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours2/moneyball/instructions/">Moneyball</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours2/packages/instructions/">Packages</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 3 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="atl/instructions/">ATL</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="connect/instructions/">Connect</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="doghnut/instructions/">Doghnut</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 4 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours4/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours4/dont-panic/instructions/">Don't Panic</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours4/meteorites/instructions/">Meteorites</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 5 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours5/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours5/bnb/instructions/">BNB</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours5/census/instructions/">Census</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours5/private/instructions/">Private</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 6 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours6/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours6/harvard/instructions/">Harvard</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours6/snap/instructions/">Snap</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 7 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../cours7/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours7/index2/">Index 2</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours7/deep/answers/">Deep Answers</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours7/deep/instructions/">Deep Instructions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours7/dont-panic-python/instructions/">Don't Panic Python</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cours7/linkedin/instructions/">LinkedIn</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SQLite Python <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../sqlite_python/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../cours2/packages/instructions/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="atl/instructions/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-    
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
+
+    <div class="container">
         
-          
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
         
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
-        
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../cours1/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 1
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../cours2/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 2
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 3
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../cours4/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 4
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../cours5/" class="md-tabs__link">
-        
-  
-    
-  
-  Cours 5
-
-      </a>
-    </li>
-  
-
-      
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#cours-3">Cours 3</a></li>
+        <li class="first-level "><a href="#introduction">Introduction</a></li>
+        <li class="first-level "><a href="#creation-dun-schema-de-base-de-donnees">Création d'un Schéma de Base de Données</a></li>
+            <li class="second-level"><a href="#normalisation">Normalisation</a></li>
+                
+            <li class="second-level"><a href="#relation">Relation</a></li>
+                
+            <li class="second-level"><a href="#questions">Questions</a></li>
+                
+        <li class="first-level "><a href="#create-table">CREATE TABLE</a></li>
+            <li class="second-level"><a href="#questions_1">Questions</a></li>
+                
+        <li class="first-level "><a href="#types-de-donnees-et-classes-de-stockage">Types de Données et Classes de Stockage</a></li>
+        <li class="first-level "><a href="#affinites-de-type">Affinités de Type</a></li>
+        <li class="first-level "><a href="#ajout-de-types-a-nos-tables">Ajout de Types à nos Tables</a></li>
+            <li class="second-level"><a href="#questions_2">Questions</a></li>
+                
+        <li class="first-level "><a href="#contraintes-de-table">Contraintes de Table</a></li>
+            <li class="second-level"><a href="#questions_3">Questions</a></li>
+                
+        <li class="first-level "><a href="#contraintes-de-colonne">Contraintes de Colonne</a></li>
+        <li class="first-level "><a href="#modification-des-tables">Modification des Tables</a></li>
+            <li class="second-level"><a href="#questions_4">Questions</a></li>
+                
     </ul>
-  </div>
-</nav>
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
+</div></div>
+        <div class="col-md-9" role="main">
 
-
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    Cours SQL
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../cours1/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 1
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 1
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours1/cyberchase/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cyberchase
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours1/normals/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Normals
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours1/players/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Players
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours1/views/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Views
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../cours2/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 2
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 2
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours2/dese/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dese
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours2/moneyball/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Moneyball
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours2/packages/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Packages
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-        
-        
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
-              
-  
-  <span class="md-ellipsis">
-    Cours 3
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link md-nav__link--active" for="__nav_4" id="__nav_4_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 3
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="atl/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ATL
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="connect/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connect
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="doghnut/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Doghnut
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../cours4/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 4
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 4
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours4/dont-panic/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Don't Panic
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours4/meteorites/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Meteorites
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours5/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cours 5
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creation-dun-schema-de-base-de-donnees" class="md-nav__link">
-    <span class="md-ellipsis">
-      Création d'un Schéma de Base de Données
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Création d'un Schéma de Base de Données">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#normalisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Normalisation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#relation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#questions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Questions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      CREATE TABLE
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="CREATE TABLE">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#questions_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Questions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-de-donnees-et-classes-de-stockage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types de Données et Classes de Stockage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#affinites-de-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Affinités de Type
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ajout-de-types-a-nos-tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ajout de Types à nos Tables
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ajout de Types à nos Tables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#questions_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Questions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contraintes-de-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contraintes de Table
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Contraintes de Table">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#questions_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Questions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contraintes-de-colonne" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contraintes de Colonne
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modification-des-tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Modification des Tables
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Modification des Tables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#questions_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Questions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
-<h1 id="cours-3">Cours 3</h1>
-<h2 id="introduction">Introduction</h2>
+<h2 id="cours-3">Cours 3<a class="headerlink" href="#cours-3" title="Permanent link">&para;</a></h2>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Nous allons apprendre à concevoir nos propres schémas de base de données.</li>
 <li>Jusqu'à présent, nous avons principalement travaillé avec une base de données déjà crée. Maintenant, nous allons examiner ce qui se passe sous le capot et voir quelles commandes peuvent être utilisées pour créer une telle base de données.</li>
@@ -1129,7 +424,7 @@ LIMIT 5;
 <pre><code class="language-sql">.schema books
 </code></pre>
 <p>Maintenant, nous voyons l'instruction utilisée pour créer la table <code>books</code>. Nous pouvons également voir les colonnes et les types de données pour chaque colonne. Par exemple, la colonne <code>"title"</code> prend du texte et la colonne <code>"publisher_id"</code> est un entier.</p>
-<h2 id="creation-dun-schema-de-base-de-donnees">Création d'un Schéma de Base de Données</h2>
+<h2 id="creation-dun-schema-de-base-de-donnees">Création d'un Schéma de Base de Données<a class="headerlink" href="#creation-dun-schema-de-base-de-donnees" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Maintenant que nous avons vu le schéma d'une base de données existante, créons le nôtre ! Nous devons représenter le système de métro de la ville de Boston à travers un schéma de base de données. Cela inclut les stations de métro, les différentes lignes de train, et les personnes qui prennent les trains.</li>
 </ul>
@@ -1140,7 +435,7 @@ LIMIT 5;
 <li>quelles colonnes chacune des tables aura, et</li>
 <li>quels types de données nous devons mettre dans chacune de ces colonnes.</li>
 </ul>
-<h3 id="normalisation">Normalisation</h3>
+<h3 id="normalisation">Normalisation<a class="headerlink" href="#normalisation" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Observons cette première tentative de création d'une table pour représenter les données du métro de Boston. Cette table contient les noms des usagers du métro, les stations actuelles où se trouvent les usagers et l'action effectuée à la station (comme entrer et sortir). Elle enregistre également les tarifs payés et les soldes sur leurs cartes de métro. Cette table contient également un ID pour chaque "transaction" d'usager, qui sert de clé primaire.</li>
 </ul>
@@ -1151,21 +446,21 @@ LIMIT 5;
 <li>De même, nous pourrions déplacer les stations de métro dans une table différente et donner à chaque station de métro un ID à utiliser comme clé étrangère ici.</li>
 <li>Le processus de séparation de nos données de cette manière s'appelle la normalisation. Lors de la normalisation, nous mettons chaque entité dans sa propre table — comme nous l'avons fait avec les usagers et les stations de métro. Toute information sur une entité spécifique, par exemple l'adresse d'un usager, va dans la table de l'entité elle-même.</li>
 </ul>
-<h3 id="relation">Relation</h3>
+<h3 id="relation">Relation<a class="headerlink" href="#relation" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Nous devons maintenant décider comment nos entités (usagers et stations) sont liées. Un usager visitera probablement plusieurs stations, et une station de métro aura probablement plus d'un usager. Étant donné cela, ce sera une relation plusieurs-à-plusieurs.</li>
 <li>Nous pouvons également utiliser un diagramme ER (Entity-Relationship) pour représenter cette relation.</li>
 </ul>
 <p><img alt="Relation plusieurs-à-plusieurs entre usagers et stations" src="https://cs50.harvard.edu/sql/2024/notes/2/images/erdriders.jpg" /></p>
 <p>Ici, nous voyons que chaque usager doit visiter au moins une station pour être considéré comme un usager. Une station, cependant, pourrait n'avoir aucun usager la visitant, car elle pourrait être temporairement hors service. Cependant, il est probable qu'une station ait plusieurs usagers la visitant, indiqué par la patte-d'oie dans le diagramme ER.</p>
-<h3 id="questions">Questions</h3>
+<h3 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>La relation entre les usagers et les stations doit-elle être exactement comme décrite ici ? Par exemple, pourquoi est-il acceptable qu'une station n'ait aucun usager ?</p>
 </blockquote>
 <ul>
 <li>C'est à la personne qui conçoit la base de données de prendre des décisions sur les relations entre les entités. Il est possible d'ajouter une contrainte qui dit qu'une station doit avoir au moins un usager pour être considérée comme une station.</li>
 </ul>
-<h2 id="create-table"><code>CREATE TABLE</code></h2>
+<h2 id="create-table"><code>CREATE TABLE</code><a class="headerlink" href="#create-table" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Maintenant que nous avons le schéma pour deux des tables, allons-y et créons les tables.</li>
 <li>Ouvrons une nouvelle base de données appelée <code>mbta.db</code> — MBTA signifie Massachusetts Bay Transportation Authority et gère le métro de Boston.</li>
@@ -1194,14 +489,14 @@ LIMIT 5;
 );
 </code></pre>
 <p>Chaque ligne de cette table nous indique la station visitée par un usager particulier.</p>
-<h3 id="questions_1">Questions</h3>
+<h3 id="questions_1">Questions<a class="headerlink" href="#questions_1" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Est-il nécessaire d'indenter les lignes dans les parenthèses <code>CREATE TABLE</code> ?</p>
 </blockquote>
 <ul>
 <li>Non, pas strictement. Cependant, nous indentons les noms des colonnes pour adhérer aux conventions de style comme toujours !</li>
 </ul>
-<h2 id="types-de-donnees-et-classes-de-stockage">Types de Données et Classes de Stockage</h2>
+<h2 id="types-de-donnees-et-classes-de-stockage">Types de Données et Classes de Stockage<a class="headerlink" href="#types-de-donnees-et-classes-de-stockage" title="Permanent link">&para;</a></h2>
 <ul>
 <li>SQLite a cinq classes de stockage :</li>
 <li><code>Null</code> : rien, ou valeur vide</li>
@@ -1218,7 +513,7 @@ LIMIT 5;
   - Integers : Nous pouvons stocker un tarif de 10 centimes comme le nombre 10, mais cela ne rend pas très clair si le tarif est de 10 centimes ou de 10 dollars.
   - Text : Nous pouvons stocker le tarif en texte, comme "$0.10". Cependant, il sera alors difficile d'effectuer des opérations mathématiques comme additionner les tarifs d'un usager.
   - Real : Nous pouvons stocker le tarif en utilisant un nombre à virgule flottante, comme 0.10, mais il n'est pas possible de stocker des nombres à virgule flottante en binaire de manière précise et — selon le niveau de précision dont nous avons besoin — cela pourrait entraîner des erreurs de calcul plus tard.</p>
-<h2 id="affinites-de-type">Affinités de Type</h2>
+<h2 id="affinites-de-type">Affinités de Type<a class="headerlink" href="#affinites-de-type" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Il est possible de spécifier le type de données d'une colonne lors de la création d'une table.</li>
 <li>Cependant, les colonnes dans SQLite ne stockent pas toujours un type de données particulier. Elles sont dites avoir des affinités de type, ce qui signifie qu'elles essaient de convertir une valeur d'entrée dans le type pour lequel elles ont une affinité.</li>
@@ -1226,7 +521,7 @@ LIMIT 5;
 <li>Considérons une colonne avec une affinité de type pour les Integers. Si nous essayons d'insérer "25" (le nombre 25 mais stocké comme texte) dans cette colonne, il sera converti en un type de données entier.</li>
 <li>De même, insérer un entier 25 dans une colonne avec une affinité de type pour le texte convertira le nombre en son équivalent texte, "25".</li>
 </ul>
-<h2 id="ajout-de-types-a-nos-tables">Ajout de Types à nos Tables</h2>
+<h2 id="ajout-de-types-a-nos-tables">Ajout de Types à nos Tables<a class="headerlink" href="#ajout-de-types-a-nos-tables" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Pour recréer les tables dans notre base de données, nous devrons d'abord supprimer (ou supprimer) les tables existantes.</li>
 <li>Essayons les commandes suivantes :</li>
@@ -1261,7 +556,7 @@ CREATE TABLE visits (
 <li>Maintenant, lisons ce fichier dans la base de données pour créer réellement les tables. Voici un diagramme ER mis à jour avec les types de données inclus.</li>
 </ul>
 <p><img alt="Diagramme ER Mis à Jour avec Types de Données" src="https://cs50.harvard.edu/sql/2024/notes/2/images/erdtypes.jpg" /></p>
-<h3 id="questions_2">Questions</h3>
+<h3 id="questions_2">Questions<a class="headerlink" href="#questions_2" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Auparavant, nous étions capables d'interroger les tables de notre base de données et de voir les résultats dans une structure de type tableau. Comment obtenir le même type de résultats ici ?</p>
 </blockquote>
@@ -1274,7 +569,7 @@ CREATE TABLE visits (
 <ul>
 <li>Nous n'en avons pas dans SQLite, mais d'autres SGBD pourraient avoir cette option. Une solution de contournement pourrait être d'utiliser des valeurs entières 0 ou 1 pour représenter des booléens. Nous verrons MySQL qui a une option Boolean à la fin du cours.</li>
 </ul>
-<h2 id="contraintes-de-table">Contraintes de Table</h2>
+<h2 id="contraintes-de-table">Contraintes de Table<a class="headerlink" href="#contraintes-de-table" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Nous pouvons utiliser des contraintes de table pour imposer des restrictions sur certaines valeurs dans nos tables.</li>
 <li>Par exemple, une colonne de clé primaire doit avoir des valeurs uniques. La contrainte de table que nous utilisons pour cela est <code>PRIMARY KEY</code>.</li>
@@ -1311,14 +606,14 @@ CREATE TABLE visits (
 );
 </code></pre>
 <p>Dans ce cas, nous voudrions probablement permettre à un usager de visiter une station plus d'une fois, donc nous ne poursuivrions pas cette approche.</p>
-<h3 id="questions_3">Questions</h3>
+<h3 id="questions_3">Questions<a class="headerlink" href="#questions_3" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Est-il possible d'inclure notre propre clé primaire pour la table <code>visits</code> ?</p>
 </blockquote>
 <ul>
 <li>Oui ! Si, pour une raison quelconque, une clé primaire explicite était requise pour la table <code>visits</code>, nous pourrions créer une colonne ID et en faire la clé primaire.</li>
 </ul>
-<h2 id="contraintes-de-colonne">Contraintes de Colonne</h2>
+<h2 id="contraintes-de-colonne">Contraintes de Colonne<a class="headerlink" href="#contraintes-de-colonne" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Une contrainte de colonne est un type de contrainte qui s'applique à une colonne spécifiée dans la table.</li>
 <li>SQLite a quatre contraintes de colonne :</li>
@@ -1351,7 +646,7 @@ CREATE TABLE visits (
 </code></pre>
 <p>La contrainte <code>NOT NULL</code> garantit qu'un nom de station et une ligne sont spécifiés. D'un autre côté, les usagers ne sont pas obligés de partager leurs noms, car il n'y a pas de contrainte appliquée aux noms des usagers. De même, chaque station doit avoir un nom unique, comme dicté par la contrainte <code>UNIQUE</code>.
 - Les colonnes de clé primaire et par extension, les colonnes de clé étrangère doivent toujours avoir des valeurs uniques, donc il n'y a pas besoin de spécifier explicitement les contraintes de colonne <code>NOT NULL</code> ou <code>UNIQUE</code>. La contrainte de table <code>PRIMARY KEY</code> inclut ces contraintes de colonne.</p>
-<h2 id="modification-des-tables">Modification des Tables</h2>
+<h2 id="modification-des-tables">Modification des Tables<a class="headerlink" href="#modification-des-tables" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Considérons le diagramme ER mis à jour suivant, où l'entité "Rider" a été remplacée par une nouvelle entité "Card" utilisée pour représenter les CharlieCards. Les CharlieCards, dans le métro de Boston, peuvent être chargées avec de l'argent et sont utilisées pour passer dans et parfois hors des stations.</li>
 </ul>
@@ -1423,7 +718,7 @@ CREATE TABLE &quot;swipes&quot; (
 <li>Il y a une vérification en place pour s'assurer que le montant sur un passage n'est pas 0. Cela est implémenté par la contrainte de colonne <code>CHECK</code>, qui est utilisée avec une expression <code>"amount" != 0</code> pour s'assurer que la valeur n'est pas 0.</li>
 <li>De même, il y a une vérification sur <code>"type"</code> pour s'assurer que sa valeur est l'une de 'enter', 'exit' et 'deposit'. Cela est fait parce que lorsqu'une CharlieCard est passée, c'est généralement pour l'une de ces trois raisons, donc il est logique que <code>"type"</code> prenne ces valeurs uniquement. Remarquez l'utilisation du mot-clé <code>IN</code> pour effectuer cette vérification ! Y a-t-il un moyen d'implémenter cette vérification en utilisant l'opérateur <code>OR</code> à la place ?</li>
 </ul>
-<h3 id="questions_4">Questions</h3>
+<h3 id="questions_4">Questions<a class="headerlink" href="#questions_4" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>En essayant de supprimer la table <code>riders</code>, une erreur apparaît parce que nous utilisons l'ID de <code>riders</code> comme clé étrangère. Comment la table peut-elle être supprimée dans ce cas ?</p>
 </blockquote>
@@ -1441,64 +736,105 @@ CREATE TABLE &quot;swipes&quot; (
 </blockquote>
 <ul>
 <li>L'affinité de type par défaut est numérique, donc la colonne se verrait assigner l'affinité de type numérique.</li>
-</ul>
+</ul></div>
+        
+        
+    </div>
 
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
 
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
 
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
 
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
 
-
-
-
-
-
-
-
-                
-              </article>
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
             </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
         </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
-</button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-    
-    
-      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
-      
-    
-  </body>
+    </body>
+
 </html>

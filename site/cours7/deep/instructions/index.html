@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Deep Instructions - Cours SQL</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">Cours SQL</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 0 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours0/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 1 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours1/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/cyberchase/instructions/">Cyberchase</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/normals/instructions/">Normals</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/players/instructions/">Players</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/views/instructions/">Views</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/index_old.md">Old Index</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 2 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours2/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/dese/instructions/">Dese</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/moneyball/instructions/">Moneyball</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/packages/instructions/">Packages</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 3 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours3/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/atl/instructions/">ATL</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/connect/instructions/">Connect</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/doghnut/instructions/">Doghnut</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 4 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours4/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours4/dont-panic/instructions/">Don't Panic</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours4/meteorites/instructions/">Meteorites</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 5 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours5/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/bnb/instructions/">BNB</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/census/instructions/">Census</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/private/instructions/">Private</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 6 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours6/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours6/harvard/instructions/">Harvard</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours6/snap/instructions/">Snap</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 7 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../index2/">Index 2</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../answers/">Deep Answers</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Deep Instructions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../dont-panic-python/instructions/">Don't Panic Python</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../linkedin/instructions/">LinkedIn</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SQLite Python <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../sqlite_python/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../answers/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../../dont-panic-python/instructions/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#probleme-a-resoudre">Problème à Résoudre</a></li>
+        <li class="first-level "><a href="#contexte">Contexte</a></li>
+        <li class="first-level "><a href="#collecte-dobservations">Collecte d'Observations</a></li>
+        <li class="first-level "><a href="#partitions">Partitions</a></li>
+            <li class="second-level"><a href="#partitionnement-aleatoire">Partitionnement Aléatoire</a></li>
+                
+            <li class="second-level"><a href="#partitionnement-par-heure">Partitionnement par Heure</a></li>
+                
+            <li class="second-level"><a href="#partitionnement-par-valeur-de-hachage">Partitionnement par Valeur de Hachage</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<p><a href="https://cs50.harvard.edu/sql/2024/psets/6/deep/"># From the Deep</a></p>
+<p><img alt="From the Deep" src="https://cs50.harvard.edu/sql/2024/psets/6/deep/deep.jpg" /></p>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
+<p>Vous êtes un chercheur opérant un sous-marin télécommandé, l'AquaByte Explorer, qui collecte en continu des observations depuis le fond de l'océan. (AquaByte, bien que fictif, est un peu comme le vrai SuBastion !). AquaByte envoie des données depuis les profondeurs, les stockant dans une base de données située sur plusieurs bateaux à la surface de l'océan.</p>
+<p>Dans un fichier nommé <code>answers.md</code>, votre tâche consiste à analyser les compromis (trade-offs) dans quelques conceptions potentielles pour le système de base de données distribué d'AquaByte !</p>
+<h2 id="contexte">Contexte<a class="headerlink" href="#contexte" title="Permanent link">&para;</a></h2>
+<p>AquaByte est capable d'envoyer plusieurs milliers d'observations par minute, souvent à des moments particuliers de la journée. Par exemple, AquaByte observe le plus activement en soirée et tôt le matin, lorsque certains poissons peuvent être vus plus fréquemment.</p>
+<p>Chaque ligne de données envoyée à la surface par AquaByte est étiquetée avec une clé primaire : dans ce cas, l'horodatage exact de l'observation au format suivant : <code>YYYY-MM-DD HH:MM:SS.SSS</code>. Il s'agit du format ISO8601, si vous êtes curieux !</p>
+<h2 id="collecte-dobservations">Collecte d'Observations<a class="headerlink" href="#collecte-dobservations" title="Permanent link">&para;</a></h2>
+<p>Pour simplifier, supposons qu'AquaByte a envoyé les 6 observations suivantes au cours du 1er novembre 2023. Pour la visualisation, chaque observation est représentée par un rectangle bleu étiqueté par sa clé primaire (l'horodatage auquel l'observation a été prise).</p>
+<p><img alt="Timestamps" src="https://cs50.harvard.edu/sql/2024/psets/6/deep/timestamps.jpg" /></p>
+<p>Pour vérifier votre compréhension, à quel moment la plupart des observations d'AquaByte ont-elles eu lieu ?</p>
+<ul>
+<li>Entre minuit et 1h du matin le 1er novembre 2023</li>
+</ul>
+<p>C'est correct !</p>
+<ul>
+<li>Entre midi et 13h le 1er novembre 2023</li>
+</ul>
+<p>Pas tout à fait.</p>
+<ul>
+<li>Entre 16h et 17h le 1er novembre 2023</li>
+</ul>
+<p>Pas tout à fait.</p>
+<h2 id="partitions">Partitions<a class="headerlink" href="#partitions" title="Permanent link">&para;</a></h2>
+<p>AquaByte prévoit d'envoyer ses six observations à un réseau de bateaux à la surface : Bateau A, Bateau B et Bateau C. Plus de bateaux permettent à AquaByte d'envoyer plus de données que ce qu'un seul bateau pourrait stocker. Cependant, plus de bateaux entraînent plus de complexité : en supposant que les données, une fois stockées, ne doivent pas être déplacées, à quel bateau AquaByte doit-il envoyer chaque observation ? Il s'agit en fait d'un problème de partitionnement des données.</p>
+<h3 id="partitionnement-aleatoire">Partitionnement Aléatoire<a class="headerlink" href="#partitionnement-aleatoire" title="Permanent link">&para;</a></h3>
+<p>Une approche consiste pour AquaByte à envoyer ses observations de manière aléatoire à chaque bateau, comme illustré ci-dessous. Avec les questions suivantes, analysez les compromis techniques de cette décision de conception.</p>
+<p><img alt="Random Partitioning" src="https://cs50.harvard.edu/sql/2024/psets/6/deep/random.jpg" /></p>
+<p>Considérez les deux questions suivantes. Une fois que vous avez une idée en tête, choisissez la réponse qui correspond le mieux à votre réflexion en cliquant sur le menu déroulant approprié.</p>
+<p>Les observations seront-elles probablement réparties uniformément sur tous les bateaux, même si AquaByte collecte le plus souvent des observations entre minuit et 1h ? Pourquoi ou pourquoi pas ?</p>
+<ul>
+<li>Les observations seront réparties uniformément.</li>
+</ul>
+<p>C'est correct. Les observations seront réparties uniformément car chacune est attribuée de manière aléatoire à l'un des trois bateaux. En d'autres termes, une observation a autant de chances d'être envoyée à n'importe quel bateau. Ainsi, même si AquaByte collecte le plus souvent des observations entre minuit et 1h, les observations seront uniformément réparties parmi les bateaux.</p>
+<ul>
+<li>Les observations ne seront pas réparties uniformément.</li>
+</ul>
+<p>Pas tout à fait. Les observations seront réparties uniformément car chacune est attribuée de manière aléatoire à l'un des trois bateaux. En d'autres termes, une observation a autant de chances d'être envoyée à n'importe quel bateau. Ainsi, même si AquaByte collecte le plus souvent des observations entre minuit et 1h, les observations seront uniformément réparties parmi les bateaux.</p>
+<p>Supposons qu'un chercheur souhaite interroger toutes les observations entre minuit et 1h. Sur combien de bateaux devra-t-il exécuter la requête ?</p>
+<ul>
+<li>Le chercheur devra exécuter la requête sur tous les bateaux.</li>
+</ul>
+<p>C'est correct. Comme les observations sont attribuées de manière aléatoire à n'importe quel bateau, chaque observation entre minuit et 1h pourrait se trouver sur l'un des trois bateaux. Si une requête n'est exécutée que sur un seul bateau, il y a une chance qu'elle ait manqué des observations, stockées sur d'autres bateaux, qu'elle aurait dû retourner.</p>
+<ul>
+<li>Le chercheur devra exécuter la requête sur seulement certains des bateaux.</li>
+</ul>
+<p>Pas tout à fait. Considérez que chaque observation entre minuit et 1h a autant de chances de se trouver sur l'un des trois bateaux. Donc, si le chercheur exécute la requête sur un seul des bateaux, il y a une chance que la requête ait manqué des observations sur d'autres bateaux.</p>
+<p>Sur la base de ce que vous avez appris ci-dessus, des cours et de votre propre intuition, écrivez 2 à 3 phrases qui décrivent à la fois les raisons d'adopter cette approche et les raisons de ne pas l'adopter. Écrivez les phrases dans <code>answers.md</code>, dans la section « Random Partitioning ».</p>
+<h3 id="partitionnement-par-heure">Partitionnement par Heure<a class="headerlink" href="#partitionnement-par-heure" title="Permanent link">&para;</a></h3>
+<p>Supposons que, pour les raisons que vous avez écrites, l'équipe AquaByte décide de ne pas envoyer les observations d'AquaByte de manière aléatoire à chaque bateau. Au lieu de cela, un membre de l'équipe propose de partitionner les données par heure de la journée. Par exemple,</p>
+<ul>
+<li>Le Bateau A recevra toutes les observations entre 0h et 7h (c'est-à-dire, de minuit à 7h59), inclus.</li>
+<li>Le Bateau B recevra toutes les observations entre 8h et 15h (c'est-à-dire, de 8h00 à 15h59), inclus.</li>
+<li>Le Bateau C recevra toutes les observations entre 16h et 23h (c'est-à-dire, de 16h00 à 23h59), inclus.</li>
+</ul>
+<p>Avec les questions suivantes, analysez les compromis techniques de cette décision de conception.</p>
+<p><img alt="Partitioning by Hour" src="https://cs50.harvard.edu/sql/2024/psets/6/deep/hour.jpg" /></p>
+<p>Considérez les deux questions suivantes. Une fois que vous avez une idée en tête, choisissez la réponse qui correspond le mieux à votre réflexion en cliquant sur le menu déroulant approprié.</p>
+<p>Les observations seront-elles probablement réparties uniformément sur tous les bateaux, même si AquaByte collecte le plus souvent des observations entre minuit et 1h ? Pourquoi ou pourquoi pas ?</p>
+<ul>
+<li>Les observations seront réparties uniformément.</li>
+</ul>
+<p>Pas tout à fait. Les observations ne seront pas réparties uniformément si AquaByte collecte le plus souvent des observations entre minuit et 1h. Puisque la plupart des observations sont collectées entre minuit et 1h, et que le Bateau A recevra toutes les observations entre 0h et 7h (c'est-à-dire, de minuit à 7h59), inclus, le Bateau A recevra la plupart des observations.</p>
+<ul>
+<li>Les observations ne seront pas réparties uniformément.</li>
+</ul>
+<p>C'est correct. Puisque la plupart des observations sont collectées entre minuit et 1h, et que le Bateau A recevra toutes les observations entre 0h et 7h (c'est-à-dire, de minuit à 7h59), inclus, le Bateau A recevra la plupart des observations.</p>
+<p>Supposons qu'un chercheur souhaite interroger toutes les observations entre minuit et 1h. Sur combien de bateaux devra-t-il exécuter la requête ?</p>
+<ul>
+<li>Le chercheur devra exécuter la requête sur tous les bateaux.</li>
+</ul>
+<p>Pas tout à fait. Le Bateau A recevra toutes les observations entre 0h et 7h (c'est-à-dire, de minuit à 7h59), inclus. Cela signifie que toutes les observations entre minuit et 1h peuvent être trouvées sur le Bateau A.</p>
+<ul>
+<li>Le chercheur devra exécuter la requête sur seulement certains des bateaux.</li>
+</ul>
+<p>C'est correct. Le Bateau A recevra toutes les observations entre 0h et 7h (c'est-à-dire, de minuit à 7h59), inclus. Cela signifie que toutes les observations entre minuit et 1h peuvent être trouvées sur le Bateau A.</p>
+<p>Sur la base de ce que vous avez appris ci-dessus, des cours et de votre propre intuition, écrivez 2 à 3 phrases qui décrivent à la fois les raisons d'adopter cette approche et les raisons de ne pas l'adopter. Écrivez les phrases dans <code>answers.md</code>, dans la section « Partitioning by Hour ».</p>
+<h3 id="partitionnement-par-valeur-de-hachage">Partitionnement par Valeur de Hachage<a class="headerlink" href="#partitionnement-par-valeur-de-hachage" title="Permanent link">&para;</a></h3>
+<p>Supposons que, pour les raisons que vous avez identifiées ci-dessus, l'équipe AquaByte décide de ne pas envoyer les observations à certains bateaux en fonction de l'heure à laquelle elles ont été collectées. Au lieu de cela, un membre de l'équipe propose de partitionner les observations par la valeur de hachage (hash value) de leur horodatage.</p>
+<p>Si vous n'êtes pas familier avec ce terme, une valeur de hachage est générée par une fonction de hachage. Une fonction de hachage est un algorithme qui prend une entrée (comme un horodatage, par exemple) et, en fonction de l'entrée, produit un nombre arbitraire (la valeur de hachage).</p>
+<p>Par exemple, supposons que l'équipe développe une fonction de hachage qui attribue une valeur comprise entre 0 et 1499, inclus, à chaque clé primaire potentielle qu'AquaByte pourrait envoyer au système de données distribué. Voici quelques exemples d'entrées et de sorties :</p>
+<ul>
+<li>L'algorithme calcule la valeur de hachage 45 pour <code>2023-11-01 00:00:01.020</code>.</li>
+<li>L'algorithme calcule la valeur de hachage 588 pour <code>2023-11-01 16:21:59.924</code>.</li>
+<li>L'algorithme calcule la valeur de hachage 1200 pour <code>2023-11-01 00:00:04.127</code>.</li>
+</ul>
+<p>Il est important de noter que la fonction de hachage est cohérente : elle calculera toujours la même valeur de hachage pour le même horodatage. La fonction de hachage répartit également les horodatages uniformément sur toutes les valeurs de hachage possibles : c'est-à-dire qu'une seule observation n'a pas plus de chances de se voir attribuer une valeur de hachage qu'une autre. Avec les questions suivantes, analysez les compromis techniques de cette décision de conception.</p>
+<p><img alt="Hash Partitioning" src="https://cs50.harvard.edu/sql/2024/psets/6/deep/hash.jpg" /></p>
+<p>Considérez les trois questions suivantes. Une fois que vous avez une idée en tête, choisissez la réponse qui correspond le mieux à votre réflexion en cliquant sur le menu déroulant approprié.</p>
+<p>Les observations seront-elles probablement réparties uniformément sur tous les bateaux, même si AquaByte collecte le plus souvent des observations entre minuit et 1h ? Pourquoi ou pourquoi pas ?</p>
+<ul>
+<li>Les observations seront réparties uniformément.</li>
+</ul>
+<p>C'est correct. Une seule observation n'a pas plus de chances de se voir attribuer une valeur de hachage qu'une autre, ce qui signifie qu'une seule observation pourrait être envoyée à l'un des trois bateaux disponibles.</p>
+<ul>
+<li>Les observations ne seront pas réparties uniformément.</li>
+</ul>
+<p>Pas tout à fait. Bien qu'AquaByte collecte le plus souvent des observations entre minuit et 1h, une seule observation n'a pas plus de chances de se voir attribuer une valeur de hachage qu'une autre. Une seule observation pourrait être envoyée à l'un des trois bateaux disponibles.</p>
+<p>Supposons qu'un chercheur souhaite interroger toutes les observations entre minuit et 1h. Sur combien de bateaux devra-t-il exécuter la requête ?</p>
+<ul>
+<li>Le chercheur devra probablement exécuter la requête sur tous les bateaux.</li>
+</ul>
+<p>C'est correct. Chaque observation dans une plage d'observations pourrait se voir attribuer une valeur de hachage arbitraire : les valeurs de hachage elles-mêmes ne sont pas dans une plage spécifiée. Pour cette raison, la requête serait mieux exécutée sur tous les bateaux.</p>
+<ul>
+<li>Le chercheur devra probablement exécuter la requête sur seulement certains des bateaux.</li>
+</ul>
+<p>Pas tout à fait. Il est certes possible de connaître la valeur de hachage d'une observation spécifique. Mais chaque observation dans une plage d'observations pourrait se voir attribuer une valeur de hachage arbitraire : les valeurs de hachage elles-mêmes ne sont pas dans une plage spécifiée. Pour cette raison, la requête serait mieux exécutée sur tous les bateaux.</p>
+<p>Supposons qu'un chercheur souhaite interroger une observation spécifique, qui s'est produite exactement à <code>2023-11-01 00:00:01.020</code>. Sur combien de bateaux devra-t-il exécuter la requête ?</p>
+<ul>
+<li>Le chercheur devra exécuter la requête sur tous les bateaux.</li>
+</ul>
+<p>Pas tout à fait. Il est possible de connaître la valeur de hachage d'un horodatage spécifique, ce qui peut indiquer au chercheur où exécuter la requête.</p>
+<ul>
+<li>Le chercheur devra exécuter la requête sur seulement certains des bateaux.</li>
+</ul>
+<p>C'est correct. Il est possible de connaître la valeur de hachage d'un horodatage spécifique, ce qui peut indiquer au chercheur où exécuter la requête.</p>
+<p>Sur la base de ce que vous avez appris ci-dessus, des cours et de votre propre intuition, écrivez 2 à 3 phrases qui décrivent à la fois les raisons d'adopter cette approche et les raisons de ne pas l'adopter. Écrivez les phrases dans <code>answers.md</code>, dans la section « Partitioning by Hash Value ».</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

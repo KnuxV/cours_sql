@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Snap - Cours SQL</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">Cours SQL</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 0 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours0/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 1 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours1/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/cyberchase/instructions/">Cyberchase</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/normals/instructions/">Normals</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/players/instructions/">Players</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/views/instructions/">Views</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/index_old.md">Old Index</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 2 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours2/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/dese/instructions/">Dese</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/moneyball/instructions/">Moneyball</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/packages/instructions/">Packages</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 3 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours3/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/atl/instructions/">ATL</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/connect/instructions/">Connect</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/doghnut/instructions/">Doghnut</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 4 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours4/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours4/dont-panic/instructions/">Don't Panic</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours4/meteorites/instructions/">Meteorites</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 5 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours5/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/bnb/instructions/">BNB</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/census/instructions/">Census</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/private/instructions/">Private</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 6 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../harvard/instructions/">Harvard</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Snap</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 7 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours7/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours7/index2/">Index 2</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours7/deep/answers/">Deep Answers</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours7/deep/instructions/">Deep Instructions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours7/dont-panic-python/instructions/">Don't Panic Python</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours7/linkedin/instructions/">LinkedIn</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SQLite Python <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../sqlite_python/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../harvard/instructions/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../../../cours7/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#en-un-clin-dil">En un Clin d'Œil</a></li>
+            <li class="second-level"><a href="#probleme-a-resoudre">Problème à Résoudre</a></li>
+                
+            <li class="second-level"><a href="#demonstration">Démonstration</a></li>
+                
+            <li class="second-level"><a href="#code-de-distribution">Code de Distribution</a></li>
+                
+            <li class="second-level"><a href="#schema">Schéma</a></li>
+                
+                <li class="third-level"><a href="#table-users">Table users</a></li>
+                <li class="third-level"><a href="#table-friends">Table friends</a></li>
+                <li class="third-level"><a href="#table-messages">Table messages</a></li>
+            <li class="second-level"><a href="#specification">Spécification</a></li>
+                
+                <li class="third-level"><a href="#1sql">1.sql</a></li>
+                <li class="third-level"><a href="#2sql">2.sql</a></li>
+                <li class="third-level"><a href="#3sql">3.sql</a></li>
+                <li class="third-level"><a href="#4sql">4.sql</a></li>
+                <li class="third-level"><a href="#5sql">5.sql</a></li>
+            <li class="second-level"><a href="#conseils">Conseils</a></li>
+                
+                <li class="third-level"><a href="#utiliser-explain-query-plan-pour-montrer-les-etapes-dune-requete">Utiliser EXPLAIN QUERY PLAN pour montrer les étapes d'une requête</a></li>
+                <li class="third-level"><a href="#interpreter-les-resultats-de-explain-query-plan">Interpréter les résultats de EXPLAIN QUERY PLAN</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="en-un-clin-dil"><a href="https://cs50.harvard.edu/sql/2024/psets/5/snap/">En un Clin d'Œil</a><a class="headerlink" href="#en-un-clin-dil" title="Permanent link">&para;</a></h1>
+<p><img alt="Peinture à l'huile abstraite d'une image numérique envoyée depuis un téléphone" src="https://cs50.harvard.edu/sql/2024/psets/5/snap/snap.png" /> « Peinture à l'huile abstraite d'une image numérique envoyée depuis un téléphone », générée par DALL·E 2</p>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
+<p>Après la presse à imprimer, le service postal et le télégramme, sont arrivées les applications de messagerie. Il y a de fortes chances que vous ayez utilisé une application de messagerie aujourd'hui, qu'il s'agisse de Facebook Messenger, iMessage, Instagram, Signal ou Snapchat, parmi tant d'autres. Alors que leurs prédécesseurs mesuraient la vitesse de communication en termes de semaines, jours ou heures, les applications de messagerie dépendent d'une vitesse de l'ordre des millisecondes : un message retardé est maintenant une connexion manquée.</p>
+<p>Dans ce problème, vous écrirez des requêtes SQL pour une application fictive qui permet aux utilisateurs d'envoyer des photos qui expirent 30 secondes après que le destinataire les a vues (une idée popularisée par Snapchat !). Les requêtes que vous écrirez permettront finalement à l'application de mettre en œuvre ses fonctionnalités principales. Cependant, étant donné que l'application compte plusieurs milliers d'utilisateurs dépendant d'une communication instantanée, il est particulièrement important d'écrire des requêtes rapides, et pas seulement correctes. Vous pratiquerez l'écriture de requêtes qui tirent parti des index, tout cela au service de permettre aux utilisateurs de rester en contact en un clin d'œil.</p>
+<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
+<pre><code class="language-bash">$ sqlite3 snap.db                                                                                   
+sqlite&gt; EXPLAIN QUERY PLAN                                                                          
+   ...&gt; SELECT * FROM &quot;messages&quot;                                                                    
+   ...&gt; WHERE &quot;from_user_id&quot; = 2;                                                                   
+QUERY PLAN                                                                                          
+`--SEARCH messages USING INDEX search_messages_by_from_user_id (from_user_id=?)                     
+sqlite&gt; .quit 
+</code></pre>
+<h2 id="code-de-distribution">Code de Distribution<a class="headerlink" href="#code-de-distribution" title="Permanent link">&para;</a></h2>
+<p>Pour ce problème, vous devrez utiliser <code>snap.db</code> et quelques fichiers <code>.sql</code> dans lesquels vous écrirez vos instructions SQL.</p>
+<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
+<pre><code class="language-mermaid">erDiagram
+    User }o--o{ User : friends
+    User ||--o{ Message : sends
+    User ||--o{ Message : views
+</code></pre>
+<p>Dans <code>snap.db</code>, vous trouverez trois tables qui implémentent les relations décrites dans le diagramme ER ci-dessus. Cliquez sur les menus déroulants ci-dessous pour en savoir plus sur le schéma de chaque table individuelle.</p>
+<h3 id="table-users">Table <code>users</code><a class="headerlink" href="#table-users" title="Permanent link">&para;</a></h3>
+<p>La table <code>users</code> contient les colonnes suivantes :</p>
+<ul>
+<li><code>id</code>, qui est l'ID de l'utilisateur.</li>
+<li><code>username</code>, qui est le nom d'utilisateur de l'utilisateur.</li>
+<li><code>phone_number</code>, qui est le numéro de téléphone de l'utilisateur.</li>
+<li><code>joined_date</code>, qui est la date à laquelle l'utilisateur a rejoint l'application.</li>
+<li><code>last_login_date</code>, qui est la date à laquelle l'utilisateur s'est connecté pour la dernière fois.</li>
+</ul>
+<h3 id="table-friends">Table <code>friends</code><a class="headerlink" href="#table-friends" title="Permanent link">&para;</a></h3>
+<p>La table <code>friends</code> contient les colonnes suivantes :</p>
+<ul>
+<li><code>user_id</code>, qui est l'ID d'un utilisateur donné.</li>
+<li><code>friend_id</code>, qui est l'ID de l'utilisateur avec lequel l'utilisateur donné est ami.</li>
+<li><code>friendship_date</code>, qui est la date à laquelle l'amitié a commencé.</li>
+</ul>
+<p>Pour chaque ligne, l'utilisateur dans la colonne <code>user_id</code> compte l'utilisateur dans la colonne <code>friend_id</code> parmi ses amis, mais pas nécessairement vice versa. Lorsque deux utilisateurs se comptent mutuellement parmi leurs amis, deux lignes sont insérées :</p>
+<table>
+<thead>
+<tr>
+<th>user_id</th>
+<th>friend_id</th>
+<th>friendship_date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>2024-01-01</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>2024-01-01</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-messages">Table <code>messages</code><a class="headerlink" href="#table-messages" title="Permanent link">&para;</a></h3>
+<p>La table <code>messages</code> contient les colonnes suivantes :</p>
+<ul>
+<li><code>id</code>, qui est l'ID du message.</li>
+<li><code>from_user_id</code>, qui est l'ID de l'utilisateur qui a envoyé le message.</li>
+<li><code>to_user_id</code>, qui est l'ID de l'utilisateur auquel le message a été envoyé.</li>
+<li><code>picture</code>, qui est le nom de fichier de la photo qui a été envoyée dans le message.</li>
+<li><code>sent_timestamp</code>, qui est l'horodatage auquel le message a été envoyé.</li>
+<li><code>viewed_timestamp</code>, qui est l'horodatage auquel le message a été vu.</li>
+<li><code>expires_timestamp</code>, qui est l'horodatage auquel le message expire.</li>
+</ul>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
+<p>Dans chaque fichier <code>.sql</code> correspondant, écrivez une requête SQL pour implémenter les fonctionnalités décrites ci-dessous. Puisque la vitesse est essentielle, vous devrez également vous assurer que votre requête utilise l'index spécifié. La meilleure façon de s'assurer qu'une requête utilise un index est de vérifier les résultats de <code>EXPLAIN QUERY PLAN</code>.</p>
+<p>Si vous vous sentez incertain sur la façon d'interpréter la sortie de <code>EXPLAIN QUERY PLAN</code>, consultez la section Conseils pour des explications supplémentaires !</p>
+<h3 id="1sql"><code>1.sql</code><a class="headerlink" href="#1sql" title="Permanent link">&para;</a></h3>
+<p>L'équipe d'engagement des utilisateurs de l'application doit identifier les utilisateurs actifs. Trouvez tous les noms d'utilisateur des utilisateurs qui se sont connectés depuis le 2024-01-01. Assurez-vous que votre requête utilise l'index <code>search_users_by_last_login</code>, qui est défini comme suit :</p>
+<pre><code>CREATE INDEX &quot;search_users_by_last_login&quot;
+ON &quot;users&quot;(&quot;last_login_date&quot;);
+</code></pre>
+<h3 id="2sql"><code>2.sql</code><a class="headerlink" href="#2sql" title="Permanent link">&para;</a></h3>
+<p>Les utilisateurs doivent être empêchés de rouvrir un message qui a expiré. Trouvez quand le message avec l'ID 151 expire. Vous pouvez utiliser l'ID du message directement dans votre requête.</p>
+<p>Assurez-vous que votre requête utilise l'index créé automatiquement sur la colonne de clé primaire de la table <code>messages</code>.</p>
+<h3 id="3sql"><code>3.sql</code><a class="headerlink" href="#3sql" title="Permanent link">&para;</a></h3>
+<p>L'application doit classer les « meilleurs amis » d'un utilisateur, similaire à la fonctionnalité « Friend Emojis » de Snapchat. Trouvez les ID des trois principaux utilisateurs auxquels <code>creativewisdom377</code> envoie le plus fréquemment des messages. Classez les ID des utilisateurs par le nombre de messages que <code>creativewisdom377</code> a envoyés à ces utilisateurs, du plus grand au plus petit.</p>
+<p>Assurez-vous que votre requête utilise l'index <code>search_messages_by_from_user_id</code>, qui est défini comme suit :</p>
+<pre><code>CREATE INDEX &quot;search_messages_by_from_user_id&quot;
+ON &quot;messages&quot;(&quot;from_user_id&quot;);
+</code></pre>
+<h3 id="4sql"><code>4.sql</code><a class="headerlink" href="#4sql" title="Permanent link">&para;</a></h3>
+<p>L'application doit envoyer aux utilisateurs un résumé de leur engagement. Trouvez le nom d'utilisateur de l'utilisateur le plus populaire, défini comme l'utilisateur à qui le plus de messages ont été envoyés.</p>
+<p>Assurez-vous que votre requête utilise l'index <code>search_messages_by_to_user_id</code>, qui est défini comme suit :</p>
+<pre><code>CREATE INDEX &quot;search_messages_by_to_user_id&quot;
+ON &quot;messages&quot;(&quot;to_user_id&quot;);
+</code></pre>
+<h3 id="5sql"><code>5.sql</code><a class="headerlink" href="#5sql" title="Permanent link">&para;</a></h3>
+<p>Pour deux utilisateurs quelconques, l'application doit rapidement afficher une liste des amis qu'ils ont en commun. Étant donné deux noms d'utilisateur, <code>lovelytrust487</code> et <code>exceptionalinspiration482</code>, trouvez les ID des amis communs. Un ami commun est un utilisateur que <code>lovelytrust487</code> et <code>exceptionalinspiration482</code> comptent tous deux parmi leurs amis.</p>
+<p>Assurez-vous que votre requête utilise l'index créé automatiquement sur les colonnes de clé primaire de la table <code>friends</code>. Cet index s'appelle <code>sqlite_autoindex_friends_1</code>.</p>
+<p>Besoin d'un indice ?</p>
+<p>Rappelez-vous qu'en SQL, vous pouvez utiliser certains mots-clés pour trouver l'intersection de deux groupes. Consultez les notes de la semaine 1 pour un rappel.</p>
+<h2 id="conseils">Conseils<a class="headerlink" href="#conseils" title="Permanent link">&para;</a></h2>
+<h3 id="utiliser-explain-query-plan-pour-montrer-les-etapes-dune-requete">Utiliser <code>EXPLAIN QUERY PLAN</code> pour montrer les étapes d'une requête<a class="headerlink" href="#utiliser-explain-query-plan-pour-montrer-les-etapes-dune-requete" title="Permanent link">&para;</a></h3>
+<p>Pour vérifier les résultats de <code>EXPLAIN QUERY PLAN</code>, vous devez simplement préfixer <code>EXPLAIN QUERY PLAN</code> à votre requête :</p>
+<pre><code>EXPLAIN QUERY PLAN
+SELECT &quot;username&quot;
+FROM &quot;users&quot;
+WHERE &quot;id&quot; = 151;
+</code></pre>
+<h3 id="interpreter-les-resultats-de-explain-query-plan">Interpréter les résultats de <code>EXPLAIN QUERY PLAN</code><a class="headerlink" href="#interpreter-les-resultats-de-explain-query-plan" title="Permanent link">&para;</a></h3>
+<p>Rappelez-vous du cours que <code>EXPLAIN QUERY PLAN</code> affiche les étapes que le moteur de base de données SQLite va suivre pour exécuter une requête SQL donnée. La sortie de <code>EXPLAIN QUERY PLAN</code> peut indiquer si une requête utilise un index.</p>
+<ul>
+<li>Si vous voyez une étape étiquetée <code>USING INDEX</code>, cela signifie que la requête utilise un index à cette étape.</li>
+<li>Si vous voyez une étape étiquetée <code>USING COVERING INDEX</code>, cela indique que la requête utilise un index couvrant à cette étape.<ul>
+<li>Rappelez-vous qu'un index couvrant est un type spécial d'index qui inclut toutes les colonnes nécessaires pour la requête. Cela signifie que la base de données peut satisfaire la requête directement à partir de l'index sans avoir à rechercher des données supplémentaires dans une table.</li>
+</ul>
+</li>
+<li>Lorsque vous voyez une étape étiquetée <code>USING INTEGER PRIMARY KEY</code>, cela implique que la requête utilise l'index sur la colonne de clé primaire, qui est fourni automatiquement par SQLite lorsque la clé primaire est de type affinité <code>INTEGER</code>. C'est un moyen efficace d'accéder directement aux lignes si les conditions de la requête impliquent la clé primaire d'une table.</li>
+</ul>
+<p>Voici quelques exemples de résultats de <code>EXPLAIN QUERY PLAN</code>, issus de requêtes qui utilisent un index dans au moins une étape de leur exécution :</p>
+<h5 id="exemple-1">Exemple 1<a class="headerlink" href="#exemple-1" title="Permanent link">&para;</a></h5>
+<pre><code>QUERY PLAN
+`--SEARCH users USING INDEX search_users_by_last_login (last_login_date&gt;?
+</code></pre>
+<p>Remarquez que cette requête peut être exécutée en une seule étape, en recherchant l'index <code>search_users_by_last_login</code>.</p>
+<h5 id="exemple-2">Exemple 2<a class="headerlink" href="#exemple-2" title="Permanent link">&para;</a></h5>
+<pre><code>QUERY PLAN
+|--SEARCH messages USING COVERING INDEX search_messages_by_to_user_id (to_user_id=?
+`--SCALAR SUBQUERY 1
+   `--SEARCH users USING COVERING INDEX sqlite_autoindex_users_1 (username=?
+</code></pre>
+<p>Remarquez que cette requête nécessite deux étapes :</p>
+<ol>
+<li>La première recherche l'index <code>search_messages_by_to_user_id</code>.</li>
+<li>La seconde résout une sous-requête en recherchant l'index <code>sqlite_autoindex_users_1</code>.</li>
+</ol>
+<h5 id="exemple-3">Exemple 3<a class="headerlink" href="#exemple-3" title="Permanent link">&para;</a></h5>
+<pre><code>QUERY PLAN
+|--SEARCH messages USING INDEX search_messages_by_from_user_id (from_user_id=?
+|--SCALAR SUBQUERY 1
+|  `--SEARCH users USING COVERING INDEX sqlite_autoindex_users_1 (username=?
+|--USE TEMP B-TREE FOR GROUP BY
+`--USE TEMP B-TREE FOR ORDER BY
+</code></pre>
+<p>Remarquez que cette requête implique plusieurs étapes, et qu'elle utilise des index pour accomplir la plupart :</p>
+<ol>
+<li>La première étape recherche l'index <code>search_messages_by_from_user_id</code>.</li>
+<li>La deuxième étape recherche l'index <code>sqlite_autoindex_users_1</code>.</li>
+<li>Les étapes finales utilisent des B-trees temporaires pour grouper et ordonner les résultats.</li>
+</ol>
+<h5 id="exemple-4">Exemple 4<a class="headerlink" href="#exemple-4" title="Permanent link">&para;</a></h5>
+<pre><code>QUERY PLAN
+|--SEARCH users USING INTEGER PRIMARY KEY (rowid=?
+`--SCALAR SUBQUERY 1
+   |--SCAN messages USING COVERING INDEX search_messages_by_to_user_id
+   `--USE TEMP B-TREE FOR ORDER BY
+</code></pre>
+<p>Remarquez que cette requête implique plusieurs étapes, et qu'elle utilise des index pour accomplir la plupart :</p>
+<ol>
+<li>La première étape recherche un index de clé primaire automatique.</li>
+<li>La deuxième étape scanne les lignes en utilisant l'index <code>search_messages_by_to_user_id</code>.</li>
+<li>L'étape finale utilise un B-tree temporaire pour ordonner les résultats.</li>
+</ol>
+<h5 id="exemple-5">Exemple 5<a class="headerlink" href="#exemple-5" title="Permanent link">&para;</a></h5>
+<pre><code>QUERY PLAN
+`--COMPOUND QUERY
+   |--LEFT-MOST SUBQUERY
+   |  |--SEARCH friends USING COVERING INDEX sqlite_autoindex_friends_1 (user_id=?
+   |  `--SCALAR SUBQUERY 1
+   |     `--SEARCH users USING COVERING INDEX sqlite_autoindex_users_1 (username=?
+   `--INTERSECT USING TEMP B-TREE
+      |--SEARCH friends USING COVERING INDEX sqlite_autoindex_friends_1 (user_id=?
+      `--SCALAR SUBQUERY 3
+         `--SEARCH users USING COVERING INDEX sqlite_autoindex_users_1 (username=?
+</code></pre>
+<p>Remarquez que cette requête implique de nombreuses étapes, et qu'elle utilise des index pour accomplir la plupart. Voyez en particulier que l'index <code>sqlite_autoindex_friends_1</code> est fréquemment accédé.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

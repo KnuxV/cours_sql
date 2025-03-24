@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Harvard - Cours SQL</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">Cours SQL</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 0 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours0/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 1 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours1/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/cyberchase/instructions/">Cyberchase</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/normals/instructions/">Normals</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/players/instructions/">Players</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/views/instructions/">Views</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours1/index_old.md">Old Index</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 2 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours2/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/dese/instructions/">Dese</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/moneyball/instructions/">Moneyball</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours2/packages/instructions/">Packages</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 3 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours3/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/atl/instructions/">ATL</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/connect/instructions/">Connect</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours3/doghnut/instructions/">Doghnut</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 4 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours4/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours4/dont-panic/instructions/">Don't Panic</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours4/meteorites/instructions/">Meteorites</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 5 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours5/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/bnb/instructions/">BNB</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/census/instructions/">Census</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours5/private/instructions/">Private</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 6 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../">Introduction</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Harvard</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../snap/instructions/">Snap</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 7 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../cours7/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours7/index2/">Index 2</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours7/deep/answers/">Deep Answers</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours7/deep/instructions/">Deep Instructions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours7/dont-panic-python/instructions/">Don't Panic Python</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../cours7/linkedin/instructions/">LinkedIn</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SQLite Python <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../sqlite_python/">Introduction</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../../snap/instructions/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#yourharvard">your.harvard</a></li>
+            <li class="second-level"><a href="#probleme-a-resoudre">Problème à Résoudre</a></li>
+                
+            <li class="second-level"><a href="#demonstration">Démonstration</a></li>
+                
+            <li class="second-level"><a href="#code-de-distribution">Code de Distribution</a></li>
+                
+            <li class="second-level"><a href="#schema">Schéma</a></li>
+                
+                <li class="third-level"><a href="#table-students">Table students</a></li>
+                <li class="third-level"><a href="#table-courses">Table courses</a></li>
+                <li class="third-level"><a href="#table-enrollments">Table enrollments</a></li>
+                <li class="third-level"><a href="#table-requirements">Table requirements</a></li>
+                <li class="third-level"><a href="#table-satisfies">Table satisfies</a></li>
+            <li class="second-level"><a href="#specification">Spécification</a></li>
+                
+                <li class="third-level"><a href="#requetes-select-typiques-sur-harvarddb">Requêtes SELECT typiques sur harvard.db</a></li>
+            <li class="second-level"><a href="#conseils">Conseils</a></li>
+                
+                <li class="third-level"><a href="#minimisez-le-nombre-dindex-que-vous-avez-crees">Minimisez le nombre d'index que vous avez créés</a></li>
+            <li class="second-level"><a href="#utilisation">Utilisation</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="yourharvard"><a href="https://cs50.harvard.edu/sql/2024/psets/5/your.harvard/">your.harvard</a><a class="headerlink" href="#yourharvard" title="Permanent link">&para;</a></h1>
+<p><img alt="Le logo my.harvard" src="https://cs50.harvard.edu/sql/2024/psets/5/your.harvard/my.harvard.png" />
+Le logo my.harvard</p>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
+<p>Si vous n'êtes pas déjà familier, Harvard dispose d'un outil de recherche de cours appelé my.harvard, avec lequel les étudiants explorent (et finalement s'inscrivent !) aux cours. Pour suivre les cours, les étudiants et leurs inscriptions, my.harvard utilise probablement une sorte de base de données sous-jacente. Et pourtant, si vous l'avez déjà utilisé, vous savez que my.harvard n'est pas particulièrement... rapide.</p>
+<p>Voici votre chance de rendre my.harvard un peu plus rapide ! Dans ce problème, prenez des données de cours de Harvard et créez des index pour accélérer les requêtes typiques sur la base de données. Gardez à l'esprit que l'indexation de chaque colonne n'est pas toujours la meilleure solution : vous devrez considérer les compromis en termes d'espace et de temps, représentant finalement les cours et les étudiants de Harvard de la manière la plus efficace possible.</p>
+<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">$ sqlite3 harvard.db                                                                                
+sqlite&gt; SELECT &quot;title&quot;, &quot;semester&quot;                                                                  
+   ...&gt; FROM &quot;courses&quot;                                                                              
+   ...&gt; WHERE &quot;semester&quot; = 'Fall 2023'                                                              
+   ...&gt; LIMIT 5;   
+</code></pre>
+<h2 id="code-de-distribution">Code de Distribution<a class="headerlink" href="#code-de-distribution" title="Permanent link">&para;</a></h2>
+<p>Pour ce problème, vous devrez utiliser <code>harvard.db</code> et un fichier <code>indexes.sql</code> dans lequel vous écrirez vos instructions SQL pour créer vos index.</p>
+<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
+<pre><code class="language-mermaid">erDiagram
+    &quot;Student&quot; }o--|{ &quot;Course&quot; : &quot;enrolls in&quot;
+    &quot;Course&quot; }|--o{ &quot;Requirement&quot; : &quot;satisfies&quot;
+</code></pre>
+<p>Dans <code>harvard.db</code>, vous trouverez cinq tables qui implémentent les relations décrites dans le diagramme ER ci-dessus. Cliquez sur les menus déroulants ci-dessous pour en savoir plus sur le schéma de chaque table individuelle.</p>
+<h3 id="table-students">Table <code>students</code><a class="headerlink" href="#table-students" title="Permanent link">&para;</a></h3>
+<p>La table <code>students</code> contient les colonnes suivantes :</p>
+<ul>
+<li><code>id</code>, qui est l'ID de l'étudiant.</li>
+<li><code>name</code>, qui est le nom de l'étudiant.</li>
+</ul>
+<h3 id="table-courses">Table <code>courses</code><a class="headerlink" href="#table-courses" title="Permanent link">&para;</a></h3>
+<p>La table <code>courses</code> contient les colonnes suivantes :</p>
+<ul>
+<li><code>id</code>, qui est l'ID du cours.</li>
+<li><code>department</code>, qui est le département dans lequel le cours est enseigné (par exemple, « Computer Science », « Economics », « Philosophy »).</li>
+<li><code>number</code>, qui est le numéro du cours (par exemple, 50, 12, 330).</li>
+<li><code>semester</code>, qui est le semestre au cours duquel le cours a été enseigné (par exemple, « Spring 2024 », « Fall 2023 »).</li>
+<li><code>title</code>, qui est le titre du cours (par exemple, « Introduction to Computer Science »).</li>
+</ul>
+<h3 id="table-enrollments">Table <code>enrollments</code><a class="headerlink" href="#table-enrollments" title="Permanent link">&para;</a></h3>
+<p>La table <code>enrollments</code> contient les colonnes suivantes :</p>
+<ul>
+<li><code>id</code>, qui est l'ID pour identifier l'inscription.</li>
+<li><code>student_id</code>, qui est l'ID de l'étudiant inscrit.</li>
+<li><code>course_id</code>, qui est l'ID du cours dans lequel l'étudiant est inscrit.</li>
+</ul>
+<h3 id="table-requirements">Table <code>requirements</code><a class="headerlink" href="#table-requirements" title="Permanent link">&para;</a></h3>
+<p>La table <code>requirements</code> contient les colonnes suivantes :</p>
+<ul>
+<li><code>id</code>, qui est l'ID de l'exigence.</li>
+<li><code>name</code>, qui est le nom de l'exigence.</li>
+</ul>
+<h3 id="table-satisfies">Table <code>satisfies</code><a class="headerlink" href="#table-satisfies" title="Permanent link">&para;</a></h3>
+<p>La table <code>satisfies</code> contient les colonnes suivantes :</p>
+<ul>
+<li><code>id</code>, qui est l'ID de la paire cours-exigence.</li>
+<li><code>course_id</code>, qui est l'ID d'un cours donné.</li>
+<li><code>requirement_id</code>, qui est l'ID de l'exigence que le cours donné satisfait.</li>
+</ul>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
+<p>Dans <code>indexes.sql</code>, écrivez un ensemble d'instructions SQL qui créent des index qui accéléreront les requêtes typiques sur la base de données <code>harvard.db</code>. Le nombre d'index que vous créez, ainsi que les colonnes qu'ils incluent, dépend entièrement de vous. Assurez-vous d'équilibrer la vitesse avec l'espace disque, en créant uniquement les index dont vous avez besoin.</p>
+<p>Lorsque les ingénieurs optimisent une base de données, ils se soucient souvent des requêtes typiques exécutées sur la base de données. De telles requêtes mettent en évidence les schémas avec lesquels une base de données est accédée, révélant ainsi les meilleures colonnes et tables sur lesquelles créer des index. Cliquez sur l'étiquette spoiler ci-dessous pour voir l'ensemble des requêtes <code>SELECT</code> typiques exécutées sur <code>harvard.db</code>.</p>
+<h3 id="requetes-select-typiques-sur-harvarddb">Requêtes <code>SELECT</code> typiques sur <code>harvard.db</code><a class="headerlink" href="#requetes-select-typiques-sur-harvarddb" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Trouver les inscriptions historiques aux cours d'un étudiant, en fonction de son ID :</li>
+</ul>
+<pre><code>SELECT &quot;courses&quot;.&quot;title&quot;, &quot;courses&quot;.&quot;semester&quot;
+FROM &quot;enrollments&quot;
+JOIN &quot;courses&quot; ON &quot;enrollments&quot;.&quot;course_id&quot; = &quot;courses&quot;.&quot;id&quot;
+JOIN &quot;students&quot; ON &quot;enrollments&quot;.&quot;student_id&quot; = &quot;students&quot;.&quot;id&quot;
+WHERE &quot;students&quot;.&quot;id&quot; = 3;
+</code></pre>
+<ul>
+<li>Trouver tous les étudiants inscrits à Computer Science 50 en Fall 2023 :</li>
+</ul>
+<pre><code>SELECT &quot;id&quot;, &quot;name&quot;
+FROM &quot;students&quot;
+WHERE &quot;id&quot; IN (
+    SELECT &quot;student_id&quot;
+    FROM &quot;enrollments&quot;
+    WHERE &quot;course_id&quot; = (
+        SELECT &quot;id&quot;
+        FROM &quot;courses&quot;
+        WHERE &quot;courses&quot;.&quot;department&quot; = 'Computer Science'
+        AND &quot;courses&quot;.&quot;number&quot; = 50
+        AND &quot;courses&quot;.&quot;semester&quot; = 'Fall 2023'
+    )
+);
+</code></pre>
+<ul>
+<li>Trier les cours par nombre d'inscriptions, du plus au moins, en Fall 2023 :</li>
+</ul>
+<pre><code>SELECT &quot;courses&quot;.&quot;id&quot;, &quot;courses&quot;.&quot;department&quot;, &quot;courses&quot;.&quot;number&quot;, &quot;courses&quot;.&quot;title&quot;, COUNT(*) AS &quot;enrollment&quot;
+FROM &quot;courses&quot;
+JOIN &quot;enrollments&quot; ON &quot;enrollments&quot;.&quot;course_id&quot; = &quot;courses&quot;.&quot;id&quot;
+WHERE &quot;courses&quot;.&quot;semester&quot; = 'Fall 2023'
+GROUP BY &quot;courses&quot;.&quot;id&quot;
+ORDER BY &quot;enrollment&quot; DESC;
+</code></pre>
+<ul>
+<li>Trouver tous les cours de computer science enseignés en Spring 2024 :</li>
+</ul>
+<pre><code>SELECT &quot;courses&quot;.&quot;id&quot;, &quot;courses&quot;.&quot;department&quot;, &quot;courses&quot;.&quot;number&quot;, &quot;courses&quot;.&quot;title&quot;
+FROM &quot;courses&quot;
+WHERE &quot;courses&quot;.&quot;department&quot; = 'Computer Science'
+AND &quot;courses&quot;.&quot;semester&quot; = 'Spring 2024';
+</code></pre>
+<ul>
+<li>Trouver l'exigence satisfaite par « Advanced Databases » en Fall 2023 :</li>
+</ul>
+<pre><code>SELECT &quot;requirements&quot;.&quot;name&quot;
+FROM &quot;requirements&quot;
+WHERE &quot;requirements&quot;.&quot;id&quot; = (
+    SELECT &quot;requirement_id&quot;
+    FROM &quot;satisfies&quot;
+    WHERE &quot;course_id&quot; = (
+        SELECT &quot;id&quot;
+        FROM &quot;courses&quot;
+        WHERE &quot;title&quot; = 'Advanced Databases'
+        AND &quot;semester&quot; = 'Fall 2023'
+    )
+);
+</code></pre>
+<ul>
+<li>Trouver combien de cours dans chaque exigence un étudiant a satisfait :</li>
+</ul>
+<pre><code>SELECT &quot;requirements&quot;.&quot;name&quot;, COUNT(*) AS &quot;courses&quot;
+FROM &quot;requirements&quot;
+JOIN &quot;satisfies&quot; ON &quot;requirements&quot;.&quot;id&quot; = &quot;satisfies&quot;.&quot;requirement_id&quot;
+WHERE &quot;satisfies&quot;.&quot;course_id&quot; IN (
+    SELECT &quot;course_id&quot;
+    FROM &quot;enrollments&quot;
+    WHERE &quot;enrollments&quot;.&quot;student_id&quot; = 8
+)
+GROUP BY &quot;requirements&quot;.&quot;name&quot;;
+</code></pre>
+<ul>
+<li>Rechercher un cours par titre et semestre :</li>
+</ul>
+<pre><code>SELECT &quot;department&quot;, &quot;number&quot;, &quot;title&quot;
+FROM &quot;courses&quot;
+WHERE &quot;title&quot; LIKE &quot;History%&quot;
+AND &quot;semester&quot; = 'Fall 2023';
+</code></pre>
+<p>Assurez-vous de consulter la section Conseils (Advice) lorsque vous commencez !</p>
+<h2 id="conseils">Conseils<a class="headerlink" href="#conseils" title="Permanent link">&para;</a></h2>
+<p>Dans ce problème, vous prendrez le point de vue opposé à celui que vous aviez en travaillant sur In a Snap : plutôt que de concevoir une requête qui tire parti des index existants, votre tâche consiste à concevoir des index dont les requêtes existantes peuvent tirer parti.</p>
+<p>Utilisez <code>EXPLAIN QUERY PLAN</code> sur chaque requête <code>SELECT</code> pour évaluer où il est préférable de créer des index.</p>
+<p>Commencez par évaluer où il est préférable de créer des index en comprenant le plan de chaque requête typique sur la base de données de my.harvard.</p>
+<p>Par exemple, essayez de révéler le plan de la première requête typique, en exécutant ce qui suit :</p>
+<pre><code>EXPLAIN QUERY PLAN
+SELECT &quot;courses&quot;.&quot;title&quot;, &quot;courses&quot;.&quot;semester&quot;
+FROM &quot;enrollments&quot;
+JOIN &quot;courses&quot; ON &quot;enrollments&quot;.&quot;course_id&quot; = &quot;courses&quot;.&quot;id&quot;
+JOIN &quot;students&quot; ON &quot;enrollments&quot;.&quot;student_id&quot; = &quot;students&quot;.&quot;id&quot;
+WHERE &quot;students&quot;.&quot;id&quot; = 3;
+</code></pre>
+<p>La sortie de ce qui précède est la suivante :</p>
+<pre><code>QUERY PLAN
+|--SEARCH students USING INTEGER PRIMARY KEY (rowid=?
+|--SCAN enrollments
+`--SEARCH courses USING INTEGER PRIMARY KEY (rowid=?
+</code></pre>
+<p>Remarquez que, bien que le moteur de la base de données <code>SEARCH</code> déjà les tables <code>students</code> et <code>courses</code> en utilisant leurs index de clé primaire, il y a encore des améliorations à apporter : le moteur de la base de données <code>SCAN</code> la table <code>enrollments</code> sans index. Rappelez-vous que <code>SCAN</code> signifie que le moteur de la base de données doit rechercher toutes les lignes, une par une—un processus beaucoup plus lent que la recherche d'un index !</p>
+<p>Expérimentez maintenant en créant un index qui pourrait transformer ce <code>SCAN</code> en une <code>SEARCH</code> utilisant un index. Ensuite, répétez le même processus pour chacune des requêtes typiques sur la base de données de my.harvard jusqu'à ce que vous ayez obtenu un ensemble d'index qui garantit que toutes les requêtes utilisent des index à leur plein potentiel.</p>
+<h3 id="minimisez-le-nombre-dindex-que-vous-avez-crees">Minimisez le nombre d'index que vous avez créés<a class="headerlink" href="#minimisez-le-nombre-dindex-que-vous-avez-crees" title="Permanent link">&para;</a></h3>
+<p>Gardez à l'esprit que les index prennent de l'espace supplémentaire et qu'ils peuvent ralentir les requêtes <code>INSERT</code>, <code>UPDATE</code> et <code>DELETE</code>. Une fois que vous avez obtenu un ensemble initial d'index, commencez à les réduire jusqu'à ce que vous ayez créé le minimum requis pour que chaque requête utilise des index de manière optimale. Comment commencer ce processus ? Considérez les questions suivantes :</p>
+<ul>
+<li>Certains de vos index incluent-ils les mêmes colonnes ? Si c'est le cas, il est probable que vous n'ayez besoin que d'un seul index sur cette colonne particulière.</li>
+<li>Certains de vos index incluent-ils des colonnes inutilisées par les requêtes données ? Si c'est le cas, il est probable que vous puissiez supprimer ces colonnes de vos index.</li>
+<li>La suppression d'un index a-t-elle un impact sur le plan de chaque requête ? Si ce n'est pas le cas, il est peut-être préférable de le supprimer !</li>
+</ul>
+<p>Grâce au processus itératif ci-dessus, vous affinerez les index que vous avez choisi de créer.</p>
+<h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
+<p>Pour charger vos index au fur et à mesure que vous les écrivez dans <code>indexes.sql</code>, vous pouvez utiliser</p>
+<pre><code>.read indexes.sql
+</code></pre>
+<p>Gardez à l'esprit que vous pouvez également utiliser</p>
+<pre><code>DROP INDEX name;
+</code></pre>
+<p>où <code>name</code> est le nom de votre index, pour supprimer un index avant de le recréer.</p>
+<p>Vous voudrez peut-être utiliser <code>VACUUM</code> pour libérer de l'espace disque après avoir supprimé un index !</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
