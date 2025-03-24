@@ -617,6 +617,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démonstration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#probleme-a-resoudre" class="md-nav__link">
     <span class="md-ellipsis">
       Problème à Résoudre
@@ -730,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index_old/" class="md-nav__link">
+      <a href="../../index_old.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1640,6 +1649,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démonstration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#probleme-a-resoudre" class="md-nav__link">
     <span class="md-ellipsis">
       Problème à Résoudre
@@ -1714,6 +1732,9 @@
 <p>À la suite d'un nouveau record annuel de chaleur établi en 2022 — le dernier d'une série d'années records — les températures moyennes de la surface des océans dans le monde ont augmenté depuis début mars. En excluant les régions polaires, elles sont environ deux dixièmes de degré Celsius plus chaudes que ce que les scientifiques ont jamais observé à cette période de l'année via les données satellites.</p>
 <p>The Washington Post, 28 avril 2023</p>
 </blockquote>
+<h2 id="demonstration">Démonstration</h2>
+<pre><code class="language-sqlite">$ sqlite3 normals.db                                                     sqlite&gt; .tables                                                         normals                                                                 sqlite&gt; SELECT &quot;latitude&quot;, &quot;longitude&quot;, &quot;0m&quot;, &quot;250m&quot;, &quot;500m&quot; FROM &quot;normals&quot;  
+</code></pre>
 <h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
 <p>Comment savons-nous si les températures des océans sont plus basses ou plus élevées que la "normale" ? Qu'est-ce qu'une température "normale" ? Il s'avère que les scientifiques ont développé une métrique appelée "Climate Normal". Une Climate Normal caractérise les aspects du climat terrestre — ses conditions météorologiques à long terme — sur une période de 30 ans. Une métrique importante est la température des océans.</p>
 <p>Dans une base de données appelée <code>normals.db</code>, en utilisant une table appelée <code>normals</code>, explorez certaines des données les plus récentes de Climate Normal pour comprendre ce qui constitue une température océanique normale dans le monde.</p>

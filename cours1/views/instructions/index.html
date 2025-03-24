@@ -12,7 +12,7 @@
         <link rel="prev" href="../../players/instructions/">
       
       
-        <link rel="next" href="../../index_old/">
+        <link rel="next" href="../../../cours2/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#probleme-a-resoudre" class="md-skip">
+        <a href="#demonstration" class="md-skip">
           Skip to content
         </a>
       
@@ -657,6 +657,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démonstration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#probleme-a-resoudre" class="md-nav__link">
     <span class="md-ellipsis">
       Problème à Résoudre
@@ -741,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index_old/" class="md-nav__link">
+      <a href="../../index_old.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1649,6 +1658,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démonstration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#probleme-a-resoudre" class="md-nav__link">
     <span class="md-ellipsis">
       Problème à Résoudre
@@ -1737,6 +1755,9 @@
 
 <p><img alt="Beau Temps, Matin Clair" src="https://cs50.harvard.edu/sql/2024/psets/0/views/2.jpeg" />
 Beau Temps, Matin Clair par Katsushika Hokusai</p>
+<h2 id="demonstration">Démonstration</h2>
+<pre><code class="language-sql">$ sqlite3 views.db                                                       sqlite&gt; .tables                                                         views                                                                   sqlite&gt; SELECT &quot;english_title&quot;, &quot;artist&quot; FROM &quot;views&quot;;  
+</code></pre>
 <h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
 <p>De 1830 à 1832, l'artiste japonais Katsushika Hokusai a créé 36 estampes représentant 36 vues différentes du Mont Fuji, un volcan sur l'île de Honshū au Japon. Parmi les œuvres les plus célèbres de la série figurent Beau Temps, Matin Clair et La Grande Vague de Kanagawa. Les estampes sont devenues si influentes qu'un autre artiste japonais de l'époque, Utagawa Hiroshige, a créé sa propre série de 36 estampes, chacune représentant une nouvelle vue du Fuji.</p>
 <p>Dans <code>views.db</code>, vous trouverez des détails sur les 36 estampes créées respectivement par Hokusai et Hiroshige. Au total, vous disposerez de données sur 72 estampes. Bien que ces estampes soient généralement appréciées pour leur esthétique, la science informatique permet désormais de fournir des informations numériques supplémentaires sur les œuvres d'art. En plus du titre et de l'auteur de chaque estampe, vous trouverez des statistiques couramment utilisées dans l'analyse computationnelle des images : la couleur moyenne, la luminosité, le contraste et l'entropie. Dans les fichiers <code>.sql</code> fournis, écrivez des requêtes SQL pour répondre à des questions sur cette base de données de 72 estampes et les statistiques sur leur composition.</p>

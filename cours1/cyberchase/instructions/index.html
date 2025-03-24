@@ -553,8 +553,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -585,14 +583,21 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cyberchase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cyberchase
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#probleme-a-resoudre" class="md-nav__link">
@@ -739,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index_old/" class="md-nav__link">
+      <a href="../../index_old.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1639,14 +1644,21 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cyberchase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cyberchase
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#probleme-a-resoudre" class="md-nav__link">
@@ -1727,11 +1739,16 @@
 
 
 
-<h1 id="cyberchase">Cyberchase</h1>
+  <h1>Cyberchase</h1>
+
+<h2 id="cyberchase"><a href="https://cs50.harvard.edu/sql/2024/psets/0/cyberchase/#cyberchase">Cyberchase</a></h2>
+<p><img alt="cyb_img" src="https://cs50.harvard.edu/sql/2024/psets/0/cyberchase/cyberchase.jpg" /></p>
 <h2 id="probleme-a-resoudre">Problème à Résoudre</h2>
 <p>Bienvenue dans le Cyberespace ! Cyberchase est une série télévisée animée et éducative pour enfants, diffusée par le Public Broadcasting Service (PBS) des États-Unis depuis 2002. Conçue à l'origine pour « montrer aux enfants que les mathématiques sont partout et que tout le monde peut être bon en maths », le monde de Cyberchase tourne autour de Jackie, Matt et Inez qui s'associent à Digit, un « cybird », pour empêcher Hacker de prendre le contrôle du Cyberespace et d'infecter la Carte Mère. En chemin, le quatuor apprend des compétences en mathématiques, en sciences et en résolution de problèmes pour contrecarrer les tentatives de Hacker.</p>
 <p>Dans une base de données appelée <code>cyberchase.db</code>, en utilisant une table appelée <code>episodes</code>, trouvez des réponses aux questions de PBS sur les épisodes de Cyberchase jusqu'à présent.</p>
 <h2 id="demonstration">Démonstration</h2>
+<pre><code class="language-sqlite">sqlite3 cyberchase.db                                                  sqlite&gt; .tables                                                         episodes                                                                 sqlite&gt; SELECT &quot;title&quot; FROM &quot;episodes&quot;      
+</code></pre>
 <h2 id="code-de-distribution">Code de Distribution</h2>
 <p>Pour ce problème, vous devrez utiliser <code>cyberchase.db</code>, ainsi que plusieurs fichiers <code>.sql</code> dans lesquels vous écrirez vos requêtes.</p>
 <p>L'exécution de <code>sqlite3 cyberchase.db</code> devrait ouvrir la base de données dans <code>sqlite3</code>, via laquelle vous exécuterez des requêtes SQL. </p>

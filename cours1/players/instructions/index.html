@@ -739,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index_old/" class="md-nav__link">
+      <a href="../../index_old.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1734,6 +1734,8 @@ L'équipe des Boston Americans de 1901 (maintenant les Red Sox)</p>
 <p>Si vous n'êtes pas familier, le baseball est un sport populaire dans lequel deux équipes de 9 joueurs alternent entre la batte (frapper une balle) et le champ (attraper et lancer les balles frappées). Des points ("runs") sont marqués lorsqu'un joueur de l'équipe à la batte frappe une balle et touche toutes les bases avant que les joueurs de l'équipe au champ n'aient la chance de le retirer ("out"). Le baseball est sans doute le plus populaire aux États-Unis et au Canada, où la MLB (Major League Baseball) sert d'association professionnelle pour les joueurs depuis 1876.</p>
 <p>Dans une base de données appelée <code>players.db</code>, en utilisant une table appelée <code>players</code>, répondez à des questions sur les joueurs de la MLB qui ont joué de 1871 à 2023.</p>
 <h2 id="demonstration">Démonstration</h2>
+<pre><code class="language-sql">$ sqlite3 players.db                                                     sqlite&gt; .tables                                                         players                                                                 sqlite&gt; SELECT &quot;first_name&quot;, &quot;last_name&quot;, &quot;debut&quot;                          ...&gt; FROM &quot;players&quot;                                                      ...&gt; LIMIT 10;     
+</code></pre>
 <h2 id="code-de-distribution">Code de Distribution</h2>
 <p>Pour ce problème, vous devrez utiliser <code>players.db</code>, ainsi que plusieurs fichiers <code>.sql</code> dans lesquels vous écrirez vos requêtes.</p>
 <h2 id="schema">Schéma</h2>
