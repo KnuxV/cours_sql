@@ -7,7 +7,7 @@ theme:
     - navigation.tracking
     - navigation.instant
     - navigation.indexes
-    - toc.integrate: true   # Ensure this is present for ToC integration
+    - toc.integrate   # Ensure this is present for ToC integration
 
 nav:
   - Home: index.md
@@ -59,3 +59,7 @@ nav:
 
   - SQLite Python:
       - Introduction: sqlite_python/index.md  # Added missing page
+
+markdown_extensions:
+  - toc:
+      permalink: true  # Add this to enable permanent links to headings
