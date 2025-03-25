@@ -5,6 +5,8 @@
 ### [Cours 0 : Introduction rapide au monde de la données](cours0/index.md)
 Introduction générale sur les données et les bases de données
 
+### [Cours0: Histoire](cours0/histoire.md)
+
 ### 📖 [Cours 1 : Les Fondamentaux en SQL](cours1/index.md)
 Concepts de base du langage SQL et vous familiarise avec la syntaxe essentielle pour interroger des bases de données. 
 

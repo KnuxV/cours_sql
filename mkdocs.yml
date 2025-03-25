@@ -1,6 +1,6 @@
 site_name: Cours SQL
 theme:
-  name: cinder   # Uses a nice, modern theme
+  name: material   # Uses a nice, modern theme
   features:
     - navigation.tabs
     - navigation.top
@@ -12,7 +12,8 @@ theme:
 nav:
   - Home: index.md
   - Cours 0:
-      - Introduction: cours0/index.md 
+      - Introduction: cours0/index.md
+      - Histoire: cours0/histoire.md 
   - Cours 1:
       - Introduction: cours1/index.md
       - Cyberchase: cours1/cyberchase/instructions.md
