@@ -1,1573 +1,237 @@
+<!DOCTYPE html>
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-        <link rel="prev" href="../cours5/private/instructions/">
-      
-      
-        <link rel="next" href="harvard/instructions/">
-      
-      
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
-    
-    
-      
-        <title>Introduction - Cours SQL</title>
-      
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
-      
-      
-
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    <body dir="ltr">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#cours-5" class="md-skip">
-          Skip to content
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Cours SQL" class="md-header__button md-logo" aria-label="Cours SQL" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Cours SQL
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Introduction
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Introduction - Cours SQL</title>
+<link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet"/>
+<link href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css" rel="stylesheet"/>
+<link href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css" rel="stylesheet"/>
+<link href="//rsms.me/inter/inter.css" rel="stylesheet" type="text/css"/>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&amp;subset=latin-ext,latin" rel="stylesheet" type="text/css"/>
+<link href="../css/bootstrap-custom.min.css" rel="stylesheet"/>
+<link href="../css/base.min.css" rel="stylesheet"/>
+<link href="../css/cinder.min.css" rel="stylesheet"/>
+<link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+<!-- Collapsed navigation -->
+<div class="navbar-header">
+<!-- Expander button -->
+<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<!-- Main title -->
+<a class="navbar-brand" href="..">Cours SQL</a>
 </div>
-    
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
-        
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../cours0/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 0
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../cours1/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 1
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../cours2/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 2
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../cours3/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 3
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../cours4/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 4
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../cours5/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 5
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 6
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../cours7/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 7
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../sqlite_python/" class="md-tabs__link">
-          
-  
-    
-  
-  SQLite Python
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-  
-
-
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    Cours SQL
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../cours0/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 0
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 0
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours0/histoire/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Histoire
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../cours1/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 1
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 1
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours1/cyberchase/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cyberchase
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours1/normals/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Normals
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours1/players/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Players
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours1/views/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Views
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours1/index_old.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Old Index
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../cours2/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 2
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 2
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours2/dese/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dese
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours2/moneyball/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Moneyball
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours2/packages/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Packages
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../cours3/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 3
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 3
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours3/atl/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ATL
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours3/connect/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connect
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours3/doghnut/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Doghnut
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../cours4/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 4
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 4
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours4/dont-panic/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Don't Panic
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours4/meteorites/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Meteorites
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../cours5/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 5
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 5
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours5/bnb/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    BNB
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours5/census/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Census
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours5/private/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Private
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-      
-        
-        
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
-              
-  
-  <span class="md-ellipsis">
-    Cours 6
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link md-nav__link--active" for="__nav_8" id="__nav_8_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 6
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="harvard/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Harvard
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="snap/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Snap
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../cours7/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 7
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 7
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours7/index2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Index 2
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours7/deep/answers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Deep Answers
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours7/deep/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Deep Instructions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours7/dont-panic-python/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Don't Panic Python
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours7/linkedin/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    LinkedIn
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../sqlite_python/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    SQLite Python
-    
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
-            SQLite Python
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
-  <h1>Introduction</h1>
-
-<h2 id="cours-5"><a href="https://cs50.harvard.edu/sql/2024/notes/5/">Cours 5</a><a class="headerlink" href="#cours-5" title="Permanent link">&para;</a></h2>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li>
+<a href="..">Home</a>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 0 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../cours0/">Introduction</a>
+</li>
+<li>
+<a href="../cours0/histoire/">Histoire</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 1 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../cours1/">Introduction</a>
+</li>
+<li>
+<a href="../cours1/cyberchase/instructions/">Cyberchase</a>
+</li>
+<li>
+<a href="../cours1/normals/instructions/">Normals</a>
+</li>
+<li>
+<a href="../cours1/players/instructions/">Players</a>
+</li>
+<li>
+<a href="../cours1/views/instructions/">Views</a>
+</li>
+<li>
+<a href="../cours1/index_old.md">Old Index</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 2 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../cours2/">Introduction</a>
+</li>
+<li>
+<a href="../cours2/dese/instructions/">Dese</a>
+</li>
+<li>
+<a href="../cours2/moneyball/instructions/">Moneyball</a>
+</li>
+<li>
+<a href="../cours2/packages/instructions/">Packages</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 3 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../cours3/">Introduction</a>
+</li>
+<li>
+<a href="../cours3/atl/instructions/">ATL</a>
+</li>
+<li>
+<a href="../cours3/connect/instructions/">Connect</a>
+</li>
+<li>
+<a href="../cours3/doghnut/instructions/">Doghnut</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 4 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../cours4/">Introduction</a>
+</li>
+<li>
+<a href="../cours4/dont-panic/instructions/">Don't Panic</a>
+</li>
+<li>
+<a href="../cours4/meteorites/instructions/">Meteorites</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 5 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../cours5/">Introduction</a>
+</li>
+<li>
+<a href="../cours5/bnb/instructions/">BNB</a>
+</li>
+<li>
+<a href="../cours5/census/instructions/">Census</a>
+</li>
+<li>
+<a href="../cours5/private/instructions/">Private</a>
+</li>
+</ul>
+</li>
+<li class="dropdown active">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 6 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="active">
+<a href="./">Introduction</a>
+</li>
+<li>
+<a href="harvard/instructions/">Harvard</a>
+</li>
+<li>
+<a href="snap/instructions/">Snap</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 7 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../cours7/">Introduction</a>
+</li>
+<li>
+<a href="../cours7/index2/">Index 2</a>
+</li>
+<li>
+<a href="../cours7/deep/answers/">Deep Answers</a>
+</li>
+<li>
+<a href="../cours7/deep/instructions/">Deep Instructions</a>
+</li>
+<li>
+<a href="../cours7/dont-panic-python/instructions/">Don't Panic Python</a>
+</li>
+<li>
+<a href="../cours7/linkedin/instructions/">LinkedIn</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">SQLite Python <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../sqlite_python/">Introduction</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a data-target="#mkdocs_search_modal" data-toggle="modal" href="#">
+<i class="fas fa-search"></i> Search
+                        </a>
+</li>
+<li>
+<a href="../cours5/private/instructions/" rel="prev">
+<i class="fas fa-arrow-left"></i> Previous
+                        </a>
+</li>
+<li>
+<a href="harvard/instructions/" rel="next">
+                            Next <i class="fas fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+<ul class="nav bs-sidenav">
+<li class="first-level active"><a href="#cours-5">Cours 5</a></li>
+<li class="first-level"><a href="#introduction">Introduction</a></li>
+<li class="first-level"><a href="#index">Index</a></li>
+<li class="second-level"><a href="#questions">Questions</a></li>
+<li class="first-level"><a href="#index-sur-plusieurs-tables">Index sur plusieurs tables</a></li>
+<li class="first-level"><a href="#compromis-espace">Compromis espace</a></li>
+<li class="first-level"><a href="#compromis-temps">Compromis temps</a></li>
+<li class="first-level"><a href="#index-partiel">Index partiel</a></li>
+<li class="second-level"><a href="#questions_1">Questions</a></li>
+<li class="first-level"><a href="#vacuum">Vacuum</a></li>
+<li class="second-level"><a href="#questions_2">Questions</a></li>
+<li class="first-level"><a href="#concurrence">Concurrence</a></li>
+<li class="second-level"><a href="#transactions">Transactions</a></li>
+<li class="second-level"><a href="#conditions-de-course">Conditions de course</a></li>
+<li class="second-level"><a href="#questions_3">Questions</a></li>
+<li class="first-level"><a href="#fin">Fin</a></li>
+</ul>
+</div></div>
+<div class="col-md-9" role="main">
+<h2 id="cours-5"><a href="https://cs50.harvard.edu/sql/2024/notes/5/">Cours 5</a><a class="headerlink" href="#cours-5" title="Permanent link">¶</a></h2>
 <p><a href="https://youtu.be/qa5-mKVSQHQ">Vidéo en anglais</a>
 - <a href="#introduction">Introduction</a>
 - <a href="#index">Index</a>
@@ -1580,17 +244,17 @@
   - <a href="#transactions">Transactions</a>
   - <a href="#conditions-de-course">Conditions de course</a>
 - <a href="#fin">Fin</a></p>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
 <ul>
 <li>Cette semaine, nous allons apprendre à optimiser nos requêtes SQL, à la fois en termes de temps et d'espace. Nous apprendrons également à exécuter des requêtes simultanément.</li>
 <li>Nous ferons tout cela dans le contexte d'une nouvelle base de données — la base de données Internet Movies Database, ou IMDb comme elle est plus communément connue. Notre base de données SQLite est compilée à partir de la grande base de données en ligne de films que vous avez peut-être déjà vue sur imdb.com.</li>
 <li>Jetez un œil à ces statistiques pour vous faire une idée de la taille de cette base de données ! Elle contient beaucoup plus de données que toutes les autres bases de données avec lesquelles nous avons travaillé jusqu'à présent.</li>
 </ul>
-<p><img alt="Statistiques sur la base de données IMDb" src="https://cs50.harvard.edu/sql/2024/notes/5/images/3.jpg" /></p>
+<p><img alt="Statistiques sur la base de données IMDb" src="https://cs50.harvard.edu/sql/2024/notes/5/images/3.jpg"/></p>
 <ul>
 <li>Voici le diagramme ER détaillant les entités et leurs relations.</li>
 </ul>
-<pre><code class="language-mermaid">erDiagram
+<div class="mermaid">erDiagram
 
 ACTEURS {
   INTEGER id
@@ -1613,20 +277,20 @@ NOTES {
 ACTEURS ||--o{FILMS : jouent
 FILMS ||--o{NOTES : ont
 
-</code></pre>
-<h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
 <ul>
 <li>Ouvrons cette base de données appelée <code>movies.db</code> dans SQLite.</li>
 <li><code>.schema</code> nous montre les tables créées dans cette base de données. Pour implémenter la relation plusieurs-à-plusieurs entre les entités Person et Movie du diagramme ER, nous avons ici une table jointe appelée <code>stars</code> qui référence les colonnes ID des deux tables <code>people</code> et <code>movies</code> en tant que colonnes de clé étrangère !</li>
 <li>Pour jeter un œil à la table <code>movies</code>, nous pouvons sélectionner dans la table et limiter les résultats.</li>
 </ul>
-<pre><code class="language-sql">SELECT * FROM &quot;movies&quot; LIMIT 5;
+<pre><code class="language-sql">SELECT * FROM "movies" LIMIT 5;
 </code></pre>
 <ul>
 <li>Pour trouver les informations concernant le film Cars, nous exécuterions la requête suivante.</li>
 </ul>
-<pre><code class="language-sql">SELECT * FROM &quot;movies&quot;
-WHERE &quot;title&quot; = 'Cars';
+<pre><code class="language-sql">SELECT * FROM "movies"
+WHERE "title" = 'Cars';
 </code></pre>
 <ul>
 <li>Supposons que nous voulons savoir combien de temps il a fallu pour exécuter cette requête. SQLite dispose d'une commande <code>.timer on</code> qui nous permet de chronométrer nos requêtes.</li>
@@ -1636,19 +300,19 @@ WHERE &quot;title&quot; = 'Cars';
 <li>Nous pouvons optimiser cette requête pour qu'elle soit plus efficace qu'un scan. De la même manière que les manuels scolaires ont souvent un index, les tables de bases de données peuvent également avoir un index. Un index, en termes de bases de données, est une structure utilisée pour accélérer la récupération des lignes d'une table.</li>
 <li>Nous pouvons utiliser la commande suivante pour créer un index pour la colonne <code>"title"</code> dans la table <code>movies</code>.</li>
 </ul>
-<pre><code class="language-sql">CREATE INDEX &quot;title_index&quot; ON &quot;movies&quot; (&quot;title&quot;);
+<pre><code class="language-sql">CREATE INDEX "title_index" ON "movies" ("title");
 </code></pre>
 <ul>
 <li>Après avoir créé cet index, nous exécutons à nouveau la requête pour trouver le film intitulé Cars. Lors de cette exécution, le temps nécessaire est considérablement plus court (pendant le cours, presque huit fois plus rapide que la première exécution) !</li>
 <li>Dans l'exemple précédent, une fois l'index créé, nous avons simplement supposé que SQL l'utiliserait pour trouver un film. Cependant, nous pouvons également le voir explicitement en utilisant une commande SQLite <code>EXPLAIN QUERY PLAN</code> avant toute requête.</li>
 <li>Pour supprimer l'index que nous venons de créer, exécutez :</li>
 </ul>
-<pre><code class="language-sql">DROP INDEX &quot;title_index&quot;;
+<pre><code class="language-sql">DROP INDEX "title_index";
 </code></pre>
 <ul>
 <li>Après avoir supprimé l'index, l'exécution à nouveau de <code>EXPLAIN QUERY PLAN</code> avec la requête <code>SELECT</code> démontrera que le plan reviendrait à scanner toute la base de données.</li>
 </ul>
-<h3 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">&para;</a></h3>
+<h3 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>Les bases de données n'ont-elles pas des algorithmes implicites pour optimiser la recherche ?</p>
 </blockquote>
@@ -1661,16 +325,16 @@ WHERE &quot;title&quot; = 'Cars';
 <ul>
 <li>Bien que cela semble utile, il y a des compromis en termes d'espace et du temps nécessaire pour insérer ultérieurement des données dans des tables avec un index. Nous verrons cela plus en détail bientôt !</li>
 </ul>
-<h2 id="index-sur-plusieurs-tables">Index sur plusieurs tables<a class="headerlink" href="#index-sur-plusieurs-tables" title="Permanent link">&para;</a></h2>
+<h2 id="index-sur-plusieurs-tables">Index sur plusieurs tables<a class="headerlink" href="#index-sur-plusieurs-tables" title="Permanent link">¶</a></h2>
 <ul>
 <li>Nous exécuterions la requête suivante pour trouver tous les films dans lesquels Tom Hanks a joué.</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot; FROM &quot;movies&quot;
-WHERE &quot;id&quot; IN (
-    SELECT &quot;movie_id&quot; FROM &quot;stars&quot;
-    WHERE &quot;person_id&quot; = (
-        SELECT &quot;id&quot; FROM &quot;people&quot;
-        WHERE &quot;name&quot; = 'Tom Hanks'
+<pre><code class="language-sql">SELECT "title" FROM "movies"
+WHERE "id" IN (
+    SELECT "movie_id" FROM "stars"
+    WHERE "person_id" = (
+        SELECT "id" FROM "people"
+        WHERE "name" = 'Tom Hanks'
     )
 );
 </code></pre>
@@ -1678,8 +342,8 @@ WHERE &quot;id&quot; IN (
 <li>Pour comprendre quel type d'index pourrait aider à accélérer cette requête, nous pouvons exécuter <code>EXPLAIN QUERY PLAN</code> avant cette requête à nouveau. Cela nous montre que la requête nécessite deux scans — de <code>people</code> et <code>stars</code>. La table <code>movies</code> n'est pas scannée car nous recherchons <code>movies</code> par son ID, pour lequel un index est automatiquement créé par SQLite !</li>
 <li>Créons les deux index pour accélérer cette requête.</li>
 </ul>
-<pre><code class="language-sql">CREATE INDEX &quot;person_index&quot; ON &quot;stars&quot; (&quot;person_id&quot;);
-CREATE INDEX &quot;name_index&quot; ON &quot;people&quot; (&quot;name&quot;);
+<pre><code class="language-sql">CREATE INDEX "person_index" ON "stars" ("person_id");
+CREATE INDEX "name_index" ON "people" ("name");
 </code></pre>
 <ul>
 <li>Maintenant, nous exécutons <code>EXPLAIN QUERY PLAN</code> avec la même requête imbriquée. Nous pouvons observer que :</li>
@@ -1691,74 +355,74 @@ CREATE INDEX &quot;name_index&quot; ON &quot;people&quot; (&quot;name&quot;);
 <li>Pour que notre recherche sur la table <code>stars</code> utilise également un index couvrant, nous pouvons ajouter <code>"movie_id"</code> à l'index que nous avons créé pour <code>stars</code>. Cela garantira que les informations recherchées (movie ID) et la valeur recherchée (person ID) soient toutes deux dans l'index.</li>
 <li>Tout d'abord, supprimons l'implémentation existante de notre index sur la table <code>stars</code>.</li>
 </ul>
-<pre><code class="language-sql">DROP INDEX &quot;person_index&quot;;
+<pre><code class="language-sql">DROP INDEX "person_index";
 </code></pre>
 <ul>
 <li>Ensuite, nous créons le nouvel index.</li>
 </ul>
-<pre><code class="language-sql">CREATE INDEX &quot;person_index&quot; ON &quot;stars&quot; (&quot;person_id&quot;, &quot;movie_id&quot;);
+<pre><code class="language-sql">CREATE INDEX "person_index" ON "stars" ("person_id", "movie_id");
 </code></pre>
 <ul>
 <li>L'exécution de ce qui suit démontrera que nous avons maintenant deux index couvrants, ce qui devrait résulter en une recherche beaucoup plus rapide !</li>
 </ul>
 <pre><code class="language-sql">EXPLAIN QUERY PLAN
-SELECT &quot;title&quot; FROM &quot;movies&quot; WHERE &quot;id&quot; IN (
-    SELECT &quot;movie_id&quot; FROM &quot;stars&quot; WHERE &quot;person_id&quot; = (
-        SELECT &quot;id&quot; FROM &quot;people&quot; WHERE &quot;name&quot; = 'Tom Hanks'
+SELECT "title" FROM "movies" WHERE "id" IN (
+    SELECT "movie_id" FROM "stars" WHERE "person_id" = (
+        SELECT "id" FROM "people" WHERE "name" = 'Tom Hanks'
     )
 );
 </code></pre>
 <ul>
 <li>En nous assurant que nous avons exécuté <code>.timer on</code>, exécutons la requête ci-dessus pour trouver tous les films dans lesquels Tom Hanks a joué, et observons le temps qu'il faut pour l'exécuter. La requête s'exécute maintenant beaucoup plus rapidement qu'elle ne le faisait sans index (dans le cours, un ordre de grandeur plus rapide) !</li>
 </ul>
-<h2 id="compromis-espace">Compromis espace<a class="headerlink" href="#compromis-espace" title="Permanent link">&para;</a></h2>
+<h2 id="compromis-espace">Compromis espace<a class="headerlink" href="#compromis-espace" title="Permanent link">¶</a></h2>
 <ul>
 <li>Les index semblent incroyablement utiles, mais il y a des compromis associés — ils occupent un espace supplémentaire dans la base de données, donc même si nous gagnons en vitesse de requête, nous perdons en espace.</li>
 <li>Un index est stocké dans une base de données sous la forme d'une structure de données appelée B-Tree, ou arbre équilibré. Une structure de données d'arbre ressemble à ceci :</li>
 </ul>
-<p><img alt="Structure de données d'arbre" src="https://cs50.harvard.edu/sql/2024/notes/5/images/20.jpg" /></p>
+<p><img alt="Structure de données d'arbre" src="https://cs50.harvard.edu/sql/2024/notes/5/images/20.jpg"/></p>
 <ul>
 <li>Remarquez que l'arbre a de nombreux nœuds, chacun connecté à quelques autres par des flèches. Le nœud racine, ou le nœud à partir duquel l'arbre prend son origine, a trois enfants. Certains nœuds à la périphérie de l'arbre ne pointent vers aucun autre nœud. Ceux-ci sont appelés nœuds feuilles.</li>
 <li>Considérons comment un index est créé pour la colonne <code>"title"</code> de la table <code>movies</code>. Si les titres des films étaient triés par ordre alphabétique, il serait beaucoup plus facile de trouver un film particulier en utilisant une recherche binaire.</li>
 <li>Dans ce cas, une copie est faite de la colonne <code>"titles"</code>. Cette copie est triée puis liée à nouveau aux lignes d'origine dans la table <code>movies</code> en pointant vers les ID des films. Cela est visualisé ci-dessous.</li>
 </ul>
-<p><img alt="Index : copie triée des titres pointant vers les ID des films d'origine" src="https://cs50.harvard.edu/sql/2024/notes/5/images/40.jpg" /></p>
+<p><img alt="Index : copie triée des titres pointant vers les ID des films d'origine" src="https://cs50.harvard.edu/sql/2024/notes/5/images/40.jpg"/></p>
 <ul>
 <li>Bien que cela nous aide à visualiser facilement l'index pour cette colonne, en réalité, l'index n'est pas une seule colonne mais est divisé en de nombreux nœuds. C'est parce que si la base de données contient beaucoup de données, comme notre exemple IMDb, stocker une colonne entière ensemble en mémoire pourrait ne pas être faisable.</li>
 <li>Si nous avons plusieurs nœuds contenant des sections de l'index, nous avons également besoin de nœuds pour naviguer vers les bonnes sections. Par exemple, considérez les nœuds suivants. Le nœud de gauche nous dirige vers la bonne section de l'index en fonction du fait que le titre du film vient avant Frozen, entre Frozen et Soul, ou après Soul par ordre alphabétique !</li>
 </ul>
-<p><img alt="Nœuds d'index divisés en sections" src="https://cs50.harvard.edu/sql/2024/notes/5/images/46.jpg" /></p>
+<p><img alt="Nœuds d'index divisés en sections" src="https://cs50.harvard.edu/sql/2024/notes/5/images/46.jpg"/></p>
 <ul>
 <li>La représentation ci-dessus est un B-tree ! C'est ainsi que les index sont stockés dans SQLite.</li>
 </ul>
-<h2 id="compromis-temps">Compromis temps<a class="headerlink" href="#compromis-temps" title="Permanent link">&para;</a></h2>
+<h2 id="compromis-temps">Compromis temps<a class="headerlink" href="#compromis-temps" title="Permanent link">¶</a></h2>
 <ul>
 <li>De manière similaire au compromis espace dont nous avons discuté précédemment, il faut également plus de temps pour insérer des données dans une colonne et ensuite les ajouter à un index. Chaque fois qu'une valeur est ajoutée à l'index, le B-tree doit être parcouru pour déterminer où la valeur doit être ajoutée !</li>
 </ul>
-<h2 id="index-partiel">Index partiel<a class="headerlink" href="#index-partiel" title="Permanent link">&para;</a></h2>
+<h2 id="index-partiel">Index partiel<a class="headerlink" href="#index-partiel" title="Permanent link">¶</a></h2>
 <ul>
 <li>Il s'agit d'un index qui n'inclut qu'un sous-ensemble de lignes d'une table, nous permettant d'économiser un peu de l'espace qu'un index complet occuperait.</li>
 <li>Cela est particulièrement utile lorsque nous savons que les utilisateurs n'interrogent qu'un sous-ensemble de lignes de la table. Dans le cas d'IMDb, il se peut que les utilisateurs soient plus susceptibles d'interroger un film qui vient de sortir plutôt qu'un film vieux de 15 ans. Essayons de créer un index partiel qui stocke les titres des films sortis en 2023.</li>
 </ul>
-<pre><code class="language-sql">CREATE INDEX &quot;recents&quot; ON &quot;movies&quot; (&quot;titles&quot;)
-WHERE &quot;year&quot; = 2023;
+<pre><code class="language-sql">CREATE INDEX "recents" ON "movies" ("titles")
+WHERE "year" = 2023;
 </code></pre>
 <ul>
 <li>Nous pouvons vérifier que la recherche de films sortis en 2023 utilise le nouvel index.</li>
 </ul>
 <pre><code class="language-sql">EXPLAIN QUERY PLAN
-SELECT &quot;title&quot; FROM &quot;movies&quot;
-WHERE &quot;year&quot; = 2023;
+SELECT "title" FROM "movies"
+WHERE "year" = 2023;
 </code></pre>
 <p>Cela nous montre que la table <code>movies</code> est scannée en utilisant l'index partiel.</p>
-<h3 id="questions_1">Questions<a class="headerlink" href="#questions_1" title="Permanent link">&para;</a></h3>
+<h3 id="questions_1">Questions<a class="headerlink" href="#questions_1" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>Les index sont-ils sauvegardés dans le schéma ?</p>
 </blockquote>
 <ul>
 <li>Oui, dans SQLite, ils le sont ! Nous pouvons le confirmer en exécutant <code>.schema</code> et nous verrons les index créés listés dans le schéma de la base de données.</li>
 </ul>
-<h2 id="vacuum">Vacuum<a class="headerlink" href="#vacuum" title="Permanent link">&para;</a></h2>
+<h2 id="vacuum">Vacuum<a class="headerlink" href="#vacuum" title="Permanent link">¶</a></h2>
 <ul>
 <li>Il existe des moyens de supprimer l'espace inutilisé dans notre base de données. SQLite nous permet de "vacuumiser" les données — cela nettoie les données précédemment supprimées (qui ne sont en fait pas supprimées, mais simplement marquées comme espace disponible pour la prochaine <code>INSERT</code>).</li>
 <li>Pour trouver la taille de <code>movies.db</code> sur le terminal, nous pouvons utiliser une commande Unix</li>
@@ -1769,7 +433,7 @@ WHERE &quot;year&quot; = 2023;
 <li>Dans le cours, cette commande nous a montré que la taille de la base de données est d'environ 158 millions d'octets, soit 158 mégaoctets.</li>
 <li>Nous pouvons maintenant nous connecter à notre base de données et supprimer un index que nous avions précédemment créé.</li>
 </ul>
-<pre><code class="language-sql">DROP INDEX &quot;person_index&quot;;
+<pre><code class="language-sql">DROP INDEX "person_index";
 </code></pre>
 <ul>
 <li>Maintenant, si nous exécutons à nouveau la commande Unix, nous constatons que la taille de la base de données n'a pas diminué ! Pour réellement nettoyer l'espace supprimé, nous devons le vacuumiser. Nous pouvons exécuter la commande suivante dans SQLite.</li>
@@ -1777,7 +441,7 @@ WHERE &quot;year&quot; = 2023;
 <pre><code class="language-sql">VACUUM;
 </code></pre>
 <p>Cela peut prendre une seconde ou deux pour s'exécuter. En exécutant à nouveau la commande Unix pour vérifier la taille de la base de données, nous devrions voir une taille plus petite. Une fois que nous avons supprimé tous les index et vacuumisé à nouveau, la base de données sera considérablement plus petite que 158 Mo (dans le cours, environ 100 Mo).</p>
-<h3 id="questions_2">Questions<a class="headerlink" href="#questions_2" title="Permanent link">&para;</a></h3>
+<h3 id="questions_2">Questions<a class="headerlink" href="#questions_2" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>Est-il possible de vacuumiser plus rapidement ?</p>
 </blockquote>
@@ -1790,18 +454,18 @@ WHERE &quot;year&quot; = 2023;
 <ul>
 <li>Les personnes formées à la médecine légale sont capables de trouver des données que nous pensons supprimées mais qui sont en fait toujours sur nos ordinateurs. Dans le cas de SQLite, après avoir effectué un vacuum, il ne serait plus possible de retrouver les lignes supprimées.</li>
 </ul>
-<h2 id="concurrence">Concurrence<a class="headerlink" href="#concurrence" title="Permanent link">&para;</a></h2>
+<h2 id="concurrence">Concurrence<a class="headerlink" href="#concurrence" title="Permanent link">¶</a></h2>
 <ul>
 <li>Jusqu'à présent, nous avons vu comment optimiser des requêtes individuelles. Maintenant, nous allons voir comment permettre non seulement une requête, mais plusieurs à la fois.</li>
 <li>La concurrence est la gestion simultanée de plusieurs requêtes ou interactions par la base de données. Imaginez une base de données pour un site web, ou un service financier, qui reçoit beaucoup de trafic en même temps. La concurrence est particulièrement importante dans ces cas.</li>
 <li>Certaines transactions de base de données peuvent être multipartites. Par exemple, considérons la base de données d'une banque. Voici une vue de la table <code>accounts</code> qui stocke les soldes des comptes.</li>
 </ul>
-<p><img alt="Table des comptes dans la base de données d'une banque. Alice envoie 10 $ à Bob." src="https://cs50.harvard.edu/sql/2024/notes/5/images/66.jpg" /></p>
+<p><img alt="Table des comptes dans la base de données d'une banque. Alice envoie 10 $ à Bob." src="https://cs50.harvard.edu/sql/2024/notes/5/images/66.jpg"/></p>
 <ul>
 <li>Une transaction pourrait consister à envoyer de l'argent d'un compte à un autre. Par exemple, Alice essaie d'envoyer 10 $ à Bob.</li>
 <li>Pour compléter cette transaction, nous devrions ajouter 10 $ au compte de Bob et également soustraire 10 $ du compte d'Alice. Si quelqu'un voit l'état de la base de données <code>accounts</code> après la première mise à jour du compte de Bob mais avant la deuxième mise à jour du compte d'Alice, il pourrait obtenir une compréhension incorrecte du montant total d'argent détenu par la banque.</li>
 </ul>
-<h3 id="transactions">Transactions<a class="headerlink" href="#transactions" title="Permanent link">&para;</a></h3>
+<h3 id="transactions">Transactions<a class="headerlink" href="#transactions" title="Permanent link">¶</a></h3>
 <ul>
 <li>Pour un observateur extérieur, il devrait sembler que les différentes parties d'une transaction se produisent toutes en même temps. En termes de bases de données, une transaction est une unité individuelle de travail — quelque chose qui ne peut pas être décomposé en morceaux plus petits.</li>
 <li>Les transactions ont certaines propriétés, qui peuvent être rappelées en utilisant l'acronyme ACID :</li>
@@ -1812,24 +476,24 @@ WHERE &quot;year&quot; = 2023;
 <li>Ouvrons <code>bank.db</code> dans notre terminal afin que nous puissions implémenter une transaction pour transférer de l'argent d'Alice à Bob !</li>
 <li>Tout d'abord, nous voulons voir les données déjà présentes dans la table <code>accounts</code>.</li>
 </ul>
-<pre><code class="language-sql">SELECT * FROM &quot;accounts&quot;;
+<pre><code class="language-sql">SELECT * FROM "accounts";
 </code></pre>
 <p>Nous notons ici que l'ID de Bob est 2 et celui d'Alice est 1, ce qui sera utile pour notre requête.
 - Pour transférer 10 $ du compte d'Alice à celui de Bob, nous pouvons écrire la transaction suivante.</p>
 <pre><code class="language-sql">BEGIN TRANSACTION;
-UPDATE &quot;accounts&quot; SET &quot;balance&quot; = &quot;balance&quot; + 10 WHERE &quot;id&quot; = 2;
-UPDATE &quot;accounts&quot; SET &quot;balance&quot; = &quot;balance&quot; - 10 WHERE &quot;id&quot; = 1;
+UPDATE "accounts" SET "balance" = "balance" + 10 WHERE "id" = 2;
+UPDATE "accounts" SET "balance" = "balance" - 10 WHERE "id" = 1;
 COMMIT;
 </code></pre>
 <p>Remarquez que les instructions <code>UPDATE</code> sont écrites entre les commandes pour commencer la transaction et la valider. Si nous exécutons la requête après avoir écrit les instructions <code>UPDATE</code>, mais sans les valider, aucune des deux instructions <code>UPDATE</code> ne sera exécutée ! Cela aide à garder la transaction atomique. En mettant à jour notre table de cette manière, nous ne pouvons pas voir les étapes intermédiaires.
 - Si nous essayions d'exécuter à nouveau la transaction ci-dessus — Alice essaie de payer Bob encore 10 $ — elle devrait échouer car le solde du compte d'Alice est à 0. (La colonne <code>"balance"</code> dans <code>accounts</code> a une contrainte de vérification pour s'assurer qu'elle a une valeur non négative. Nous pouvons exécuter <code>.schema</code> pour vérifier cela.)
 - La manière dont nous implémentons l'annulation de la transaction est en utilisant <code>ROLLBACK</code>. Une fois que nous avons commencé une transaction et écrit quelques instructions SQL, si l'une d'elles échoue, nous pouvons la terminer avec un <code>ROLLBACK</code> pour revenir toutes les valeurs à leur état pré-transaction. Cela aide à garder les transactions cohérentes.</p>
 <pre><code class="language-sql">BEGIN TRANSACTION;
-UPDATE &quot;accounts&quot; SET &quot;balance&quot; = &quot;balance&quot; + 10 WHERE &quot;id&quot; = 2;
-UPDATE &quot;accounts&quot; SET &quot;balance&quot; = &quot;balance&quot; - 10 WHERE &quot;id&quot; = 1; -- Invokes constraint error
+UPDATE "accounts" SET "balance" = "balance" + 10 WHERE "id" = 2;
+UPDATE "accounts" SET "balance" = "balance" - 10 WHERE "id" = 1; -- Invokes constraint error
 ROLLBACK;
 </code></pre>
-<h3 id="conditions-de-course">Conditions de course<a class="headerlink" href="#conditions-de-course" title="Permanent link">&para;</a></h3>
+<h3 id="conditions-de-course">Conditions de course<a class="headerlink" href="#conditions-de-course" title="Permanent link">¶</a></h3>
 <ul>
 <li>Les transactions peuvent aider à se prémunir contre les conditions de course.</li>
 <li>Une condition de course se produit lorsque plusieurs entités accèdent simultanément à une valeur partagée et prennent des décisions basées sur celle-ci, potentiellement causant des incohérences dans la base de données. Des conditions de course non résolues peuvent être exploitées par des hackers pour manipuler la base de données.</li>
@@ -1840,7 +504,7 @@ ROLLBACK;
 <li>SHARED : lorsqu'une transaction lit des données de la base de données, elle obtient un verrou partagé qui permet à d'autres transactions de lire simultanément de la base de données,</li>
 <li>EXCLUSIVE : si une transaction doit écrire ou mettre à jour des données, elle obtient un verrou exclusif sur la base de données qui ne permet pas à d'autres transactions de se produire en même temps (pas même une lecture).</li>
 </ul>
-<h3 id="questions_3">Questions<a class="headerlink" href="#questions_3" title="Permanent link">&para;</a></h3>
+<h3 id="questions_3">Questions<a class="headerlink" href="#questions_3" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>Comment décidons-nous quand une transaction peut obtenir un verrou exclusif ? Comment priorisons-nous différents types de transactions ?</p>
 </blockquote>
@@ -1856,67 +520,90 @@ ROLLBACK;
 <pre><code class="language-sql">BEGIN EXCLUSIVE TRANSACTION;
 </code></pre>
 <p>Si nous ne complétons pas cette transaction maintenant, et essayons de nous connecter à la base de données via un autre terminal pour lire depuis la table, nous obtiendrons une erreur indiquant que la base de données est verrouillée ! Cela, bien sûr, est une manière très grossière de verrouiller car elle verrouille toute la base de données. Comme SQLite est grossier de cette manière, il a un module pour prioriser les transactions et s'assurer qu'un verrou exclusif est obtenu uniquement pour la durée la plus courte nécessaire.</p>
-<h2 id="fin">Fin<a class="headerlink" href="#fin" title="Permanent link">&para;</a></h2>
+<h2 id="fin">Fin<a class="headerlink" href="#fin" title="Permanent link">¶</a></h2>
 <ul>
 <li>Cela conclut le Cours 5 sur l'Optimisation en SQL !</li>
-</ul>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
-</button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
+</ul></div>
 </div>
-      
-    </div>
-  </div>
+<footer class="col-md-12 text-center">
+<hr/>
+<p>
+<small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+</p>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-    
-    
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
-      
-    
-  </body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap-3.0.3.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>var base_url = ".."</script>
+<script src="../js/base.js"></script>
+<script src="../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+</div>
+<div class="modal-body">
+<p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="text"/>
+</div>
+</form>
+<div id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
 </html>

@@ -1,1848 +1,261 @@
+<!DOCTYPE html>
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-        <link rel="prev" href="../../harvard/instructions/">
-      
-      
-        <link rel="next" href="../../../cours7/">
-      
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
-    
-    
-      
-        <title>Snap - Cours SQL</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
-      
-      
-
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    <body dir="ltr">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#en-un-clin-dil" class="md-skip">
-          Skip to content
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Cours SQL" class="md-header__button md-logo" aria-label="Cours SQL" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Cours SQL
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Snap
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../../img/favicon.ico" rel="shortcut icon"/>
+<title>Snap - Cours SQL</title>
+<link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet"/>
+<link href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css" rel="stylesheet"/>
+<link href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css" rel="stylesheet"/>
+<link href="//rsms.me/inter/inter.css" rel="stylesheet" type="text/css"/>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&amp;subset=latin-ext,latin" rel="stylesheet" type="text/css"/>
+<link href="../../../css/bootstrap-custom.min.css" rel="stylesheet"/>
+<link href="../../../css/base.min.css" rel="stylesheet"/>
+<link href="../../../css/cinder.min.css" rel="stylesheet"/>
+<link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+<!-- Collapsed navigation -->
+<div class="navbar-header">
+<!-- Expander button -->
+<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<!-- Main title -->
+<a class="navbar-brand" href="../../..">Cours SQL</a>
 </div>
-    
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
-        
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../cours0/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 0
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../cours1/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 1
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../cours2/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 2
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../cours3/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 3
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../cours4/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 4
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../cours5/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 5
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 6
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../cours7/" class="md-tabs__link">
-          
-  
-    
-  
-  Cours 7
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../sqlite_python/" class="md-tabs__link">
-          
-  
-    
-  
-  SQLite Python
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-  
-
-
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    Cours SQL
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../cours0/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 0
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 0
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours0/histoire/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Histoire
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../cours1/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 1
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 1
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours1/cyberchase/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cyberchase
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours1/normals/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Normals
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours1/players/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Players
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours1/views/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Views
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours1/index_old.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Old Index
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../cours2/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 2
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 2
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours2/dese/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dese
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours2/moneyball/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Moneyball
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours2/packages/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Packages
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../cours3/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 3
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 3
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours3/atl/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ATL
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours3/connect/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connect
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours3/doghnut/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Doghnut
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../cours4/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 4
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 4
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours4/dont-panic/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Don't Panic
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours4/meteorites/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Meteorites
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../cours5/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 5
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 5
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours5/bnb/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    BNB
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours5/census/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Census
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours5/private/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Private
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-      
-        
-        
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 6
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 6
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../harvard/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Harvard
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Snap
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Snap
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-a-resoudre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème à Résoudre
-    </span>
-  </a>
-  
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li>
+<a href="../../..">Home</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#demonstration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Démonstration
-    </span>
-  </a>
-  
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 0 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../../cours0/">Introduction</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code-de-distribution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code de Distribution
-    </span>
-  </a>
-  
+<li>
+<a href="../../../cours0/histoire/">Histoire</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schéma
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schéma">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#table-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table users
-    </span>
-  </a>
-  
+</ul>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#table-friends" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table friends
-    </span>
-  </a>
-  
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 1 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../../cours1/">Introduction</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#table-messages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table messages
-    </span>
-  </a>
-  
+<li>
+<a href="../../../cours1/cyberchase/instructions/">Cyberchase</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+<li>
+<a href="../../../cours1/normals/instructions/">Normals</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spécification
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spécification">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.sql
-    </span>
-  </a>
-  
+<li>
+<a href="../../../cours1/players/instructions/">Players</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.sql
-    </span>
-  </a>
-  
+<li>
+<a href="../../../cours1/views/instructions/">Views</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#3sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.sql
-    </span>
-  </a>
-  
+<li>
+<a href="../../../cours1/index_old.md">Old Index</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#4sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.sql
-    </span>
-  </a>
-  
+</ul>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#5sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.sql
-    </span>
-  </a>
-  
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 2 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../../cours2/">Introduction</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+<li>
+<a href="../../../cours2/dese/instructions/">Dese</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#conseils" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conseils
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Conseils">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#utiliser-explain-query-plan-pour-montrer-les-etapes-dune-requete" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utiliser EXPLAIN QUERY PLAN pour montrer les étapes d'une requête
-    </span>
-  </a>
-  
+<li>
+<a href="../../../cours2/moneyball/instructions/">Moneyball</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#interpreter-les-resultats-de-explain-query-plan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Interpréter les résultats de EXPLAIN QUERY PLAN
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Interpréter les résultats de EXPLAIN QUERY PLAN">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple 1
-    </span>
-  </a>
-  
+<li>
+<a href="../../../cours2/packages/instructions/">Packages</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#exemple-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple 2
-    </span>
-  </a>
-  
+</ul>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#exemple-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple 3
-    </span>
-  </a>
-  
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 3 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../../cours3/">Introduction</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#exemple-4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple 4
-    </span>
-  </a>
-  
+<li>
+<a href="../../../cours3/atl/instructions/">ATL</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#exemple-5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple 5
-    </span>
-  </a>
-  
+<li>
+<a href="../../../cours3/connect/instructions/">Connect</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+<li>
+<a href="../../../cours3/doghnut/instructions/">Doghnut</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
 </li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../cours7/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Cours 7
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Cours 7
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours7/index2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Index 2
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours7/deep/answers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Deep Answers
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours7/deep/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Deep Instructions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours7/dont-panic-python/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Don't Panic Python
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cours7/linkedin/instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    LinkedIn
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../sqlite_python/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    SQLite Python
-    
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
-            SQLite Python
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
-<h1 id="en-un-clin-dil"><a href="https://cs50.harvard.edu/sql/2024/psets/5/snap/">En un Clin d'Œil</a><a class="headerlink" href="#en-un-clin-dil" title="Permanent link">&para;</a></h1>
-<p><img alt="Peinture à l'huile abstraite d'une image numérique envoyée depuis un téléphone" src="https://cs50.harvard.edu/sql/2024/psets/5/snap/snap.png" /> « Peinture à l'huile abstraite d'une image numérique envoyée depuis un téléphone », générée par DALL·E 2</p>
-<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">&para;</a></h2>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 4 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../../cours4/">Introduction</a>
+</li>
+<li>
+<a href="../../../cours4/dont-panic/instructions/">Don't Panic</a>
+</li>
+<li>
+<a href="../../../cours4/meteorites/instructions/">Meteorites</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 5 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../../cours5/">Introduction</a>
+</li>
+<li>
+<a href="../../../cours5/bnb/instructions/">BNB</a>
+</li>
+<li>
+<a href="../../../cours5/census/instructions/">Census</a>
+</li>
+<li>
+<a href="../../../cours5/private/instructions/">Private</a>
+</li>
+</ul>
+</li>
+<li class="dropdown active">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 6 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../">Introduction</a>
+</li>
+<li>
+<a href="../../harvard/instructions/">Harvard</a>
+</li>
+<li class="active">
+<a href="./">Snap</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours 7 <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../../cours7/">Introduction</a>
+</li>
+<li>
+<a href="../../../cours7/index2/">Index 2</a>
+</li>
+<li>
+<a href="../../../cours7/deep/answers/">Deep Answers</a>
+</li>
+<li>
+<a href="../../../cours7/deep/instructions/">Deep Instructions</a>
+</li>
+<li>
+<a href="../../../cours7/dont-panic-python/instructions/">Don't Panic Python</a>
+</li>
+<li>
+<a href="../../../cours7/linkedin/instructions/">LinkedIn</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">SQLite Python <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../../sqlite_python/">Introduction</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a data-target="#mkdocs_search_modal" data-toggle="modal" href="#">
+<i class="fas fa-search"></i> Search
+                        </a>
+</li>
+<li>
+<a href="../../harvard/instructions/" rel="prev">
+<i class="fas fa-arrow-left"></i> Previous
+                        </a>
+</li>
+<li>
+<a href="../../../cours7/" rel="next">
+                            Next <i class="fas fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+<ul class="nav bs-sidenav">
+<li class="first-level active"><a href="#en-un-clin-dil">En un Clin d'Œil</a></li>
+<li class="second-level"><a href="#probleme-a-resoudre">Problème à Résoudre</a></li>
+<li class="second-level"><a href="#demonstration">Démonstration</a></li>
+<li class="second-level"><a href="#code-de-distribution">Code de Distribution</a></li>
+<li class="second-level"><a href="#schema">Schéma</a></li>
+<li class="third-level"><a href="#table-users">Table users</a></li>
+<li class="third-level"><a href="#table-friends">Table friends</a></li>
+<li class="third-level"><a href="#table-messages">Table messages</a></li>
+<li class="second-level"><a href="#specification">Spécification</a></li>
+<li class="third-level"><a href="#1sql">1.sql</a></li>
+<li class="third-level"><a href="#2sql">2.sql</a></li>
+<li class="third-level"><a href="#3sql">3.sql</a></li>
+<li class="third-level"><a href="#4sql">4.sql</a></li>
+<li class="third-level"><a href="#5sql">5.sql</a></li>
+<li class="second-level"><a href="#conseils">Conseils</a></li>
+<li class="third-level"><a href="#utiliser-explain-query-plan-pour-montrer-les-etapes-dune-requete">Utiliser EXPLAIN QUERY PLAN pour montrer les étapes d'une requête</a></li>
+<li class="third-level"><a href="#interpreter-les-resultats-de-explain-query-plan">Interpréter les résultats de EXPLAIN QUERY PLAN</a></li>
+</ul>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="en-un-clin-dil"><a href="https://cs50.harvard.edu/sql/2024/psets/5/snap/">En un Clin d'Œil</a><a class="headerlink" href="#en-un-clin-dil" title="Permanent link">¶</a></h1>
+<p><img alt="Peinture à l'huile abstraite d'une image numérique envoyée depuis un téléphone" src="https://cs50.harvard.edu/sql/2024/psets/5/snap/snap.png"/> « Peinture à l'huile abstraite d'une image numérique envoyée depuis un téléphone », générée par DALL·E 2</p>
+<h2 id="probleme-a-resoudre">Problème à Résoudre<a class="headerlink" href="#probleme-a-resoudre" title="Permanent link">¶</a></h2>
 <p>Après la presse à imprimer, le service postal et le télégramme, sont arrivées les applications de messagerie. Il y a de fortes chances que vous ayez utilisé une application de messagerie aujourd'hui, qu'il s'agisse de Facebook Messenger, iMessage, Instagram, Signal ou Snapchat, parmi tant d'autres. Alors que leurs prédécesseurs mesuraient la vitesse de communication en termes de semaines, jours ou heures, les applications de messagerie dépendent d'une vitesse de l'ordre des millisecondes : un message retardé est maintenant une connexion manquée.</p>
 <p>Dans ce problème, vous écrirez des requêtes SQL pour une application fictive qui permet aux utilisateurs d'envoyer des photos qui expirent 30 secondes après que le destinataire les a vues (une idée popularisée par Snapchat !). Les requêtes que vous écrirez permettront finalement à l'application de mettre en œuvre ses fonctionnalités principales. Cependant, étant donné que l'application compte plusieurs milliers d'utilisateurs dépendant d'une communication instantanée, il est particulièrement important d'écrire des requêtes rapides, et pas seulement correctes. Vous pratiquerez l'écriture de requêtes qui tirent parti des index, tout cela au service de permettre aux utilisateurs de rester en contact en un clin d'œil.</p>
-<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
+<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">¶</a></h2>
 <pre><code class="language-bash">$ sqlite3 snap.db                                                                                   
 sqlite&gt; EXPLAIN QUERY PLAN                                                                          
-   ...&gt; SELECT * FROM &quot;messages&quot;                                                                    
-   ...&gt; WHERE &quot;from_user_id&quot; = 2;                                                                   
+   ...&gt; SELECT * FROM "messages"                                                                    
+   ...&gt; WHERE "from_user_id" = 2;                                                                   
 QUERY PLAN                                                                                          
 `--SEARCH messages USING INDEX search_messages_by_from_user_id (from_user_id=?)                     
 sqlite&gt; .quit 
 </code></pre>
-<h2 id="code-de-distribution">Code de Distribution<a class="headerlink" href="#code-de-distribution" title="Permanent link">&para;</a></h2>
+<h2 id="code-de-distribution">Code de Distribution<a class="headerlink" href="#code-de-distribution" title="Permanent link">¶</a></h2>
 <p>Pour ce problème, vous devrez utiliser <code>snap.db</code> et quelques fichiers <code>.sql</code> dans lesquels vous écrirez vos instructions SQL.</p>
-<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
-<pre><code class="language-mermaid">erDiagram
+<h2 id="schema">Schéma<a class="headerlink" href="#schema" title="Permanent link">¶</a></h2>
+<div class="mermaid">erDiagram
     User }o--o{ User : friends
     User ||--o{ Message : sends
     User ||--o{ Message : views
-</code></pre>
+</div>
 <p>Dans <code>snap.db</code>, vous trouverez trois tables qui implémentent les relations décrites dans le diagramme ER ci-dessus. Cliquez sur les menus déroulants ci-dessous pour en savoir plus sur le schéma de chaque table individuelle.</p>
-<h3 id="table-users">Table <code>users</code><a class="headerlink" href="#table-users" title="Permanent link">&para;</a></h3>
+<h3 id="table-users">Table <code>users</code><a class="headerlink" href="#table-users" title="Permanent link">¶</a></h3>
 <p>La table <code>users</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui est l'ID de l'utilisateur.</li>
@@ -1851,7 +264,7 @@ sqlite&gt; .quit
 <li><code>joined_date</code>, qui est la date à laquelle l'utilisateur a rejoint l'application.</li>
 <li><code>last_login_date</code>, qui est la date à laquelle l'utilisateur s'est connecté pour la dernière fois.</li>
 </ul>
-<h3 id="table-friends">Table <code>friends</code><a class="headerlink" href="#table-friends" title="Permanent link">&para;</a></h3>
+<h3 id="table-friends">Table <code>friends</code><a class="headerlink" href="#table-friends" title="Permanent link">¶</a></h3>
 <p>La table <code>friends</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>user_id</code>, qui est l'ID d'un utilisateur donné.</li>
@@ -1880,7 +293,7 @@ sqlite&gt; .quit
 </tr>
 </tbody>
 </table>
-<h3 id="table-messages">Table <code>messages</code><a class="headerlink" href="#table-messages" title="Permanent link">&para;</a></h3>
+<h3 id="table-messages">Table <code>messages</code><a class="headerlink" href="#table-messages" title="Permanent link">¶</a></h3>
 <p>La table <code>messages</code> contient les colonnes suivantes :</p>
 <ul>
 <li><code>id</code>, qui est l'ID du message.</li>
@@ -1891,43 +304,43 @@ sqlite&gt; .quit
 <li><code>viewed_timestamp</code>, qui est l'horodatage auquel le message a été vu.</li>
 <li><code>expires_timestamp</code>, qui est l'horodatage auquel le message expire.</li>
 </ul>
-<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
+<h2 id="specification">Spécification<a class="headerlink" href="#specification" title="Permanent link">¶</a></h2>
 <p>Dans chaque fichier <code>.sql</code> correspondant, écrivez une requête SQL pour implémenter les fonctionnalités décrites ci-dessous. Puisque la vitesse est essentielle, vous devrez également vous assurer que votre requête utilise l'index spécifié. La meilleure façon de s'assurer qu'une requête utilise un index est de vérifier les résultats de <code>EXPLAIN QUERY PLAN</code>.</p>
 <p>Si vous vous sentez incertain sur la façon d'interpréter la sortie de <code>EXPLAIN QUERY PLAN</code>, consultez la section Conseils pour des explications supplémentaires !</p>
-<h3 id="1sql"><code>1.sql</code><a class="headerlink" href="#1sql" title="Permanent link">&para;</a></h3>
+<h3 id="1sql"><code>1.sql</code><a class="headerlink" href="#1sql" title="Permanent link">¶</a></h3>
 <p>L'équipe d'engagement des utilisateurs de l'application doit identifier les utilisateurs actifs. Trouvez tous les noms d'utilisateur des utilisateurs qui se sont connectés depuis le 2024-01-01. Assurez-vous que votre requête utilise l'index <code>search_users_by_last_login</code>, qui est défini comme suit :</p>
-<pre><code>CREATE INDEX &quot;search_users_by_last_login&quot;
-ON &quot;users&quot;(&quot;last_login_date&quot;);
+<pre><code>CREATE INDEX "search_users_by_last_login"
+ON "users"("last_login_date");
 </code></pre>
-<h3 id="2sql"><code>2.sql</code><a class="headerlink" href="#2sql" title="Permanent link">&para;</a></h3>
+<h3 id="2sql"><code>2.sql</code><a class="headerlink" href="#2sql" title="Permanent link">¶</a></h3>
 <p>Les utilisateurs doivent être empêchés de rouvrir un message qui a expiré. Trouvez quand le message avec l'ID 151 expire. Vous pouvez utiliser l'ID du message directement dans votre requête.</p>
 <p>Assurez-vous que votre requête utilise l'index créé automatiquement sur la colonne de clé primaire de la table <code>messages</code>.</p>
-<h3 id="3sql"><code>3.sql</code><a class="headerlink" href="#3sql" title="Permanent link">&para;</a></h3>
+<h3 id="3sql"><code>3.sql</code><a class="headerlink" href="#3sql" title="Permanent link">¶</a></h3>
 <p>L'application doit classer les « meilleurs amis » d'un utilisateur, similaire à la fonctionnalité « Friend Emojis » de Snapchat. Trouvez les ID des trois principaux utilisateurs auxquels <code>creativewisdom377</code> envoie le plus fréquemment des messages. Classez les ID des utilisateurs par le nombre de messages que <code>creativewisdom377</code> a envoyés à ces utilisateurs, du plus grand au plus petit.</p>
 <p>Assurez-vous que votre requête utilise l'index <code>search_messages_by_from_user_id</code>, qui est défini comme suit :</p>
-<pre><code>CREATE INDEX &quot;search_messages_by_from_user_id&quot;
-ON &quot;messages&quot;(&quot;from_user_id&quot;);
+<pre><code>CREATE INDEX "search_messages_by_from_user_id"
+ON "messages"("from_user_id");
 </code></pre>
-<h3 id="4sql"><code>4.sql</code><a class="headerlink" href="#4sql" title="Permanent link">&para;</a></h3>
+<h3 id="4sql"><code>4.sql</code><a class="headerlink" href="#4sql" title="Permanent link">¶</a></h3>
 <p>L'application doit envoyer aux utilisateurs un résumé de leur engagement. Trouvez le nom d'utilisateur de l'utilisateur le plus populaire, défini comme l'utilisateur à qui le plus de messages ont été envoyés.</p>
 <p>Assurez-vous que votre requête utilise l'index <code>search_messages_by_to_user_id</code>, qui est défini comme suit :</p>
-<pre><code>CREATE INDEX &quot;search_messages_by_to_user_id&quot;
-ON &quot;messages&quot;(&quot;to_user_id&quot;);
+<pre><code>CREATE INDEX "search_messages_by_to_user_id"
+ON "messages"("to_user_id");
 </code></pre>
-<h3 id="5sql"><code>5.sql</code><a class="headerlink" href="#5sql" title="Permanent link">&para;</a></h3>
+<h3 id="5sql"><code>5.sql</code><a class="headerlink" href="#5sql" title="Permanent link">¶</a></h3>
 <p>Pour deux utilisateurs quelconques, l'application doit rapidement afficher une liste des amis qu'ils ont en commun. Étant donné deux noms d'utilisateur, <code>lovelytrust487</code> et <code>exceptionalinspiration482</code>, trouvez les ID des amis communs. Un ami commun est un utilisateur que <code>lovelytrust487</code> et <code>exceptionalinspiration482</code> comptent tous deux parmi leurs amis.</p>
 <p>Assurez-vous que votre requête utilise l'index créé automatiquement sur les colonnes de clé primaire de la table <code>friends</code>. Cet index s'appelle <code>sqlite_autoindex_friends_1</code>.</p>
 <p>Besoin d'un indice ?</p>
 <p>Rappelez-vous qu'en SQL, vous pouvez utiliser certains mots-clés pour trouver l'intersection de deux groupes. Consultez les notes de la semaine 1 pour un rappel.</p>
-<h2 id="conseils">Conseils<a class="headerlink" href="#conseils" title="Permanent link">&para;</a></h2>
-<h3 id="utiliser-explain-query-plan-pour-montrer-les-etapes-dune-requete">Utiliser <code>EXPLAIN QUERY PLAN</code> pour montrer les étapes d'une requête<a class="headerlink" href="#utiliser-explain-query-plan-pour-montrer-les-etapes-dune-requete" title="Permanent link">&para;</a></h3>
+<h2 id="conseils">Conseils<a class="headerlink" href="#conseils" title="Permanent link">¶</a></h2>
+<h3 id="utiliser-explain-query-plan-pour-montrer-les-etapes-dune-requete">Utiliser <code>EXPLAIN QUERY PLAN</code> pour montrer les étapes d'une requête<a class="headerlink" href="#utiliser-explain-query-plan-pour-montrer-les-etapes-dune-requete" title="Permanent link">¶</a></h3>
 <p>Pour vérifier les résultats de <code>EXPLAIN QUERY PLAN</code>, vous devez simplement préfixer <code>EXPLAIN QUERY PLAN</code> à votre requête :</p>
 <pre><code>EXPLAIN QUERY PLAN
-SELECT &quot;username&quot;
-FROM &quot;users&quot;
-WHERE &quot;id&quot; = 151;
+SELECT "username"
+FROM "users"
+WHERE "id" = 151;
 </code></pre>
-<h3 id="interpreter-les-resultats-de-explain-query-plan">Interpréter les résultats de <code>EXPLAIN QUERY PLAN</code><a class="headerlink" href="#interpreter-les-resultats-de-explain-query-plan" title="Permanent link">&para;</a></h3>
+<h3 id="interpreter-les-resultats-de-explain-query-plan">Interpréter les résultats de <code>EXPLAIN QUERY PLAN</code><a class="headerlink" href="#interpreter-les-resultats-de-explain-query-plan" title="Permanent link">¶</a></h3>
 <p>Rappelez-vous du cours que <code>EXPLAIN QUERY PLAN</code> affiche les étapes que le moteur de base de données SQLite va suivre pour exécuter une requête SQL donnée. La sortie de <code>EXPLAIN QUERY PLAN</code> peut indiquer si une requête utilise un index.</p>
 <ul>
 <li>Si vous voyez une étape étiquetée <code>USING INDEX</code>, cela signifie que la requête utilise un index à cette étape.</li>
@@ -1938,12 +351,12 @@ WHERE &quot;id&quot; = 151;
 <li>Lorsque vous voyez une étape étiquetée <code>USING INTEGER PRIMARY KEY</code>, cela implique que la requête utilise l'index sur la colonne de clé primaire, qui est fourni automatiquement par SQLite lorsque la clé primaire est de type affinité <code>INTEGER</code>. C'est un moyen efficace d'accéder directement aux lignes si les conditions de la requête impliquent la clé primaire d'une table.</li>
 </ul>
 <p>Voici quelques exemples de résultats de <code>EXPLAIN QUERY PLAN</code>, issus de requêtes qui utilisent un index dans au moins une étape de leur exécution :</p>
-<h5 id="exemple-1">Exemple 1<a class="headerlink" href="#exemple-1" title="Permanent link">&para;</a></h5>
+<h5 id="exemple-1">Exemple 1<a class="headerlink" href="#exemple-1" title="Permanent link">¶</a></h5>
 <pre><code>QUERY PLAN
 `--SEARCH users USING INDEX search_users_by_last_login (last_login_date&gt;?
 </code></pre>
 <p>Remarquez que cette requête peut être exécutée en une seule étape, en recherchant l'index <code>search_users_by_last_login</code>.</p>
-<h5 id="exemple-2">Exemple 2<a class="headerlink" href="#exemple-2" title="Permanent link">&para;</a></h5>
+<h5 id="exemple-2">Exemple 2<a class="headerlink" href="#exemple-2" title="Permanent link">¶</a></h5>
 <pre><code>QUERY PLAN
 |--SEARCH messages USING COVERING INDEX search_messages_by_to_user_id (to_user_id=?
 `--SCALAR SUBQUERY 1
@@ -1954,7 +367,7 @@ WHERE &quot;id&quot; = 151;
 <li>La première recherche l'index <code>search_messages_by_to_user_id</code>.</li>
 <li>La seconde résout une sous-requête en recherchant l'index <code>sqlite_autoindex_users_1</code>.</li>
 </ol>
-<h5 id="exemple-3">Exemple 3<a class="headerlink" href="#exemple-3" title="Permanent link">&para;</a></h5>
+<h5 id="exemple-3">Exemple 3<a class="headerlink" href="#exemple-3" title="Permanent link">¶</a></h5>
 <pre><code>QUERY PLAN
 |--SEARCH messages USING INDEX search_messages_by_from_user_id (from_user_id=?
 |--SCALAR SUBQUERY 1
@@ -1968,7 +381,7 @@ WHERE &quot;id&quot; = 151;
 <li>La deuxième étape recherche l'index <code>sqlite_autoindex_users_1</code>.</li>
 <li>Les étapes finales utilisent des B-trees temporaires pour grouper et ordonner les résultats.</li>
 </ol>
-<h5 id="exemple-4">Exemple 4<a class="headerlink" href="#exemple-4" title="Permanent link">&para;</a></h5>
+<h5 id="exemple-4">Exemple 4<a class="headerlink" href="#exemple-4" title="Permanent link">¶</a></h5>
 <pre><code>QUERY PLAN
 |--SEARCH users USING INTEGER PRIMARY KEY (rowid=?
 `--SCALAR SUBQUERY 1
@@ -1981,7 +394,7 @@ WHERE &quot;id&quot; = 151;
 <li>La deuxième étape scanne les lignes en utilisant l'index <code>search_messages_by_to_user_id</code>.</li>
 <li>L'étape finale utilise un B-tree temporaire pour ordonner les résultats.</li>
 </ol>
-<h5 id="exemple-5">Exemple 5<a class="headerlink" href="#exemple-5" title="Permanent link">&para;</a></h5>
+<h5 id="exemple-5">Exemple 5<a class="headerlink" href="#exemple-5" title="Permanent link">¶</a></h5>
 <pre><code>QUERY PLAN
 `--COMPOUND QUERY
    |--LEFT-MOST SUBQUERY
@@ -1993,64 +406,87 @@ WHERE &quot;id&quot; = 151;
       `--SCALAR SUBQUERY 3
          `--SEARCH users USING COVERING INDEX sqlite_autoindex_users_1 (username=?
 </code></pre>
-<p>Remarquez que cette requête implique de nombreuses étapes, et qu'elle utilise des index pour accomplir la plupart. Voyez en particulier que l'index <code>sqlite_autoindex_friends_1</code> est fréquemment accédé.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
-</button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
+<p>Remarquez que cette requête implique de nombreuses étapes, et qu'elle utilise des index pour accomplir la plupart. Voyez en particulier que l'index <code>sqlite_autoindex_friends_1</code> est fréquemment accédé.</p></div>
 </div>
-      
-    </div>
-  </div>
+<footer class="col-md-12 text-center">
+<hr/>
+<p>
+<small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+</p>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-    
-    
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
-      
-    
-  </body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../../../js/bootstrap-3.0.3.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>var base_url = "../../.."</script>
+<script src="../../../js/base.js"></script>
+<script src="../../../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+</div>
+<div class="modal-body">
+<p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="text"/>
+</div>
+</form>
+<div id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
 </html>
