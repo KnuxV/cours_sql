@@ -15,6 +15,8 @@
 ## Introduction
 
 - Les bases de données peuvent avoir plusieurs tables. Lors du dernier cours, nous avons vu une base de données de livres nominés pour le International Booker Prize. Nous allons maintenant voir que cette base de données contient de nombreuses tables différentes pour les livres, les auteurs, les éditeurs, etc.
+  - Accéder à la nouvelle base de données du cours en cliquant sur le lien [sql_cours2](https://github.com/KnuxV/sql_cours2)
+
 - Tout d'abord, ouvrez la base de données en utilisant SQLite dans le terminal de votre Codespace.
 - Nous pouvons utiliser la commande SQLite suivante pour voir toutes les tables de notre base de données :
 

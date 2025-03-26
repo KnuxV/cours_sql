@@ -1,886 +1,2135 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="histoire/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
+      
+        <title>Introduction - Cours SQL</title>
+      
     
-    <link rel="shortcut icon" href="../img/favicon.ico">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
 
     
-    <title>Introduction - Cours SQL</title>
     
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
-    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../css/base.min.css" rel="stylesheet">
-    <link href="../css/cinder.min.css" rel="stylesheet">
-
+      
     
+    
+      
         
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
         
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
     
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-        <![endif]-->
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
     
-
-     
-</head>
-
-<body>
-
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-
-            <!-- Main title -->
-
-            
-              <a class="navbar-brand" href="..">Cours SQL</a>
-            
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                
-                
-                    <li >
-                        <a href="..">Home</a>
-                    </li>
-                
-                
-                
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 0 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li class="active">
-    <a href="./">Introduction</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 1 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours1/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours1/cyberchase/instructions/">Cyberchase</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours1/normals/instructions/">Normals</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours1/players/instructions/">Players</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours1/views/instructions/">Views</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours1/index_old.md">Old Index</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 2 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours2/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours2/dese/instructions/">Dese</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours2/moneyball/instructions/">Moneyball</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours2/packages/instructions/">Packages</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 3 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours3/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours3/atl/instructions/">ATL</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours3/connect/instructions/">Connect</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours3/doghnut/instructions/">Doghnut</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 4 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours4/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours4/dont-panic/instructions/">Don't Panic</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours4/meteorites/instructions/">Meteorites</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 5 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours5/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours5/bnb/instructions/">BNB</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours5/census/instructions/">Census</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours5/private/instructions/">Private</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 6 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours6/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours6/harvard/instructions/">Harvard</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours6/snap/instructions/">Snap</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours 7 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../cours7/">Introduction</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours7/index2/">Index 2</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours7/deep/answers/">Deep Answers</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours7/deep/instructions/">Deep Instructions</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours7/dont-panic-python/instructions/">Don't Panic Python</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../cours7/linkedin/instructions/">LinkedIn</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SQLite Python <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../sqlite_python/">Introduction</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fas fa-search"></i> Search
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="..">
-                            <i class="fas fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="next" href="../cours1/">
-                            Next <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </li>
-            </ul>
-        </div>
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-aux-donnees-et-aux-bases-de-donnees" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-</div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-    <div class="container">
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Cours SQL" class="md-header__button md-logo" aria-label="Cours SQL" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cours SQL
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
         
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
         
-        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#cours-1">Cours 1</a></li>
-        <li class="first-level "><a href="#introduction">Introduction</a></li>
-        <li class="first-level "><a href="#quest-ce-quune-base-de-donnees">Qu'est-ce qu'une base de données ?</a></li>
-        <li class="first-level "><a href="#sql">SQL</a></li>
-        <li class="first-level "><a href="#demarrer-avec-sqlite">Démarrer avec SQLite</a></li>
-        <li class="first-level "><a href="#conseils-pour-le-terminal">Conseils pour le terminal</a></li>
-            <li class="second-level"><a href="#commandes-de-base-du-terminal">Commandes de base du terminal</a></li>
-                
-            <li class="second-level"><a href="#astuces-generales-du-terminal">Astuces générales du terminal</a></li>
-                
-            <li class="second-level"><a href="#commandes-specifiques-a-sqlite">Commandes spécifiques à SQLite</a></li>
-                
-            <li class="second-level"><a href="#conseils-pour-les-requetes-sql">Conseils pour les requêtes SQL</a></li>
-                
-        <li class="first-level "><a href="#select">SELECT</a></li>
-        <li class="first-level "><a href="#limit">LIMIT</a></li>
-        <li class="first-level "><a href="#null">NULL</a></li>
-        <li class="first-level "><a href="#like">LIKE</a></li>
-        <li class="first-level "><a href="#plages">Plages</a></li>
-        <li class="first-level "><a href="#order-by">ORDER BY</a></li>
-        <li class="first-level "><a href="#fonctions-dagregation">Fonctions d'agrégation</a></li>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 0
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cours1/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cours2/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cours3/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cours4/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cours5/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 5
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cours6/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 6
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cours7/" class="md-tabs__link">
+          
+  
+    
+  
+  Cours 7
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../sqlite_python/" class="md-tabs__link">
+          
+  
+    
+  
+  SQLite Python
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
-</div></div>
-        <div class="col-md-9" role="main">
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
-<h2 id="cours-1"><a href="https://cs50.harvard.edu/sql/2024/notes/0/">Cours 1</a><a class="headerlink" href="#cours-1" title="Permanent link">&para;</a></h2>
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Cours SQL" class="md-nav__button md-logo" aria-label="Cours SQL" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Cours SQL
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    Cours 0
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="histoire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Histoire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../cours1/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 1
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours1/cyberchase/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cyberchase
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours1/normals/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Normals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours1/players/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Players
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours1/views/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Views
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours1/index_old.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Old Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../cours2/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 2
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours2/dese/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dese
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours2/moneyball/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moneyball
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours2/packages/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../cours3/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 3
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours3/atl/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours3/connect/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours3/doghnut/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Doghnut
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../cours4/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 4
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours4/dont-panic/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Don't Panic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours4/meteorites/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meteorites
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../cours5/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 5
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours5/bnb/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BNB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours5/census/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Census
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours5/private/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Private
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../cours6/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 6
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours6/harvard/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harvard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours6/snap/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Snap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../cours7/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cours 7
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Cours 7
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours7/index2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours7/deep/answers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deep Answers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours7/deep/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deep Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours7/dont-panic-python/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Don't Panic Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours7/linkedin/instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LinkedIn
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../sqlite_python/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    SQLite Python
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            SQLite Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduction-aux-donnees-et-aux-bases-de-donnees">Introduction aux Données et aux Bases de Données<a class="headerlink" href="#introduction-aux-donnees-et-aux-bases-de-donnees" title="Permanent link">&para;</a></h1>
+<h2 id="1-quest-ce-quune-donnee">1. Qu'est-ce qu'une Donnée ?<a class="headerlink" href="#1-quest-ce-quune-donnee" title="Permanent link">&para;</a></h2>
+<h3 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
+<p>Une donnée (data) est une information brute, non interprétée, qui peut être stockée et traitée par un ordinateur. Elle représente des faits, des concepts, des mesures ou des instructions sous une forme qui peut être communiquée, interprétée et traitée.</p>
+<h3 id="caracteristiques-des-donnees">Caractéristiques des données<a class="headerlink" href="#caracteristiques-des-donnees" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#quest-ce-quune-base-de-données">Qu'est-ce qu'une base de données ?</a></li>
-<li><a href="#sql">SQL</a></li>
-<li><a href="#démarrer-avec-sqlite">Démarrer avec SQLite</a></li>
-<li><a href="#conseils-pour-le-terminal">Conseils pour le terminal</a></li>
-<li><a href="#select"><code>SELECT</code></a></li>
-<li><a href="#limit"><code>LIMIT</code></a></li>
-<li><a href="#where"><code>WHERE</code></a></li>
-<li><a href="#null"><code>NULL</code></a></li>
-<li><a href="#like"><code>LIKE</code></a></li>
-<li><a href="#plages">Plages</a></li>
-<li><a href="#order-by"><code>ORDER BY</code></a></li>
-<li><a href="#fonctions-dagrégration">Fonctions d'agrégation</a></li>
+<li><strong>Objectivité</strong> : Les données sont des faits bruts, sans interprétation ni contexte</li>
+<li><strong>Atomicité</strong> : Une donnée est généralement la plus petite unité d'information utilisable</li>
+<li><strong>Persistance</strong> : Les données peuvent être stockées pour une utilisation ultérieure</li>
+<li><strong>Transformabilité</strong> : Elles peuvent être transformées en information utile après traitement</li>
 </ul>
-<p><a href="https://video.cs50.io/vHYeChEf2lA?screen=6UZILCexEZ4">Vidéo en anglais</a> (facultatif)</p>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Les bases de données (et SQL) sont des outils qui peuvent être utilisés pour interagir avec, stocker et gérer des informations. Bien que les outils que nous utilisons dans ce cours soient nouveaux, une base de données est une idée ancienne.</li>
-<li>Regardez ce diagramme vieux de quelques milliers d'années. Il a des lignes et des colonnes, et semble contenir des indemnités pour les travailleurs d'un temple. On pourrait appeler ce diagramme un tableau, ou même une feuille de calcul.</li>
-</ul>
-<p><img alt="Tableau avec les indemnités des travailleurs du temple" src="https://cs50.harvard.edu/sql/2024/notes/0/images/templeworkerstipends.jpg" /></p>
-<ul>
-<li>Sur la base de ce que nous voyons dans le diagramme ci-dessus, nous pouvons conclure que :</li>
-<li>Un tableau stocke un ensemble d'informations (ici, les indemnités des travailleurs).</li>
-<li>Chaque ligne d'un tableau stocke un élément de cet ensemble (ici, un travailleur).</li>
-<li>Chaque colonne a un attribut de cet élément (ici, l'indemnité pour un mois particulier).</li>
-<li>Considérons maintenant un contexte moderne. Disons que vous êtes bibliothécaire et que vous devez organiser des informations sur les titres de livres et les auteurs dans ce diagramme.</li>
-</ul>
-<p><img alt="&quot;Titres de livres et auteurs - Non organisés&quot;" src="https://cs50.harvard.edu/sql/2024/notes/0/images/books.jpg" /></p>
-<ul>
-<li>Une façon d'organiser les informations serait d'avoir chaque titre de livre suivi de son auteur, comme ci-dessous.</li>
-</ul>
-<p><img alt="&quot;Tableau avec les titres de livres suivis de l'auteur&quot;" src="https://cs50.harvard.edu/sql/2024/notes/0/images/bookstable.jpg" /></p>
-<pre><code>- Notez que chaque livre est maintenant une ligne dans ce tableau.
-- Chaque ligne a deux colonnes — chacune un attribut différent du livre (titre du livre et auteur).
-</code></pre>
-<ul>
-<li>À l'ère de l'information d'aujourd'hui, nous pouvons stocker nos tableaux en utilisant des logiciels comme Google Sheets au lieu de papier📝 ou de tablettes en pierre🪨. Cependant, dans ce cours, nous parlerons de bases de données et non de feuilles de calcul.</li>
-<li>Trois raisons de passer des feuilles de calcul aux bases de données sont :</li>
-<li>Échelle : Les bases de données peuvent stocker non seulement des éléments se comptant en dizaines de milliers, mais aussi en millions et en milliards.</li>
-<li>Capacité de mise à jour : Les bases de données sont capables de gérer plusieurs mises à jour de données par seconde.</li>
-<li>Vitesse : Les bases de données permettent une recherche plus rapide des informations. Cela est dû au fait que les bases de données nous donnent accès à différents algorithmes pour récupérer des informations. En revanche, les feuilles de calcul permettent uniquement l'utilisation de Ctrl+F ou Cmd+F pour parcourir les résultats un par un.</li>
-</ul>
-<h2 id="quest-ce-quune-base-de-donnees">Qu'est-ce qu'une base de données ?<a class="headerlink" href="#quest-ce-quune-base-de-donnees" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>CRUD</strong>: Une base de données est un moyen d'organiser des données de manière à pouvoir effectuer quatre opérations sur celles-ci :</li>
-<li>CREATE (créer)</li>
-<li>READ (lire)</li>
-<li>UPDATE (mettre à jour)</li>
-<li>DELETE (supprimer)</li>
-<li>Un système de gestion de base de données (DBMS) est un moyen d'interagir avec une base de données en utilisant une interface graphique ou un langage textuel.</li>
-<li>Exemples de DBMS : MySQL, Oracle, PostgreSQL, SQLite, Microsoft Access, MongoDB, etc.</li>
-<li>Le choix d'un DBMS dépend de facteurs tels que :</li>
-<li>Coût : logiciel propriétaire vs logiciel gratuit,</li>
-<li>Quantité de support : les logiciels libres et open source comme MySQL, PostgreSQL et SQLite ont l'inconvénient de devoir configurer la base de données soi-même,</li>
-<li>Poids : les systèmes plus complets comme MySQL ou PostgreSQL sont plus lourds et nécessitent plus de calculs pour fonctionner que des systèmes comme SQLite.</li>
-<li>Dans ce cours, nous commencerons par SQLite, puis nous passerons à MySQL et PostgreSQL.</li>
-</ul>
-<h2 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h2>
-<ul>
-<li>SQL signifie Structured Query Language (langage de requête structuré). C'est un langage utilisé pour interagir avec les bases de données, grâce auquel vous pouvez créer, lire, mettre à jour et supprimer des données dans une base de données. Quelques points importants sur SQL :</li>
-<li>il est structuré, comme nous le verrons dans ce cours,</li>
-<li>il a certains mots-clés qui peuvent être utilisés pour interagir avec la base de données, et</li>
-<li>c'est un langage de requête — il peut être utilisé pour poser des questions sur les données à l'intérieur d'une base de données.</li>
-<li>Dans cette leçon, nous apprendrons à écrire quelques requêtes SQL simples.</li>
-</ul>
-<h2 id="demarrer-avec-sqlite">Démarrer avec SQLite<a class="headerlink" href="#demarrer-avec-sqlite" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Il est utile de noter que SQLite n'est pas seulement quelque chose que nous utilisons pour ce cours, mais une base de données utilisée dans de nombreuses autres applications, y compris les téléphones, les applications de bureau et les sites web.</li>
-<li>Considérons maintenant une base de données de livres qui ont été présélectionnés pour le Prix International Booker. Chaque année, il y a 13 livres sur la liste restreinte et notre base de données contient 5 années de telles listes restreintes.</li>
-<li>Avant de commencer à interagir avec cette base de données :</li>
-<li>Connectez-vous à votre compte github, et ouvrez le <a href="https://github.com/KnuxV/sql_cours1#">lien suivant</a>.</li>
-<li>Ouvrez le répertoire github dans codespace</li>
-<li>L'environnement SQLite est déjà configuré dans votre Codespace ! Ouvrez-le dans le terminal.</li>
-</ul>
-<h2 id="conseils-pour-le-terminal">Conseils pour le terminal<a class="headerlink" href="#conseils-pour-le-terminal" title="Permanent link">&para;</a></h2>
-<p>Voici quelques commandes essentielles pour naviguer dans le terminal et manipuler SQLite efficacement.</p>
-<h3 id="commandes-de-base-du-terminal">Commandes de base du terminal<a class="headerlink" href="#commandes-de-base-du-terminal" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>ls</code> - Affiche le contenu du répertoire actuel</li>
-<li><code>cd dossier</code> - Change de répertoire vers "dossier"</li>
-<li><code>cd ..</code> - Remonte d'un niveau dans l'arborescence</li>
-<li><code>mkdir nom_dossier</code> - Crée un nouveau dossier</li>
-<li><code>touch nom_fichier</code> - Crée un nouveau fichier vide</li>
-<li><code>rm nom_fichier</code> - Supprime un fichier</li>
-<li><code>rm -r nom_dossier</code> - Supprime un dossier et son contenu</li>
-<li><code>pwd</code> - Affiche le chemin du répertoire actuel</li>
-<li><code>cat nom_fichier</code> - Affiche le contenu d'un fichier</li>
-</ul>
-<h3 id="astuces-generales-du-terminal">Astuces générales du terminal<a class="headerlink" href="#astuces-generales-du-terminal" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Pour effacer l'écran du terminal, appuyez sur <code>Ctrl + L</code></li>
-<li>Pour accéder aux commandes précédemment exécutées, utilisez la touche <code>↑</code> (flèche vers le haut)</li>
-<li>Pour interrompre une commande en cours d'exécution, appuyez sur <code>Ctrl + C</code></li>
-<li>Pour compléter automatiquement un nom de fichier ou de dossier, utilisez la touche <code>Tab</code></li>
-</ul>
-<h3 id="commandes-specifiques-a-sqlite">Commandes spécifiques à SQLite<a class="headerlink" href="#commandes-specifiques-a-sqlite" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>.quit</code> - Quitter l'environnement SQLite</li>
-<li><code>.help</code> - Afficher l'aide et la liste des commandes disponibles</li>
-<li><code>.tables</code> - Afficher toutes les tables dans la base de données</li>
-<li><code>.schema [nom_table]</code> - Afficher la structure d'une table</li>
-<li><code>.mode column</code> - Afficher les résultats en colonnes (plus lisible)</li>
-<li><code>.headers on</code> - Afficher les noms des colonnes dans les résultats</li>
-<li><code>.mode csv</code> - Afficher les résultats au format CSV</li>
-<li><code>.mode box</code> - Afficher les résultats dans des cadres (très lisible)</li>
-<li><code>.open nom_fichier.db</code> - Ouvrir une base de données</li>
-</ul>
-<h3 id="conseils-pour-les-requetes-sql">Conseils pour les requêtes SQL<a class="headerlink" href="#conseils-pour-les-requetes-sql" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Si votre requête SQL est trop longue, vous pouvez appuyer sur <code>Entrée</code> et continuer sur la ligne suivante</li>
-<li>N'oubliez pas de terminer vos requêtes SQL par un point-virgule <code>;</code></li>
-<li>Pour exécuter un fichier SQL, utilisez <code>.read nom_fichier.sql</code></li>
-<li>Pour enregistrer les résultats d'une requête dans un fichier, utilisez <code>.output nom_fichier.txt</code></li>
-</ul>
-<h2 id="select"><code>SELECT</code><a class="headerlink" href="#select" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Quelles données se trouvent réellement dans notre base de données ? Pour répondre à cette question, nous utiliserons notre premier mot-clé SQL, <code>SELECT</code>, qui nous permet de sélectionner certaines (ou toutes) les lignes d'un tableau à l'intérieur de la base de données.</li>
-<li>Dans l'environnement SQLite, exécutez :</li>
-</ul>
-<pre><code class="language-sql">SELECT *
-FROM &quot;longlist&quot;;
-</code></pre>
-<p>Cela sélectionne toutes les lignes du tableau appelé <code>longlist</code>.</p>
-<ul>
-<li>La sortie que nous obtenons contient toutes les colonnes de toutes les lignes de ce tableau, ce qui représente beaucoup de données. Nous pouvons la simplifier en sélectionnant une colonne particulière, par exemple le titre, dans le tableau. Essayons :</li>
-</ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;
-FROM &quot;longlist&quot;;
-</code></pre>
-<ul>
-<li>Maintenant, nous voyons une liste des titres dans ce tableau. Mais que faire si nous voulons voir les titres et les auteurs dans nos résultats de recherche ? Pour cela, nous exécutons :</li>
-</ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;author&quot;
-FROM longlist;
-</code></pre>
-<h2 id="limit"><code>LIMIT</code><a class="headerlink" href="#limit" title="Permanent link">&para;</a></h2>
-<ul>
+<h3 id="types-de-valeurs-de-donnees">Types de valeurs de données<a class="headerlink" href="#types-de-valeurs-de-donnees" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Données numériques (Numeric Data)</strong></li>
+<li><strong>Entiers (Integers)</strong> (ex: 1, 42, -7) : nombres sans partie décimale</li>
+<li><strong>Réels/Flottants (Floats)</strong> (ex: 3.14, 0.5, -2.75) : nombres avec partie décimale</li>
 <li>
-<p>Si une base de données contient des millions de lignes, il ne serait peut-être pas judicieux de sélectionner toutes ses lignes. Au lieu de cela, nous pourrions simplement vouloir jeter un coup d'œil aux données qu'elle contient. Nous utilisons le mot-clé SQL <code>LIMIT</code> pour spécifier le nombre de lignes dans la sortie de la requête.</p>
+<p><strong>Booléens (Booleans)</strong> (Vrai/Faux, 1/0) : valeurs binaires représentant une condition</p>
 </li>
 <li>
-<p><code>sql
-  SELECT "title"
-  FROM "longlist"
-  LIMIT 10;</code></p>
+<p><strong>Données alphanumériques (Alphanumeric Data)</strong></p>
 </li>
-</ul>
-<pre><code>
-Cette requête nous donne les 10 premiers titres de la base de données. Les titres sont triés de la même manière dans la sortie de cette requête que dans la base de données.
-​
-## `WHERE`
-​
-- Le mot-clé `WHERE` est utilisé pour sélectionner des lignes en fonction d'une condition ; il affiche les lignes pour lesquelles la condition spécifiée est vraie.
-- ```sql
-SELECT &quot;title&quot;, &quot;author&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;year&quot; = 2023;
-</code></pre>
-<p>Cela nous donne les titres et les auteurs des livres présélectionnés en 2023. Notez que <code>2023</code> n'est pas entre guillemets car c'est un entier (integer), et non une chaîne de caractères (string) ou un identifiant.</p>
+<li><strong>Chaînes de caractères (Strings)</strong> (ex: "Bonjour", "Paris", "A123") : séquences de caractères</li>
+<li>
+<p><strong>Caractères (Characters)</strong> (ex: 'A', '9', '&amp;') : symboles individuels</p>
+</li>
+<li>
+<p><strong>Données temporelles (Temporal Data)</strong></p>
+</li>
+<li><strong>Dates</strong> (ex: 2023-10-01) : jour, mois, année</li>
+<li><strong>Heures (Times)</strong> (ex: 14:30:00) : heure, minute, seconde</li>
+<li>
+<p><strong>Horodatages (Timestamps)</strong> (ex: 2023-10-01 14:30:00) : combinaison date et heure</p>
+</li>
+<li>
+<p><strong>Données spéciales (Special Data)</strong></p>
+</li>
+<li><strong>BLOB (Binary Large Object)</strong> : images, fichiers audio, vidéos</li>
+<li><strong>Données géospatiales (Geospatial Data)</strong> : coordonnées, formes, régions</li>
+<li><strong>Données JSON/XML</strong> : structures hiérarchiques de données</li>
+</ol>
+<h3 id="exemples-concrets-de-donnees">Exemples concrets de données<a class="headerlink" href="#exemples-concrets-de-donnees" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Les opérateurs qui peuvent être utilisés pour spécifier des conditions en SQL sont <code>=</code> (“égal à”), <code>!=</code> (“différent de”) et <code>&lt;&gt;</code> (également “différent de”).</li>
-<li>Pour sélectionner les livres qui ne sont pas des couvertures rigides (hardcovers), nous pouvons exécuter la requête :</li>
+<li><strong>Informations personnelles</strong> :</li>
+<li>Nom : "Alice Dupont"</li>
+<li>Âge : 30</li>
+<li>Adresse email : alice.dupont@example.com</li>
+<li>
+<p>Numéro de téléphone : +33 6 12 34 56 78</p>
+</li>
+<li>
+<p><strong>Données de transaction</strong> :</p>
+</li>
+<li>Identifiant de transaction : TX-12345</li>
+<li>Date : 2023-10-01</li>
+<li>Montant : 150,75 €</li>
+<li>
+<p>Méthode de paiement : "Carte de crédit"</p>
+</li>
+<li>
+<p><strong>Données météorologiques</strong> :</p>
+</li>
+<li>Température : 22,5°C</li>
+<li>Humidité : 65%</li>
+<li>Vitesse du vent : 12 km/h</li>
+<li>
+<p>Précipitations : 0 mm</p>
+</li>
+<li>
+<p><strong>Données de produit</strong> :</p>
+</li>
+<li>Code produit : "PRD-789"</li>
+<li>Nom : "Smartphone Galaxy S23"</li>
+<li>Prix : 899,99 €</li>
+<li>Stock disponible : 45 unités</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;format&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;format&quot; != 'hardcover';
-</code></pre>
-<pre><code>- Notez que `hardcover` est entre guillemets simples car c'est une chaîne de caractères SQL et non un identifiant.
-</code></pre>
+<h3 id="le-cycle-de-vie-des-donnees">Le cycle de vie des données<a class="headerlink" href="#le-cycle-de-vie-des-donnees" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Création/Acquisition</strong> : collecte de données brutes</li>
+<li><strong>Stockage</strong> : enregistrement dans un support (disque dur, base de données)</li>
+<li><strong>Traitement</strong> : nettoyage, transformation, agrégation</li>
+<li><strong>Analyse</strong> : extraction d'informations utiles</li>
+<li><strong>Visualisation/Utilisation</strong> : présentation des résultats</li>
+<li><strong>Archivage/Suppression</strong> : conservation à long terme ou effacement</li>
+</ol>
+<h2 id="2-types-de-bases-de-donnees">2. Types de Bases de Données<a class="headerlink" href="#2-types-de-bases-de-donnees" title="Permanent link">&para;</a></h2>
+<p>Une base de données (database) est une collection organisée de données structurées, stockées électroniquement dans un système informatique. Elle est conçue pour stocker, gérer et récupérer efficacement des informations.</p>
+<h3 id="a-bases-de-donnees-relationnelles-relational-databases">a. Bases de Données Relationnelles (Relational Databases)<a class="headerlink" href="#a-bases-de-donnees-relationnelles-relational-databases" title="Permanent link">&para;</a></h3>
+<h4 id="structure-et-principes">Structure et principes<a class="headerlink" href="#structure-et-principes" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>!=</code> peut être remplacé par l'opérateur <code>&lt;&gt;</code> pour obtenir les mêmes résultats. La requête modifiée serait :</li>
+<li><strong>Tables</strong> (ou relations) : les données sont organisées en tableaux composés de lignes (enregistrements) et de colonnes (attributs)</li>
+<li><strong>Schéma</strong> : structure prédéfinie qui spécifie les types de données pour chaque colonne</li>
+<li><strong>Clés primaires (Primary Keys)</strong> : identifiants uniques pour chaque enregistrement</li>
+<li><strong>Clés étrangères (Foreign Keys)</strong> : références aux clés primaires d'autres tables, créant des relations</li>
+<li><strong>Normalisation</strong> : processus d'organisation des données pour réduire la redondance</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;format&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;format&quot; &lt;&gt; 'hardcover';
-</code></pre>
+<h4 id="types-de-relations">Types de relations<a class="headerlink" href="#types-de-relations" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Une autre façon d'obtenir les mêmes résultats est d'utiliser le mot-clé SQL <code>NOT</code>. La requête modifiée serait :</li>
+<li><strong>One-to-One (1:1)</strong> : Une ligne d'une table est associée à une seule ligne d'une autre table.</li>
+<li>Exemple : Une personne a un seul passeport, et un passeport appartient à une seule personne.</li>
+<li><strong>One-to-Many (1:N)</strong> : Une ligne d'une table est associée à plusieurs lignes d'une autre table.</li>
+<li>Exemple : Un auteur peut écrire plusieurs livres, mais chaque livre a un seul auteur.</li>
+<li><strong>Many-to-Many (N:N)</strong> : Plusieurs lignes d'une table sont associées à plusieurs lignes d'une autre table.</li>
+<li>Exemple : Des étudiants peuvent s'inscrire à plusieurs cours, et chaque cours peut avoir plusieurs étudiants.</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;format&quot;
-FROM &quot;longlist&quot;
-WHERE NOT &quot;format&quot; = 'hardcover';
-</code></pre>
+<h4 id="caracteristiques-principales">Caractéristiques principales<a class="headerlink" href="#caracteristiques-principales" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Pour combiner des conditions, nous pouvons utiliser les mots-clés SQL <code>AND</code> et <code>OR</code>. Nous pouvons également utiliser des parenthèses pour indiquer comment combiner les conditions dans une instruction conditionnelle composée.</li>
-<li>Pour sélectionner les titres et les auteurs des livres présélectionnés en 2022 ou 2023 :</li>
+<li><strong>Langage SQL (Structured Query Language)</strong> pour interagir avec les données</li>
+<li><strong>Jointures (Joins)</strong> entre tables pour combiner des données connexes</li>
+<li><strong>Contraintes d'intégrité</strong> pour assurer la qualité des données</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;author&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;year&quot; = 2022 OR &quot;year&quot; = 2023;
-</code></pre>
+<h4 id="exemples-de-sgbdr-populaires">Exemples de SGBDR populaires<a class="headerlink" href="#exemples-de-sgbdr-populaires" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Pour sélectionner les livres présélectionnés en 2022 ou 2023 qui n'étaient pas des couvertures rigides :</li>
+<li><strong>MySQL</strong> : open-source, très utilisé pour les applications web</li>
+<li><strong>PostgreSQL</strong> : open-source, fonctionnalités avancées, extensible</li>
+<li><strong>Oracle Database</strong> : solution d'entreprise robuste, fonctionnalités complètes</li>
+<li><strong>Microsoft SQL Server</strong> : bien intégré à l'écosystème Microsoft</li>
+<li><strong>SQLite</strong> : base de données légère, intégrée à l'application, sans serveur</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;format&quot;
-FROM &quot;longlist&quot;
-WHERE (&quot;year&quot; = 2022 OR &quot;year&quot; = 2023) AND &quot;format&quot; != 'hardcover';
+<h4 id="exemple-simplifie">Exemple simplifié<a class="headerlink" href="#exemple-simplifie" title="Permanent link">&para;</a></h4>
+<h4 id="1-relationnel">1. Relationnel<a class="headerlink" href="#1-relationnel" title="Permanent link">&para;</a></h4>
+<h4 id="table-clients">Table Clients:<a class="headerlink" href="#table-clients" title="Permanent link">&para;</a></h4>
+<pre><code class="language-markdown">| ID_Client | Nom     | Prénom  | Email               | Téléphone      |
+|-----------|---------|---------|---------------------|----------------|
+| 1         | Dupont  | Marie   | marie.d@example.com | +33612345678   |
+| 2         | Martin  | Jean    | jean.m@example.com  | +33698765432   |
+| 3         | Durand  | Sophie  | sophie.d@example.com| +33655555555   |
 </code></pre>
-<p>Ici, les parenthèses indiquent que la clause <code>OR</code> doit être évaluée avant la clause <code>AND</code>.</p>
-<h2 id="null"><code>NULL</code><a class="headerlink" href="#null" title="Permanent link">&para;</a></h2>
+<h4 id="table-vendeurs">Table Vendeurs:<a class="headerlink" href="#table-vendeurs" title="Permanent link">&para;</a></h4>
+<pre><code>| ID_Vendeur | Nom     | Prénom  | Email               | Téléphone      |
+|------------|---------|---------|---------------------|----------------|
+| 1          | Lefevre | Pierre  | pierre.l@example.com| +33611111111   |
+| 2          | Moreau  | Paul    | paul.m@example.com  | +33622222222   |
+| 3          | Cheval  | Claire  | claire.c@example.com| +33633333333   |
+</code></pre>
+<h4 id="table-commandes">Table Commandes:<a class="headerlink" href="#table-commandes" title="Permanent link">&para;</a></h4>
+<pre><code>| ID_Commande | ID_Client | ID_Vendeur | Date       | Montant | Statut      |
+|-------------|-----------|------------|------------|---------|-------------|
+| 101         | 1         | 1          | 2023-09-15 | 125,50  | Livré       |
+| 102         | 2         | 2          | 2023-09-20 | 78,90   | En cours    |
+| 103         | 1         | 1          | 2023-10-01 | 45,00   | En attente  |
+| 104         | 3         | 3          | 2023-10-05 | 200,00  | Livré       |
+| 105         | 2         | 2          | 2023-10-10 | 99,99   | En cours    |
+| 106         | 3         | 1          | 2023-10-15 | 50,00   | En attente  |
+</code></pre>
+<h4 id="2-non-relationel-excel">2. Non-Relationel (Excel)<a class="headerlink" href="#2-non-relationel-excel" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>ID_Commande</th>
+<th>ID_Client</th>
+<th>Nom_Client</th>
+<th>Prénom_Client</th>
+<th>Email_Client</th>
+<th>Téléphone_Client</th>
+<th>ID_Vendeur</th>
+<th>Nom_Vendeur</th>
+<th>Prénom_Vendeur</th>
+<th>Email_Vendeur</th>
+<th>Téléphone_Vendeur</th>
+<th>Date</th>
+<th>Montant</th>
+<th>Statut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>1</td>
+<td>Dupont</td>
+<td>Marie</td>
+<td>marie.d@example.com</td>
+<td>+33612345678</td>
+<td>1</td>
+<td>Lefevre</td>
+<td>Pierre</td>
+<td>pierre.l@example.com</td>
+<td>+33611111111</td>
+<td>2023-09-15</td>
+<td>125,50</td>
+<td>Livré</td>
+</tr>
+<tr>
+<td>102</td>
+<td>2</td>
+<td>Martin</td>
+<td>Jean</td>
+<td>jean.m@example.com</td>
+<td>+33698765432</td>
+<td>2</td>
+<td>Moreau</td>
+<td>Paul</td>
+<td>paul.m@example.com</td>
+<td>+33622222222</td>
+<td>2023-09-20</td>
+<td>78,90</td>
+<td>En cours</td>
+</tr>
+<tr>
+<td>103</td>
+<td>1</td>
+<td>Dupont</td>
+<td>Marie</td>
+<td>marie.d@example.com</td>
+<td>+33612345678</td>
+<td>1</td>
+<td>Lefevre</td>
+<td>Pierre</td>
+<td>pierre.l@example.com</td>
+<td>+33611111111</td>
+<td>2023-10-01</td>
+<td>45,00</td>
+<td>En attente</td>
+</tr>
+<tr>
+<td>104</td>
+<td>3</td>
+<td>Durand</td>
+<td>Sophie</td>
+<td>sophie.d@example.com</td>
+<td>+33655555555</td>
+<td>3</td>
+<td>Cheval</td>
+<td>Claire</td>
+<td>claire.c@example.com</td>
+<td>+33633333333</td>
+<td>2023-10-05</td>
+<td>200,00</td>
+<td>Livré</td>
+</tr>
+<tr>
+<td>105</td>
+<td>2</td>
+<td>Martin</td>
+<td>Jean</td>
+<td>jean.m@example.com</td>
+<td>+33698765432</td>
+<td>2</td>
+<td>Moreau</td>
+<td>Paul</td>
+<td>paul.m@example.com</td>
+<td>+33622222222</td>
+<td>2023-10-10</td>
+<td>99,99</td>
+<td>En cours</td>
+</tr>
+<tr>
+<td>106</td>
+<td>3</td>
+<td>Durand</td>
+<td>Sophie</td>
+<td>sophie.d@example.com</td>
+<td>+33655555555</td>
+<td>1</td>
+<td>Lefevre</td>
+<td>Pierre</td>
+<td>pierre.l@example.com</td>
+<td>+33611111111</td>
+<td>2023-10-15</td>
+<td>50,00</td>
+<td>En attente</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b-bases-de-donnees-hierarchiques-hierarchical-databases">b. Bases de Données Hiérarchiques (Hierarchical Databases)<a class="headerlink" href="#b-bases-de-donnees-hierarchiques-hierarchical-databases" title="Permanent link">&para;</a></h3>
+<h4 id="structure-et-principes_1">Structure et principes<a class="headerlink" href="#structure-et-principes_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Il est possible que les tableaux aient des données manquantes. <code>NULL</code> est un type utilisé pour indiquer que certaines données n'ont pas de valeur, ou n'existent pas dans le tableau.</li>
-<li>Par exemple, les livres de notre base de données ont un traducteur en plus d'un auteur. Cependant, seuls certains des livres ont été traduits en anglais. Pour les autres livres, la valeur du traducteur sera <code>NULL</code>.</li>
-<li>Les conditions utilisées avec <code>NULL</code> sont <code>IS NULL</code> et <code>IS NOT NULL</code>.</li>
-<li>Pour sélectionner les livres pour lesquels les traducteurs n'existent pas, nous pouvons exécuter :</li>
+<li><strong>Organisation arborescente</strong> des données (structure parent-enfant)</li>
+<li>Chaque enregistrement (nœud) a un seul parent, mais peut avoir plusieurs enfants</li>
+<li>Les données sont accédées en suivant un chemin hiérarchique depuis la racine</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;translator&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;translator&quot; IS NULL;
-</code></pre>
+<h4 id="caracteristiques-principales_1">Caractéristiques principales<a class="headerlink" href="#caracteristiques-principales_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Essayons l'inverse : sélectionner les livres pour lesquels les traducteurs existent.</li>
+<li><strong>Simplicité conceptuelle</strong> facile à comprendre</li>
+<li><strong>Accès rapide</strong> aux données lorsque la structure hiérarchique est connue</li>
+<li><strong>Relations un-à-plusieurs</strong> bien gérées</li>
+<li><strong>Navigation efficace</strong> de parent à enfant</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;translator&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;translator&quot; IS NOT NULL;
-</code></pre>
-<h2 id="like"><code>LIKE</code><a class="headerlink" href="#like" title="Permanent link">&para;</a></h2>
+<h4 id="exemples-de-sgbd-hierarchiques">Exemples de SGBD hiérarchiques<a class="headerlink" href="#exemples-de-sgbd-hierarchiques" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Ce mot-clé est utilisé pour sélectionner des données qui correspondent approximativement à la chaîne de caractères spécifiée. Par exemple, <code>LIKE</code> pourrait être utilisé pour sélectionner des livres qui ont un certain mot ou une certaine phrase dans leur titre.</li>
-<li><code>LIKE</code> est combiné avec les opérateurs <code>%</code> (correspond à n'importe quels caractères autour d'une chaîne donnée) et <code>_</code> (correspond à un seul caractère).</li>
-<li>Pour sélectionner les livres avec le mot “love” dans leurs titres, nous pouvons exécuter :</li>
+<li><strong>IBM Information Management System (IMS)</strong> : utilisé dans les mainframes</li>
+<li><strong>Windows Registry</strong> : stockage hiérarchique de la configuration Windows</li>
+<li><strong>Systèmes de fichiers</strong> : organisation des fichiers et dossiers</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;title&quot; LIKE '%love%';
-</code></pre>
-<p><code>%</code> correspond à 0 ou plusieurs caractères, donc cette requête correspondra aux titres de livres qui ont 0 ou plusieurs caractères avant et après “love” — c'est-à-dire, les titres qui contiennent “love”.</p>
+<h4 id="cas-dutilisation-typiques">Cas d'utilisation typiques<a class="headerlink" href="#cas-dutilisation-typiques" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Pour sélectionner les livres dont le titre commence par “The”, nous pouvons exécuter :</li>
+<li>Systèmes bancaires traditionnels</li>
+<li>Systèmes de gestion de documents</li>
+<li>Applications nécessitant une navigation verticale rapide</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;title&quot; LIKE 'The%';
+<h4 id="exemple-simplifie_1">Exemple simplifié<a class="headerlink" href="#exemple-simplifie_1" title="Permanent link">&para;</a></h4>
+<pre><code>Organisation (Racine)
+├── Département Marketing
+│   ├── Équipe Médias Sociaux
+│   │   ├── Employé: Alice
+│   │   └── Employé: Bob
+│   └── Équipe Publicité
+│       └── Employé: Charles
+└── Département Technique
+    ├── Équipe Développement
+    │   ├── Employé: David
+    │   └── Employé: Emma
+    └── Équipe Infrastructure
+        └── Employé: Frank
 </code></pre>
+<h3 id="c-bases-de-donnees-reseau-network-databases">c. Bases de Données Réseau (Network Databases)<a class="headerlink" href="#c-bases-de-donnees-reseau-network-databases" title="Permanent link">&para;</a></h3>
+<h4 id="structure-et-principes_2">Structure et principes<a class="headerlink" href="#structure-et-principes_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li>La requête ci-dessus pourrait également retourner des livres dont les titres commencent par “Their” ou “They”. Pour sélectionner uniquement les livres dont les titres commencent par le mot “The”, nous pouvons ajouter un espace.</li>
+<li>Extension du modèle hiérarchique permettant des relations plusieurs-à-plusieurs</li>
+<li>Les enregistrements sont organisés en "ensembles" où un enregistrement propriétaire peut être lié à plusieurs enregistrements membres</li>
+<li>Un enregistrement membre peut appartenir à plusieurs ensembles (contrairement au modèle hiérarchique)</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;title&quot; LIKE 'The %';
-</code></pre>
+<h4 id="caracteristiques-principales_2">Caractéristiques principales<a class="headerlink" href="#caracteristiques-principales_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Étant donné qu'il y a un livre dans le tableau dont le nom est soit “Pyre” soit “Pire”, nous pouvons le sélectionner en exécutant :</li>
+<li><strong>Flexibilité</strong> dans la représentation des relations complexes</li>
+<li><strong>Navigation bidirectionnelle</strong> entre les enregistrements liés</li>
+<li><strong>Performances optimisées</strong> pour les chemins d'accès prédéfinis</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;title&quot; LIKE 'P_re';
-</code></pre>
-<p>Cette requête pourrait également retourner des titres de livres comme “Pore” ou “Pure” s'ils existaient dans notre base de données, car <code>_</code> correspond à n'importe quel caractère unique.</p>
-<h2 id="plages">Plages<a class="headerlink" href="#plages" title="Permanent link">&para;</a></h2>
+<h4 id="exemples-de-sgbd-reseau">Exemples de SGBD réseau<a class="headerlink" href="#exemples-de-sgbd-reseau" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Nous pouvons également utiliser les opérateurs <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> et <code>&gt;=</code> dans nos conditions pour correspondre à une plage de valeurs. Par exemple, pour sélectionner tous les livres présélectionnés entre les années 2019 et 2022 (inclus), nous pouvons exécuter :</li>
+<li><strong>Integrated Data Store (IDS)</strong> développé par Charles Bachman</li>
+<li><strong>IDMS</strong> (Integrated Database Management System)</li>
+<li><strong>RDM Embedded</strong> (pour systèmes embarqués)</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;author&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;year&quot; &gt;= 2019 AND &quot;year&quot; &lt;= 2022;
-</code></pre>
+<h4 id="cas-dutilisation-typiques_1">Cas d'utilisation typiques<a class="headerlink" href="#cas-dutilisation-typiques_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Une autre façon d'obtenir les mêmes résultats est d'utiliser les mots-clés <code>BETWEEN</code> et <code>AND</code> pour spécifier des plages inclusives. Nous pouvons exécuter :</li>
+<li>Applications industrielles complexes</li>
+<li>Systèmes de fabrication</li>
+<li>Certains systèmes bancaires hérités</li>
 </ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;author&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;year&quot; BETWEEN 2019 AND 2022;
-</code></pre>
-<ul>
-<li>Pour sélectionner les livres qui ont une note de 4.0 ou plus, nous pouvons exécuter :</li>
-</ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;rating&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;rating&quot; &gt; 4.0;
-</code></pre>
-<ul>
-<li>Pour limiter davantage les livres sélectionnés par le nombre de votes, et n'avoir que les livres avec au moins 10 000 votes, nous pouvons exécuter :</li>
-</ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;rating&quot;, &quot;votes&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;rating&quot; &gt; 4.0 AND &quot;votes&quot; &gt; 10000;
-</code></pre>
-<ul>
-<li>Pour sélectionner les livres qui ont moins de 300 pages, nous pouvons exécuter :</li>
-</ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;pages&quot;
-FROM &quot;longlist&quot;
-WHERE &quot;pages&quot; &lt; 300;
-</code></pre>
-<h2 id="order-by"><code>ORDER BY</code><a class="headerlink" href="#order-by" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Le mot-clé <code>ORDER BY</code> nous permet d'organiser les lignes retournées dans un certain ordre spécifié.</li>
-<li>La requête suivante sélectionne les 10 livres les moins bien notés de notre base de données.</li>
-</ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;rating&quot;
-FROM &quot;longlist&quot;
-ORDER BY &quot;rating&quot; LIMIT 10;
-</code></pre>
-<ul>
-<li>Notez que nous obtenons les 10 livres les moins bien notés car <code>ORDER BY</code> choisit l'ordre croissant par défaut.</li>
-<li>Au lieu de cela, pour sélectionner les 10 meilleurs livres :</li>
-</ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;rating&quot;
-FROM &quot;longlist&quot;
-ORDER BY &quot;rating&quot; DESC LIMIT 10;
-</code></pre>
-<p>Notez l'utilisation du mot-clé SQL <code>DESC</code> pour spécifier l'ordre décroissant. <code>ASC</code> peut être utilisé pour spécifier explicitement l'ordre croissant.</p>
-<ul>
-<li>Pour sélectionner les 10 meilleurs livres par note et inclure également le nombre de votes comme critère de départage, nous pouvons exécuter :</li>
-</ul>
-<pre><code class="language-sql">SELECT &quot;title&quot;, &quot;rating&quot;, &quot;votes&quot;
-FROM &quot;longlist&quot;
-ORDER BY &quot;rating&quot; DESC, &quot;votes&quot; DESC
-LIMIT 10;
-</code></pre>
-<p>Notez que pour chaque colonne dans la clause <code>ORDER BY</code>, nous spécifions l'ordre croissant ou décroissant.</p>
-<h2 id="fonctions-dagregation">Fonctions d'agrégation<a class="headerlink" href="#fonctions-dagregation" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>COUNT</code>, <code>AVG</code>, <code>MIN</code>, <code>MAX</code>, et <code>SUM</code> sont appelées fonctions d'agrégation et nous permettent d'effectuer les opérations correspondantes sur plusieurs lignes de données. Par leur nature même, chacune des fonctions d'agrégation suivantes ne retournera qu'une seule sortie — la valeur agrégée.</li>
-<li>Pour trouver la note moyenne de tous les livres dans la base de données :</li>
-</ul>
-<pre><code class="language-sql">SELECT AVG(&quot;rating&quot;)
-FROM &quot;longlist&quot;;
-</code></pre>
-<ul>
-<li>Pour arrondir la note moyenne à 2 décimales :</li>
-</ul>
-<pre><code class="language-sql">SELECT ROUND(AVG(&quot;rating&quot;), 2)
-FROM &quot;longlist&quot;;
-</code></pre>
-<ul>
-<li>Pour renommer la colonne dans laquelle les résultats sont affichés :</li>
-</ul>
-<pre><code class="language-sql">SELECT ROUND(AVG(&quot;rating&quot;), 2) AS &quot;note moyenne&quot;
-FROM &quot;longlist&quot;;
-</code></pre>
-<p>Notez l'utilisation du mot-clé SQL <code>AS</code> pour renommer les colonnes.</p>
-<ul>
-<li>Pour sélectionner la note maximale dans la base de données :</li>
-</ul>
-<pre><code class="language-sql">SELECT MAX(&quot;rating&quot;)
-FROM &quot;longlist&quot;;
-</code></pre>
-<ul>
-<li>Pour sélectionner la note minimale dans la base de données :</li>
-</ul>
-<pre><code class="language-sql">SELECT MIN(&quot;rating&quot;)
-FROM &quot;longlist&quot;;
-</code></pre>
-<ul>
-<li>Pour compter le nombre total de votes dans la base de données :</li>
-</ul>
-<pre><code class="language-sql">SELECT SUM(&quot;votes&quot;)
-FROM &quot;longlist&quot;;
-</code></pre>
-<ul>
-<li>Pour compter le nombre de livres dans notre base de données :</li>
-</ul>
-<pre><code class="language-sql">SELECT COUNT(*)
-FROM &quot;longlist&quot;;
-</code></pre>
-<pre><code>- Souvenez-vous que nous avons utilisé `*` pour sélectionner chaque ligne et colonne de la base de données. Dans ce cas, nous essayons de compter chaque ligne de la base de données et donc nous utilisons le `*`.
-</code></pre>
-<ul>
-<li>Pour compter le nombre de traducteurs :</li>
-</ul>
-<pre><code class="language-sql">SELECT COUNT(&quot;translator&quot;)
-FROM &quot;longlist&quot;;
-</code></pre>
-<pre><code>- Nous observons que le nombre de traducteurs est inférieur au nombre de lignes dans la base de données. C'est parce que la fonction `COUNT` ne compte pas les valeurs `NULL`.
-</code></pre>
-<ul>
-<li>Pour compter le nombre d'éditeurs dans la base de données :</li>
-</ul>
-<pre><code class="language-sql">SELECT COUNT(&quot;publisher&quot;)
-FROM &quot;longlist&quot;;
-</code></pre>
-<ul>
-<li>Comme pour les traducteurs, cette requête comptera le nombre de valeurs d'éditeurs qui ne sont pas <code>NULL</code>. Cependant, cela peut inclure des doublons. Un autre mot-clé SQL, <code>DISTINCT</code>, peut être utilisé pour s'assurer que seules les valeurs distinctes sont comptées.</li>
-</ul>
-<pre><code class="language-sql">SELECT COUNT(DISTINCT &quot;publisher&quot;)
-FROM &quot;longlist&quot;;
-</code></pre></div>
-        
-        
-    </div>
+<h4 id="exemple-simplifie_2">Exemple simplifié<a class="headerlink" href="#exemple-simplifie_2" title="Permanent link">&para;</a></h4>
+<pre><code>Étudiants                     Cours
+  │                              │
+Alice ── [inscription] ──&gt; Mathématiques
+  │                              │
+  │── [inscription] ──&gt; Sciences
+  │
+Bob ── [inscription] ──&gt; Histoire
+  │
+Charlie ── [inscription] ──&gt; Mathématiques
+  │                              │
+  │── [inscription] ──&gt; Histoire
 
-    
-      <footer class="col-md-12 text-center">
-          
-          
-            <hr>
-            <p>
-            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
-            </p>
-          
+</code></pre>
+<h3 id="d-bases-de-donnees-orientees-objet-object-oriented-databases">d. Bases de Données Orientées Objet (Object-Oriented Databases)<a class="headerlink" href="#d-bases-de-donnees-orientees-objet-object-oriented-databases" title="Permanent link">&para;</a></h3>
+<h4 id="structure-et-principes_3">Structure et principes<a class="headerlink" href="#structure-et-principes_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Données stockées sous forme d'objets</strong>, comme dans la programmation orientée objet</li>
+<li>Les objets encapsulent à la fois les données (attributs) et les comportements (méthodes)</li>
+<li><strong>Héritage</strong> et <strong>polymorphisme</strong> sont supportés</li>
+<li><strong>Identité d'objet</strong> unique pour chaque instance</li>
+</ul>
+<h4 id="caracteristiques-principales_3">Caractéristiques principales<a class="headerlink" href="#caracteristiques-principales_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Correspondance directe</strong> avec les langages orientés objet</li>
+<li><strong>Types de données complexes</strong> facilement représentables</li>
+<li><strong>Encapsulation</strong> des données et comportements</li>
+</ul>
+<h4 id="exemples-de-sgbd-orientes-objet">Exemples de SGBD orientés objet<a class="headerlink" href="#exemples-de-sgbd-orientes-objet" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>db4o</strong> (database for objects)</li>
+<li><strong>ObjectDB</strong></li>
+<li><strong>Versant Object Database</strong></li>
+<li><strong>ObjectStore</strong></li>
+</ul>
+<h4 id="cas-dutilisation-typiques_2">Cas d'utilisation typiques<a class="headerlink" href="#cas-dutilisation-typiques_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Applications de CAO (Conception Assistée par Ordinateur)</li>
+<li>Systèmes multimédias</li>
+<li>Applications scientifiques avec structures de données complexes</li>
+</ul>
+<h4 id="exemple-simplifie_3">Exemple simplifié<a class="headerlink" href="#exemple-simplifie_3" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python"># Définition d'une classe (objet)
+class Personne:
+    def __init__(self, nom: str, prenom: str, date_naissance: date, contacts: List[str] = None):
+        self.nom = nom
+        self.prenom = prenom
+        self.date_naissance = date_naissance
+        self.contacts = contacts if contacts is not None else []
 
-          
-          
-      </footer>
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    def calculer_age(self) -&gt; int:
+        # Méthode pour calculer l'âge
+        today = date.today()
+        age = today.year - self.date_naissance.year
+        if (today.month, today.day) &lt; (self.date_naissance.month, self.date_naissance.day):
+            age -= 1
+        return age
 
-    
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-        
-    <script>hljs.initHighlightingOnLoad();</script>
-    
+# Exemple d'utilisation
+pers1 = Personne(&quot;Dupont&quot;, &quot;Marie&quot;, date(1985, 5, 15))
+</code></pre>
+<h3 id="e-bases-de-donnees-nosql-nosql-databases">e. Bases de Données NoSQL (NoSQL Databases)<a class="headerlink" href="#e-bases-de-donnees-nosql-nosql-databases" title="Permanent link">&para;</a></h3>
+<h4 id="structure-et-principes_4">Structure et principes<a class="headerlink" href="#structure-et-principes_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>"Not Only SQL"</strong> : alternatives aux bases de données relationnelles</li>
+<li><strong>Schéma flexible</strong> ou sans schéma prédéfini</li>
+<li>Conçues pour la scalabilité horizontale (distribution sur plusieurs serveurs)</li>
+<li>Optimisées pour des cas d'utilisation spécifiques</li>
+</ul>
+<h4 id="types-principaux-de-bases-de-donnees-nosql">Types principaux de bases de données NoSQL<a class="headerlink" href="#types-principaux-de-bases-de-donnees-nosql" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Bases de données orientées documents (Document-Oriented Databases)</strong></p>
+</li>
+<li>
+<p>Stockent des documents (généralement JSON ou BSON)</p>
+</li>
+<li>Chaque document contient toutes ses données associées</li>
+<li><strong>Exemples</strong> : MongoDB, CouchDB, Firestore</li>
+<li><strong>Cas d'utilisation</strong> : applications web, catalogues, gestion de contenu</li>
+</ol>
+<p>Exemple (document JSON):
+   <code>json
+   [
+     {
+       "id": "client-123",
+       "nom": "Dupont",
+       "prenom": "Marie",
+       "email": "marie.d@example.com",
+       "adresses": [
+         {
+           "type": "livraison",
+           "rue": "123 rue de Paris",
+           "ville": "Lyon"
+         },
+         {
+           "type": "facturation",
+           "rue": "45 avenue Victor Hugo",
+           "ville": "Paris"
+         }
+       ]
+     },
+     {
+       "id": "client-124",
+       "nom": "Martin",
+       "prenom": "Jean",
+       "email": "jean.m@example.com",
+       "adresse": {
+         "type": "principale",
+         "rue": "78 boulevard Saint-Germain",
+         "ville": "Marseille"
+       }
+     }
+   ]</code></p>
+<ol>
+<li><strong>Bases de données clé-valeur (Key-Value Databases)</strong></li>
+<li>Stockent des paires clé-valeur simples</li>
+<li>Très rapides pour les opérations de lecture/écriture</li>
+<li><strong>Exemples</strong> : Redis, DynamoDB, Riak</li>
+<li><strong>Cas d'utilisation</strong> : caching, sessions utilisateur, préférences</li>
+</ol>
+<p>Exemple:
+   ```
+   client-123:nom = "Dupont"
+   client-123:prenom = "Marie"
+   client-123:email = "marie.d@example.com"
+   client-123:adresse:livraison:rue = "123 rue de Paris"
+   client-123:adresse:livraison:ville = "Lyon"
+   client-123:adresse:facturation:rue = "45 avenue Victor Hugo"
+   client-123:adresse:facturation:ville = "Paris"</p>
+<p>or </p>
+<p>client-123 = {
+     "nom": "Dupont",
+     "prenom": "Marie",
+     "email": "marie.d@example.com",
+     "adresses": [
+       {
+         "type": "livraison",
+         "rue": "123 rue de Paris",
+         "ville": "Lyon"
+       },
+       {
+         "type": "facturation",
+         "rue": "45 avenue Victor Hugo",
+         "ville": "Paris"
+       }
+     ]
+   }
+   ```</p>
+<ol>
+<li>
+<p><strong>Bases de données en colonnes (Column-Family Databases)</strong></p>
+</li>
+<li>
+<p>Stockent les données par colonnes plutôt que par lignes</p>
+</li>
+<li>Optimisées pour les requêtes analytiques sur de grands volumes</li>
+<li><strong>Exemples</strong> : Cassandra, HBase, Google Bigtable</li>
+<li>
+<p><strong>Cas d'utilisation</strong> : analyses big data, séries temporelles, télémétrie</p>
+</li>
+<li>
+<p><strong>Bases de données orientées graphes (Graph Databases)</strong></p>
+</li>
+<li>Stockent des entités (nœuds) et leurs relations (arêtes)</li>
+<li>Optimisées pour explorer les relations entre données</li>
+<li><strong>Exemples</strong> : Neo4j, JanusGraph, Amazon Neptune</li>
+<li><strong>Cas d'utilisation</strong> : réseaux sociaux, systèmes de recommandation, détection de fraude</li>
+</ol>
+<p>Exemple simplifié:
+   <code>(Personne:Marie)-[:AMI_DE]-&gt;(Personne:Jean)</code></p>
+<h4 id="caracteristiques-communes-des-bases-nosql">Caractéristiques communes des bases NoSQL<a class="headerlink" href="#caracteristiques-communes-des-bases-nosql" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Scalabilité horizontale</strong> : capacité à distribuer les données sur plusieurs serveurs</li>
+<li><strong>Haute disponibilité</strong> : souvent conçues pour éviter les points de défaillance uniques</li>
+<li><strong>Performances élevées</strong> pour certains types d'opérations spécifiques</li>
+<li><strong>Cohérence éventuelle</strong> plutôt que transactions ACID strictes (dans de nombreux cas)</li>
+</ul>
 
-    <script>var base_url = ".."</script>
-    
-    <script src="../js/base.js"></script>
-    <script src="../search/main.js"></script>
 
-    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
             </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-    </body>
-
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.indexes", "toc.integrate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
 </html>

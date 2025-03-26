@@ -5,11 +5,11 @@
 - [SQL](#sql)
 - [Démarrer avec SQLite](#démarrer-avec-sqlite)
 - [Conseils pour le terminal](#conseils-pour-le-terminal)
-- [`SELECT`](#-select)
-- [`LIMIT`](#-limit)
-- [`WHERE`](#-where)
-- [`NULL`](#-null)
-- [`LIKE`](#-like)
+- [`SELECT`](#select)
+- [`LIMIT`](#limit)
+- [`WHERE`](#where)
+- [`NULL`](#null)
+- [`LIKE`](#like)
 - [Plages](#plages)
 - [`ORDER BY`](#-order-by)
 - [Fonctions d'agrégation](#fonctions-dagrégration)
@@ -146,7 +146,7 @@ FROM longlist;
 ## `LIMIT`
 
 - Si une base de données contient des millions de lignes, il ne serait peut-être pas judicieux de sélectionner toutes ses lignes. Au lieu de cela, nous pourrions simplement vouloir jeter un coup d'œil aux données qu'elle contient. Nous utilisons le mot-clé SQL `LIMIT` pour spécifier le nombre de lignes dans la sortie de la requête.
-- ```sql
+```sql
 SELECT "title"
 FROM "longlist"
 LIMIT 10;
@@ -157,7 +157,9 @@ Cette requête nous donne les 10 premiers titres de la base de données. Les tit
 ## `WHERE`
 
 - Le mot-clé `WHERE` est utilisé pour sélectionner des lignes en fonction d'une condition ; il affiche les lignes pour lesquelles la condition spécifiée est vraie.
-- ```sql
+
+
+```sql
 SELECT "title", "author"
 FROM "longlist"
 WHERE "year" = 2023;
