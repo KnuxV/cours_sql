@@ -12,11 +12,9 @@ Dans ce problème, vous écrirez des requêtes SQL pour une application fictive 
 
 ```bash
 $ sqlite3 snap.db                                                                                   
-sqlite> EXPLAIN QUERY PLAN                                                                          
-   ...> SELECT * FROM "messages"                                                                    
-   ...> WHERE "from_user_id" = 2;                                                                   
+sqlite> EXPLAIN QUERY PLAN SELECT * FROM "messages" WHERE "from_user_id" = 2;                                                                   
 QUERY PLAN                                                                                          
-`--SEARCH messages USING INDEX search_messages_by_from_user_id (from_user_id=?)                     
+--SEARCH messages USING INDEX search_messages_by_from_user_id (from_user_id=?)                     
 sqlite> .quit 
 ```
 

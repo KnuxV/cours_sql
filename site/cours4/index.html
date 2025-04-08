@@ -420,13 +420,11 @@
 <li>Chaque ligne de données contient le titre d'une œuvre d'art ainsi que le <code>numéro d'accession</code> (accession number), qui est un identifiant unique utilisé en interne par le musée. Il y a également une date indiquant quand l'art a été acquis.</li>
 <li>La table contient un ID qui sert de clé primaire (primary key).</li>
 <li>Nous pouvons imaginer que l'administrateur de la base de données du MFA exécute une requête SQL pour insérer chacune de ces œuvres d'art dans la table.</li>
-<li>
-<p>Pour comprendre comment cela fonctionne, créons d'abord une base de données appelée <code>mfa.db</code>. Ensuite, lisons le fichier de schéma <code>schema0.sql</code> dans la base de données. Ce fichier de schéma, déjà fourni, nous aide à créer la table <code>collections</code>.</p>
-</li>
-<li>
-<p><code>sqlite
-    .read schema0.sql</code></p>
-</li>
+<li>Pour comprendre comment cela fonctionne, créons d'abord une base de données appelée <code>mfa.db</code>. Ensuite, lisons le fichier de schéma <code>schema0.sql</code> dans la base de données. Ce fichier de schéma, déjà fourni, nous aide à créer la table <code>collections</code>.</li>
+</ul>
+<pre><code class="language-sqlite">    .read schema0.sql
+</code></pre>
+<ul>
 <li>
 <p>Pour confirmer que la table a été créée, nous pouvons sélectionner à partir de la table. </p>
 </li>
@@ -434,54 +432,54 @@
 <p>Cela devrait nous donner un résultat vide, car la table n'a pas encore de données.</p>
 </li>
 </ul>
-<p><code>sql
-  SELECT * FROM "collections";</code></p>
+<pre><code class="language-sql">  SELECT * FROM &quot;collections&quot;;
+</code></pre>
 <ul>
 <li>Ou utiliser la commande suivante:</li>
 </ul>
-<p><code>sqlite
-  .schema</code></p>
+<pre><code class="language-sqlite">  .schema
+</code></pre>
 <p><strong>Insertion de données (Inserting Data)</strong></p>
 <ul>
 <li>L'instruction SQL <code>INSERT INTO</code> est utilisée pour insérer une ligne de données dans une table donnée.</li>
 </ul>
-<p><code>sql
-  INSERT INTO "collections" ("id", "title", "accession_number", "acquired")
-  VALUES (1, 'Profusion de fleurs', '56.257', '1956-04-12');</code></p>
+<pre><code class="language-sql">  INSERT INTO &quot;collections&quot; (&quot;id&quot;, &quot;title&quot;, &quot;accession_number&quot;, &quot;acquired&quot;)
+  VALUES (1, 'Profusion de fleurs', '56.257', '1956-04-12');
+</code></pre>
 <p>Nous pouvons voir que cette commande nécessite la liste des colonnes de la table qui recevront les nouvelles données et les valeurs à ajouter à chaque colonne, dans le même ordre.
 - L'exécution de la commande <code>INSERT INTO</code> ne retourne rien, mais nous pouvons exécuter une requête pour confirmer que la ligne est maintenant présente dans <code>collections</code>.</p>
-<p><code>sql
-  SELECT * FROM "collections";</code></p>
+<pre><code class="language-sql">  SELECT * FROM &quot;collections&quot;;
+</code></pre>
 <ul>
 <li>Nous pouvons ajouter plus de lignes à la base de données en insérant plusieurs fois. Cependant, saisir manuellement la valeur de la clé primaire (comme 1, 2, 3, etc.) peut entraîner des erreurs. Heureusement, SQLite peut remplir automatiquement les valeurs de la clé primaire. Pour utiliser cette fonctionnalité, nous omettons la colonne ID lors de l'insertion d'une ligne.</li>
 </ul>
-<p><code>sql
-  INSERT INTO "collections" ("title", "accession_number", "acquired")
-  VALUES ('Fermiers travaillant à l'aube', '11.6152', '1911-08-03');</code></p>
+<pre><code class="language-sql">  INSERT INTO &quot;collections&quot; (&quot;title&quot;, &quot;accession_number&quot;, &quot;acquired&quot;)
+  VALUES ('Fermiers travaillant à l'aube', '11.6152', '1911-08-03');
+</code></pre>
 <p>Nous pouvons vérifier que cette ligne a été insérée avec un <code>id</code> de 2 en exécutant</p>
-<p><code>sql
-  SELECT * FROM "collections";</code></p>
+<pre><code class="language-sql">  SELECT * FROM &quot;collections&quot;;
+</code></pre>
 <p>Remarquez que SQLite remplit les valeurs de la clé primaire en incrémentant la clé primaire précédente, dans ce cas, 1.</p>
 <h2 id="autres-contraintes-other-constraints"><strong>Autres contraintes (Other Constraints)</strong><a class="headerlink" href="#autres-contraintes-other-constraints" title="Permanent link">&para;</a></h2>
 <ul>
 <li>L'ouverture du fichier <code>schema.sql</code> affiche le schéma de la base de données.</li>
 </ul>
-<p><code>sql
-  CREATE TABLE "collections" (
-      "id" INTEGER,
-      "title" TEXT NOT NULL,
-      "accession_number" TEXT NOT NULL UNIQUE,
-      "acquired" NUMERIC,
-      PRIMARY KEY("id")
-  );</code></p>
+<pre><code class="language-sql">  CREATE TABLE &quot;collections&quot; (
+      &quot;id&quot; INTEGER,
+      &quot;title&quot; TEXT NOT NULL,
+      &quot;accession_number&quot; TEXT NOT NULL UNIQUE,
+      &quot;acquired&quot; NUMERIC,
+      PRIMARY KEY(&quot;id&quot;)
+  );
+</code></pre>
 <ul>
 <li>Il est spécifié que le numéro d'accession est unique. Si nous essayons d'insérer une ligne avec un numéro d'accession répété, nous déclencherons une erreur indiquant <code>UNIQUE constraint failed: collections.accession_number (19)</code>.</li>
 <li>Cette erreur nous informe que la ligne que nous essayons d'insérer viole une contrainte dans le schéma, spécifiquement la contrainte <code>UNIQUE</code> dans ce scénario.</li>
 <li>De même, nous pouvons essayer d'ajouter une ligne avec un titre <code>NULL</code>, violant la contrainte <code>NOT NULL</code>.</li>
 </ul>
-<p><code>sql
-  INSERT INTO "collections" ("title", "accession_number", "acquired")
-  VALUES(NULL, NULL, '1900-01-10');</code></p>
+<pre><code class="language-sql">  INSERT INTO &quot;collections&quot; (&quot;title&quot;, &quot;accession_number&quot;, &quot;acquired&quot;)
+  VALUES(NULL, NULL, '1900-01-10');
+</code></pre>
 <p>En exécutant ceci, nous verrons à nouveau une erreur indiquant <code>NOT NULL constraint failed: collections.title (19)</code>.
 - De cette manière, les contraintes de schéma sont des garde-fous qui nous protègent de l'ajout de lignes qui ne suivent pas le schéma de notre base de données.</p>
 <h2 id="insertion-de-plusieurs-lignes-inserting-multiple-rows"><strong>Insertion de plusieurs lignes (Inserting Multiple Rows)</strong><a class="headerlink" href="#insertion-de-plusieurs-lignes-inserting-multiple-rows" title="Permanent link">&para;</a></h2>
@@ -493,17 +491,17 @@
 <ul>
 <li>Insérons maintenant deux nouvelles peintures dans la table <code>collections</code>.</li>
 </ul>
-<p><code>sql
-  INSERT INTO "collections" ("title", "accession_number", "acquired")
+<pre><code class="language-sql">  INSERT INTO &quot;collections&quot; (&quot;title&quot;, &quot;accession_number&quot;, &quot;acquired&quot;)
   VALUES
   ('Paysage imaginatif', '56.496', NULL),
-  ('Pivoines et papillon', '06.1899', '1906-01-01');</code></p>
+  ('Pivoines et papillon', '06.1899', '1906-01-01');
+</code></pre>
 <p>Le musée ne connaît pas toujours exactement quand une peinture a été acquise, donc il est possible que la valeur <code>acquired</code> soit <code>NULL</code>, comme c'est le cas pour la première peinture que nous venons d'insérer.</p>
 <ul>
 <li>Pour voir la table mise à jour, nous pouvons sélectionner toutes les lignes de la table comme toujours.</li>
 </ul>
-<p><code>sql
-  SELECT * FROM "collections";</code></p>
+<pre><code class="language-sql">  SELECT * FROM &quot;collections&quot;;
+</code></pre>
 <ul>
 <li>Nos données pourraient également être stockées dans un format de valeurs séparées par des virgules, ou CSV. Observons dans l'exemple suivant comment les valeurs de chaque ligne sont séparées par une virgule.</li>
 </ul>
@@ -511,10 +509,10 @@
 <ul>
 <li>SQLite permet d'importer directement un fichier CSV dans notre base de données. Pour ce faire, <strong>nous devons repartir de zéro</strong> en <strong>supprimant</strong> mfa.db. Dans le terminal, on peut utiliser: </li>
 </ul>
-<p><code>sqlite
-  .quit --pour sortir de sqlite</code></p>
-<p><code>bash
-  rm mda.db # pour supprimer un ficher (rm = remove)</code></p>
+<pre><code class="language-sqlite">  .quit --pour sortir de sqlite
+</code></pre>
+<pre><code class="language-bash">  rm mda.db # pour supprimer un ficher (rm = remove)
+</code></pre>
 <ul>
 <li>
 <p>Nous avons déjà un fichier CSV appelé <code>mfa.csv</code> qui contient les données dont nous avons besoin. En ouvrant ce fichier, nous pouvons noter que la première ligne contient les noms des colonnes, qui correspondent exactement aux noms des colonnes de notre table <code>collections</code> selon le schéma.</p>
@@ -523,13 +521,13 @@
 <p>Créons à nouveau la base de données <code>mfa.db</code> et lisons le fichier de schéma comme nous l'avons fait précédemment.</p>
 </li>
 </ul>
-<p><code>sqlite
-  sqlite3 mfa.db</code></p>
+<pre><code class="language-sqlite">  sqlite3 mfa.db
+</code></pre>
 <ul>
 <li>Ensuite, nous pouvons importer le CSV en exécutant une commande SQLite.</li>
 </ul>
-<p><code>sqlite
-  .import --csv mfa.csv collections</code></p>
+<pre><code class="language-sqlite">  .import --csv mfa.csv collections
+</code></pre>
 <p>Le premier argument, <code>--csv</code>, indique à SQLite que nous importons un fichier CSV. Cela aidera SQLite à analyser correctement le fichier. Le deuxième argument indique que la première ligne du fichier CSV (la ligne d'en-tête) doit être ignorée, ou non insérée dans la table.</p>
 <ul>
 <li>
@@ -542,17 +540,18 @@
 <p>Pour essayer cela, ouvrons <code>mfa.csv</code> dans notre espace de code et supprimons la colonne <code>id</code> de la ligne d'en-tête, ainsi que les valeurs de chaque colonne. Voici à quoi devrait ressembler <code>mfa.csv</code> une fois que nous aurons fini de le modifier :</p>
 </li>
 </ul>
-<p><code>title,accession_number,acquired
+<pre><code class="language-csv">  title,accession_number,acquired
   Profusion de fleurs,56.257,1956-04-12
   Fermiers travaillant à l'aube,11.6152,1911-08-03
   Sortie de printemps,14.76,1914-01-08
   Paysage imaginatif,56.496,
-  Pivoines et papillon,06.1899,1906-01-01</code></p>
+  Pivoines et papillon,06.1899,1906-01-01
+</code></pre>
 <ul>
 <li>Nous allons également supprimer toutes les lignes qui sont déjà dans la table <code>collections</code>.</li>
 </ul>
-<p><code>sql
-  DELETE FROM "collections";</code></p>
+<pre><code class="language-sql">  DELETE FROM &quot;collections&quot;;
+</code></pre>
 <ul>
 <li>
 <p>Maintenant, nous voulons importer ce fichier CSV dans une table. Cependant, la table <code>collections</code> (selon notre schéma) doit avoir quatre colonnes dans chaque ligne. Ce nouveau fichier CSV ne contient que trois colonnes pour chaque ligne. Par conséquent, nous ne pouvons pas procéder à l'importation de la même manière que précédemment.</p>
@@ -561,54 +560,54 @@
 <p>Pour importer avec succès le fichier CSV sans valeurs d'ID, nous devons utiliser une table temporaire :</p>
 </li>
 </ul>
-<p><code>sqlite
-  .import --csv mfa_noid.csv temp</code></p>
+<pre><code class="language-sqlite">  .import --csv mfa_noid.csv temp
+</code></pre>
 <p>Remarquez que nous n'utilisons pas l'argument <code>--skip 1</code> avec cette commande. C'est parce que SQLite est capable de reconnaître la toute première ligne de données CSV comme la ligne d'en-tête, et convertit ces données en noms de colonnes de la nouvelle table <code>temp</code>.</p>
 <ul>
 <li>Nous pouvons voir les données dans la table <code>temp</code> en l'interrogeant.</li>
 </ul>
-<p><code>sql
-  SELECT * FROM "temp";</code></p>
+<pre><code class="language-sql">  SELECT * FROM &quot;temp&quot;;
+</code></pre>
 <ul>
 <li>Ensuite, nous allons sélectionner les données (sans clés primaires) de <code>temp</code> et les déplacer vers <code>collections</code>, ce qui était notre objectif depuis le début ! Nous pouvons utiliser la commande suivante pour y parvenir.</li>
 </ul>
-<p><code>sql
-  INSERT INTO "collections" ("title", "accession_number", "acquired")
-  SELECT "title", "accession_number", "acquired" FROM "temp";</code></p>
+<pre><code class="language-sql">  INSERT INTO &quot;collections&quot; (&quot;title&quot;, &quot;accession_number&quot;, &quot;acquired&quot;)
+  SELECT &quot;title&quot;, &quot;accession_number&quot;, &quot;acquired&quot; FROM &quot;temp&quot;;
+</code></pre>
 <p>Dans ce processus, SQLite ajoutera automatiquement les valeurs de clé primaire dans la colonne <code>id</code>.</p>
 <ul>
 <li>Juste pour nettoyer notre base de données, nous pouvons également supprimer la table <code>temp</code> une fois que nous avons fini de déplacer les données.</li>
 </ul>
-<p><code>sql
-  DROP TABLE "temp";</code></p>
+<pre><code class="language-sql">  DROP TABLE &quot;temp&quot;;
+</code></pre>
 <h2 id="suppression-de-donnees-deleting-data"><strong>Suppression de données (Deleting Data)</strong><a class="headerlink" href="#suppression-de-donnees-deleting-data" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Nous avons vu précédemment que l'exécution de la commande suivante supprimait toutes les lignes de la table <code>collections</code>. (Nous ne voulons pas exécuter cette commande maintenant, sinon nous perdrons toutes les données de la table !)</li>
 </ul>
-<p><code>sql
-  DELETE FROM "collections";</code></p>
+<pre><code class="language-sql">  DELETE FROM &quot;collections&quot;;
+</code></pre>
 <ul>
 <li>Nous pouvons également supprimer des lignes qui correspondent à des conditions spécifiques. Par exemple, pour supprimer la peinture "Sortie de printemps" de notre table <code>collections</code>, nous pouvons exécuter :</li>
 </ul>
-<p><code>sql
-  DELETE FROM "collections"
-  WHERE "title" = 'Sortie de printemps';</code></p>
+<pre><code class="language-sql">  DELETE FROM &quot;collections&quot;
+  WHERE &quot;title&quot; = 'Sortie de printemps';
+</code></pre>
 <ul>
 <li>Pour supprimer toute peinture avec la date d'acquisition <code>NULL</code>, nous pouvons exécuter</li>
 </ul>
-<p><code>sql
-  DELETE FROM "collections"
-  WHERE "acquired" IS NULL;</code></p>
+<pre><code class="language-sql">  DELETE FROM &quot;collections&quot;
+  WHERE &quot;acquired&quot; IS NULL;
+</code></pre>
 <ul>
 <li>Comme toujours, nous nous assurerons que la suppression a fonctionné comme prévu en sélectionnant toutes les données de la table.</li>
 </ul>
-<p><code>sql
-  SELECT * FROM "collections";</code></p>
+<pre><code class="language-sql">  SELECT * FROM &quot;collections&quot;;
+</code></pre>
 <p>Nous voyons que les peintures "Sortie de printemps" et "Paysage imaginatif" ne sont plus dans la table.
 - Pour supprimer les lignes concernant des peintures antérieures à 1909, nous pouvons exécuter</p>
-<p><code>sql
-  DELETE FROM "collections"
-  WHERE "acquired" &lt; '1909-01-01';</code></p>
+<pre><code class="language-sql">  DELETE FROM &quot;collections&quot;
+  WHERE &quot;acquired&quot; &lt; '1909-01-01';
+</code></pre>
 <p>En utilisant l'opérateur <code>&lt;</code> ici, nous trouvons les peintures acquises avant le 1er janvier 1909. Ce sont les peintures qui seront supprimées lors de l'exécution de la requête.
 - Il peut y avoir des cas où la suppression de certaines données pourrait affecter l'intégrité d'une base de données. Les contraintes de clé étrangère en sont un bon exemple. Une colonne de clé étrangère fait référence à la clé primaire d'une table différente. Si nous devions supprimer la clé primaire, la colonne de clé étrangère n'aurait plus rien à référencer !
 - Considérons maintenant un schéma mis à jour pour la base de données du MFA, contenant des informations non seulement sur les œuvres d'art mais aussi sur les artistes. Les deux entités Artiste et Collection ont une relation plusieurs-à-plusieurs : une peinture peut être créée par plusieurs artistes et un seul artiste peut également créer plusieurs œuvres d'art.</p>
@@ -621,22 +620,22 @@
 - Étant donné cette base de données, si nous choisissons de supprimer l'artiste non identifié (avec l'ID 3), que se passera-t-il avec les lignes de la table <code>created</code> avec un <code>artist_id</code> de 3 ? Essayons-le.
 - Après avoir ouvert <code>mfa.db</code>, nous pouvons maintenant voir le schéma mis à jour en exécutant la commande <code>.schema</code>. La table <code>created</code> a effectivement deux contraintes de clé étrangère, une pour l'ID de l'artiste et une pour l'ID de la collection.
 - Maintenant, nous pouvons essayer de supprimer de la table <code>artistes</code>.</p>
-<p><code>sql
-  DELETE FROM "artists"
-  WHERE "name" = 'Artiste non identifié';</code></p>
+<pre><code class="language-sql">  DELETE FROM &quot;artists&quot;
+  WHERE &quot;name&quot; = 'Artiste non identifié';
+</code></pre>
 <p>En exécutant ceci, nous obtenons une erreur très similaire à celles que nous avons déjà vues dans ce cours : <code>Runtime error: FOREIGN KEY constraint failed (19)</code>. Cette erreur nous informe que la suppression de ces données violerait la contrainte de clé étrangère définie dans la table <code>created</code>.
 - Comment nous assurer que la contrainte n'est pas violée ? Une possibilité est de supprimer les lignes correspondantes de la table <code>created</code> avant de supprimer de la table <code>artistes</code>.</p>
-<p><code>sql
-  DELETE FROM "created"
-  WHERE "artist_id" = (
-      SELECT "id"
-      FROM "artists"
-      WHERE "name" = 'Artiste non identifié'
-  );</code></p>
+<pre><code class="language-sql">  DELETE FROM &quot;created&quot;
+  WHERE &quot;artist_id&quot; = (
+      SELECT &quot;id&quot;
+      FROM &quot;artists&quot;
+      WHERE &quot;name&quot; = 'Artiste non identifié'
+  );
+</code></pre>
 <p>Cette requête supprime efficacement l'affiliation de l'artiste avec son œuvre. Une fois l'affiliation supprimée, nous pouvons supprimer les données de l'artiste sans violer la contrainte de clé étrangère. Pour ce faire, nous pouvons exécuter</p>
-<p><code>sql
-  DELETE FROM "artists"
-  WHERE "name" = 'Artiste non identifié';</code></p>
+<pre><code class="language-sql">  DELETE FROM &quot;artists&quot;
+  WHERE &quot;name&quot; = 'Artiste non identifié';
+</code></pre>
 <ul>
 <li>Dans une autre possibilité, nous pouvons spécifier l'action à entreprendre lorsqu'un ID référencé par une clé étrangère est supprimé. Pour ce faire, nous utilisons le mot-clé <code>ON DELETE</code> suivi de l'action à entreprendre.</li>
 <li><code>ON DELETE RESTRICT</code> : Cela nous empêche de supprimer des ID lorsque la contrainte de clé étrangère est violée.</li>
@@ -646,16 +645,16 @@
 <li><code>ON DELETE CASCADE</code> : Cela permet la suppression d'ID référencés par une clé étrangère et supprime également en cascade les lignes de clé étrangère référentes. Par exemple, si nous utilisions ceci pour supprimer un ID d'artiste, toutes les affiliations de l'artiste avec les œuvres d'art seraient également supprimées de la table <code>created</code>.</li>
 <li>La dernière version du fichier de schéma met en œuvre la méthode ci-dessus. Les contraintes de clé étrangère ressemblent maintenant à ceci :</li>
 </ul>
-<p><code>sql
-  FOREIGN KEY("artist_id") REFERENCES "artists"("id") ON DELETE CASCADE
-  FOREIGN KEY("collection_id") REFERENCES "collections"("id") ON DELETE CASCADE</code></p>
+<pre><code class="language-sql">  FOREIGN KEY(&quot;artist_id&quot;) REFERENCES &quot;artists&quot;(&quot;id&quot;) ON DELETE CASCADE
+  FOREIGN KEY(&quot;collection_id&quot;) REFERENCES &quot;collections&quot;(&quot;id&quot;) ON DELETE CASCADE
+</code></pre>
 <p>Maintenant, l'exécution de l'instruction <code>DELETE</code> suivante ne résultera pas en une erreur, et supprimera en cascade de la table <code>artistes</code> à la table <code>created</code> :</p>
-<p><code>sql
-  DELETE FROM "artists"
-  WHERE "name" = 'Artiste non identifié';</code></p>
+<pre><code class="language-sql">  DELETE FROM &quot;artists&quot;
+  WHERE &quot;name&quot; = 'Artiste non identifié';
+</code></pre>
 <p>Pour vérifier que cette suppression en cascade a fonctionné, nous pouvons interroger la table <code>created</code> :</p>
-<p><code>sql
-  SELECT * FROM "created";</code></p>
+<pre><code class="language-sql">  SELECT * FROM &quot;created&quot;;
+</code></pre>
 <p>Nous observons qu'aucune des lignes n'a un ID de 3 (l'ID de l'artiste supprimé de la table <code>artistes</code>).</p>
 <h2 id="mise-a-jour-de-donnees-updating-data"><strong>Mise à jour de données (Updating Data)</strong><a class="headerlink" href="#mise-a-jour-de-donnees-updating-data" title="Permanent link">&para;</a></h2>
 <ul>
@@ -666,18 +665,18 @@
 <ul>
 <li>Changeons cette affiliation pour "Fermiers travaillant à l'aube" dans la table <code>created</code> en utilisant la syntaxe ci-dessus.</li>
 </ul>
-<p><code>sql
-  UPDATE "created"
-  SET "artist_id" = (
-      SELECT "id"
-      FROM "artists"
-      WHERE "name" = 'Li Yin'
+<pre><code class="language-sql">  UPDATE &quot;created&quot;
+  SET &quot;artist_id&quot; = (
+      SELECT &quot;id&quot;
+      FROM &quot;artists&quot;
+      WHERE &quot;name&quot; = 'Li Yin'
   )
-  WHERE "collection_id" = (
-      SELECT "id"
-      FROM "collections"
-      WHERE "title" = 'Fermiers travaillant à l'aube'
-  );</code></p>
+  WHERE &quot;collection_id&quot; = (
+      SELECT &quot;id&quot;
+      FROM &quot;collections&quot;
+      WHERE &quot;title&quot; = 'Fermiers travaillant à l'aube'
+  );
+</code></pre>
 <p>La première partie de cette requête spécifie la table à mettre à jour. La partie suivante récupère l'ID de Li Yin à définir comme nouvel ID. La dernière partie sélectionne la ou les lignes dans <code>created</code> qui seront mises à jour avec l'ID de Li Yin, qui est la peinture "Fermiers travaillant à l'aube" !</p>
 <h2 id="fin"><strong>Fin</strong><a class="headerlink" href="#fin" title="Permanent link">&para;</a></h2>
 <ul>

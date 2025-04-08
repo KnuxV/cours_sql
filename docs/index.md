@@ -10,6 +10,8 @@ Introduction générale sur les données et les bases de données
 ### 📖 [Cours 1 : Les Fondamentaux en SQL](cours1/index.md)
 Concepts de base du langage SQL et vous familiarise avec la syntaxe essentielle pour interroger des bases de données. 
 
+#### [Lien vers Github : Cours 1](https://github.com/KnuxV/sql_cours1)
+
 - **Thèmes abordés :**
   - Syntaxe de base des requêtes (SELECT, FROM, WHERE)
   - Filtrage conditionnel avec opérateurs de comparaison
@@ -26,6 +28,8 @@ Concepts de base du langage SQL et vous familiarise avec la syntaxe essentielle 
 ### 📊 [Cours 2 : Requêtes Avancées et Agrégations](cours2/index.md)
 Techniques de requêtes en introduisant les fonctions d'agrégation et les jointures. 
 
+####[Lien vers Github Cours 2](https://github.com/KnuxV/sql_cours2)
+
 - **Thèmes abordés :**
   - Fonctions d'agrégation pour l'analyse statistique (COUNT, SUM, AVG, MAX, MIN)
   - Regroupement et filtrage de données agrégées (GROUP BY, HAVING)
@@ -38,7 +42,9 @@ Techniques de requêtes en introduisant les fonctions d'agrégation et les joint
   - [Packages](cours2/packages/instructions.md) : Gestion des dépendances logicielles avec jointures multiples
 
 ### 📈 [Cours 3 : Modélisation et Schémas](cours3/index.md)
-Principes de conception de bases de données, la normalisation et la création de schémas efficaces. 
+Principes de conception de bases de données, la normalisation et la création de schémas efficaces.
+
+####[Lien vers Github](https://github.com/KnuxV/sql_cours4)
 
 - **Thèmes abordés :**
   - Conception de schémas relationnels
@@ -54,6 +60,8 @@ Principes de conception de bases de données, la normalisation et la création d
 ### 🔍 [Cours 4 : Manipulation Avancée des Données](cours4/index.md)
 Techniques avancées pour manipuler des ensembles de données complexes.
 
+####[Lien vers Github](https://github.com/KnuxV/sql_cours5)
+
 - **Thèmes abordés :**
   - Sous-requêtes corrélées et non corrélées
   - Analyse de séries temporelles avec fonctions de fenêtrage (WINDOW)
@@ -64,17 +72,19 @@ Techniques avancées pour manipuler des ensembles de données complexes.
   - [Don't Panic](cours4/dont-panic/instructions.md) : Système de gestion d'incidents utilisant des transactions et des sous-requêtes
   - [Météorites](cours4/meteorites/instructions.md) : Analyse scientifique de données de météorites avec fonctions de fenêtrage
 
-### 💾 [Cours 5 : Indexation et Performance](cours5/index.md)
-Optimisation des performances des bases de données. 
-- **Thèmes abordés :**
-  - Types d'index et leur fonctionnement interne
-  - Analyse des plans d'exécution avec EXPLAIN QUERY PLAN
-  - Compromis entre espace et temps lors de l'indexation
-  - Techniques d'optimisation des requêtes complexes
-
-- **Exercices pratiques :**
-  - [Optimization](cours5/optimization/instructions.md) : Techniques diverses pour améliorer la performance des requêtes
-  - [Indexes](cours5/indexes/instructions.md) : Création et utilisation stratégique d'index pour accélérer des requêtes spécifiques
+- ### 🔍 [Cours 5 : Vues et Organisation des Données](cours5/index.md)
+#### [Lien vers GITHUB](https://github.com/KnuxV/sql_cours3)
+  Approches pour structurer et simplifier l'accès aux données.
+  
+  - Thèmes abordés :
+    - Création et utilisation de vues pour simplifier les requêtes complexes
+    - Techniques d'agrégation via des vues permanentes et temporaires
+    - Expressions communes de table (CTE) pour les requêtes ponctuelles
+    - Partitionnement et sécurisation des données sensibles
+  - Exercices pratiques :
+    - [The Private Eye](cours5/private/instructions.md) : Déchiffrement d'un message codé avec des vues
+    - [Recenseur](cours5/census/instructions.md) : Agrégation de données de recensement par district
+    - [Bed and Breakfast](cours5/bnb/instructions.md) : Analyse de données AirBnB avec des vues spécialisées
 
 ### 🔐 [Cours 6 : Indexation Avancée et Optimisation](cours6/index.md)
 Techniques d'optimisation des bases de données en explorant l'indexation avancée, l'analyse des plans d'exécution et les stratégies de performance pour les applications à forte charge.
@@ -90,6 +100,9 @@ Techniques d'optimisation des bases de données en explorant l'indexation avanc�
   - [Snap](cours6/snap/instructions.md) : Écriture de requêtes efficaces pour une application de messagerie utilisant des index existants
 
 ### 🌐 [Cours 7 : Systèmes de Gestion de Bases de Données Avancés](cours7/index.md)
+
+#### [Lien vers Github: github.com/knuxv/sql_python](https://github.com/KnuxV/sql_python)
+
 Différents systèmes de gestion de bases de données, leurs caractéristiques spécifiques et les techniques avancées pour la mise à l'échelle des applications.
 
 - **Thèmes abordés :**

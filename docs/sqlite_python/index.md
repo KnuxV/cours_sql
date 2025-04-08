@@ -1,7 +1,3 @@
-Voici une version modifiée du guide SQLite avec Python, incluant des explications supplémentaires sur les concepts propres à la bibliothèque `sqlite3`, notamment `cursor`, `fetchone`, `fetchmany`, `fetchall`, `commit`, `execute`, et `executemany`.
-
----
-
 # SQLite avec Python : Guide Pratique
 
 Ce guide se concentre sur les commandes Python pour manipuler une base de données SQLite existante (`pokedex.sqlite`) en utilisant les opérations CRUD (Create, Read, Update, Delete).
@@ -301,6 +297,7 @@ for row in rows:
 
 # Utilisation de pandas pour une analyse plus avancée
 df_pokemon = pd.read_sql_query("SELECT * FROM pokedex", conn)
+print(df_pokemon)
 
 # Analyse statistique par type
 def extract_types(type_string):
@@ -347,6 +344,5 @@ id	name	height	weight	hp	attack	defense	s_attack	s_defense	speed	type	evo_set	in
 5	charmeleon	11	190	58	64	58	80	65	80	{fire}	2	When it swings its burning tail, it elevates the temperature to unbearably high levels.
 ```
 
----
 
-Ce guide devrait maintenant être plus clair et informatif, avec des explications supplémentaires sur les concepts clés de la bibliothèque `sqlite3`.
+
